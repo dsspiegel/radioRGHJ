@@ -717,7 +717,7 @@ We will see in \S\ref{ss:RGradio} that radio flux from the planets will probably
 Then, we estimate the radio emission of Jupiter-twin around known M giants in \S\ref{ss:actualMgiants}. 
 In \S\ref{ss:detectability}, we estimate the sensitivities and limitations of several current and future
 radio instruments at relevant frequencies.
-Finally, \S\ref{ss:timevariability} discusses the expected time variability of the radio emission as a mean to discern the signals from the background noise. 
+Finally, \S\ref{ss:timevariability} discusses the expected time variability of the radio emission as a means to discern the signals from the background noise. 
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -728,7 +728,7 @@ Finally, \S\ref{ss:timevariability} discusses the expected time variability of t
 Over the last four decades there have been numerous radio continuum observations of nearby red giants, many with the aim of understanding the extended atmospheres and mass-loss mechanisms of K- and M-type giants~\citep[e.g.,][]{Newell1982, Knapp1995, Skinner1997, Lim1998, OGorman2013}.
 Almost all observations have been carried out 
 %at wavelengths of 6 cm and below, 
-at frequency of 5 GHz or above, 
+at frequencies $\geq 5~\rm GHz$, 
 probing thermal Bremsstrahlung emission from the large, partially ionized envelopes surrounding the giant stars~\citep{drake1986}.
 The spectral index of this emission is of order unity, with a range of reported values for various sources between 0.8 and 1.6~\citep{OGorman2013}.
 
@@ -752,22 +752,22 @@ However, assuming thermal Bremsstrahlung emission continues to dominate in this 
 %In this case, for example, extrapolating from the 0.4 mJy flux density of $\alpha$ Ori at 1.46 GHz, and using its spectral index 1.32~\citep{Newell1982}, we arrive at an estimated flux density of 0.04 mJy at 300 MHz. 
 % YF: This is consistent with the following equation, so I removed it to avoid redundancy. 
 %
-\citet{OGorman2013} reported $\alpha $ Boo ($R_\star = 25.4 R_{\odot }$, $T=4286$ K, $d=11.26$ pc) at 1~GHz is about 70 $\mu$Jy, and $\alpha $ Tau ($R_\star = 44.2  R_{\odot }$, $T=3,910$ K, $d=20.0$ pc) at 3~GHz is about 40 $\mu$Jy. 
+\citet{OGorman2013} reported $\alpha $ Boo ($R_\star = 25.4 R_{\odot }$, $T=4286$ K, $d=11.26$ pc) at 1~GHz is about 70 $\mu$Jy, and $\alpha $ Tau ($R_\star = 44.2  R_{\odot }$, $T=3910$ K, $d=20.0$ pc) at 3~GHz is about 40 $\mu$Jy. 
 Using these data, we extrapolate the radio flux from the host star $F_{\star}$ to the lower frequency range with a simple power law as follows:
 %%%
 \begin{eqnarray}
-\nonumber F_{\star}(\nu ) &\sim & (0.4-1.4) \times 10^{-5} ~\mbox{Jy} \\
-&& \times \left( \frac{d}{100 ~\mbox{pc}} \right)^{-2}  \left( \frac{R_{\star }}{100 ~R_{\odot }} \right)^2 \left( \frac{\nu}{1~\mbox{GHz}} \right)^{\alpha } 
+\nonumber F_{\star}(\nu ) &\sim & (0.4-1.4) \times 10^{-5} ~\mbox{Jy} \times \\
+&& \left( \frac{d}{100 ~\mbox{pc}} \right)^{-2} \!\! \left( \frac{R_{\star }}{100~R_{\odot}} \right)^2 \!\! \left( \frac{\nu}{1~\mbox{GHz}} \right)^{\alpha } 
 \end{eqnarray}
 %%%
 where the power index $\alpha $ is order of unity. 
 
 Figure \ref{fig:cartoon} is a cartoon for a radio spectrum of a planet with $10~M_J$ and that of the host red giant star with 100~$R_{\odot }$, both of which are placed at a distance of 100 pc. 
-Note that the thermal contribution from accretion disk is negligible in this figure. 
-The spectral shape is modeled by simply scaling the Jovian radio spectra e.g. Figure 8 of \citet{zarka_et_al2004}. 
+Note that the thermal contribution from the accretion disk is negligible in this figure. 
+The spectral shape is modeled by simply scaling the Jovian radio spectrum (e.g. Figure 8 of \cite{zarka_et_al2004}). 
 The continuum from the star in the case of $\alpha =0.6$ is shown as an extreme case; the 0.6 value is the prediction from the constant property wind model \citep{wright1975,panagia1975,olnon1975}. 
-As Figure \ref{fig:cartoon} indicates, with the reasonable range of spectral index, radio emission from the stars is by order of magnitude smaller than the expected radio flux from RGHJs at frequencies below 300~MHz. 
-For less massive planets (with weaker magnetic fields), the distinction is even clearer, as the peak flux is larger and the peak frequencies is smaller. 
+As Figure \ref{fig:cartoon} indicates, with a reasonable range of spectral index, the radio emission from the star is smaller by order of magnitude than the expected radio flux from RGHJs at frequencies below 300~MHz. 
+For less massive planets (with weaker magnetic fields), the distinction is even clearer, as the peak flux is larger and the peak frequencies are smaller. 
 
 
 Therefore, in the following, we ignore the radio emission from the red giant as a noise source. 
@@ -803,30 +803,31 @@ Cross symbols indicate that the radio emission is not observable because cyclotr
 \end{figure}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% 
 
-In order to examine the potential to detect radio emission of RGHJs with the current and near-future instruments, we estimate the possible radio emission from known red giants assuming that they have planetary companions. 
-For this purpose, we obtained the list of M-type red giants from Table 4 of \citet{dumm1998} with the data of mass, radius, and effective temperature.
+In order to examine the potential to detect radio emission of RGHJs with current and near-future instruments, we estimate the possible radio emission from known red giants assuming that they have planetary companions. 
+%For this purpose, we obtained the list of M-type red giants from Table 4 of \citet{dumm1998} with the data of mass, radius, and effective temperature.
+\memoTM{For this purpose, we obtained the masses, radii, and effective temperatures for a catalog of M-type red giants \citet{dumm1998} (in their Table 4).}
 For each red giant, the mass-loss rate is estimated by Reimers' equation \citep{reimers1975}:
 %%%
 \begin{equation}
 \dot M_\star [M_\odot{\rm /yr}] \sim 4 \times 10^{-13} \eta \left( \frac{R_{\star }}{R_{\odot }} \right)\left( \frac{L_{\star }}{L_{\odot }} \right) \left( \frac{M_\star}{M_\odot} \right)^{-1}
 \end{equation}
 %%%
-where $R_{\star }$, $L_{\star } (=4\pi R_{\star }^2 T_{\star }^4)$, and $M_{\star}$ are radius, luminosity, and mass of the star. 
+where $R_{\star }$, $L_{\star } (=4\pi R_{\star }^2 T_{\star }^4)$, and $M_{\star}$ are the radius, luminosity, and mass of the star. 
 The factor $\eta $ is $\sim 0.3-3$, and we assume $\eta =1$ here. 
-The velocity of stellar wind is assumed to scale with the escape velocity, hence
+The velocity of the stellar wind is assumed to scale with the escape velocity, hence
 %%%
 \begin{equation}
 v \propto \sqrt{\frac{2GM_\star}{R_{\star }}}
 \end{equation}
 %%%
-The age of the system is assumed to roughly same as the lifetime of their main-sequence stage, which depends on the stellar mass.
+The age of the system is assumed to be roughly the same as the lifetime of the main-sequence stage, which depends on the stellar mass.
 We assume \memoYF{validation}:
 %%%
 \begin{equation}
 t \sim 10\,{\rm Gyr}\, \left( \frac{M_{\star}}{M_{\odot }} \right)^{-2.5}
 \end{equation}
 %%%
-In addition, the distance to the system is obtained based on the parallax data from Hipparcos datasets\footnote{http://www.rssd.esa.int/index.php?project=HIPPARCOS}. 
+In addition, the distance to the system is obtained based on the parallax data from Hipparcos datasets.\footnote{http://www.rssd.esa.int/index.php?project=HIPPARCOS}
 
 Using these data, we can now calculate the maximum frequency and intensity of radio emission by specifying planetary mass and orbital distance of a hypothetical planetary companion. 
 We consider [A] a Jupiter-twin whose cyclotron frequency is $\sim 30$~MHz, and [B] a larger Jovian planet with $M_p\sim 10M_p$ whose cyclotron frequency is $\sim 300$~MHz (equations (\ref{eq:scalingB}) and (\ref{eq:fcyc})). 
@@ -891,7 +892,7 @@ The primary limitation to detectability is a telescope's sensitivity, characteri
 The RMS noise \sigRMS\ in an interferometric observation with integration time $\tau$, bandwidth $\Delta \nu$, effective area $A_{\rm eff}$ ($\approx0.7 \pi (D/2)^2$ for interferometers comprising antennas with dish size $D$), and $N$ antennas is \citep[see e.g.][]{condon+ransom2016}
 %%%
 \begin{equation}
-\sigRMS = \frac{2 k T_{\rm sys}}{A_{\rm eff} \, \sqrt{\Delta \nu \, \tau N (N-1)}} 
+\sigRMS = \frac{2 k \Tsys}{A_{\rm eff} \, \sqrt{\Delta \nu \, \tau N (N-1)}} 
 \left(\frac{\rm 10^{26} Jy}{\rm W m^{-2} Hz^{-1}}\right).
 \label{eq:rms_sens}
 \end{equation}
@@ -900,7 +901,8 @@ Here, \Tsys\ is the blackbody temperature equivalent of the total system noise, 
 We estimate \Tsky\ using the low frequency sky noise temperature fit from \cite{Rogers+Bowman2008}:
 %%%
 \begin{equation}
-\Tsky = T_{150} \left( \frac{\nu}{150~\rm MHz}\right)^{-\beta} + \Tcmb 
+\Tsky = T_{150} \left( \frac{\nu}{150~\rm MHz}\right)^{-\beta} + \Tcmb
+\label{eq:Tsky}
 \end{equation}
 %%%
 where $T_{150} = 283.2~\rm K$ is the \Tsky\ at 150~MHz, $\beta=2.47$, and $\Tcmb = 2.73~\rm K$ is the contribution from the cosmic microwave background (CMB).
@@ -917,15 +919,15 @@ To estimate $\sigma_c$, reported in Table~\ref{tab:sens}, we use the relations p
 \end{eqnarray}
 %%%
 The source confusion limit is dominated by active galactic nuclei, which have low polarization fractions $\lesssim2.5\%$ \citep{Stil2014} and slowly vary with time.
-Therefore both the circularly polarized nature of the emission from hot Jupiters and the time variability (discussed in \S\ref{ss:timevariability}) partially mitigate the source confusion limit, allowing hot jupiters, like other time-variable sources, to be detected below the imaging confusion limit.
-We therefore expect confusion not to be a strong limitation to detectability of hot Jupiters.
+Therefore both the circularly polarized nature of the cyclotron emission from hot jupiters and the time variability (discussed in \S\ref{ss:timevariability}) partially mitigate the source confusion limit, allowing hot jupiters, like other time-variable sources, to be detected below the imaging confusion limit.
+We therefore expect confusion not to be a strong limitation to the detectability of hot jupiters.
 
 % LOFAR
 The LOw-Frequency ARray (LOFAR) operates as two separate arrays defined by their high and low bands, differing configurations, and antenna designs, which are called respectively the Low Band Antennas (LBA) and High Band Antennas (HBA).
 LOFAR-LBA operates in the 10-90~MHz range, and LOFAR-HBA operates in the 100-240~MHz range \citep{vanHaarlem2013}.
 We consider it as two separate instruments here.
 LOFAR-LBA's most sensitive band is centered at 60~MHz, and LOFAR-HBA's is at 150~MHz.
-Given the strong frequency dependence of the effective aperture of a dipole antenna, and that the reciever noise temperature for LOFAR $\Trx \sim \Tsky$, we use the LOFAR Image Noise calculator\footnote{Heald; \url{http://www.astron.nl/~heald/test/sens.php}}, which is based on {\it SKA Memo 113}\footnote{Nijboer, Pandey-Pommier, \& de Bruyn; \url{http://www.skatelescope.org/uploaded/59513\_113\_Memo\_Nijboer.pdf}}, for our fiducial sensitivity and imaging parameters in Table~\ref{tab:sens}.
+Given the strong frequency dependence of the effective aperture of a dipole antenna, and that the reciever noise temperature for LOFAR $\Trx \sim \Tsky$, we use the LOFAR Image Noise calculator\footnote{Heald; \url{http://www.astron.nl/~heald/test/sens.php}}, which is based on {\it SKA Memo 113}\footnote{Nijboer, Pandey-Pommier, \& de Bruyn; \url{http://www.skatelescope.org/uploaded/59513\_113\_Memo\_Nijboer.pdf}}, to obtain the sensitivity and imaging parameters in Table~\ref{tab:sens}.
 
 % HERA
 The Hydrogen Epoch of Reionization Array (HERA\footnote{\url{http://reionization.org/}}) \ldots \memoYF{write here (Aaron?)}
@@ -939,32 +941,32 @@ To be conservative, we use the GMRT online calculator.\footnote{\url{http://gmrt
 % SKA
 The low frequency component of the Square Kilometer Array (SKA), recently rebaselined to have 0.4~km$^2$ collecting area in 130,000 elements with baselines extending to 65~km, will operate from 50-350~MHz.\footnote{\url{https://www.skatelescope.org/news/worlds-largest-radio-telescope-near-construction/}}
 We estimate the noise in the lower half of the band ($\nu<200~\rm MHz$), appropriate for lower mass ($\lesssim 10 M_J$) separately from the full band, which could be used to detect $\sim 30 M_J$ hot Jupiters.
-We adopt the \cite{Rogers+Bowman2008} relation for \Tsys\ as above, and assume $\Trx \approx 60~\rm K$.
+We again adopt the \cite{Rogers+Bowman2008} relation for \Tsys\ (Equation~\ref{eq:Tsky}), and assume $\Trx \approx 60~\rm K$.
 We caution that these assumptions are optimistic, and the time estimates could in reality be a factor of a few worse.
 
 % VLA
-For the low frequency receivers (28-80~MHz; 4-Band) in the \memoDS{Long Wavelength Array (LWA) and the?}\memoTM{No need to mention LWA here.  The receivers are the same in the VLA 4-band and the LWA, but the LWA is far too insensitive to consider here, as is VLA 4-band alone, so the reference just serves to place an upper limit on what \Trx\ will be for LOBO.} Very Large Array (VLA), the receiver noise temperature $\Trx \approx 260~\rm K$ \citep{Hicks2012} and is subdominant to \Tsky\ by at least -6~dB.
-Future upgrades to the VLA such as the LOw Band Observatory \citep[LOBO][]{Kassim2015IAU} are being considered, and would cover the full 30-470~MHz band.
+For the low frequency receivers (28-80~MHz; 4-Band) in the Very Large Array (VLA) have $\Trx \sim 260~\rm K$, similar to the receiver noise temperatures for the Long Wavelength Array (LWA) \citep{Hicks2012}.  As noted in \citep{Hicks2012}, this noise level is subdominant to \Tsky\ by at least -6~dB.
+Future upgrades to the VLA such as the LOw Band Observatory \citep[LOBO][]{Kassim2015IAU} are being considered, and could potentially cover the full 30-470~MHz band.
 We estimate the sensitivity of LOBO assuming the receiver noise extrapolates linearly from $\Trx \approx 60~\rm K$ (internal VLA memo) in P-Band (230-470~MHz) to $\Trx \approx 260~\rm K$ in 4-band, and consider just the 50-350~MHz portion of the full 30-470~MHz band.
 
 
-The estimates of the noises shown in Table \ref{tab:sens}, together with Figure \ref{fig:observability}, indicate that, at the frequency relevant to the radio emission from Jupiter-size planets, current instrument sensitivities are too low for detection.
+The noise estimates shown in Table \ref{tab:sens}, together with Figure \ref{fig:observability}, indicate that, at the frequencies relevant for the detection of radio emission from Jupiter-size planets, current instrument sensitivities are generally too low.
 On the other hand, for more massive exoplanets ($M_p\sim 10 M_J$) where the bulk of the radio emission would exist above 50~MHz, there is hope to detect radio emission from nearby systems with LOFAR-HBA or LOBO.
-LOFAR-HBA has reasonable sensitivity to $M_p =10~M_J$ planets at 5 AU around a few closest systems as well as those around further stars but orbiting closer to the stars. 
+LOFAR-HBA has reasonable sensitivity to $M_p =10~M_J$ planets at 5 AU around the few closest systems as well as those around further stars but orbiting closer to the stars. 
 More promising is the low frequency component of SKA, which will be able to detect the signal within one day from planets with $M_p \sim 10~M_J$ and orbital distances $\sim$5~AU around M stars $<$100~pc from Earth.
 
 
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\subsection{Discriminating from Background}
+\subsection{Discriminating the Signal from the Background}
 \label{ss:timevariability}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 
-Since the confusion limit is on the same order as the signal (Table \ref{tab:sens}), it is crucial to consider the ways to discriminate the signal from the confusion sources. In this section, we discuss time variability and polarization as keys to identify the auroral radio emission from the planets. 
+Since the confusion limit is on the same order as the signal (Table \ref{tab:sens}), it is crucial to consider the ways to discriminate the signal from these sources. In this section, we discuss time variability and polarization as keys to identify the auroral radio emission from the planets. 
 
-One of the key features that make planetary radio emission distinct is the almost complete polarization \citep[e.g.][]{dulk1994}.
+One of the key features that makes planetary radio emission distinct is the almost complete circular polarization \citep[e.g.][]{dulk1994}.
 ...\memoYF{write here (YF)}
 
 Another key is that auroral radio emission from planets is not a static source but it significantly varies in time. 
