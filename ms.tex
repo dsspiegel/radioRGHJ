@@ -661,10 +661,12 @@ F_{\nu} &=& \frac{P_{\rm radio}}{\Omega d^2 f_{\rm cyc}} \\
 && \times \left( \frac{\dot M_\star}{\dot M_{\odot}} \right)^{2/3} \left( \frac{v}{v_{\odot}} \right)^{5/3} \label{eq:F_nu_RGHJs} \\
 && \;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\; \mbox{(for canonical hot jupiters)} \notag 
 \end{eqnarray}
-%%% 
+%%%
+%Note that, within this framework, the {\it spectral} radio flux has necessarily negative correlation with the planetary magnetic field, as pointed out by \citet{griesmeier2005}. 
 %\memoYF{cite original paper!}. 
-Thus, RGHJs are expected to be intrinsically as bright as the closest hot Jupiters, and Jupiter-like planets around AGB stars are potentially orders-of-magnitude brighter than them. 
-Note that, within this framework, the {\it spectral} radio flux has necessarily negative correlation with the planetary magnetic field, as pointed out by \citet{griesmeier2005}. 
+Thus, RGHJs are expected to be intrinsically as bright as the closest hot Jupiters. 
+Compared with the distant Jupiter-like planets around main sequence stars, the massive stellar wind of late red giants can increase the radio emission from planetary companions by more than 2 orders of magnitude, which allow us to explore 10 times more distant system, i.e., 1000 times more volume. This compensates the small population of evolved stars at least partially. 
+
 Equation (\ref{eq:F_nu_RGHJ}) gives the value which is by factor smaller than the prediction of equation (5) in \citet{ignace2010} in the case of $\eta = 1$. This originates from the different scaling laws for the planetary magnetic field and that their paper didn't incorporate the compression of the planetary magnetosphere due to massive stellar wind. 
 
 Using the model for planetary magnetic field strength, we may consider the  radio spectral intensity and maximum frequency of given planetary mass and age. 
@@ -681,7 +683,9 @@ We can see emission only from where the cyclotron frequency (equation (\ref{eq:f
 %%%
 The doubly hashed regions in Figure \ref{fig:radio} indicate the parameter spaces where this criteria is not satisfied and thus the radio emission from the planet cannot be observed from the Earth. 
 In reality, the peak of the auroral radio emission does not always occur at the maximum frequency. Instead, it usually exits at lower frequencies. Here, we also consider a more conservative criteria, $0.1 f_{\rm cyc} > f_{\rm plasma}^{\rm los}$ as a measure for the observability of the bulk of radio emission. In Figure \ref{fig:radio}, this conservative region is shown as hatched regions with vertical lines. 
-It is now shown that the plasma cut-off due to massive stellar wind is a major obstacle in detecting planetary companions around evolved stars. For a red-giant system, the most promising target if massive companion with $M_p \gtrsim 5M_J$. On the other hand, for a AGB-star system, it is very difficult to detect a signal from the planetary-mass companions within 100 AU. 
+It is now shown that the plasma cut-off due to massive stellar wind is a major obstacle in detecting planetary companions around evolved stars. 
+For a red-giant system, the most promising target is massive companions with $M_p \gtrsim 5M_J$. 
+On the other hand, for a AGB-star system, only massive planets at distant orbits are marginally detectable. 
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -802,7 +806,7 @@ Cross symbols indicate that the radio emission is not observable because cyclotr
 
 In order to examine the potential to detect radio emission of RGHJs with the current and near-future instruments, we estimate the possible radio emission from known red giants assuming that they have planetary companions. 
 For this purpose, we obtained the list of M-type red giants from Table 4 of \citet{dumm1998} with the data of mass, radius, and effective temperature.
-For each red giant, the mass-loss rate is estimated by Reimers' equation \citep{reimers1975}:
+For each red giant, the mass-loss rate is estimated by Reimers' equation \citep{reimers1975} \memoYF{should be replaced by the updated Reimer's equation}:
 %%%
 \begin{equation}
 \dot M_\star [M_\odot{\rm /yr}] \sim 4 \times 10^{-13} \eta \left( \frac{R_{\star }}{R_{\odot }} \right)\left( \frac{L_{\star }}{L_{\odot }} \right) \left( \frac{M_\star}{M_\odot} \right)^{-1}
