@@ -216,7 +216,7 @@ Instead, we investigate the parameter space where we can search for radio emissi
 
 In \S2, we describe our assumptions for the stellar wind, planetary magnetosphere, frequency of radio emission, and scaling of planetary radio emission.
 \S3 presents an estimate of the spectral radio intensity of RGHJs and compares the predictions with what might be expected from canonical hot Jupiters as well as those from Jupiter-twins.
-\S4 gives predictions for the signals from evolved systems within 400 pc, taking account of the intrinsic radio emission from the host evolved stars. Considering the sensitivity of the current and future radio instruments, we argue that SKA, and perhaps LOFAR-HBA as well, would be capable of detecting these signals within a reasonable integration time. 
+\S4 gives predictions for the signals from evolved systems within 400 pc, taking account of the intrinsic radio emission from the host evolved stars. Considering the sensitivity of the current and future radio instruments, we argue that the Square Kilometer Array(SKA), and perhaps the high band of the LOw Frequency ARray (LOFAR-HBA) as well, will be capable of detecting these signals within a reasonable integration time. 
 %In \S5, we discuss the usefulness of radio emission in exploring Jupiter-like planets around evolved stars. 
 In \S5, we mention the effects of canceling magnetic field which results from the plasmas spiraling in the planetary magnetosphere.  
 Finally, \S6 concludes the paper with a brief summary. 
@@ -231,7 +231,7 @@ Finally, \S6 concludes the paper with a brief summary.
 
 \memoYF{In the end the number of significant decimal digits is set to 1 or 2.}
 
-Before estimating the frequency of planetary radio emission and the spectral radio intensity, we specify the property of the planetary magnetic field in \S\ref{ss:magneticfield}, and that of the stellar wind of the evolved stars in \S\ref{ss:stellarwind}.  
+Before estimating the frequency of planetary radio emission and its radio spectral intensity, we specify the property of the planetary magnetic field in \S\ref{ss:magneticfield}, and that of the stellar wind of the evolved stars in \S\ref{ss:stellarwind}.  
 Then, we discuss the framework to estimate the frequency and intensity of planetary radio emission in \S\ref{ss:model_frequency} and \S\ref{ss:model_intensity}, respectively. 
 
 
@@ -289,7 +289,7 @@ The density of the metallic core, $\rho _{\rm dynamo}$ is obtained by averaging 
 In the case of Jupiter, $r_{\rm dynamo, J} = 0.85 R_{\rm J}$ and $\rho_{\rm dynamo, J} = 1.899~{\rm g/cm}^3$.
 
 The scaling of convected heat flux at the outer boundary, $q_o$, is obtained by dividing the age-dependent net-planetary luminosity by the surface area of the core region, i.e., $4\pi r_{\rm dynamo}^2$. 
-The time-dependence luminosity is taken from \citet{burrows_et_al2001} \citep[see also][]{marley2007}. 
+The time-dependent luminosity is taken from \citet{burrows_et_al2001} \citep[see also][]{marley2007}. 
 Ignoring the relatively weak dependence on average atmospheric Rosseland mean opacity leads to:
 %%%%%%%%%%
 \begin{equation}
@@ -324,7 +324,8 @@ under this model.
 \label{ss:stellarwind}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-Another ingredient needed for modeling the radio emission from the interaction between the planetary magnetic field and the stellar wind is the density and velocity of the stellar wind. 
+To model the radio emission from the interaction between the planetary magnetic field and the stellar wind,
+we need the density and velocity of the stellar wind. 
 The number density of electrons in the stellar wind, $n$, can be expressed as
 %%%%%%%%%% 
 \begin{equation}
@@ -356,8 +357,8 @@ Therefore,
 Based on equations (\ref{eq:scale_Mdot}) and (\ref{eq:scale_v}), the number density of the stellar wind (equation (\ref{eq:n})) are normalized as follows:
 %%%%%%%%%% 
 \begin{eqnarray}
-n &=& 1.80 \times 10^6 \; {\rm cm^{-3}} \\
-&&\times \left( \frac{\dot M_\star}{10^{-8} M_{\odot }{\rm /yr}} \right) \left( \frac{v}{30~\mbox{km/s}} \right)^{-1} \left( \frac{a}{5 \; {\rm AU}} \right)^{-2}. \label{eq:n_normalized}
+n &=& 1.80 \times 10^6 \; {\rm cm^{-3}} \times \left( \frac{a}{5 \; {\rm AU}} \right)^{-2} \notag \\
+&&\times \left( \frac{\dot M_\star}{10^{-8} M_{\odot }{\rm /yr}} \right) \left( \frac{v}{30~\mbox{km/s}} \right)^{-1}. \label{eq:n_normalized}
 \end{eqnarray}
 %%%%%%%%%% 
 \memoYF{check the values above}
@@ -368,7 +369,7 @@ However, at this stage, the velocity of stellar wind becomes slower than the esc
 %%%%%%%%%
 \begin{eqnarray}
 L_{\rm acc} \sim &&  10^{28} \; {\rm erg\;s}^{-1} \left( \frac{\dot M_*}{10^{-8} M_{\odot }/{\rm yr}} \right)  \notag \\
-&& \times \left( \frac{M_p}{10 M_J} \right)^3 \left( \frac{M_*}{M_{\odot }} \right) \\
+&& \times \left( \frac{M_p}{10 M_J} \right)^3 \left( \frac{M_*}{M_{\odot }} \right). \\
 %
 T_{\rm acc} \sim && 2 \times 10^6 ~\mbox{K} \left( \frac{M_p}{10 M_J} \right) \\
 \sim && 2 \times 10^5 ~\mbox{K} \left( \frac{M_p}{M_J} \right). 
@@ -391,7 +392,7 @@ where $S$ is the source rate of ionizing photons, $n$ is the density of hydrogen
 &\sim& 2.74 \times 10^{-14} \; \left( \frac{M_p}{M_J} \right)^{-3/4} \;\; {\rm cm^3 \; sec^{-1}} 
 \end{eqnarray}
 %%%%%%%%%
-The source rate is obtained by counting the number of photons whose energy is higher than 13.6~eV ($\lambda = $), the energy needed to ionize hydrogen atoms.
+The source rate is obtained by counting the number of photons whose energy is greater than 13.6~eV ($\lambda < 91~\rm nm$), the energy needed to ionize hydrogen atoms.
 As a result, 
 %%%%%%%%%
 \begin{eqnarray}
