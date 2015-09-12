@@ -227,8 +227,6 @@ Finally, \S6 concludes the paper with a brief summary.
 \label{s:assumptions}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\memoYF{In the end the number of significant decimal digits is set to 1 or 2.}
-
 Before estimating the frequency of planetary radio emission and its radio spectral intensity, we specify the property of the planetary magnetic field in \S\ref{ss:magneticfield}, and that of the stellar wind of the evolved stars in \S\ref{ss:stellarwind}.  
 Then, we discuss the framework to estimate the frequency and intensity of planetary radio emission in \S\ref{ss:model_frequency} and \S\ref{ss:model_intensity}, respectively. 
 
@@ -291,7 +289,8 @@ The time-dependent luminosity is taken from equation (1) of \citet{burrows_et_al
 Ignoring the relatively weak dependence on average atmospheric Rosseland mean opacity leads to:
 %%%%%%%%%%
 \begin{equation}
-L \sim 1.84\times10^{-10} L_\odot \left( \frac{t}{4.5 \rm~Gyr} \right)^{-1.3} \left( \frac{M_p}{M_J} \right)^{2.64} \, 	
+%L \sim 1.84\times10^{-10} L_\odot \left( \frac{t}{4.5 \rm~Gyr} \right)^{-1.3} \left( \frac{M_p}{M_J} \right)^{2.64} \, 	
+L \sim 6.3\times10^{23} \left( \frac{t}{4.5 \rm~Gyr} \right)^{-1.3} \left( \frac{M_p}{M_J} \right)^{2.64} \, 
 \label{eq:burrowsLum}
 \end{equation}
 %%%%%%%%%%
@@ -355,11 +354,10 @@ Therefore,
 Based on equations (\ref{eq:scale_Mdot}) and (\ref{eq:scale_v}), the number density of the stellar wind (equation (\ref{eq:n})) are normalized as follows:
 %%%%%%%%%% 
 \begin{eqnarray}
-n &=& 1.80 \times 10^6 \; {\rm cm^{-3}} \times \left( \frac{a}{5 \; {\rm AU}} \right)^{-2} \notag \\
+n &=& 1.8 \times 10^6 \; {\rm cm^{-3}} \times \left( \frac{a}{5 \; {\rm AU}} \right)^{-2} \notag \\
 &&\times \left( \frac{\dot M_\star}{10^{-8} M_{\odot }{\rm /yr}} \right) \left( \frac{v}{30~\mbox{km/s}} \right)^{-1}. \label{eq:n_normalized}
 \end{eqnarray}
 %%%%%%%%%% 
-\memoYF{check the values above}
 
 As discussed in \citet{ignace2010}, the ionization fraction of the stellar wind of evolved stars are supposedly as low as $\sim 10^{-3}$\memoYF{cite something}. Since only charged particles interact with planetary magnetic field, this suggests the inefficient interaction with planetary magnetosphere and hence low input energy for radio emission. 
 However, at this stage, the velocity of stellar wind becomes slower than the escape velocity of planetary companion and hence the stellar wind particles are expected to accrete onto the planets. 
@@ -441,7 +439,7 @@ Planetary auroral radio wave are emitted at the local cyclotron frequency along 
 The upper limit is around the cyclotron frequency of the planetary surface magnetic field, $\nu_{\rm cyc}$: 
 %%%%%%%%%% 
 \begin{equation}
-\nu_{\rm cyc} = \frac{eB}{2\pi m_e} \approx 27.9 {\rm~MHz} \left( \frac{B}{10 \rm~G} \right) \label{eq:fcyc}
+\nu_{\rm cyc} = \frac{eB}{2\pi m_e c} \approx 28 {\rm~MHz} \left( \frac{B}{10 \rm~G} \right) \label{eq:fcyc}
 \end{equation}
 %%%%%%%%%%
 where $e$ and $m_e$ are the charge and mass of the electron, respectively.
@@ -458,11 +456,11 @@ At the favorable viewing condition, when the planet is on the near side of its s
 Therefore, combining Eq.~(\ref{eq:n_normalized}) and Eq.~(\ref{eq:fplasma}), we have
 %%%
 \begin{eqnarray}
-\label{eq:fplasmalos} \nu_{\rm plasma}^{\rm los} & \sim & 8.98 {\rm~kHz} \times \left( \frac{\dot M_\star}{4 \pi a^2 m_p v} \times 1\rm~cm^3 \right)^{1/2} \\
-\label{eq:fplasmalos_scaled} & = & 14.7{\rm~MHz} \times \left( \frac{a}{5~\mbox{AU}}\right)^{-1} \left(\frac{v}{30~\mbox{km/s}}  \right)^{-1/2} \notag \\
+\label{eq:fplasmalos} \nu_{\rm plasma}^{\rm los} & \sim & 
+8979 {\rm~kHz} \times \left( \frac{\dot M_\star}{4 \pi a^2 m_p v} \times 1\rm~cm^3 \right)^{1/2} \\
+\label{eq:fplasmalos_scaled} &=& 12 {\rm~MHz} \times \left( \frac{a}{5~\mbox{AU}}\right)^{-1} \left(\frac{v}{30~\mbox{km/s}}  \right)^{-1/2} \notag \\
  & & \times \left( \frac{\dot M_\star}{10^{-8} M_{\odot }{\rm /yr}}\right)^{1/2} \, .
 \end{eqnarray}
-\memoYF{check numbers in above equation}
 %%%
 %where in Eq.~(\ref{eq:fplasmalos_scaled}) we have taken the solar mass-loss rate $\dot M_\odot$ to be $2.0 \times 10^{-14}~M_\odot$/yr and the typical solar wind velocity $v_{\odot }$ to be 400~km/sec.
 
@@ -589,8 +587,9 @@ LOFAR, HERA, SKA, and potential upgrades to the VLA.
 Based on the assumption that the radio emission is proportional to the input kinetic energy (equation (\ref{eq:Pinp_kin})), the scaling of the radio emission is expanded as follows:
 %%%
 \begin{eqnarray}
-P_{\rm k,\,inp} &=& nv^3 r_s^2 %= n v^3 \left( \frac{B^2}{2\pi m_{\rm p}nv^2} \right)^{1/3}  \\
-&=& P_{\rm k,\,inp,\,J} \left( \frac{B}{B_J} \right)^{2/3} \left( \frac{a}{5.20~\mbox{AU}} \right)^{-4/3}  \notag \\
+P_{\rm k,\,inp} &=& nv^3 r_s^2 %= n v^3 \left( \frac{B^2}{8\pi m_{\rm p}nv^2} \right)^{1/3} R_J^2  \\
+\\
+&=& P_{\rm k,\,inp,\,J} \left( \frac{B}{B_J} \right)^{2/3} \left( \frac{a}{5.2~\mbox{AU}} \right)^{-4/3}  \notag \\
 && \times \left( \frac{\dot M_\star}{\dot M_{\odot}} \right)^{2/3} \left( \frac{v}{v_{\odot}} \right)^{5/3} \label{eq:Pkinp}
 \end{eqnarray}
 %%%
@@ -810,22 +809,21 @@ Cross symbols indicate that the radio emission is not observable because cyclotr
 
 In order to examine the potential to detect radio emission of RGHJs with the current and near-future instruments, we estimate the possible radio emission from known red giants assuming that they have planetary companions. 
 For this purpose, we obtained the list of M-type red giants from Table 4 of \citet{dumm1998} with the data of mass, radius, and effective temperature.
-For each red giant, the mass-loss rate is estimated by Reimers' equation \citep{reimers1975} \memoYF{should be replaced by the updated Reimer's equation}:
+For each red giant, the mass-loss rate is estimated by the improved Reimers' equation \citep{reimers1975} given by \citet{schroder2005,schroder2007}:
 %%%
 \begin{equation}
-\dot M_\star [M_\odot{\rm /yr}] \sim 4 \times 10^{-13} \eta \left( \frac{R_{\star }}{R_{\odot }} \right)\left( \frac{L_{\star }}{L_{\odot }} \right) \left( \frac{M_\star}{M_\odot} \right)^{-1}
+%\dot M_\star [M_\odot{\rm /yr}] \sim 4 \times 10^{-13} \eta \left( \frac{R_{\star }}{R_{\odot }} \right)\left( \frac{L_{\star }}{L_{\odot }} \right) \left( \frac{M_\star}{M_\odot} \right)^{-1}
+\dot M_\star [M_\odot{\rm /yr}] \sim 8 \times 10^{-14} \frac{\tilde L \tilde R}{\tilde M} \left( \frac{T_{\rm eff}}{4000} \right)^{3.5} \left( 1 + \frac{g_{\odot }}{4300 g_{\star}} \right) 
 \end{equation}
 %%%
-where $R_{\star }$, $L_{\star } (=4\pi R_{\star }^2 T_{\star }^4)$, and $M_{\star}$ are the radius, luminosity, and mass of the star. 
-The factor $\eta $ is $\sim 0.3-3$, and we assume $\eta =1$ here. 
+where $\tilde L = L_{\star }/L_{\odot }(=4\pi R_{\star }^2 T_{\star }^4)$, $\tilde R = R_{\star }/R_{\odot }$, $\tilde M = M_{\star }/M_{\odot }$, and $g$ is the surface gravity. 
 The velocity of the stellar wind is assumed to scale with the escape velocity, hence
 %%%
 \begin{equation}
 v \propto \sqrt{\frac{2GM_\star}{R_{\star }}}
 \end{equation}
 %%%
-The age of the system is assumed to be roughly the same as the lifetime of the main-sequence stage, which depends on the stellar mass.
-We assume \memoYF{validation}:
+The age of the system is assumed to be roughly the same as the lifetime of the main-sequence stage, which depends on the stellar mass. We simply assume:
 %%%
 \begin{equation}
 t \sim 10\,{\rm Gyr}\, \left( \frac{M_{\star}}{M_{\odot }} \right)^{-2.5}
