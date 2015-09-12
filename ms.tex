@@ -378,7 +378,7 @@ We estimate the scale of the ionized region by computing Stromgren radius of the
 R_{\rm stromgren} = \frac{3}{4\pi} \left( \frac{S}{n^2 \beta } \right)^{1/3}
 \end{equation}
 %%%%%%%%%
-where $S$ is the source rate of ionizing photons, $n$ is the density of hydrogen, and $\beta $ is the coefficient for recombination \memoYF{cite something}:
+where $\dot{N}_x$ is the source rate of ionizing photons, $n$ is the density of hydrogen, and $\beta $ is the coefficient for recombination \memoYF{cite something}:
 % http://www.tapir.caltech.edu/~chirata/ay102/Photoionized.pdf
 % T \propto 4.3e-13 ( T /10^4 K )^-0.7
 %%%%%%%%%
@@ -388,11 +388,15 @@ where $S$ is the source rate of ionizing photons, $n$ is the density of hydrogen
 &\sim& 2.74 \times 10^{-14} \; \left( \frac{M_p}{M_J} \right)^{-3/4} \;\; {\rm cm^3 \; sec^{-1}} 
 \end{eqnarray}
 %%%%%%%%%
-The source rate is obtained by counting the number of photons whose energy is greater than 13.6~eV ($\lambda < 91~\rm nm$), the energy needed to ionize hydrogen atoms.
+The source rate is obtained by counting the number of photons whose energy exceeds the ionization energy of Hydrogen ($1{\rm~Ry} = 13.6$~eV where Ry is the Rydberg constant, or $\lambda = 91.2\rm~nm$), which is approximately given by dividing the X-ray accretion luminosity by the characteristic photon energy produced:
+\begin{equation}
+\dot{N}_x \sim \frac{L_{\rm acc}}{k_B T_{\rm acc}} \, ,
+\end{equation}
+where $k_B$ is Boltzmann's constant.
 As a result, 
 %%%%%%%%%
 \begin{eqnarray}
-S_* \sim  
+\dot{N}_x \sim  
   \left\{
     \begin{array}{ll}
       2 \times 10^{35} \;  {\rm sec^{-1}} & \;\;\;(M_p = M_J) \\
