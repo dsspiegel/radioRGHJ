@@ -521,7 +521,7 @@ By scaling this radius with equations (\ref{eq:n}) and (\ref{eq:stand-off}), the
 %&\sim & R_p \left( \frac{B^2}{8\pi m_{\rm p}nv^2} \right)^{1/6}  \\
 &=& r_{s,\,J} \left( \frac{B}{10~\mbox{G}} \right)^{1/3} \left( \frac{a}{5.2\mbox{AU}} \right)^{1/3}  \\
 && \times \left( \frac{\dot M_\star}{\dot M_\odot} \right)^{-1/6}  \left( \frac{\dot v}{v_{\odot }} \right)^{-1/6} \\
-\nonumber &=& 11.3 \, R_J \left( \frac{B}{10~\mbox{G}} \right)^{1/3}  \left( \frac{a}{5\mbox{AU}} \right)^{1/3} \\
+\nonumber &=& 15 \, R_J \left( \frac{B}{10~\mbox{G}} \right)^{1/3}  \left( \frac{a}{5\mbox{AU}} \right)^{1/3} \\
 && \times \left( \frac{\dot M_\star}{10^{-8} M_{\odot }{\rm /yr}} \right)^{-1/6}  \left( \frac{\dot v}{10^{-1}v_{\odot }} \right)^{-1/6}
  \label{eq:stand-off-radius}
 \end{eqnarray}
@@ -604,13 +604,19 @@ Then, equation (\ref{eq:Pkinp}) can be re-normalized as follows.
 %%%
 \begin{eqnarray}
 P_{\rm k,\,inp} 
-&\approx & 227 ~P_{\rm k,\,inp,\,J} \left( \frac{B}{B_J} \right)^{2/3} \left( \frac{a}{5~\mbox{AU}} \right)^{-4/3} \notag \\
-&& \times \left( \frac{\dot M_\star}{10^6 \dot M_{\odot}} \right)^{2/3} \left( \frac{v}{10^{-1} v_{\odot}} \right)^{5/3} \\
+%&\approx & 227 ~P_{\rm k,\,inp,\,J} \left( \frac{B}{B_J} \right)^{2/3} \left( \frac{a}{5~\mbox{AU}} \right)^{-4/3} \notag \\
+%&& \times \left( \frac{\dot M_\star}{\dot M_{\odot}} \right)^{2/3} \left( \frac{v}{10^{-1} v_{\odot}} \right)^{5/3} \\
+&\approx &  140 ~P_{\rm k,\,inp,\,J} \left( \frac{B}{B_J} \right)^{2/3} \left( \frac{a}{5~\mbox{AU}} \right)^{-4/3} \notag \\
+&& \times \left( \frac{\dot M_\star}{10^{-8} M_{\odot}{\rm /yr}} \right)^{2/3} \left( \frac{v}{10^{-1} v_{\odot}} \right)^{5/3} \\
 && \;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\; \mbox{(for RGB stars' companions)} \notag \\
-&\approx & 2.27 \times 10^4 ~P_{\rm k,\,inp,\,J} \left( \frac{B}{B_J} \right)^{2/3} \left( \frac{a}{5~\mbox{AU}} \right)^{-4/3} \notag \\
-&& \times \left( \frac{\dot M_\star}{10^9 \dot M_{\odot}} \right)^{2/3} \left( \frac{v}{10^{-1} v_{\odot}} \right)^{5/3}  \\
+%&\approx & 2.27 \times 10^4 ~P_{\rm k,\,inp,\,J} \left( \frac{B}{B_J} \right)^{2/3} \left( \frac{a}{5~\mbox{AU}} \right)^{-4/3} \notag \\
+%&& \times \left( \frac{\dot M_\star}{10^9 \dot M_{\odot}} \right)^{2/3} \left( \frac{v}{10^{-1} v_{\odot}} \right)^{5/3}  \\
+&\approx & 14000 \times 10^4 ~P_{\rm k,\,inp,\,J} \left( \frac{B}{B_J} \right)^{2/3} \left( \frac{a}{5~\mbox{AU}} \right)^{-4/3} \notag \\
+&& \times \left( \frac{\dot M_\star}{10^{-5} M_{\odot}{\rm /yr}} \right)^{2/3} \left( \frac{v}{10^{-1} v_{\odot}} \right)^{5/3}  \\
 && \;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\; \mbox{(for AGB stars' companions)} \notag \\
-&\approx & 489 ~P_{\rm k,\,inp,\,J} \left( \frac{B}{B_J} \right)^{2/3} \left( \frac{a}{0.05~\mbox{AU}} \right)^{-4/3} \notag \\
+%&\approx & 489 ~P_{\rm k,\,inp,\,J} \left( \frac{B}{B_J} \right)^{2/3} \left( \frac{a}{0.05~\mbox{AU}} \right)^{-4/3} \notag \\
+%&& \times \left( \frac{\dot M_\star}{\dot M_{\odot}} \right)^{2/3} \left( \frac{v}{v_{\odot}} \right)^{5/3} \\
+&\approx & 490 ~P_{\rm k,\,inp,\,J} \left( \frac{B}{B_J} \right)^{2/3} \left( \frac{a}{0.05~\mbox{AU}} \right)^{-4/3} \notag \\
 && \times \left( \frac{\dot M_\star}{\dot M_{\odot}} \right)^{2/3} \left( \frac{v}{v_{\odot}} \right)^{5/3} \\
 && \;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\; \mbox{(for canonical hot jupiters)} \notag 
 \end{eqnarray}
@@ -648,22 +654,28 @@ Combining the expressions above, we find that the radio spectral flux density ob
 %%%
 \begin{eqnarray}
 F_{\nu} &=& \frac{P_{\rm radio}}{\Omega d^2 \nu_{\rm cyc}} \\
-&\approx & 5.22\times 10^{-8} \mbox{Jy} \left( \frac{d}{100\mbox{~pc}} \right)^{-2}  \notag \\
+&\approx & 5.2\times 10^{-8} \mbox{Jy} \left( \frac{d}{100\mbox{~pc}} \right)^{-2}  \notag \\
 &&\times \left( \frac{B}{B_J} \right)^{-1/3}  \left( \frac{a}{5~\mbox{AU}} \right)^{-4/3} \notag \\
 && \times \left( \frac{\dot M_\star}{\dot M_{\odot}} \right)^{2/3} \left( \frac{v}{v_{\odot}} \right)^{5/3} \label{eq:F_nu} \\
 && \;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\; \mbox{(for Jupiter-twin)} \notag \\
 %%%
-&\approx & 1.12 \times 10^{-5} \mbox{Jy} \left( \frac{d}{100\mbox{~pc}} \right)^{-2}  \notag \\
+%&\approx & 1.12 \times 10^{-5} \mbox{Jy} \left( \frac{d}{100\mbox{~pc}} \right)^{-2}  \notag \\
+%&&\times \left( \frac{B}{B_J} \right)^{-1/3} \left( \frac{a}{5~\mbox{AU}} \right)^{-4/3} \notag \\ 
+%&& \times \left( \frac{\dot M_\star}{10^6 \dot M_{\odot}} \right)^{2/3} \left( \frac{v}{10^{-1} v_{\odot}} \right)^{5/3} \label{eq:F_nu_RGHJ} \\
+&\approx & 0.70 \times 10^{-5} \mbox{Jy} \left( \frac{d}{100\mbox{~pc}} \right)^{-2}  \notag \\
 &&\times \left( \frac{B}{B_J} \right)^{-1/3} \left( \frac{a}{5~\mbox{AU}} \right)^{-4/3} \notag \\ 
-&& \times \left( \frac{\dot M_\star}{10^6 \dot M_{\odot}} \right)^{2/3} \left( \frac{v}{10^{-1} v_{\odot}} \right)^{5/3} \label{eq:F_nu_RGHJ} \\
+&& \times \left( \frac{\dot M_\star}{10^{-8} M_{\odot}/{\rm yr}} \right)^{2/3} \left( \frac{v}{10^{-1} v_{\odot}} \right)^{5/3} \label{eq:F_nu_RGHJ} \\
 && \;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\; \mbox{(for RGB stars' companions)} \notag \\
 %%%
-&\approx & 1.12 \times 10^{-3} \mbox{Jy} \left( \frac{d}{100\mbox{~pc}} \right)^{-2}  \notag \\
+%&\approx & 1.12 \times 10^{-3} \mbox{Jy} \left( \frac{d}{100\mbox{~pc}} \right)^{-2}  \notag \\
+%&&\times \left( \frac{B}{B_J} \right)^{-1/3} \left( \frac{a}{5~\mbox{AU}} \right)^{-4/3} \notag \\ 
+%&& \times \left( \frac{\dot M_\star}{10^9 \dot M_{\odot}} \right)^{2/3} \left( \frac{v}{10^{-1} v_{\odot}} \right)^{5/3} \label{eq:F_nu_AGB} \\
+&\approx & 0.70 \times 10^{-3} \mbox{Jy} \left( \frac{d}{100\mbox{~pc}} \right)^{-2}  \notag \\
 &&\times \left( \frac{B}{B_J} \right)^{-1/3} \left( \frac{a}{5~\mbox{AU}} \right)^{-4/3} \notag \\ 
-&& \times \left( \frac{\dot M_\star}{10^9 \dot M_{\odot}} \right)^{2/3} \left( \frac{v}{10^{-1} v_{\odot}} \right)^{5/3} \label{eq:F_nu_AGB} \\
+&& \times \left( \frac{\dot M_\star}{10^{-5} M_{\odot}/{\rm yr}} \right)^{2/3} \left( \frac{v}{10^{-1} v_{\odot}} \right)^{5/3} \label{eq:F_nu_AGB} \\
 && \;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\; \mbox{(for AGB stars' companions)} \notag \\
 %%%
-&\approx & 2.42 \times 10^{-5} \mbox{Jy} \left( \frac{d}{100\mbox{~pc}} \right)^{-2}  \notag \\
+&\approx & 2.4 \times 10^{-5} \mbox{Jy} \left( \frac{d}{100\mbox{~pc}} \right)^{-2}  \notag \\
 &&\times \left( \frac{B}{B_J} \right)^{-1/3} \left( \frac{a}{0.05~\mbox{AU}} \right)^{-4/3} \notag \\ 
 && \times \left( \frac{\dot M_\star}{\dot M_{\odot}} \right)^{2/3} \left( \frac{v}{v_{\odot}} \right)^{5/3} \label{eq:F_nu_RGHJs} \\
 && \;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\; \mbox{(for canonical hot jupiters)} \notag 
@@ -1165,13 +1177,13 @@ P_{\rm inp,k}=nv^3 r_s^2 \propto \dot M_{\star} v^2 a^{-2} r_s^2.
 Combining the above equation with the scaling between the radius of the magnetic stand-off point, $r_s$, and the planetary magnetic field $B$ (equation (\ref{eq:stand-off-radius})), i.e.\
 %%%
 \begin{equation}
-r_s \propto B^{1/3} a^{1/3} \dot M_{\star }^{-1/6} \dot v^{-1/6}, 
+r_s \propto B^{1/3} a^{1/3} \dot M_{\star }^{-1/6} v^{-1/6}, 
 \end{equation}
 %%%
 and assuming a constant stellar wind, we obtain:
 %%%
 \begin{equation}
-P_{\rm inp, k} \propto B^{2/3} a^{-4/3} \dot M_{\star }^{2/3} \dot v^{5/3}.
+P_{\rm inp, k} \propto B^{2/3} a^{-4/3} \dot M_{\star }^{2/3} v^{5/3}.
 \end{equation}
 \memoTM{I don't see how $\dot v \neq 0$ here, if we're assuming a constant stellar wind.}
 %%%
