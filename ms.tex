@@ -473,13 +473,14 @@ Here, we ignored the attenuation of X-ray because the optical depth $\tau \sim n
 The ionization fraction $\alpha $ that satisfies \ref{eq:equilibrium} is shown in Figure \ref{fig:ionizationfraction}.  
 Although the photon number is large for larger planets, the strong dependence of cross section on the photon energy decreases the radius of ionized region. 
 However, still, substantial amount of ionized plasmas are expected around the magnetic stand-off radius. 
-\memoYF{Secondary ionization by energetic electrons needs to be incorporated. }
+\memoYF{Secondary ionization by energetic electrons needs to be incorporated.}
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{figure}[htbp]
    \plotoneh{ionizationfraction.pdf}
    \caption{Ionization fraction due to X-ray from the planetary accretion disk.}
+   \memoDS{This looks great.  Might be good to also show the locations of the magnetic standoff point and the ``stromgren sphere radius'' on this figure (say, with vertical dashed and dotted lines?), and to move the legend to the lower left corner? {\tt plt.legend(loc=3)}}
   \label{fig:ionizationfraction}
 \end{figure}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% 
