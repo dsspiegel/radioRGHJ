@@ -357,7 +357,7 @@ n &=& 1.8 \times 10^6 \; {\rm cm^{-3}} \times \left( \frac{a}{5 \; {\rm AU}} \ri
 \end{eqnarray}
 %%%%%%%%%% 
 
-As discussed in \citet{ignace2010}, the ionization fraction of the stellar wind of evolved stars are supposedly as low as $\sim 10^{-3}$\memoYF{cite something}. Since only charged particles interact with planetary magnetic field, this suggests the inefficient interaction with planetary magnetosphere and hence low input energy for radio emission. 
+As discussed in \citet{ignace2010}, as the stars evolve, the ionization fraction of the stellar wind are lowered down to order of $\sim 10^{-3}$ \citep{drake1987}. Since only charged particles interact with planetary magnetic field, this suggests the inefficient interaction with planetary magnetosphere and hence low input energy for radio emission. 
 However, at this stage, the velocity of stellar wind becomes slower than the escape velocity of planetary companion and hence the stellar wind particles are expected to accrete onto the planets. 
 \citet{spiegel+madhusudhan2012} computed the accretion luminosity $L_{\rm acc}$ and the temperature $T_{\rm acc}$ as follows: 
 %%%%%%%%%
@@ -366,61 +366,33 @@ L_{\rm acc} \sim &&  10^{28} \; {\rm erg\;s}^{-1} \left( \frac{\dot M_*}{10^{-8}
 && \times \left( \frac{M_p}{10 M_J} \right)^3 \left( \frac{M_*}{M_{\odot }} \right). \\
 %
 T_{\rm acc} \sim && 2 \times 10^6 ~\mbox{K} \left( \frac{M_p}{10 M_J} \right) \\
-\sim && 2 \times 10^5 ~\mbox{K} \left( \frac{M_p}{M_J} \right). 
+\sim && 2 \times 10^5 ~\mbox{K} \left( \frac{M_p}{M_J} \right). \label{eq:Tacc}
 \end{eqnarray}
 %%%%%%%%%
-The accretion disks around planets therefore emit X-ray radiation. 
-We estimate the scale of the ionized region by computing Stromgren radius of the accretion disk \citep{stromgren1939}: 
+Therefore, the accretion disks around planets therefore emit UV/X-ray radiation 
+whose characteristic energy $\sim k_B T_{\rm acc} $ exceeds the ionization energy of Hydrogen, $E_{\rm Rydberg} = 13.6$~eV, or $\lambda = 91.2\rm~nm$. 
+
+Let us consider the ionization profile around the planet. 
+We suppose a state where the ionization and recombination rates are in equilibrium. 
+Denoting the ionization fraction by $\alpha $, the equilibrium state at a distance $r$ from the planet may be approximately represented by 
 %%%%%%%%%
 \begin{equation}
-R_{\rm stromgren} = \frac{3}{4\pi} \left( \frac{\dot N_X}{n^2 \beta } \right)^{1/3}
+\frac{\dot N_X}{ 4 \pi r^2 } n ( 1-\alpha ) \sigma _H [E_{\rm photon}] = (n \alpha )^2 \beta [T_e] \label{eq:equilibrium}
 \end{equation}
 %%%%%%%%%
-where $\dot{N}_X$ is the source rate of ionizing photons, $n$ is the density of hydrogen, and $\beta $ is the coefficient for recombination \memoYF{cite something}:
-% http://www.tapir.caltech.edu/~chirata/ay102/Photoionized.pdf
-% T \propto 4.3e-13 ( T /10^4 K )^-0.7
+where $\dot N_X$ is the source rate of the photons that can ionize the hydrogen, 
+$\sigma _H$ is the cross section of H atoms for X-ray \citep{verner1996}: 
 %%%%%%%%%
-\begin{eqnarray}
-%\beta &=& 4.3? \times 10^{-13} \; \left( \frac{T}{10^4 \;{\rm K}} \right) ^{-3/4} \;\; {\rm cm^3 \; sec^{-1}} \\
-\beta &=& 2.6 \times 10^{-13} \; \left( \frac{T}{10^4 \;{\rm K}} \right) ^{-3/4} \;\; {\rm cm^3 \; sec^{-1}} \\
-&\sim& 2.74 \times 10^{-14} \; \left( \frac{M_p}{M_J} \right)^{-3/4} \;\; {\rm cm^3 \; sec^{-1}} 
-\end{eqnarray}
-%%%%%%%%%
-The source rate is obtained by counting the number of photons whose energy exceeds the ionization energy of Hydrogen ($1{\rm~Ry} = 13.6$~eV where Ry is the Rydberg constant, or $\lambda = 91.2\rm~nm$), which is approximately given by dividing the X-ray accretion luminosity by the characteristic photon energy produced:
 \begin{equation}
-\dot{N}_X \sim \frac{L_{\rm acc}}{k_B T_{\rm acc}} \, ,
+\sigma _H [E_{\rm photon}] \sim 6.3 \times 10^{-18} \;{\rm cm}^2 \cdot \left( \frac{E_{\rm photon}}{E_{\rm Rydberg}} \right)^{-3} \label{eq:sigma_H}
 \end{equation}
-where $k_B$ is Boltzmann's constant.
-As a result, 
 %%%%%%%%%
-\begin{eqnarray}
-\dot{N}_x \sim  
-  \left\{
-    \begin{array}{ll}
-      2 \times 10^{35} \;  {\rm sec^{-1}} & \;\;\;(M_p = M_J) \\
-      3 \times 10^{37} \; {\rm sec^{-1}} & \;\;\;(M_p = 10 M_J)
-    \end{array}. 
-  \right.
-\end{eqnarray}
-%%%%%%%%%
-Using the number density of hydrogen atoms given by equation (\ref{eq:n_normalized}), 
-%%%%%%%%%
-\begin{eqnarray}
-R_{\rm stromgren} \sim  
-  \left\{
-    \begin{array}{ll}
-      40 ~R_J & \;\;\;(M_p = M_J) \\
-      400 ~R_J & \;\;\;(M_p = 10 M_J)
-    \end{array}
-  \right.
-\end{eqnarray}
-%%%%%%%%%
-for a planet around a red giants at 5~AU. 
+where $E_{\rm photon}$ is the energy per photon, 
+and $\beta [T_e]$ is the ``class B'' recombination coefficient which is 
+$ \beta \sim 2.6 \times 10^{-13}\;{\rm cm^3/sec} $ \citep{pequignot1991} 
+at electron temperature of stellar wind of evolved stars, $T_e \sim 10^4 $K \citep{suzuki2007}. 
+In equation (\ref{eq:equilibrium}), we ignored the attenuation of X-ray because the optical depth $\tau \sim n \sigma _H r$ is much smaller than unity.  
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\memoYF{how about the following}
-
-The accretion disks around planets therefore emit X-ray radiation. 
 The source rate is obtained by counting the number of photons whose energy exceeds the ionization energy of Hydrogen ($E_{\rm Rydberg} = 13.6$~eV, %where Ry is the Rydberg constant, 
 or $\lambda = 91.2\rm~nm$), which is approximately given by dividing the X-ray accretion luminosity by the characteristic photon energy produced:
 %%%%%%%%%
@@ -441,50 +413,52 @@ As a result,
   \right.
 \end{eqnarray}
 %%%%%%%%%
-
-
-
-Let us consider the ionization state around the planet. 
-We suppose a state where the ionization and recombination rates are in equilibrium. 
-The cross section of H atoms for X-ray, $\sigma _H [E_{\rm photon}] $ is
+For the accretion disks of large planets, however, the characteristic photon energy is so high (equation (\ref{eq:Tacc})) that the released energetic electrons may also ionize other atoms in the vicinity; the cross section of hydrogen for electrons is $\sim 4\times 10^{-17} {\rm cm}^2$  \citep{fite1958} and thus about 60\% of the released electrons will be used to ionize other atoms within a distance of $2R_J$. 
+In theory, photons with energy $E{\rm photon}$ have potential to ionize $E_{\rm photon}/E_{\rm Rydberg}$ times. 
+To take this into account, we also consider replacing the source term $\dot N_X$ in equation (\ref{eq:equilibrium}) by 
 %%%%%%%%%
 \begin{equation}
-\sigma _H [E_{\rm photon}] = 6.3 \times 10^{-18} \;{\rm cm}^2 \cdot \left( \frac{E_{\rm photon}}{E_{\rm Rydberg}} \right)^{-3} 
+\dot{N}_X \rightarrow \dot{N}_X \left[ 1 + f \left( \frac{E_{\rm photon}}{E_{\rm Rydberg}} - 1 \right) \right] 
 \end{equation}
 %%%%%%%%%
-where $E_{\rm photon} = k_B T_{\rm acc} $ is energy per photon, 
-while the recombination rate $\beta [T_e]$ is 
-%%%%%%%%%
-\begin{equation}
-\beta [T_e] = 2.6 \times 10^{-13}\;{\rm cm^3/sec}\cdot\left(\frac{T_e}{10^{4}} \right)^{-3/4}
-\end{equation}
-%%%%%%%%%
-where $T _e$ is electron temperature $\sim 10^4$ K \memoYF{cite something}. 
+where the $f$ is a fudge factor to represent the efficiency of this reaction. 
 
-Denoting the ionization fraction by $\alpha $, the equilibrium state at a distance $r$ from the planet is represented by 
+The ionization fraction $\alpha $ as a solution of equation (\ref{eq:equilibrium}) is shown in Figure \ref{fig:ionizationfraction}. 
+The solid lines show the ionization fraction of $f=0$ (no additional ionization by electrons) and dashed lines show that of $f=0.5$. In the figure, the vertical lines show the magnetic stand-off points obtained by equation (\ref{eq:stand-off-radius}) below. \memoYF{need to replace the order?} 
+While the photon rate is large for larger planets, the strong dependence of cross section on the photon energy (equation \ref{eq:sigma_H}) leads to the decrease in the radius of ionized region. 
+Nevertheless, still, substantial amount of ionized plasmas are expected around the magnetic stand-off radius. 
+
+The extent of ionized region can also be roughly estimated by Stromgren radius of the accretion disk \citep{stromgren1939}: 
 %%%%%%%%%
 \begin{equation}
-\frac{\dot N_X}{ 4 \pi r^2 } n ( 1-\alpha ) \sigma _H [E_{\rm photon}] = (n \alpha )^2 \beta [T_e] \label{eq:equilibrium}
+R_{\rm stromgren} = \left( \frac{3}{4\pi} \frac{\dot N_X}{n^2 \beta } \right)^{1/3}
 \end{equation}
 %%%%%%%%%
-Here, we ignored the attenuation of X-ray because the optical depth $\tau \sim n \sigma r$ is much smaller than unity.  
-The ionization fraction $\alpha $ that satisfies \ref{eq:equilibrium} is shown in Figure \ref{fig:ionizationfraction}.  
-Although the photon number is large for larger planets, the strong dependence of cross section on the photon energy decreases the radius of ionized region. 
-However, still, substantial amount of ionized plasmas are expected around the magnetic stand-off radius. 
-\memoYF{Secondary ionization by energetic electrons needs to be incorporated.}
+which gives
+%%%%%%%%%
+\begin{eqnarray}
+R_{\rm stromgren} \sim  
+  \left\{
+    \begin{array}{ll}
+      67 ~R_J & \;\;\;(M_p = M_J) \\
+      310 ~R_J & \;\;\;(M_p = 10 M_J)
+    \end{array}
+  \right. \label{eq:stromgren}
+\end{eqnarray}
+%%%%%%%%%
+for a planet around a red giants at 5~AU. 
+The Stromgren radius for $1M_J $ and for $10M_J$ are also indicated in Figure \ref{fig:ionizationfraction}. Note, however, that unlike the frequently-demonstrated photoionization problem around O/B-type stars, in the situation of our interest, the Stromgren radius is not a sharp edge of ionization anymore, due to smaller source rate and smaller cross section (in this case parameter ``a'' in equation (13) of \citet{stromgren1939} is not small). 
+The Stromgren radius are indicated by vertical arrows in Figure \ref{fig:ionizationfraction}. 
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{figure}[htbp]
    \plotoneh{ionizationfraction.pdf}
-   \caption{Ionization fraction due to X-ray from the planetary accretion disk.}
-   \memoDS{This looks great.  Might be good to also show the locations of the magnetic standoff point and the ``stromgren sphere radius'' on this figure (say, with vertical dashed and dotted lines?), and to move the legend to the lower left corner? {\tt plt.legend(loc=3)}}
+   \caption{Profile of ionization fraction due to X-ray from the planetary accretion disk, measured from the surface of the planet. Solid lines show the solutions without the correction for the secondary ionization by ionized electrons, while the dashed lines show the solutions which take the correction into account with the fudge factor $f=0.5$. The vertical arrows show the Stromgren radius estimated simply  by equation (\ref{eq:stromgren}). The dotted vertical lines indicate the location of the magnetic stand-off points obtained by equation (\ref{eq:stand-off-radius}) below. }
+   %\memoDS{This looks great.  Might be good to also show the locations of the magnetic standoff point and the ``stromgren sphere radius'' on this figure (say, with vertical dashed and dotted lines?), and to move the legend to the lower left corner? {\tt plt.legend(loc=3)}}
   \label{fig:ionizationfraction}
 \end{figure}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% 
-
- 
-\memoYF{until here}
 
 We therefore expect that the X-ray emission from the accretion disk is enough to ionize the stellar wind.
 This implies that the stellar wind particles represented by (equation~\ref{eq:n}) are fully ionized plasmas like Solar wind, and that the stellar wind can interact with the planetary magnetic fields in a rather similar way to the case of Solar System planets.
