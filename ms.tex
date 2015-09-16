@@ -414,16 +414,18 @@ As a result,
 \end{eqnarray}
 %%%%%%%%%
 For the accretion disks of large planets, however, the characteristic photon energy is so high (equation (\ref{eq:Tacc})) that the released energetic electrons may also ionize other atoms in the vicinity; the cross section of hydrogen for electrons is $\sim 4\times 10^{-17} {\rm cm}^2$  \citep{fite1958} and thus about 60\% of the released electrons will be used to ionize other atoms within a distance of $2R_J$. 
-In theory, photons with energy $E{\rm photon}$ have potential to ionize $E_{\rm photon}/E_{\rm Rydberg}$ times. 
+Photons with energy $E{\rm photon}$ have potential to ionize $E_{\rm photon}/E_{\rm Rydberg}$ times. 
 To take this into account, we also consider replacing the source term $\dot N_X$ in equation (\ref{eq:equilibrium}) by 
 %%%%%%%%%
 \begin{equation}
-\dot{N}_X \rightarrow \dot{N}_X \left[ 1 + f \left( \frac{E_{\rm photon}}{E_{\rm Rydberg}} - 1 \right) \right] 
+\dot{N}_X \rightarrow \dot{N}_X \left[ 1 + \xi \left( \frac{E_{\rm photon}}{E_{\rm Rydberg}} - 1 \right) \right] 
 \end{equation}
 %%%%%%%%%
-where the $f$ is a fudge factor to represent the efficiency of this reaction. 
+where the $\xi$ is a fudge factor to represent the efficiency of this reaction. \memoDS{Does the above argument imply that $\xi \sim 0.6$?  Should we think of it as an $N$-Rydberg photon, if absorbed, leads to 1 $N-1$-Rydberg electron, which produces 0.6 $N-2$-Rydberg electrons, $0.6^2$ $N-3$-Rydberg electrons, ... and $0.6^{N-1}$ 0-Rydberg electrons, so in the end we have $1 + 0.6 + 0.6^2 + ... + 0.6^{N-1} \sim 2.5$ electrons?}
+% N - power - 1 = energy of electrons
+% N - (N-1) - 1 = 0-Rydberg electron
 
-The ionization fraction $x$ as a solution of equation (\ref{eq:equilibrium}) is shown in Figure \ref{fig:ionizationfraction}. 
+The ionization fraction $x$ as a solution of equation (\ref{eq:equilibrium}) is shown in Figure \ref{fig:ionizationfraction}. \memoDS{We should write the expression ... it's just the quadratic formula, but it would be useful to write.}
 The solid lines show the ionization fraction of $f=0$ (no additional ionization by electrons) and dashed lines show that of $f=0.5$. In the figure, the vertical lines show the magnetic stand-off points obtained by equation (\ref{eq:stand-off-radius}) below. \memoYF{need to replace the order?} 
 While the photon rate is large for larger planets, the strong dependence of cross section on the photon energy (equation \ref{eq:sigma_H}) leads to the decrease in the radius of ionized region. 
 Nevertheless, still, substantial amount of ionized plasmas are expected around the magnetic stand-off radius. 
