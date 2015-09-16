@@ -1,4 +1,7 @@
 ms.pdf
+ms.ps
 *.log
 *.blg
+*.dvi
+*.out
 .DS_Store
