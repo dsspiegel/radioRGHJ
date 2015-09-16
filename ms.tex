@@ -374,10 +374,10 @@ whose characteristic energy $\sim k_B T_{\rm acc} $ exceeds the ionization energ
 
 Let us consider the ionization profile around the planet. 
 We suppose a state where the ionization and recombination rates are in equilibrium. 
-Denoting the ionization fraction by $\alpha $, the equilibrium state at a distance $r$ from the planet may be approximately represented by 
+Denoting the ionization fraction by $x$, the equilibrium state at a distance $r$ from the planet may be approximately represented by 
 %%%%%%%%%
 \begin{equation}
-\frac{\dot N_X}{ 4 \pi r^2 } n ( 1-\alpha ) \sigma _H [E_{\rm photon}] = (n \alpha )^2 \beta [T_e] \label{eq:equilibrium}
+\frac{\dot N_X}{ 4 \pi r^2 } n ( 1-x ) \sigma _H [E_{\rm photon}] = (n x )^2 \beta [T_e] \label{eq:equilibrium}
 \end{equation}
 %%%%%%%%%
 where $\dot N_X$ is the source rate of the photons that can ionize the hydrogen, 
@@ -404,7 +404,7 @@ where $k_B$ is Boltzmann's constant.
 As a result, 
 %%%%%%%%%
 \begin{eqnarray}
-\dot{N}_x \sim  
+\dot{N}_X \sim  
   \left\{
     \begin{array}{ll}
       2 \times 10^{35} \;  {\rm sec^{-1}} & \;\;\;(M_p = M_J) \\
@@ -423,7 +423,7 @@ To take this into account, we also consider replacing the source term $\dot N_X$
 %%%%%%%%%
 where the $f$ is a fudge factor to represent the efficiency of this reaction. 
 
-The ionization fraction $\alpha $ as a solution of equation (\ref{eq:equilibrium}) is shown in Figure \ref{fig:ionizationfraction}. 
+The ionization fraction $x$ as a solution of equation (\ref{eq:equilibrium}) is shown in Figure \ref{fig:ionizationfraction}. 
 The solid lines show the ionization fraction of $f=0$ (no additional ionization by electrons) and dashed lines show that of $f=0.5$. In the figure, the vertical lines show the magnetic stand-off points obtained by equation (\ref{eq:stand-off-radius}) below. \memoYF{need to replace the order?} 
 While the photon rate is large for larger planets, the strong dependence of cross section on the photon energy (equation \ref{eq:sigma_H}) leads to the decrease in the radius of ionized region. 
 Nevertheless, still, substantial amount of ionized plasmas are expected around the magnetic stand-off radius. 
@@ -813,20 +813,20 @@ However, assuming thermal Bremsstrahlung emission continues to dominate in this 
 %In this case, for example, extrapolating from the 0.4 mJy flux density of $\alpha$ Ori at 1.46 GHz, and using its spectral index 1.32~\citep{Newell1982}, we arrive at an estimated flux density of 0.04 mJy at 300 MHz. 
 % YF: This is consistent with the following equation, so I removed it to avoid redundancy. 
 %
-For example, \citet{OGorman2013} reported $\alpha $ Boo ($R_\star = 25.4 R_{\odot }$, $T=4286$ K, $d=11.26$ pc) at 1~GHz is about 70 $\mu$Jy, and $\alpha $ Tau ($R_\star = 44.2  R_{\odot }$, $T=3910$ K, $d=20.0$ pc) at 3~GHz is about 40 $\mu$Jy. 
+For example, \citet{OGorman2013} reported $\alpha$~Boo ($R_\star = 25.4 R_{\odot }$, $T=4286$ K, $d=11.26$ pc) at 1~GHz is about 70 $\mu$Jy, and $\alpha$~Tau ($R_\star = 44.2  R_{\odot }$, $T=3910$ K, $d=20.0$ pc) at 3~GHz is about 40 $\mu$Jy. 
 Using these data, we extrapolate the radio flux from the host star $F_{\star}$ to the lower frequency range with a simple power law as follows:
 %%%
 \begin{eqnarray}
 \nonumber F_{\star}(\nu ) &\sim & (0.4-1.4) \times 10^{-5} ~\mbox{Jy} \times \\
-&& \left( \frac{d}{100 ~\mbox{pc}} \right)^{-2} \!\! \left( \frac{R_{\star }}{100~R_{\odot}} \right)^2 \!\! \left( \frac{\nu}{1~\mbox{GHz}} \right)^{\alpha } 
+&& \left( \frac{d}{100 ~\mbox{pc}} \right)^{-2} \!\! \left( \frac{R_{\star }}{100~R_{\odot}} \right)^2 \!\! \left( \frac{\nu}{1~\mbox{GHz}} \right)^{\alpha_* } 
 \end{eqnarray}
 %%%
-where the power index $\alpha $ is order of unity. 
+where the power index $\alpha_* $ is order of unity. 
 
 Figure \ref{fig:cartoon} is a cartoon for a radio spectrum of a planet with $10~M_J$ and that of the host red giant star with 100~$R_{\odot }$, both of which are placed at a distance of 100 pc. 
 Note that the thermal contribution from the accretion disk is negligible in this figure. \memoYF{check} 
 The spectral shape is modeled by simply scaling the Jovian radio spectrum (e.g. Figure 8 of \cite{zarka_et_al2004}). 
-The continuum lines from the star in the cases of $\alpha =0.8$ and $2.0$ are shown as an extreme case. %; the 0.6 value is the prediction from the constant property wind model \citep{wright1975,panagia1975,olnon1975}. 
+The continuum lines from the star in the cases of $\alpha_* =0.8$ and $2.0$ are shown as an extreme case. %; the 0.6 value is the prediction from the constant property wind model \citep{wright1975,panagia1975,olnon1975}. 
 As Figure \ref{fig:cartoon} indicates, with a reasonable range of spectral index, the radio emission from the star is smaller by order of magnitude than the expected radio flux from RGHJs at frequencies below 300~MHz. 
 For less massive planets (with weaker magnetic fields), the distinction is even clearer, as the peak flux is larger and the peak frequencies are smaller. 
 
@@ -1082,7 +1082,7 @@ If the spectra are obtained, the upper cut-off frequency of the radio spectra wi
 \label{ss:Lfunc}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-In principle, if the expected luminosity function (LF) and positional distribution of possible RGHJ emitters were known one could estimate the likelihood of detecting RGHJs in radio surveys. For illustration we consider a hypothetical power-law distribution for the RGHJ luminosity function $N(L) \propto L^{-\alpha}$, where, $N(L)$ is the number of objects per unit volume with a luminosity of L, and assume an isotropic distribution of sources in the observed volume. Under these assumptions, the observed flux from the brightest source in a volume limited sample will scale with distance as $F_{\rm max} \propto d^{\frac{3}{\alpha} - 2}$, implying that the likelihood of finding the brightest source increases with distance for $\alpha < 3/2$. Such a scenario would indeed be favorable to detect RGHJs given that AGB stars, which are good sources for bright RGHJs due to their high mass loss rates, are rare and would require probing out to larger distances for detection. For example, for an $N(L) \propto L^{-1}$ the brightest source within a given distance will increase linearly with distance, making it favorable for detecting intrinsically rare objects. Therefore, it is important to determine the LF for RGHJ emitters in order to estimate their detectability. 
+In principle, if the expected luminosity function (LF) and positional distribution of possible RGHJ emitters were known one could estimate the likelihood of detecting RGHJs in radio surveys. For illustration we consider a hypothetical power-law distribution for the RGHJ luminosity function $N(L) \propto L^{-\alpha_L}$, where, $N(L)$ is the number of objects per unit volume with a luminosity of L, and assume an isotropic distribution of sources in the observed volume. Under these assumptions, the observed flux from the brightest source in a volume limited sample will scale with distance as $F_{\rm max} \propto d^{\frac{3}{\alpha_L} - 2}$, implying that the likelihood of finding the brightest source increases with distance for $\alpha_L < 3/2$. Such a scenario would indeed be favorable to detect RGHJs given that AGB stars, which are good sources for bright RGHJs due to their high mass loss rates, are rare and would require probing out to larger distances for detection. For example, for an $N(L) \propto L^{-1}$ the brightest source within a given distance will increase linearly with distance, making it favorable for detecting intrinsically rare objects. Therefore, it is important to determine the LF for RGHJ emitters in order to estimate their detectability. 
 
 Planning future targeted surveys of RGHJs would require accurate distribution functions of various parameters of giant stars in the local galaxy. In order to estimate the true luminosity function of RGHJ emitters one of the key factors is the distribution of mass-loss rates of giant host stars. As discussed in section~3.2, for a given set of orbital parameters the luminosity ($L$) of a RGHJ depends on the stellar mass-loss rate as $\dot{M}_\star^{1/2}$. Recent empirical studies of stellar mass-loss rates, including those for evolved giant stars, suggest $\dot{M}_\star \propto L_\star^{7.5/4} (R_\star/M_\star)(1+A/g_\star)$, where $L_\star$,  $R_\star$, $M_\star$, and $g_\star$ are the stellar luminosity, radius, mass, and gravity, respectively, and $A  = g_\odot/4300$ is a constant \citep{schroder2005,schroder2007}. 
 Therefore, the luminosity of a RGHJ varies nearly linearly as the luminosity of the host star, and is given by $L \propto L_\star^{7.5/8} [(R_\star/M_\star)(1+A/g_\star)]^{1/2}$. Therefore, the LF of giant host stars is an essential ingredient for determining the LF for RGHJs which future surveys would need to consider. 
@@ -1603,7 +1603,8 @@ Theoretically, the magnetic moment of gaseous planets are expressed with the fol
 where $\omega $ is the spin angular velocity, $\rho _c$, $r_c$ and $\sigma $ are the density, the radius, and the conductivity of the ``dynamo region'' where the density is high enough for hydrogen to be metallic, respectively. 
 The scaling indexes are estimated to be $\alpha \sim 1/2-1$, $\beta \sim 1/2$, $\gamma \sim 3-4$, and $\sigma \sim -1/2-0$. In this paper, we assume $\alpha =1$, $\beta =1/2$, and $r_c = 7/2$ \citep{sano1993}. \memoYF{validity?}
 
-Unlike usual hot jupiters, RGHJs are not subject to tidal lock, as the gravitational effects of their host star does not change even if the star evolves into red giants. Without no physical insights of the typical spin rate, we simply assume that of Jupiter: $\omega = 9.925$ [hr]. 
+Unlike usual hot jupiters, RGHJs are not tidally locked to their host stars, as the stellar tidal field does not change significantly even if the star evolves into a giant.
+Without no physical insights of the typical spin rate, we simply assume that of Jupiter: $\omega = 9.925$ [hr]. 
 \memoYF{Would their spin rate become higher or lower??}
 
 In order to evaluate $\rho _c $ and $r_c$, we need a model of internal structure of gaseous planets. 
