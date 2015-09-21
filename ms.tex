@@ -377,7 +377,11 @@ We suppose a state where the ionization and recombination rates are in equilibri
 Denoting the ionization fraction by $x$, the equilibrium state at a distance $r$ from the planet may be approximately represented by 
 %%%%%%%%%
 \begin{equation}
-\frac{\dot N_X}{ 4 \pi r^2 } n ( 1-x ) \sigma _H [E_{\rm photon}] = (n x )^2 \beta [T_e] \label{eq:equilibrium}
+\frac{\dot N_X}{ 4 \pi r^2 } e^{- \tau } n ( 1-x ) \sigma _H [E_{\rm photon}] = (n x )^2 \beta [T_e] \label{eq:equilibrium} 
+\end{equation}
+%%%%%%%%%
+\begin{equation}
+\tau = \int _{R_J}^r n(1-x) \sigma_H dr 
 \end{equation}
 %%%%%%%%%
 where $\dot N_X$ is the source rate of the photons that can ionize the hydrogen, 
@@ -391,7 +395,7 @@ where $E_{\rm photon}$ is the energy per photon,
 and $\beta [T_e]$ is the ``class B'' recombination coefficient which is 
 $ \beta \sim 2.6 \times 10^{-13}\;{\rm cm^3/sec} $ \citep{pequignot1991} 
 at electron temperature of stellar wind of evolved stars, $T_e \sim 10^4 $K \citep{suzuki2007}. 
-In equation (\ref{eq:equilibrium}), we ignored the attenuation of X-ray because the optical depth $\tau \sim n \sigma _H r$ is much smaller than unity.  
+
 
 The source rate is obtained by counting the number of photons whose energy exceeds the ionization energy of Hydrogen ($E_{\rm Rydberg} = 13.6$~eV, %where Ry is the Rydberg constant, 
 or $\lambda = 91.2\rm~nm$), which is approximately given by dividing the X-ray accretion luminosity by the characteristic photon energy produced:
@@ -413,21 +417,36 @@ As a result,
   \right.
 \end{eqnarray}
 %%%%%%%%%
-For the accretion disks of large planets, however, the characteristic photon energy is so high (equation (\ref{eq:Tacc})) that the released energetic electrons may also ionize other atoms in the vicinity; the cross section of hydrogen for electrons is $\sim 4\times 10^{-17} {\rm cm}^2$  \citep{fite1958} and thus about 60\% of the released electrons will be used to ionize other atoms within a distance of $2R_J$. 
-Photons with energy $E_{\rm photon}$ have potential to ionize $E_{\rm photon}/E_{\rm Rydberg}$ times. 
-To take this into account, we also consider replacing the source term $\dot N_X$ in equation (\ref{eq:equilibrium}) by 
+
+For the accretion disks of large planets, however, the characteristic photon energy is so high (equation (\ref{eq:Tacc})) that the released energetic electrons may also ionize other atoms in the vicinity; the cross section of hydrogen for electrons is $\sim 4\times 10^{-17} {\rm cm}^2$  \citep{fite1958} and the mean free path of the electrons is $\sim 2R_J$. 
+In practice, photons with energy $E_{\rm photon}$ have potential to ionize $E_{\rm photon}/E_{\rm Rydberg}$ times. 
+To take this into account, we consider the cascade where an electron with energy $E _{\rm in}$ ionize an atom releasing two electrons  (an ionizing electron plus the released electron) with energy $ ( E_{\rm in} - E_{\rm Rydberg} ) /2 $ for each. 
+Note that the proton will not acquire much energy due to the conservation of momentum and conservation of energy. \memoYF{in more detail?}
+For example, in an idealized case with $M_p = 10 M_{\rm J}$, $k_B T_{\rm acc} \sim 172\,{\rm eV} \sim 12 \, E_{\rm Rydberg}$, a photoionization produce a photon with energy of $(12-1) = 11 E_{\rm Rydberg} $, then second ionization by that electron produce two photons with energy of $(11-1)/2 = 5 E_{\rm Rydberg}$, and the third ionization by these two photons produce four photons with energy of $(5-1)/2 = 2 E_{\rm Rydberg}$; the cascade can proceed to the forth  order at the maximum. 
+In reality, not all released electrons may be able to proceed the next ionization. Letting $\xi $ represent the fraction of released electrons that proceed to the next ionization, the number of ionized atoms through this cascade, $\alpha $, is
 %%%%%%%%%
 \begin{equation}
-\dot{N}_X \rightarrow \dot{N}_X \left[ 1 + \xi \left( \frac{E_{\rm photon}}{E_{\rm Rydberg}} - 1 \right) \right] 
+\alpha = (1-\xi) + 2\xi (1-\xi) + 4 \xi^2 (1-\xi) + 8 \xi^3. 
 \end{equation}
 %%%%%%%%%
-where the $\xi$ is a fudge factor to represent the efficiency of this reaction. \memoDS{Does the above argument imply that $\xi \sim 0.6$?  Should we think of it as an $N$-Rydberg photon, if absorbed, leads to 1 $N-1$-Rydberg electron, which produces 0.6 $N-2$-Rydberg electrons, $0.6^2$ $N-3$-Rydberg electrons, ... and $0.6^{N-1}$ 0-Rydberg electrons, so in the end we have $1 + 0.6 + 0.6^2 + ... + 0.6^{N-1} \sim 2.5$ electrons?}
-% N - power - 1 = energy of electrons
-% N - (N-1) - 1 = 0-Rydberg electron
+With $\xi = 0.8 $, this gives $\alpha \sim 5$. 
+Then, $\dot{N}_X $ in equation (\ref{eq:equilibrium}) is replaced by 
+%%%%%%%%%
+\begin{equation}
+\dot{N}_X \rightarrow \alpha \dot{N}_X. 
+\end{equation}
+%%%%%%%%%
 
-The ionization fraction $x$ as a solution of equation (\ref{eq:equilibrium}) is shown in Figure \ref{fig:ionizationfraction}. \memoDS{We should write the expression ... it's just the quadratic formula, but it would be useful to write.}
-The solid lines show the ionization fraction of $\xi=0$ (no additional ionization by electrons) and dashed lines show that of $\xi=0.5$. In the figure, the vertical lines show the magnetic stand-off points obtained by equation (\ref{eq:stand-off-radius}) below. \memoYF{need to replace the order?} 
-While the photon rate is large for larger planets, the strong dependence of cross section on the photon energy (equation \ref{eq:sigma_H}) leads to the decrease in the radius of ionized region. 
+The ionization fraction $x$ as a solution of equation (\ref{eq:equilibrium}) is shown in Figure \ref{fig:ionizationfraction}. 
+%\memoDS{We should write the expression ... it's just the quadratic formula, but it would be useful to write.}
+When, $\tau \sim n \sigma _H r$ is much smaller than unity and thus $e^{-\tau }$ term can be ignored (that is the case for $M_p = 10 M_J$),  the solution is simply
+%%%%%%%%%
+\begin{eqnarray}
+x[r] &=& \frac{-1 + \sqrt{1+4C[r]}}{2C[r]} \\
+C[r] &\equiv &   \frac{4 \pi n \beta [T_e] r^2}{\dot{N} \sigma_H[E_{\rm photon}]}  \end{eqnarray}
+%%%%%%%%%
+The solid lines show the ionization fraction of $\xi=0$ (no additional ionization by electrons) and dashed lines show that of $\xi=0.5$. In the figure, the vertical lines show the magnetic stand-off points obtained by equation (\ref{eq:stand-off-radius}) below. 
+While the photon rate is large for larger planets, the strong dependence of cross section on the photon energy (equation (\ref{eq:sigma_H})) leads to the decrease in the radius of ionized region. 
 Nevertheless, still, substantial amount of ionized plasmas are expected around the magnetic stand-off radius. 
 
 The extent of ionized region can also be roughly estimated by Stromgren radius of the accretion disk \citep{stromgren1939}: 
@@ -450,20 +469,20 @@ R_{\rm stromgren} \sim
 %%%%%%%%%
 for a planet around a red giants at 5~AU. 
 The Stromgren radius for $1M_J $ and for $10M_J$ are also indicated in Figure \ref{fig:ionizationfraction}. Note, however, that unlike the frequently-demonstrated photoionization problem around O/B-type stars, in the situation of our interest, the Stromgren radius is not a sharp edge of ionization anymore, due to smaller source rate and smaller cross section (in this case parameter ``a'' in equation (13) of \citet{stromgren1939} is not small). 
-The Stromgren radius are indicated by vertical arrows in Figure \ref{fig:ionizationfraction}. 
+The Stromgren radii are indicated by vertical arrows in Figure \ref{fig:ionizationfraction}. 
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{figure}[htbp]
    \plotoneh{ionizationfraction.pdf}
-   \caption{Profile of ionization fraction due to X-ray from the planetary accretion disk, measured from the surface of the planet. Solid lines show the solutions without the correction for the secondary ionization by ionized electrons, while the dashed lines show the solutions which take the correction into account with the fudge factor $\xi=0.5$. The vertical arrows show the Stromgren radius estimated simply  by equation (\ref{eq:stromgren}). The dotted vertical lines indicate the location of the magnetic stand-off points obtained by equation (\ref{eq:stand-off-radius}) below. }
+   \caption{Profile of ionization fraction due to X-ray from the planetary accretion disk, measured from the surface of the planet. Solid lines show the solutions without the correction for the secondary ionization by ionized electrons, while the dashed lines show the solutions which take the correction into account with efficiency factor $\xi=0.8$. The vertical arrows show the Stromgren radius estimated simply  by equation (\ref{eq:stromgren}). The dotted vertical lines indicate the location of the magnetic stand-off radii, $r_{\rm mag}$,  obtained by equation (\ref{eq:stand-off-radius}) below. }
    %\memoDS{This looks great.  Might be good to also show the locations of the magnetic standoff point and the ``stromgren sphere radius'' on this figure (say, with vertical dashed and dotted lines?), and to move the legend to the lower left corner? {\tt plt.legend(loc=3)}}
   \label{fig:ionizationfraction}
 \end{figure}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% 
 
-We therefore expect that the X-ray emission from the accretion disk is enough to ionize the stellar wind.
-This implies that the stellar wind particles represented by (equation~\ref{eq:n}) are fully ionized plasmas like Solar wind, and that the stellar wind can interact with the planetary magnetic fields in a rather similar way to the case of Solar System planets.
+We therefore expect for the X-ray emission from the accretion disk to ionize the stellar wind.
+This implies that the stellar wind particles represented by (equation~(\ref{eq:n})) are fully ionized plasmas like Solar wind, and that the stellar wind can interact with the planetary magnetic fields in a rather similar way to the case of Solar System planets.
 
 
 
@@ -532,11 +551,11 @@ The scaling is based on the empirical/apparent good correlation between the radi
 %%%
 \begin{eqnarray}
 P_{\rm radio} &\propto & P_{\rm inp} \\
-P_{\rm inp,\,k} &=& n v^3 r_s ^2 \label{eq:Pinp_kin}, \\
-P_{\rm inp,\,m} &=& v B_{\bot }^2 r_s ^2 \label{eq:Pinp_mag} \, ,
+P_{\rm inp,\,k} &=& n v^3 r_{\rm mag} ^2 \label{eq:Pinp_kin}, \\
+P_{\rm inp,\,m} &=& v B_{\bot }^2 r_{\rm mag} ^2 \label{eq:Pinp_mag} \, ,
 \end{eqnarray}
 %%%
-where $ B_{\bot }$ is the interstellar magnetic field perpendicular to the stellar wind flow, and $r_s$ is the radius of the magnetic stand-off point. 
+where $ B_{\bot }$ is the interstellar magnetic field perpendicular to the stellar wind flow, and $r_{\rm mag}$ is the radius of the magnetic stand-off point. 
 %In the case of the Solar wind, the kinetic energy is dominant input energy over the magnetic one (the former is $\sim 400$ times larger than the latter).  
 It is not clear from the observations of the Solar System planets which is the fundamental one, the correlation to the input kinetic energy, that to the magnetic energy, or both. 
 In this paper, we assume that the radio emission is scaled with the input kinetic energy, i.e., $P_{\rm radio} \propto P_{\rm k,\,inp}$ and consider the possible effects of massive stellar wind. 
@@ -548,19 +567,19 @@ However, because of the lack of universal understanding of the stellar magnetic 
 In reality, the total power of Jovian auroral emission varies greatly over time: $1.3\times 10^{10}$ W for the average, $3.2\times 10^{10}$ W for the average of highly active time, and $4.5 \times 10^{11}$ W for the peak activity \citep{zarka_et_al2004}. 
 Here we employ $P_{\rm radio,\,J}=2.1\times 10^{11}\mbox{~W}$ as a canonical value, following \citet{griesmeier2005,griesmeier2007b}. 
 
-The radius of the magnetic stand-off point, $r_s$, is obtained based on the balance between the stellar wind pressure and the planetary magnetic pressure: 
+The radius of the magnetic stand-off point, $r_{\rm mag}$, is obtained based on the balance between the stellar wind pressure and the planetary magnetic pressure: 
 %%%
 \begin{equation}
-m_p n v ^2 \sim \frac{B^2}{8\pi}\left( \frac{r_s}{R_p} \right)^{-6}  \label{eq:stand-off}
+m_p n v ^2 \sim \frac{B^2}{8\pi}\left( \frac{r_{\rm mag}}{R_p} \right)^{-6}  \label{eq:stand-off}
 \end{equation}
 %%%
 The radius obtained for Jupiter from this equality is about half of the actual magnetospheric radius \citep[][]{griesmeier2005}. 
 By scaling this radius with equations (\ref{eq:n}) and (\ref{eq:stand-off}), the radius of magnetosphere of planets would be estimated as:
 %If the radius of magnetosphere is estimated by scaling that of Jupiter according to equations (\ref{eq:n}) and (\ref{eq:stand-off}), 
-%We estimate $r_s$ simply by scaling Jovian magnetosphere \citep[$r_{s,\,J} \sim 84 R_J$;][]{joy2002} according to equation (\ref{eq:stand-off}), i.e., 
+%We estimate $r_{\rm mag}$ simply by scaling Jovian magnetosphere \citep[$r_{s,\,J} \sim 84 R_J$;][]{joy2002} according to equation (\ref{eq:stand-off}), i.e., 
 %%%
 \begin{eqnarray}
-\nonumber r_s 
+\nonumber r_{\rm mag} 
 %&\sim & R_p \left( \frac{B^2}{8\pi m_{\rm p}nv^2} \right)^{1/6}  \\
 &=& r_{s,\,J} \left( \frac{B}{10~\mbox{G}} \right)^{1/3} \left( \frac{a}{5.2\mbox{AU}} \right)^{1/3}  \\
 && \times \left( \frac{\dot M_\star}{\dot M_\odot} \right)^{-1/6}  \left( \frac{v}{v_{\odot }} \right)^{-1/6} \\
@@ -634,7 +653,7 @@ LOFAR, HERA, SKA, and potential upgrades to the VLA.
 Based on the assumption that the radio emission is proportional to the input kinetic energy (equation (\ref{eq:Pinp_kin})), the scaling of the radio emission is expanded as follows:
 %%%
 \begin{eqnarray}
-P_{\rm k,\,inp} &=& nv^3 r_s^2 %= n v^3 \left( \frac{B^2}{8\pi m_{\rm p}nv^2} \right)^{1/3} R_J^2  \\
+P_{\rm k,\,inp} &=& nv^3 r_{\rm mag}^2 %= n v^3 \left( \frac{B^2}{8\pi m_{\rm p}nv^2} \right)^{1/3} R_J^2  \\
 \\
 &=& P_{\rm k,\,inp,\,J} \left( \frac{B}{B_J} \right)^{2/3} \left( \frac{a}{5.2~\mbox{AU}} \right)^{-4/3}  \notag \\
 && \times \left( \frac{\dot M_\star}{\dot M_{\odot}} \right)^{2/3} \left( \frac{v}{v_{\odot}} \right)^{5/3} \label{eq:Pkinp}
@@ -1086,8 +1105,8 @@ If the spectra are obtained, the upper cut-off frequency of the radio spectra wi
 
 In principle, if the expected luminosity function (LF) and positional distribution of possible RGHJ emitters were known one could estimate the likelihood of detecting RGHJs in radio surveys. For illustration we consider a hypothetical power-law distribution for the RGHJ luminosity function $N(L) \propto L^{-\alpha_L}$, where, $N(L)$ is the number of objects per unit volume with a luminosity of L, and assume an isotropic distribution of sources in the observed volume. Under these assumptions, the observed flux from the brightest source in a volume limited sample will scale with distance as $F_{\rm max} \propto d^{\frac{3}{\alpha_L} - 2}$, implying that the likelihood of finding the brightest source increases with distance for $\alpha_L < 3/2$. Such a scenario would indeed be favorable to detect RGHJs given that AGB stars, which are good sources for bright RGHJs due to their high mass loss rates, are rare and would require probing out to larger distances for detection. For example, for an $N(L) \propto L^{-1}$ the brightest source within a given distance will increase linearly with distance, making it favorable for detecting intrinsically rare objects. Therefore, it is important to determine the LF for RGHJ emitters in order to estimate their detectability. 
 
-Planning future targeted surveys of RGHJs would require accurate distribution functions of various parameters of giant stars in the local galaxy. In order to estimate the true luminosity function of RGHJ emitters one of the key factors is the distribution of mass-loss rates of giant host stars. As discussed in section~3.2, for a given set of orbital parameters the luminosity ($L$) of a RGHJ depends on the stellar mass-loss rate as $\dot{M}_\star^{1/2}$. Recent empirical studies of stellar mass-loss rates, including those for evolved giant stars, suggest $\dot{M}_\star \propto L_\star^{7.5/4} (R_\star/M_\star)(1+A/g_\star)$, where $L_\star$,  $R_\star$, $M_\star$, and $g_\star$ are the stellar luminosity, radius, mass, and gravity, respectively, and $A  = g_\odot/4300$ is a constant \citep{schroder2005,schroder2007}. 
-Therefore, the luminosity of a RGHJ varies nearly linearly as the luminosity of the host star, and is given by $L \propto L_\star^{7.5/8} [(R_\star/M_\star)(1+A/g_\star)]^{1/2}$. Therefore, the LF of giant host stars is an essential ingredient for determining the LF for RGHJs which future surveys would need to consider. 
+Planning future targeted surveys of RGHJs would require accurate distribution functions of various parameters of giant stars in the local galaxy. In order to estimate the true luminosity function of RGHJ emitters one of the key factors is the distribution of mass-loss rates of giant host stars. As discussed in section~3.2, for a given set of orbital parameters the luminosity ($L$) of a RGHJ depends on the stellar mass-loss rate as $\dot{M}_\star^{1/2}$. Recent empirical studies of stellar mass-loss rates, including those for evolved giant stars, suggest $\dot{M}_\star \propto L_\star^{7.5/4} R_\star^{-0.75} M_\star^{-1} (1+A/g_\star)$, where $L_\star$,  $R_\star$, $M_\star$, and $g_\star$ are the stellar luminosity, radius, mass, and gravity, respectively, and $A  = g_\odot/4300$ is a constant \citep{schroder2005,schroder2007}. 
+Therefore, the luminosity of a RGHJ varies nearly linearly as the luminosity of the host star, and is given by $L \propto L_\star^{7.5/8} R_\star ^{-0.375} M_\star^{-1/2} (1+A/g_\star)^{1/2}$. Therefore, the LF of giant host stars is an essential ingredient for determining the LF for RGHJs which future surveys would need to consider. 
 
 
 
@@ -1129,7 +1148,7 @@ where $\rho_K$ and $\rho_B$ are the kinetic energy density and the magnetic ener
 Just inside the stand-off point, 
 %%%
 \begin{equation}
-m_p n[r_s] v^2 < \frac{B[r_s]^2}{2\pi }
+m_p n[r_{\rm mag}] v^2 < \frac{B[r_{\rm mag}]^2}{2\pi }
 \end{equation}
 %%%
 and thus $\rho_K/\rho _B < 1$. 
@@ -1203,6 +1222,8 @@ Basic research in radio astronomy at NRL is supported by 6.1 Base funding.
 
 \bibliography{biblio.bib}
 
+\end{document}
+
 \newpage
 
 \appendix
@@ -1216,13 +1237,13 @@ A common part is the scaling relationship between the planetary magnetic field s
 From equations \ref{eq:Pinp_kin} and \ref{eq:n}, the input kinetic energy scales as
 %%%
 \begin{equation}
-P_{\rm inp,k}=nv^3 r_s^2 \propto \dot M_{\star} v^2 a^{-2} r_s^2.
+P_{\rm inp,k}=nv^3 r_{\rm mag}^2 \propto \dot M_{\star} v^2 a^{-2} r_{\rm mag}^2.
 \end{equation}
 %%%
-Combining the above equation with the scaling between the radius of the magnetic stand-off point, $r_s$, and the planetary magnetic field $B$ (equation (\ref{eq:stand-off-radius})), i.e.\
+Combining the above equation with the scaling between the radius of the magnetic stand-off point, $r_{\rm mag}$, and the planetary magnetic field $B$ (equation (\ref{eq:stand-off-radius})), i.e.\
 %%%
 \begin{equation}
-r_s \propto B^{1/3} a^{1/3} \dot M_{\star }^{-1/6} v^{-1/6}, 
+r_{\rm mag} \propto B^{1/3} a^{1/3} \dot M_{\star }^{-1/6} v^{-1/6}, 
 \end{equation}
 %%%
 and assuming a constant stellar wind, we obtain:
@@ -1236,7 +1257,7 @@ P_{\rm inp, k} \propto B^{2/3} a^{-4/3} \dot M_{\star }^{2/3} v^{5/3}.
 %equation (\ref{eq:stand-off-radius})
 %%%
 %\begin{equation}
-%r_s = 11.3 \, R_J \left( \frac{B}{10~\mbox{G}} \right)^{1/3}  \left( \frac{a}{5\mbox{AU}} \right)^{1/3} \left( \frac{\dot M_\star}{10^6 \dot M_\odot} \right)^{-1/6}  \left( \frac{\dot v}{10^{-1}v_{\odot }} \right)^{-1/6}
+%r_{\rm mag} = 11.3 \, R_J \left( \frac{B}{10~\mbox{G}} \right)^{1/3}  \left( \frac{a}{5\mbox{AU}} \right)^{1/3} \left( \frac{\dot M_\star}{10^6 \dot M_\odot} \right)^{-1/6}  \left( \frac{\dot v}{10^{-1}v_{\odot }} \right)^{-1/6}
 %\end{equation}
 %%%
 Aside from this common part, the differences originate mainly from:
@@ -1353,10 +1374,10 @@ Employing Larmor formula, power emitted from a thin shell at $r\sim r+dr$, $dP/d
 %%%
 where $N_{\rm plasma}(r) $ represents the number density of plasma in the planetary magnetosphere at radius $r$. 
 
-We assume that $N_{\rm plasma}(r_s) $  is proportional to the squared radius of the magnetic stand-off point:
+We assume that $N_{\rm plasma}(r_{\rm mag}) $  is proportional to the squared radius of the magnetic stand-off point:
 %%%
 \begin{equation}
-N_{\rm plasma}(r_s) \propto \pi r_s^2 \;\;(\propto B_p^{2/3}) \label{eq:N0_plasma}
+N_{\rm plasma}(r_{\rm mag}) \propto \pi r_{\rm mag}^2 \;\;(\propto B_p^{2/3}) \label{eq:N0_plasma}
 \end{equation}
 %%%
 Due the the mass flux conservation,
@@ -1368,7 +1389,7 @@ Due the the mass flux conservation,
 Combining with equation (\ref{eq:N0_plasma}),
 %%%
 \begin{equation}
-N_{\rm plasma}(r) \propto  \frac{r_s^2 }{v_{\|}(r) r^2} \propto  B_p^{2/3} \cdot \frac{v_{\|}(r)}{r^2}
+N_{\rm plasma}(r) \propto  \frac{r_{\rm mag}^2 }{v_{\|}(r) r^2} \propto  B_p^{2/3} \cdot \frac{v_{\|}(r)}{r^2}
 \end{equation}
 %%%
 
@@ -1391,17 +1412,17 @@ On the other hand, conservation of energy ensures that
 \mathcal{E} = -\frac{GM_p}{r} + \frac{v_{\bot }^2}{2} + \frac{v_{\|}^2}{2}=const.
 \end{equation}
 %%%
-Assuming that the initial energy (at $r=r_s$) is negligible compared to those near the surface, $\mathcal{E}=0$, 
+Assuming that the initial energy (at $r=r_{\rm mag}$) is negligible compared to those near the surface, $\mathcal{E}=0$, 
 %%%
 \begin{equation}
-v_{\|}^2 \sim \frac{GM_p}{r} - \frac{v_{\bot ,0}^2}{2} \left( \frac{r}{r_s} \right)^{-6} \label{eq:v_||}
+v_{\|}^2 \sim \frac{GM_p}{r} - \frac{v_{\bot ,0}^2}{2} \left( \frac{r}{r_{\rm mag}} \right)^{-6} \label{eq:v_||}
 \end{equation}
 %%%
 
 Substituting equations (\ref{eq:N0_plasma}),  (\ref{eq:v_bot}) and (\ref{eq:v_||}) into equation (\ref{eq:larmor}) leads to
 %%%
 \begin{equation}
-\frac{dP}{dr} \propto \frac{B_p^{8/3}}{r^{12}} \left( \frac{GM_p}{r} - \frac{v_{\bot ,0}^2}{2} \left( \frac{r}{r_s} \right)^{-6} \right)^{1/2}  
+\frac{dP}{dr} \propto \frac{B_p^{8/3}}{r^{12}} \left( \frac{GM_p}{r} - \frac{v_{\bot ,0}^2}{2} \left( \frac{r}{r_{\rm mag}} \right)^{-6} \right)^{1/2}  
 \end{equation}
 %%%
 The right-hand side has the maximum value $\sqrt{5GM_p/6\tilde r} $ at radius $\tilde r=(6v_{\bot ,0}^2/GM_p)^{1/5}$. 
