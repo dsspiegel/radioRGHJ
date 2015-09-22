@@ -151,8 +151,9 @@ yuka.fujii@elsi.jp
 When planet-hosting stars evolve off the main sequence and go through the red-giant branch (RGB), the stars become orders of magnitudes more luminous and at the same time lose mass at much higher rates than their main-sequence counterparts.
 Accordingly, planetary companions around them at orbital distances of a few AU, if they exist, will be heated up to the level of canonical hot Jupiters and also subjected to a massive stellar wind.
 Given that magnetized planets interacting with stellar winds emit radio waves, such ``Red-Giant Hot Jupiters'' (RGHJs) may also be candidate radio emitters.
-We estimate the spectral auroral radio intensity of RGHJs employing the ``radiometric Bode's law'' and a proposed scaling for planetary magnetic fields. \memoDS{I recommend nixing ``radiometric Bode's law'' from the abstract, but wanted to get others' opinions before doing so.}
-We predict that RGHJs might be intrinsically brighter than canonical hot Jupiters, and thus the low frequency radio emission from a RGHJ may be detectable at distances up to a few hundred parsecs with current/future instruments such as LOFAR and the Square Kilometer Array.
+We estimate the spectral auroral radio intensity of RGHJs based on the empirical relation with the stellar wind as well as a proposed scaling for planetary magnetic fields. 
+We predict that RGHJs might be intrinsically as bright as canonical hot Jupiters, and 100 times brighter than equivalent objects around main-sequence stars, which allow us to search them in 1000 times larger volume. 
+The signal from a RGHJ may be detectable at distances up to a few hundred parsecs with current/future instruments such as LOFAR and the Square Kilometer Array. 
 
 %Red-giant hot Jupiters (RGHJs) are jovian planets orbiting red-giant-branch (RGB) or asymptotic-giant-branch (AGB) stars. 
 %Red-giant hot Jupiters (RGHJs) are jovian planets orbiting red-giant-branch (RGB) or asymptotic-giant-branch (AGB) stars.
@@ -182,37 +183,40 @@ It is well known that Jupiter emits radio waves from its auroral region due to t
 Potentially, exoplanets can also generate radio emission through similar mechanisms, depending on their intrinsic magnetic fields and the density of surrounding plasmas, e.g. stellar wind particles and particles from Io-like moons. 
 Observations of radio emission from Solar System planets imply an empirical relation that the radio intensity is proportional to the input solar wind flux going into each planetary magnetosphere, which is commonly referred to as the ``radiometric Bode's law'' \citep{desch+kaiser1984}. 
 Extrapolating this scaling to exoplanets, radio emission from exoplanetary systems has been examined. 
-\citet{farrell1999,zarka2001,lazio2004} pointed out that a few of the known exoplanetary systems may have radio flux of $\sim $1 mJy level, due to the small orbital distance of the planet and/or the larger planetary mass. 
+\citet{farrell1999,zarka2001,lazio2004} estimated that a few of the known exoplanetary systems may have radio flux of $\sim $1 mJy level, due to the small orbital distance of the planet and/or the larger planetary mass. 
 %\citet{griesmeier2004} modeled in detail the evolution of atmosphere and magnetic field of the tidally-locked close-in stars and found that 
 \citet{stevens2005} gave improved estimates of the stellar mass-loss rate based on X-ray flux and re-evaluated the radio flux of known exoplanetary systems. 
 \citet{griesmeier2005} took account of the high stellar activity in the early stage of the planetary system and proposed that the young system would be good candidates to search for radio emission. 
 \citet{griesmeier2007a, griesmeier2007b} discussed the effects of the detailed properties of stellar wind in the proximity of the stars. They considered not only the kinetic energy of the stellar wind but also the magnetic energy of the stellar wind and coronal mass ejection (CME). 
 Note that in these papers, the scaling relation of planetary magnetic fields differ from paper to paper.
-In \citet{reiners2010}, the authors adopted a new scaling relation of planetary magnetic field based on \citet{christensen_et_al2009}.
-\citet{jardine2008} modeled the reconnection between the magnetic fields of close-in planets and of the star, which would accelerate electrons and produce radio emission \memoTM{(can we say?) via cyclotron radiation}.
+In \citet{reiners2010}, the authors adopted a new scaling relation of planetary magnetic field based on \citet{christensen_et_al2009}. 
+%\citet{jardine2008} modeled the reconnection between the magnetic fields of close-in planets and of the star, which would accelerate electrons and produce radio emission \memoTM{(can we say?) via cyclotron radiation}.
+% I leave this out because this is not based on radiometric bode's law. 
 Although observational searches for these radio signatures are underway, no clear detection has been claimed \citep{bastian2000,george2007,stroe2012,hallinan2013,murphy2015}, though there are some promising initial results \citep{lecavelier_et_al2013,sirothia2014}.
 
 When stars less than $\sim$8~$M_\sun$ evolve off the main sequence, they evolve through the red-giant branch (RGB) and the asymptotic-giant branch (AGB) phases where their radii and luminosities increase by orders of magnitude.
 Jovian planets in orbit around such stars can migrate inward or outward due to the interplay between tidal torques and mass-loss process on the post-main sequence \citep{nordhaus_et_al2010,nordhaus+spiegel2013}.  During this time, such planets can be transiently heated to hot-Jupiter temperatures ($\gtrsim$1000~K) at distances out to tens of AU, depending on the star's mass; such planets are termed ``Red Giant Hot Jupiters'' (RGHJs), though the term can refer to planets orbiting either RGB and AGB stars \citep{spiegel+madhusudhan2012}.
-Such planets are also subject to interactions with a massive (but slow) stellar wind, as the mass-loss rate of evolved stars is significant, ranging from $\sim 10^{-8} M_\odot$/yr to $\sim  10^{-5} M_\odot$/yr with the highest values for AGB stars \citep[e.g.,][]{reimers1975, schild1989, vassiliadis1993, schoier2001, vanloon2005}, thus higher than that of the Sun, $\sim 10^{-14}M_\odot$/yr. 
+Such planets are also subject to interactions with a massive (but slow) stellar wind, as the mass-loss rate of evolved stars is significant, ranging from $\sim 10^{-8} M_\odot$/yr to $\sim  10^{-5} M_\odot$/yr with the highest values for AGB stars \citep[e.g.,][]{reimers1975, schild1989, vassiliadis1993, schoier2001, vanloon2005}. 
 On the assumption that the radio emission is correlated with the stellar wind, planetary companions around evolved stars could also generate bright radio emission. 
 
 Based on this speculation, \citet{ignace2010} examined radio emission from known substellar-mass companions around cool evolved stars.
 They found that the low ionization fraction of the stellar wind of evolved stars suppresses their radio emission and leads to weak radio emission, probably below the detection limit. 
 
 In this paper, we argue that the accretion of the massive stellar wind onto the planet would emit strong X-rays, thereby ionizing the hydrogen atoms around the planet.
-The ionized stellar wind would then interact with the planetary magnetic field in the same way as Solar System planets do.
-Thus, by extrapolating the radiometric Bode's law, we provide more optimistic estimates for highly evolved stars compared to the previous result.
+The ionized stellar wind particles would then interact with the planetary magnetic field in the same way as Solar System planets do.
+Thus, by extrapolating the ``radiometric Bode's law'', we provide more optimistic estimates for highly evolved stars compared to the previous result.
 We also consider the plasma frequency cut-off of the stellar wind, which turns out to be one of the major obstacles to detect radio emission from RGHJs. 
 Given that the survey of exoplanets around highly evolved stars is not complete, we do not constrain ourselves to the systems known to have sub-stellar companions.
 Instead, we investigate the parameter space where we can search for radio emission and examine the possibility to detect them with current and future instruments. 
 
-In \S2, we describe our assumptions for the stellar wind, planetary magnetosphere, frequency of radio emission, and scaling of planetary radio emission.
-\S3 presents an estimate of the spectral radio intensity of RGHJs and compares the predictions with what might be expected from canonical hot Jupiters as well as those from Jupiter-twins.
-\S4 gives predictions for the signals from evolved systems within 400 pc, taking account of the intrinsic radio emission from the host evolved stars. Considering the sensitivity of the current and future radio instruments, we argue that the Square Kilometer Array(SKA), and perhaps the high band of the LOw Frequency ARray (LOFAR-HBA) as well, will be capable of detecting these signals within a reasonable integration time. 
+In Section \ref{s:assumptions}, we introduce the framework to obtain the frequency of radio emission and the planetary radio emission, and describe our models for the stellar wind and planetary magnetosphere.
+Section \ref{s:result} presents an estimate of the spectral radio intensity of RGHJs and compares the predictions with what might be expected from canonical hot Jupiters as well as those from Jupiter-twins.
+Section \ref{s:observability} gives the prospects for the signal detection with the current/future instruments. 
+Estimates for the actual late-type (M type) evolved stars are also included. 
+We find that the Square Kilometer Array(SKA), and perhaps the high band of the LOw Frequency ARray (LOFAR-HBA) as well, will be capable of detecting these signals within a reasonable integration time. 
 %In \S5, we discuss the usefulness of radio emission in exploring Jupiter-like planets around evolved stars. 
-In \S5, we mention the effects of canceling magnetic field which results from the plasmas spiraling in the planetary magnetosphere.  
-Finally, \S6 concludes the paper with a brief summary. 
+Section \ref{s:discussion} is devoted to additional discussions, one for the usefulness of the radio emission for characterizing the system and the other for the effects of canceling magnetic field which results from the plasmas spiraling in the planetary magnetosphere.  
+Finally, Section \ref{s:conc} concludes the paper with a brief summary. 
 
 %Roughly 20\% of the more than 700 \memoYF{check!} currently known exoplanets around main-sequence stars \footnote{See online catalogs such as http://www.openexoplanetcatalogue.com/ \citep{rein2012}, http://exoplanet.eu \citep{schneider_et_al2011}, or http://exoplanets.org \citep{wright_et_al2011} for up-to-date lists.} have masses greater than half of Jupiter's, orbital radii greater than 1~AU, and will become hot Jupiters (i.e., for the present purposes, this means they will receive at least as much irradiation as the currently known hot Jupiters/Neptunes \citep{spiegel+madhusudhan2012}. 
 
@@ -581,7 +585,7 @@ F_{\nu} = \frac{P_{\rm radio}}{\Omega l^2 \Delta \nu}
 where $P_{\rm radio}$ is the energy that is deposited as radio emission of considered frequency range, $\Omega$ is the solid angle of the emission, $l$ is the distance between the target and the Earth, and $\Delta \nu$ is frequency bandwidth. 
 
 We estimate the radio emission of exoplanets, $P_{\rm radio}$, simply by scaling the Jovian auroral radio emission, $P_{\rm radio,\,J}$, with the input energy from stellar wind, in the same manner as \citet{griesmeier2005,griesmeier2007a,griesmeier2007b}.
-The scaling is based on the empirical/apparent good correlation between the radio emission intensity of Solar System planets and the input kinetic energy, $P_{\rm inp,\,k}$, or the magnetic energy of the solar wind, $P_{\rm inp,\,m}$, \citep[``radio Bode's law''; ][]{desch+kaiser1984}, i.e.,
+The scaling is based on the empirical/apparent good correlation between the radio emission intensity of Solar System planets and the input kinetic energy, $P_{\rm inp,\,k}$, or the magnetic energy of the solar wind, $P_{\rm inp,\,m}$, \citep[``radiometric Bode's law''; ][]{desch+kaiser1984}, i.e.,
 %Namely, although the detail of the mechanism to generate planetary radio emission is not fully understood so far \memoYF{cite something?}, 
 %observations indicate that the total radio emission, $P_{\rm radio}$ is proportional to the input kinetic energy, $P_{\rm k,\,inp}$, or the input magnetic energy, $P_{\rm m,\,inp}$ \citep[``radio Bode's law''; ][]{desch+kaiser1984}:
 %%%
@@ -1224,7 +1228,7 @@ Therefore, unless the density increases more drastically than $1/r^5$, the ratio
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Conclusions}
-\label{sec:conc}
+\label{s:conc}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 In this paper, we estimate the radio brightness of distant ``hot Jupiters'' around evolved stars (RGHJ) on the assumption of the simple empirical correlation between planetary radio emission and the input kinetic energy from the stellar wind. 
