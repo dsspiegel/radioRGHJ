@@ -17,8 +17,6 @@
 %\usepackage[dvipdfmx]{color}
 %\usepackage[dvipdfmx]{graphicx}
 
-% trivial change as a test
-
 \bibliographystyle{apj}
 
 \def\memoYF#1{\color{red}$[${\bf #1}$]$ \color{black}}
@@ -89,7 +87,6 @@
 \slugcomment{Submitted to ApJ, XX September 2015}
 
 \begin{document}
-
 
 %%% Begin front material
 %\twocolumn[%%% Begin front material
@@ -425,7 +422,7 @@ As a result, nearly 2/3 of released energetic electrons will ionize a hydrogen a
 In principle, photons with energy $E_{\rm photon}$ have potential to ionize $E_{\rm photon}/E_{\rm Rydberg}$ times.
 To take this into account, we consider two limiting possibilities:
 After an ionizing collision, the energy can (\emph{i}) be split evenly between the two electrons, or it can (\emph{ii}) go entirely into the kinetic energy of one electron and not at all into that of the other (of course, any split in between these extremes is possible, too).
-Note that conservation of momentum and energy imply that the proton will not acquire a significant fraction of the energy of the collision.\footnote{Were it otherwise, we'd have to take into account what fraction of a rubber ball's kinetic energy is imparted to the kinetic energy of the Earth when bouncing a ball.}  \memoYF{in more detail?} \memoDS{I think it's fine.}
+Note that conservation of momentum and energy imply that the proton will not acquire a significant fraction of the energy of the collision.\footnote{Were it otherwise, we'd have to take into account what fraction of a rubber ball's kinetic energy is imparted to the kinetic energy of the Earth when bouncing a ball.}  
 
 Scenario (\emph{i}) implies a cascade where an electron with energy $E_{\rm in}$ ionizes an atom producing two electrons (an ionizing electron plus the released electron) with energy $ ( E_{\rm in} - E_{\rm Rydberg} ) /2 $ for each.
 For example, in an idealized case with $M_p = 10 M_{\rm J}$, $k_B T_{\rm acc} \sim 172\,{\rm eV} \sim 12 \, E_{\rm Rydberg}$, a photoionization could produce an electron with energy of $(12-1) = 11 E_{\rm Rydberg} $, then a second ionization by that electron would produce two photons with energy of $(11-1)/2 = 5 E_{\rm Rydberg}$, and the third ionization by these two photons would produce four photons with energy of $(5-1)/2 = 2 E_{\rm Rydberg}$, etc.
@@ -606,7 +603,7 @@ By scaling this radius with equations (\ref{eq:n}) and (\ref{eq:stand-off}), the
 \begin{eqnarray}
 \nonumber r_{\rm mag} 
 %&\sim & R_p \left( \frac{B^2}{8\pi m_{\rm p}nv^2} \right)^{1/6}  \\
-&=& r_{s,\,J} \left( \frac{B}{10~\mbox{G}} \right)^{1/3} \left( \frac{a}{5.2\mbox{AU}} \right)^{1/3}  \\
+&=& r_{mag,\,J} \left( \frac{B}{10~\mbox{G}} \right)^{1/3} \left( \frac{a}{5.2\mbox{AU}} \right)^{1/3}  \\
 && \times \left( \frac{\dot M_\star}{\dot M_\odot} \right)^{-1/6}  \left( \frac{v}{v_{\odot }} \right)^{-1/6} \\
 \nonumber &=& 15 \, R_J \left( \frac{B}{10~\mbox{G}} \right)^{1/3}  \left( \frac{a}{5\mbox{AU}} \right)^{1/3} \\
 && \times \left( \frac{\dot M_\star}{10^{-8} M_{\odot }{\rm /yr}} \right)^{-1/6}  \left( \frac{v}{10^{-1}v_{\odot }} \right)^{-1/6}
@@ -891,6 +888,7 @@ The spectra of the host red giant are modeled simply by extrapolating observed r
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% 
 
 
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \subsection{Radio Flux from Nearby M giants}
 \label{ss:actualMgiants}
@@ -916,7 +914,7 @@ For each red giant, the mass-loss rate is estimated by the improved Reimers' equ
 %%%
 \begin{equation}
 %\dot M_\star [M_\odot{\rm /yr}] \sim 4 \times 10^{-13} \eta \left( \frac{R_{\star }}{R_{\odot }} \right)\left( \frac{L_{\star }}{L_{\odot }} \right) \left( \frac{M_\star}{M_\odot} \right)^{-1}
-\dot M_\star [M_\odot{\rm /yr}] \sim 8 \times 10^{-14} \frac{\tilde L \tilde R}{\tilde M} \left( \frac{T_{\rm eff}}{4000} \right)^{3.5} \left( 1 + \frac{g_{\odot }}{4300 g_{\star}} \right) 
+\dot M_\star [M_\odot{\rm /yr}] \sim 8 \times 10^{-14} \frac{\tilde L \tilde R}{\tilde M} \left( \frac{T_{\rm eff}}{4000} \right)^{3.5} \left( 1 + \frac{g_{\odot }}{4300 g_{\star}} \right) \label{eq:mass-loss}
 \end{equation}
 %%%
 where $\tilde L = L_{\star }/L_{\odot }(=4\pi R_{\star }^2 T_{\star }^4)$, $\tilde R = R_{\star }/R_{\odot }$, $\tilde M = M_{\star }/M_{\odot }$, and $g$ is the surface gravity. 
@@ -940,9 +938,34 @@ We consider [A] a Jupiter-twin whose cyclotron frequency is $\sim 30$~MHz, and [
 Figure \ref{fig:observability} displays the estimated radio intensity (i.e., cyclotron frequency) of Jupiters [A] and [B] around M-type red giants within 100~pc. 
 Jupiters are placed at 1 AU and at 5 AU for reference. 
 The difference of the symbols indicates whether the radio emission can escape from the system (circle) or not (cross). 
+For a hypothetical Jupiter-mass planet at 5 AU, a reasonable number of systems have potential to emit radio wave at the level of $\sim 10 \mu {\rm Jy}$  out to $\sim 100-150$ pc. 
 
 %\memoYF{Up to where would the planet be engulfed by evolved stars? References?}
 %I wondered this because if planets at 1 AU would be engulfed anyway it would not be worth discussing here. According to e.g. Nordhaus and Spiegel (2013) it is the case--however, some planets may migrate inward within 1 AU after evolution. So it should be ok. In any case this is not the main point of this paper and I would leave it out. 
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Luminosity function of planetary radio: 
+nearby faint object v.s. far luminous object}
+\label{ss:Lfunc}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+In principle, if the expected luminosity function (LF) and positional distribution of possible RGHJ emitters were known, one could estimate the likelihood of detecting RGHJs in radio surveys. 
+For illustration we consider a hypothetical power-law distribution for the RGHJ luminosity function $N[L] \propto L^{-\alpha_L}$, where, $N[L]$ is the number of objects per unit volume with a luminosity of $L$, and assume an isotropic distribution of sources in the observed volume. 
+Under these assumptions, the largest luminosity in a volume limited sample (volume $V$) would be such that $V n[L] = 1$, i.e., $L \propto d^{3/\alpha _L}$. The flux of such target at distance $d$ is $F \propto d^{\frac{3}{\alpha_L} - 2}$. 
+Therefore,the likelihood of finding the brighter source increases with distance for $\alpha_L < 3/2$. 
+Such a scenario would indeed be favorable to detect RGHJs given that RGs and AGB stars with high mass loss rates are rare and would require probing out to larger distances for detection. 
+For example, for an $N(L) \propto L^{-1}$ the brightest source within a given distance will increase linearly with distance, making it favorable for detecting intrinsically rare objects. 
+Therefore, it is important to determine the LF for RGHJ emitters in order to estimate their detectability. 
+
+Planning future targeted surveys of RGHJs would require accurate distribution functions of various parameters of giant stars in the local galaxy. 
+In order to estimate the true luminosity function of RGHJ emitters one of the key factors is the distribution of mass-loss rates of giant host stars. 
+As discussed in Section~3.2, for a given set of orbital parameters the luminosity ($L$) of a RGHJ depends on the stellar mass-loss rate and wind velocity as $\dot{M}_\star^{2/3} v^{5/3}$. 
+Employing equation (\ref{eq:mass-loss}) which implies $\dot{M}_\star \propto L_\star^{7.5/4} R_\star^{-0.75} M_\star^{-1} (1+A/g_\star)$ and crudely estimating the wind velocity as $v \propto \sqrt{GM/R} \propto M^{1/2} R^{-1/2}$, the luminosity of the RGHJ radio emission is given by $L \propto L_\star^{2/3} R_\star ^{-1/6} M_\star^{1/6} T_{\rm eff}^{2.3} (1+A/g_\star)^{2/3}$. 
+Given that the dependences on $R_\star$ and $M_\star^{1/6}$ are relatively weak and that $T_{\rm eff}$ does not change significantly, the radio luminosity due to planets are roughly $L \propto L_{\star }^{2/3}$. 
+Thus,  the criteria $\alpha _L < 3/2$ is satisfied if the slope of the luminosity function of the stars are not steeper than $-1$. 
+
+
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \subsection{Detectability with Current and Near Future Low Frequency Radio Instrumentation}
@@ -1121,18 +1144,6 @@ As mentioned in \S\ref{ss:timevariability}, auroral radio flux significantly var
 Long term monitoring could reveal the time variability corresponding to orbital period if the system is near edge-on. Modulation on timescale of a few days may imply presence of satellites. 
 
 If the spectra are obtained, the upper cut-off frequency of the radio spectra will imply us the magnetic field strengths of the planetary surface. Such information would be most useful if we could obtain constraints on planetary mass via e.g. radial velocity observations, because once both magnetic field strength and the planetary mass is constrained, the proposed scaling law of planetary dynamo may be contested. On the other hand, the lower cut-off frequency indicates the plasma frequency in the vicinity of the planets, which might be used as a probe of the density of the stellar wind at the planetary orbit. 
-
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\subsection{Luminosity function of planetary radio emission}
-\label{ss:Lfunc}
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-In principle, if the expected luminosity function (LF) and positional distribution of possible RGHJ emitters were known one could estimate the likelihood of detecting RGHJs in radio surveys. For illustration we consider a hypothetical power-law distribution for the RGHJ luminosity function $N(L) \propto L^{-\alpha_L}$, where, $N(L)$ is the number of objects per unit volume with a luminosity of L, and assume an isotropic distribution of sources in the observed volume. Under these assumptions, the observed flux from the brightest source in a volume limited sample will scale with distance as $F_{\rm max} \propto d^{\frac{3}{\alpha_L} - 2}$, implying that the likelihood of finding the brightest source increases with distance for $\alpha_L < 3/2$. Such a scenario would indeed be favorable to detect RGHJs given that AGB stars, which are good sources for bright RGHJs due to their high mass loss rates, are rare and would require probing out to larger distances for detection. For example, for an $N(L) \propto L^{-1}$ the brightest source within a given distance will increase linearly with distance, making it favorable for detecting intrinsically rare objects. Therefore, it is important to determine the LF for RGHJ emitters in order to estimate their detectability. 
-
-Planning future targeted surveys of RGHJs would require accurate distribution functions of various parameters of giant stars in the local galaxy. In order to estimate the true luminosity function of RGHJ emitters one of the key factors is the distribution of mass-loss rates of giant host stars. As discussed in section~3.2, for a given set of orbital parameters the luminosity ($L$) of a RGHJ depends on the stellar mass-loss rate as $\dot{M}_\star^{1/2}$. Recent empirical studies of stellar mass-loss rates, including those for evolved giant stars, suggest $\dot{M}_\star \propto L_\star^{7.5/4} R_\star^{-0.75} M_\star^{-1} (1+A/g_\star)$, where $L_\star$,  $R_\star$, $M_\star$, and $g_\star$ are the stellar luminosity, radius, mass, and gravity, respectively, and $A  = g_\odot/4300$ is a constant \citep{schroder2005,schroder2007}. 
-Therefore, the luminosity of a RGHJ varies nearly linearly as the luminosity of the host star, and is given by $L \propto L_\star^{7.5/8} R_\star ^{-0.375} M_\star^{-1/2} (1+A/g_\star)^{1/2}$. Therefore, the LF of giant host stars is an essential ingredient for determining the LF for RGHJs which future surveys would need to consider. 
-
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
