@@ -321,13 +321,13 @@ we need the density and velocity of the stellar wind.
 The number density of particles in the stellar wind, $n$, can be expressed as
 %%%%%%%%%% 
 \begin{equation}
-n = \frac{\dot M_\star}{4\pi a^2 m_p v}
+n = \frac{\dot M_\star}{4\pi a^2 m_p v_{\rm sw}}
 \label{eq:n}
 \end{equation}
 %%%%%%%%%% 
-where $\dot M_\star$ is the stellar mass loss rate, $a$ is the orbital distance from the star and $m_p$ is proton mass, and $v$ is the velocity of the stellar wind. 
+where $\dot M_\star$ is the stellar mass loss rate, $a$ is the orbital distance from the star and $m_p$ is proton mass, and $v_{\rm sw}$ is the velocity of the stellar wind. For the solar wind, $\dot M_\odot \sim 2\times 10^{-14} M_{\odot}$/yr and $v_{\rm sw} \sim 400 {\rm km/s}$ \citep[e.g.,][]{hundhausen1997}. 
 
-While the solar mass loss rate, $\dot M_\odot$, is $\dot M_\odot \sim 2\times 10^{-14} M_{\odot}$/yr \citep[e.g.,][]{hundhausen1997}, the mass loss rate of red giants is typically $\dot M_\star \sim 10^{-8}-10^{-7} M_{\odot}$/yr \citep{reimers1975}, and the rate can be as high as $10^{-5} M_\odot{\rm /yr}$ during the AGB phase \citep{schild1989, vassiliadis1993, schoier2001, vanloon2005}.
+The mass loss rate of red giants is typically $\dot M_\star \sim 10^{-8}-10^{-7} M_{\odot}$/yr \citep{reimers1975}, and the rate can be as high as $10^{-5} M_\odot{\rm /yr}$ during the AGB phase \citep{schild1989, vassiliadis1993, schoier2001, vanloon2005}.
 Therefore, we have
 %%%%%%%%%% 
 \begin{equation}
@@ -335,24 +335,30 @@ Therefore, we have
 \end{equation}
 %%%%%%%%%% 
 
-On the other hand, the stellar wind velocity becomes smaller because of the small escape velocity (due to the expanded stellar radius).
-%\footnote{Escape velocity is $\sqrt{2GM/r}$.}
-Assuming that the stellar wind scales as the escape velocity, i.e., $\propto \sqrt{2GM_{\star}/R_{\star}}$ ($G$ is the gravitational constant, $M_{\star}$ is the stellar mass, and $R_{\star}$ is the stellar radius), a Solar-mass red giant with radius $R_{\star}=100R_{\odot}$ encounters 10 times as slow stellar wind as that at the Sun, $v_{\odot}$.
-Therefore, 
+
+On the other hand, the stellar wind velocity, $v_{\rm sw}$, becomes smaller as the star evolves. The wind velocity is typically the escape velocity at the distance of the several stellar radius \citep{suzuki2007}, i.e., $\sim \sqrt{2GM_{\star}/R'_{\star}}$ where $R'_{\star} \sim (4-5) R_{\star }$. 
+For a planet with radius $R_{\star }=100~R_{\odot }$, this results in $v_{\rm sw}\sim 30~{\rm km/s}$. 
+Therefore, a Solar-mass red giant with radius $R_{\star}=100R_{\odot}$ encounters at least 10 times as slow stellar wind as that at the Sun, $v_{\odot}$. 
+
+Based on equations (\ref{eq:scale_Mdot}), the number density of the stellar wind (equation (\ref{eq:n})) are normalized as follows:
+%%%%%%%%%% 
+\begin{eqnarray}
+n &=& 1.8 \times 10^6 \; {\rm cm^{-3}} \times \left( \frac{a}{5 \; {\rm AU}} \right)^{-2} \notag \\
+&&\times \left( \frac{\dot M_\star}{10^{-8} M_{\odot }{\rm /yr}} \right) \left( \frac{v_{\rm sw}}{30~\mbox{km/s}} \right)^{-1}. \label{eq:n_normalized}
+\end{eqnarray}
+%%%%%%%%%% 
+
+The contributions for the velocity term in equation (\ref{eq:Pinp_kin}), which should be the relative velocity between the planet and the solar wind, are given by the stellar wind velocity, the infall velocity (i.e., acceleration by planetary gravity), and the planetary orbital velocity. 
+While $v_{\rm sw}$ is $\sim 30~{\rm km/s}$, the infall velocity at the planetary to be added is $\sim 10-25~{\rm km/s}$, depending on the planetary mass (ranging from $1 M_{\rm J}-10 M_{\rm J}$), and the orbital velocity is $10-30~{\rm km/s}$ depending on the orbital distance (ranging from $1-5~{\rm AU}$). 
+Here, we simply consider
 %%%%%%%%%% 
 \begin{equation}
 \frac{v}{v_{\odot}} \sim 10^{-1} \, . \label{eq:scale_v}
 \end{equation}
-%%%%%%%%%% 
+%%%%%%%%%%
+as a fiducial values for the normalization. 
 %where $v_{\odot} \sim 4.0 \times 10^2 $ km/sec. 
 
-Based on equations (\ref{eq:scale_Mdot}) and (\ref{eq:scale_v}), the number density of the stellar wind (equation (\ref{eq:n})) are normalized as follows:
-%%%%%%%%%% 
-\begin{eqnarray}
-n &=& 1.8 \times 10^6 \; {\rm cm^{-3}} \times \left( \frac{a}{5 \; {\rm AU}} \right)^{-2} \notag \\
-&&\times \left( \frac{\dot M_\star}{10^{-8} M_{\odot }{\rm /yr}} \right) \left( \frac{v}{30~\mbox{km/s}} \right)^{-1}. \label{eq:n_normalized}
-\end{eqnarray}
-%%%%%%%%%% 
 
 As discussed in \citet{ignace2010}, as the stars evolve, the ionization fraction of the stellar wind are lowered down to order of $\sim 10^{-3}$ \citep{drake1987}. Since only charged particles interact with planetary magnetic field, this suggests the inefficient interaction with planetary magnetosphere and hence low input energy for radio emission. 
 However, at this stage, the velocity of stellar wind becomes slower than the escape velocity of planetary companion and hence the stellar wind particles are expected to accrete onto the planets. 
