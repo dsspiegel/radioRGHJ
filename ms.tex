@@ -369,7 +369,7 @@ T_{\rm acc} \sim && 2 \times 10^6 ~\mbox{K} \left( \frac{M_p}{10 M_J} \right) \\
 \sim && 2 \times 10^5 ~\mbox{K} \left( \frac{M_p}{M_J} \right). \label{eq:Tacc}
 \end{eqnarray}
 %%%%%%%%%
-Therefore, the accretion disks around planets therefore emit UV/X-ray radiation 
+The accretion onto planets, therefore, leads to emission of UV/X-ray radiation 
 whose characteristic energy $\sim k_B T_{\rm acc} $ exceeds the ionization energy of Hydrogen, $E_{\rm Rydberg} = 13.6$~eV, or $\lambda = 91.2\rm~nm$. 
 
 Let us consider the ionization profile around the planet. 
@@ -418,24 +418,49 @@ As a result,
 \end{eqnarray}
 %%%%%%%%%
 
-For the accretion disks of large planets, however, the characteristic photon energy is so high (equation (\ref{eq:Tacc})) that the released energetic electrons may also ionize other atoms in the vicinity; the cross section of hydrogen for electrons is $\sim 4\times 10^{-17} {\rm cm}^2$  \citep{fite1958} and the mean free path of the electrons is $\sim 2R_J$. 
-In practice, photons with energy $E_{\rm photon}$ have potential to ionize $E_{\rm photon}/E_{\rm Rydberg}$ times. 
-To take this into account, we consider the cascade where an electron with energy $E _{\rm in}$ ionize an atom releasing two electrons  (an ionizing electron plus the released electron) with energy $ ( E_{\rm in} - E_{\rm Rydberg} ) /2 $ for each. 
-Note that the proton will not acquire much energy due to the conservation of momentum and conservation of energy. \memoYF{in more detail?}
-For example, in an idealized case with $M_p = 10 M_{\rm J}$, $k_B T_{\rm acc} \sim 172\,{\rm eV} \sim 12 \, E_{\rm Rydberg}$, a photoionization produce an electron with energy of $(12-1) = 11 E_{\rm Rydberg} $, then second ionization by that electron produce two photons with energy of $(11-1)/2 = 5 E_{\rm Rydberg}$, and the third ionization by these two photons produce four photons with energy of $(5-1)/2 = 2 E_{\rm Rydberg}$; the cascade can proceed to the forth  order at the maximum. 
-In reality, not all released electrons may be able to proceed the next ionization. Letting $\xi $ represent the fraction of released electrons that proceed to the next ionization, the number of ionized atoms through this cascade, $\alpha $, is
+For the accretion onto large planets, however, the characteristic photon energy is so high (equation (\ref{eq:Tacc})) that the released energetic electrons may also ionize other atoms in the vicinity.
+The cross section\footnote{This is close to the geometric cross section of the Bohr radius.} of hydrogen for electrons is $\sim 4\times 10^{-17} {\rm cm}^2$ (\citep{fite1958}), which implies a mean free path for ionized electrons of $\sim$2$R_J$ in the surrounding medium.
+As a result, nearly 2/3 of released energetic electrons will ionize a hydrogen atom within $\sim$2$R_J$, and more than 99\% will ionize a hydrogen atom within $\sim$10$R_J$.
+
+In principle, photons with energy $E_{\rm photon}$ have potential to ionize $E_{\rm photon}/E_{\rm Rydberg}$ times.
+To take this into account, we consider two limiting possibilities:
+After an ionizing collision, the energy can (\emph{i}) be split evenly between the two electrons, or it can (\emph{ii}) go entirely into the kinetic energy of one electron and not at all into that of the other (of course, any split in between these extremes is possible, too).
+Note that conservation of momentum and energy imply that the proton will not acquire a significant fraction of the energy of the collision.\footnote{Were it otherwise, we'd have to take into account what fraction of a rubber ball's kinetic energy is imparted to the kinetic energy of the Earth when bouncing a ball.}  \memoYF{in more detail?} \memoDS{I think it's fine.}
+
+Scenario (\emph{i}) implies a cascade where an electron with energy $E_{\rm in}$ ionizes an atom producing two electrons (an ionizing electron plus the released electron) with energy $ ( E_{\rm in} - E_{\rm Rydberg} ) /2 $ for each.
+For example, in an idealized case with $M_p = 10 M_{\rm J}$, $k_B T_{\rm acc} \sim 172\,{\rm eV} \sim 12 \, E_{\rm Rydberg}$, a photoionization could produce an electron with energy of $(12-1) = 11 E_{\rm Rydberg} $, then a second ionization by that electron would produce two photons with energy of $(11-1)/2 = 5 E_{\rm Rydberg}$, and the third ionization by these two photons would produce four photons with energy of $(5-1)/2 = 2 E_{\rm Rydberg}$, etc.
+The cascade can proceed to the fourth order at the maximum.
+
+Under scenario (\emph{ii}), the cascade proceeds with the initial $E_{\rm in}$ electron leading to an electron with kinetic energy $E_{\rm in} - E_{\rm Rydberg}$ and another electron with 0 kinetic energy.
+Clearly, this cascade can produce a maximum total of $E_{\rm in} / E_{\rm Rydberg}$ free electrons.
+
+In reality, not all released electrons may be able to proceed the next ionization.
+If $\xi$ represents the fraction of released electrons that proceed to the next ionization, then the number of ionized atoms $N_i$ released through this cascade (\emph{i}), is
+%%%%%%%%%
+\begin{eqnarray}
+  \nonumber N_i & = & (1-\xi) + 2\xi (1-\xi) + 4 \xi^2 (1-\xi) + 8 \xi^3 \\
+  \label{eq:N_i1} & = & 1 + \xi + 2 \xi^2 + 4 \xi ^3 \, .
+\end{eqnarray}
+%%%%%%%%%
+With $\xi = 0.8 $, this gives $N_i \sim 5$.  \memoDS{Why 0.8?}
+Alternatively, cascade (\emph{ii}) leads to
+%%%%%%%%%
+\begin{eqnarray}
+  \nonumber N_i & = & \frac{1 - \xi^\nu}{1 - \xi} \\
+  \label{eq:N_i2}  & = & 1 + \xi + \xi^2 + \cdots + \xi^{\nu - 1} \, ,
+\end{eqnarray}
+%%%%%%%%%
+where $\nu \equiv E_{\rm in} / E_{\rm Rydberg}$ is the maximum number of ionizations for the given initial electron energy.
+This limit leads to a value for $N_i$ that is not dramatically different from that of limit (\emph{ii}).
+In Appendix \ref{sec:AppendixB}, we estimate the Bhabha(/M{\o}ller) scattering cross section and show that cascade (\emph{ii}) is probably more realistic.
+
+Ultimately, $\dot{N}_X $ in equation (\ref{eq:equilibrium}) is replaced by 
 %%%%%%%%%
 \begin{equation}
-\alpha = (1-\xi) + 2\xi (1-\xi) + 4 \xi^2 (1-\xi) + 8 \xi^3. 
+\dot{N}_X \rightarrow N_i \dot{N}_X \, .
 \end{equation}
 %%%%%%%%%
-With $\xi = 0.8 $, this gives $\alpha \sim 5$. 
-Then, $\dot{N}_X $ in equation (\ref{eq:equilibrium}) is replaced by 
-%%%%%%%%%
-\begin{equation}
-\dot{N}_X \rightarrow \alpha \dot{N}_X. 
-\end{equation}
-%%%%%%%%%
+For a $10 M_J$ planet, $N_i$ is probably approximately in the range 5---10.
 
 The ionization fraction $x$ as a solution of equation (\ref{eq:equilibrium}) is shown in Figure \ref{fig:ionizationfraction}. 
 %\memoDS{We should write the expression ... it's just the quadratic formula, but it would be useful to write.}
@@ -1222,14 +1247,13 @@ Basic research in radio astronomy at NRL is supported by 6.1 Base funding.
 
 \bibliography{biblio.bib}
 
-\end{document}
 
 \newpage
 
 \appendix
 
 \section{Comparison with previous work}
-
+\label{sec:AppendixA}
 
 There is a rather wide range in estimates of the radio emission from Jovian exoplanets and it is worth noting how the different models yield different answers. 
 
@@ -1338,6 +1362,31 @@ P_{\rm rad} \times 10^{11} \,{\rm W}\, \left( \frac{\omega}{\omega _J} \right)^{
 %%%
 with $\alpha = 0.5-0.8$, $\beta = 0.33-1.33$, $\gamma = 0-0.288$, $\gamma = 1.17-1.60$, $\epsilon = 0.58-0.8$, $\phi = 1.46-2.0$. 
 
+
+\section{Ionization Cascade}
+\label{sec:AppendixB}
+
+For an electron-hydrogen ionizing collision, we estimate the differential cross section $\sigma$ as a function of recoil energy $d\sigma / dE_{\rm recoil}$.
+We approximate the bound electron as a free one at rest and use the differential cross section for scattering of two electrons (Bhabha scattering) in the non-relativistic limit:
+\begin{equation}
+\label{eq:dsig/dOmeg} \frac{d\sigma}{d\Omega_{\rm CM}} \sim \frac{\alpha^2}{m_e^2 v_{\rm rel}^2 \sin^4 \theta} \, ,
+\end{equation}
+where $\alpha$ is the fine structure constant, $v_{\rm rel}$ is the relative velocity, $\theta$ is the scattering angle in the center of mass (CM) frame, and $m_e$ is the electron mass.
+The recoil energy (that is, the energy transferred to the electron at rest) is related to the scattering angle via
+\begin{equation}
+  \label{eq:Erec} = \frac{1}{4} m_e v_{\rm rel}^2 \left( 1 - \cos \theta \right) \, ,
+\end{equation}
+and hence
+\begin{equation}
+  \label{eq:dErec/dOmeg} \frac{dE_{\rm recoil}}{d\Omega_{\rm CM}} = -\frac{1}{4} m_e v_{\rm rel}^2 \, .
+\end{equation}
+We therefore have
+\begin{equation}
+  \label{eq:dsig/dErec} \frac{d\sigma}{dE_{\rm recoil}} \sim \frac{\alpha^2}{m_e v_{\rm rel}^2 E_{\rm recoil}^2} \, ,
+\end{equation}
+which is largest for small recoil energies.
+Of course, $E_{\rm recoil}$ must be larger than $E_{\rm Rydberg}$ for this approximation to be meaningful.
+%This suggests that if the energetic electron ends up ionizing other atoms, it is more likely to put them right at the threshold of 
 
 \end{document}
 
