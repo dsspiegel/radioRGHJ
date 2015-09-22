@@ -1277,6 +1277,36 @@ Basic research in radio astronomy at NRL is supported by 6.1 Base funding.
 
 \appendix
 
+
+
+\section{Ionization Cascade}
+\label{sec:AppendixB}
+
+For an electron-hydrogen ionizing collision, we estimate the differential cross section $\sigma$ as a function of recoil energy $d\sigma / dE_{\rm recoil}$.
+We approximate the bound electron as a free one at rest and use the differential cross section for scattering of two electrons (Bhabha scattering) in the non-relativistic limit:
+\begin{equation}
+\label{eq:dsig/dOmeg} \frac{d\sigma}{d\Omega_{\rm CM}} \sim \frac{\alpha^2}{m_e^2 v_{\rm rel}^2 \sin^4 \theta} \, ,
+\end{equation}
+where $\alpha$ is the fine structure constant, $v_{\rm rel}$ is the relative velocity, $\theta$ is the scattering angle in the center of mass (CM) frame, and $m_e$ is the electron mass.
+The recoil energy (that is, the energy transferred to the electron at rest) is related to the scattering angle via
+\begin{equation}
+  \label{eq:Erec} = \frac{1}{4} m_e v_{\rm rel}^2 \left( 1 - \cos \theta \right) \, ,
+\end{equation}
+and hence
+\begin{equation}
+  \label{eq:dErec/dOmeg} \frac{dE_{\rm recoil}}{d\Omega_{\rm CM}} = -\frac{1}{4} m_e v_{\rm rel}^2 \, .
+\end{equation}
+We therefore have
+\begin{equation}
+  \label{eq:dsig/dErec} \frac{d\sigma}{dE_{\rm recoil}} \sim \frac{\alpha^2}{m_e v_{\rm rel}^2 E_{\rm recoil}^2} \, ,
+\end{equation}
+which is largest for small recoil energies.
+Of course, $E_{\rm recoil}$ must be larger than $E_{\rm Rydberg}$ for this approximation to be meaningful.
+%This suggests that if the energetic electron ends up ionizing other atoms, it is more likely to put them right at the threshold of 
+
+
+
+
 \section{Comparison with previous work}
 \label{sec:AppendixA}
 
@@ -1386,33 +1416,6 @@ P_{\rm rad} \times 10^{11} \,{\rm W}\, \left( \frac{\omega}{\omega _J} \right)^{
 \end{equation} 
 %%%
 with $\alpha = 0.5-0.8$, $\beta = 0.33-1.33$, $\gamma = 0-0.288$, $\gamma = 1.17-1.60$, $\epsilon = 0.58-0.8$, $\phi = 1.46-2.0$. 
-
-
-\section{Ionization Cascade}
-\label{sec:AppendixB}
-
-For an electron-hydrogen ionizing collision, we estimate the differential cross section $\sigma$ as a function of recoil energy $d\sigma / dE_{\rm recoil}$.
-We approximate the bound electron as a free one at rest and use the differential cross section for scattering of two electrons (Bhabha scattering) in the non-relativistic limit:
-\begin{equation}
-\label{eq:dsig/dOmeg} \frac{d\sigma}{d\Omega_{\rm CM}} \sim \frac{\alpha^2}{m_e^2 v_{\rm rel}^2 \sin^4 \theta} \, ,
-\end{equation}
-where $\alpha$ is the fine structure constant, $v_{\rm rel}$ is the relative velocity, $\theta$ is the scattering angle in the center of mass (CM) frame, and $m_e$ is the electron mass.
-The recoil energy (that is, the energy transferred to the electron at rest) is related to the scattering angle via
-\begin{equation}
-  \label{eq:Erec} = \frac{1}{4} m_e v_{\rm rel}^2 \left( 1 - \cos \theta \right) \, ,
-\end{equation}
-and hence
-\begin{equation}
-  \label{eq:dErec/dOmeg} \frac{dE_{\rm recoil}}{d\Omega_{\rm CM}} = -\frac{1}{4} m_e v_{\rm rel}^2 \, .
-\end{equation}
-We therefore have
-\begin{equation}
-  \label{eq:dsig/dErec} \frac{d\sigma}{dE_{\rm recoil}} \sim \frac{\alpha^2}{m_e v_{\rm rel}^2 E_{\rm recoil}^2} \, ,
-\end{equation}
-which is largest for small recoil energies.
-Of course, $E_{\rm recoil}$ must be larger than $E_{\rm Rydberg}$ for this approximation to be meaningful.
-%This suggests that if the energetic electron ends up ionizing other atoms, it is more likely to put them right at the threshold of 
-
 \end{document}
 
 \clearpage
