@@ -561,7 +561,7 @@ For a $10 M_{\rm J}$ planet, $N_i$ is probably approximately in the range 5---10
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{figure}[htbp]
    \plotoneh{ionizationfraction.pdf}
-   \caption{Profile of ionization fraction due to X-ray from the planetary accretion disk, measured from the surface of the planet. Solid lines show the solutions without the correction for the secondary ionization by ionized electrons, while the dashed lines show the solutions which take the correction into account with efficiency factor $\xi=0.8$. The vertical arrows show the Str\"omgren radius estimated simply  by equation (\ref{eq:stromgren}). The dotted vertical lines indicate the location of the magnetic stand-off radii, $r_{\rm mag}$,  obtained by equation (\ref{eq:stand-off-radius_RGHJ}) below. }
+   \caption{Profile of ionization fraction due to X-ray from the planetary accretion disk, measured from the surface of the planet. Solid lines show the solutions without the correction for the secondary ionization by ionized electrons, while the dashed lines show the solutions which take the correction into account with efficiency factor $N_i=6$. The vertical arrows show the Str\"omgren radius estimated simply  by equation (\ref{eq:stromgren}). The dotted vertical lines indicate the location of the magnetic stand-off radii, $r_{\rm mag}$,  obtained by equation (\ref{eq:stand-off-radius_RGHJ}) below. }
    %\memoDS{This looks great.  Might be good to also show the locations of the magnetic standoff point and the ``stromgren sphere radius'' on this figure (say, with vertical dashed and dotted lines?), and to move the legend to the lower left corner? {\tt plt.legend(loc=3)}}
   \label{fig:ionizationfraction}
 \end{figure}
@@ -575,7 +575,7 @@ When, $\tau \sim n \sigma _H r$ is much smaller than unity and thus $e^{-\tau }$
 x[r] &=& \frac{-1 + \sqrt{1+4C[r]}}{2C[r]} \\
 C[r] &\equiv &   \frac{4 \pi n \beta [T_e] r^2}{\dot{N} \sigma_H[E_{\rm photon}]}  \end{eqnarray}
 %%%%%%%%%
-The solid lines show the ionization fraction of $\xi=0$ (no additional ionization by electrons) and dashed lines show that of $\xi=0.5$. In the figure, the vertical lines show the magnetic stand-off radius obtained by equation (\ref{eq:stand-off-radius_RGHJ}) below. 
+The solid lines show the ionization fraction of $\xi=0 \; (N_i = 1)$ (no additional ionization by electrons) and dashed lines show that of $N_i=6$. In the figure, the vertical lines show the magnetic stand-off radius obtained by equation (\ref{eq:stand-off-radius_RGHJ}) below. 
 While the photon rate is large for larger planets, the strong dependence of cross section on the photon energy (equation (\ref{eq:sigma_H})) leads to the decrease in the radius of ionized region. 
 Nevertheless, still, substantial amount of ionized plasmas are expected around the magnetic stand-off radius. 
 
@@ -808,7 +808,7 @@ Observable energy flux is, however, limited by the plasma cut-off frequency in t
 %\end{equation} 
 %%%
 The doubly hashed regions in Figure \ref{fig:radio} indicate the parameter spaces where the criteria $\nu_{\rm cyc,\,max} > \nu_{\rm plasma}^{\rm los}$ is not satisfied and thus the radio emission from the planet cannot be observed from the Earth. 
-In reality, the peak of the auroral radio emission does not always occur at the maximum frequency. Instead, it usually exits at lower frequencies. Here, we also consider one more criteria, $0.1 \nu_{\rm cyc,\,max} > \nu_{\rm plasma}^{\rm los}$ as a conservative measure for the observability of the bulk of radio emission. In figure \ref{fig:radio}, this conservative region is shown as hatched regions with vertical lines. 
+In reality, the peak of the auroral radio emission does not always occur at the maximum frequency. Instead, it usually exits at lower frequencies. Here, we also consider one more criteria, $0.1 \nu_{\rm cyc,\,max} > \nu_{\rm plasma}^{\rm los}$ as a conservative measure for the observability of the bulk of radio emission. In Figure \ref{fig:radio}, this conservative region is shown as hatched regions with vertical lines. 
 It is now shown that the plasma cut-off due to massive stellar wind is a major obstacle in detecting planetary companions around evolved stars. 
 For a red-giant system, the most promising target is massive companions with $M_p \gtrsim 5M_{\rm J}$. 
 On the other hand, for a AGB-star system, only massive planets at distant orbits are marginally detectable. 
@@ -907,7 +907,7 @@ Figure \ref{fig:cartoon} is a cartoon for a radio spectrum of a planet with $10~
 Note that the thermal contribution from the accretion disk is negligible in this figure. 
 The spectral shape is modeled by simply scaling the Jovian radio spectrum (e.g. Figure 8 of \cite{zarka_et_al2004}). 
 The continuum lines from the star in the cases of $\alpha_* =0.8$ and $2.0$ are shown as an extreme case. %; the 0.6 value is the prediction from the constant property wind model \citep{wright1975,panagia1975,olnon1975}. 
-As figure \ref{fig:cartoon} indicates, with a reasonable range of spectral index, the radio emission from the star is smaller by order of magnitude than the expected radio flux from RGHJs at frequencies below 300~MHz. 
+As Figure \ref{fig:cartoon} indicates, with a reasonable range of spectral index, the radio emission from the star is smaller by order of magnitude than the expected radio flux from RGHJs at frequencies below 300~MHz. 
 For less massive planets (with weaker magnetic fields), the distinction is even clearer, because the peak flux is larger and the peak frequencies are smaller. 
 
 
@@ -991,10 +991,36 @@ Planning future targeted surveys of RGHJs would require accurate distribution fu
 In order to estimate the true luminosity function of RGHJ emitters, one of the key factors is the distribution of mass-loss rates of giant host stars. 
 As discussed in Section \ref{ss:brightness}, for a given set of orbital parameters the luminosity ($L$) of a RGHJ depends on the stellar mass-loss rate and wind velocity as $\dot{M}_\star^{2/3} v^{5/3}$. 
 Employing equation (\ref{eq:mass-loss}) which implies $\dot{M}_\star \propto L_\star^{7.5/4} R_\star^{-0.75} M_\star^{-1} (1+A/g_\star)$ and crudely estimating the wind velocity as $v \propto \sqrt{GM/R} \propto M^{1/2} R^{-1/2}$, the luminosity of the RGHJ radio emission is given by $L \propto L_\star^{2/3} R_\star ^{-1/6} M_\star^{1/6} T_{\rm eff}^{2.3} (1+A/g_\star)^{2/3}$. 
-Given that the dependences on $R_\star$ and $M_\star^{1/6}$ are relatively weak and that $T_{\rm eff}$ does not change significantly, the radio luminosity of RGHJs scales roughly as $L \propto L_{\star }^{2/3}$.
+Given that the dependences on $R_\star$ and $M_\star^{1/6}$ are relatively weak and that $T_{\rm eff}$ does not change significantly, the radio luminosity of RGHJs scales roughly as $L \propto L_{\star }^{2/3}$. 
+Observations of globular clusters indicates the luminosity function of red giants $dn/dL_{\star } \sim L_{\star }^{-1.8}$ \citep{sandquist1996}. Therefore, $\alpha_L \sim -2.7$. 
+
 Thus, the criterion $\alpha_L < 3/2$ is satisfied if the slope of the luminosity function of the host stars is shallower than $-1$.
 
+\memoYF{stirring up...}
 
+The number of targets within the shell at radius $r \sim r+\Delta r$, $dN(r)/dr $, is
+%%%
+\begin{eqnarray}
+\frac{dN(r)}{dr} &=& 4 \pi r^2 \int _{L_{\rm min}}^{\infty} \frac{dn(L)}{dL} dL \\
+L_{\rm min} &\propto & r^2 F_{\rm min} 
+\end{eqnarray}
+%%%
+where $F_{\rm min}$ is the detection limit ($=constant$). 
+Assuming $dn(L)/dL \propto L^{-\alpha_L }$, 
+%%%
+\begin{eqnarray}
+\frac{dN(r)}{dr} &\propto & r^2 \left( \frac{L_{\rm min}^{-\alpha_L + 1}}{\alpha_L - 1}  \right)\\
+&\sim & r^2 \left( \frac{r^{2(-\alpha_L + 1)}}{\alpha_L - 1} \right) \\
+&\propto & \frac{r^{-2\alpha_L + 4}}{\alpha_L - 1}
+\end{eqnarray}
+%%%
+($N(r)$ is the number of candidates within volume $V(r) =4\pi r^3/3$.)
+When $\alpha _L=2.7$, 
+\begin{equation}
+\frac{dN(r)}{dr} \propto r^{-1.4}
+\end{equation}
+%Now, using the luminosity function of red giants $dn/dL_{\star } \sim L_{\star }^{-1.8}$ \citep{sandquist1996} and $L \sim L_{\star}^{2/3}$, $\alpha_L \sim -2.7$. Thus, the number of candidates within volume $V(r)$ increases as $r^{-0.4}$. 
+%%%
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \subsection{Detectability with current and near-future low-frequency radio instrumentation}
