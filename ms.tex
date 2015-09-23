@@ -351,7 +351,7 @@ Therefore, we implicitly assume that the RGHJs considered in this paper are rapi
 
 
 In order to evaluate $\rho _{\rm dynamo}$ and $q_o$, we need models of the internal planetary structure. 
-We consider Jupiter-like gaseous planets and assume that the planetary radius is constant at $R_p = R_{p,J}$, as numerical calculations show that the radii of gaseous planets over the range of $0.1 M_{p, J} < M_p < 10M_{p, J}$ (with core mass less than 10\%) converge to $0.8 R_{p, J} < R_p < 1.2R_{p, J}$ within 1 Gyr \citep{fortney2007}. 
+We consider Jupiter-like gaseous planets and assume that the planetary radius is constant at $R_p = R_{p,{\rm J}}$, as numerical calculations show that the radii of gaseous planets over the range of $0.1 M_{p,{\rm J}} < M_p < 10M_{p, {\rm J}}$ (with core mass less than 10\%) converge to $0.8 R_{p,{\rm J}} < R_p < 1.2R_{p, {\rm J}}$ within 1 Gyr \citep{fortney2007}. 
 For the density profile, we assume a polytrope gas sphere with index $n=1$, which results in:
 %%%%%%%%%% 
 \begin{equation}
@@ -367,15 +367,15 @@ The time-dependent luminosity is taken from equation (1) of \citet{burrows_et_al
 Ignoring the relatively weak dependence on average atmospheric Rosseland mean opacity leads to:
 %%%%%%%%%%
 \begin{equation}
-%L \sim 1.84\times10^{-10} L_\odot \left( \frac{t}{4.5 \rm~Gyr} \right)^{-1.3} \left( \frac{M_p}{M_J} \right)^{2.64} \, 	
-L_p \sim 6.3\times10^{23} \left( \frac{t}{4.5 \rm~Gyr} \right)^{-1.3} \left( \frac{M_p}{M_J} \right)^{2.64} \, 
+%L \sim 1.84\times10^{-10} L_\odot \left( \frac{t}{4.5 \rm~Gyr} \right)^{-1.3} \left( \frac{M_p}{M_{\rm J}} \right)^{2.64} \, 	
+L_p \sim 6.3\times10^{23} \; {\rm erg} \; \left( \frac{t}{4.5 \rm~Gyr} \right)^{-1.3} \left( \frac{M_p}{M_{\rm J}} \right)^{2.64} \, 
 \label{eq:burrowsLum}
 \end{equation}
 %%%%%%%%%%
 Therefore, we have
 %%%%%%%%%%
 \begin{equation}
-q_o \sim q_{o, J} \left( \frac{t}{4.5 \rm~Gyr} \right)^{-1.3} \left( \frac{M_p}{M_J} \right)^{2.64} \left( \frac{r_{\rm dynamo}}{r_{\rm dynamo,\,J}} \right)^{-2}\, .
+q_o \sim q_{o, {\rm J}} \left( \frac{t}{4.5 \rm~Gyr} \right)^{-1.3} \left( \frac{M_p}{M_{\rm J}} \right)^{2.64} \left( \frac{r_{\rm dynamo}}{r_{\rm dynamo,\,J}} \right)^{-2}\, .
 \label{eq:burrowsHeatFlux}
 \end{equation}
 %%%%%%%%%%
@@ -384,7 +384,7 @@ Substituting equation (\ref{eq:burrowsHeatFlux}) into equation (\ref{eq:Bscaling
 %%%%%%%%%% 
 \begin{equation}
 %B   &\sim &  10~{\rm G} \left( \frac{t}{4.5~\rm{Gyr}} \right)^{-0.43} \left( \frac{M_p }{M_{p,J}} \right)^{1.38} \label{eq:scalingB} \\
-B   \sim   10~{\rm G} \left( \frac{M_p }{M_{p,J}} \right)^{1.04} \left( \frac{t}{4.5~\rm{Gyr}} \right)^{-0.43} \label{eq:scalingB}
+B   \sim   10~{\rm G} \left( \frac{M_p }{M_{p,{\rm J}}} \right)^{1.04} \left( \frac{t}{4.5~\rm{Gyr}} \right)^{-0.43} \label{eq:scalingB}
 \end{equation}
 %%%%%%%%%%
 under this model. 
@@ -432,7 +432,7 @@ n &=& 1.8 \times 10^6 \; {\rm cm^{-3}} \times \left( \frac{a}{5 \; {\rm AU}} \ri
 %%%%%%%%%% 
 
 The contributions for the velocity term in equation (\ref{eq:Pinp_kin}), which should be the relative velocity between the planet and the solar wind, are given by the stellar wind velocity, the planetary orbital velocity, and the infall velocity (i.e., the velocity due to falling in the planet's gravitional field).
-While $v_{\rm sw}$ is $\sim$30~km/s, the orbital velocity is $10-30~{\rm km/s}$ depending on the orbital distance (ranging from $1-5~{\rm AU}$), and the infall velocity from the planetary gravity is $\sim 10-25~{\rm km/s}$, depending on the planetary mass (ranging from $1 M_{\rm J}-10 M_{\rm J}$). \memoDS{Where is the relevant velocity?  Is it at the magnetic standoff point, or at the planetary surface, or somewhere in between?  At the planet's surface, the infall velocity is 150 km/s for a 10$M_J$ planet, no?}
+While $v_{\rm sw}$ is $\sim$30~km/s, the orbital velocity is $10-30~{\rm km/s}$ depending on the orbital distance (ranging from $1-5~{\rm AU}$), and the infall velocity from the planetary gravity is $\sim 10-25~{\rm km/s}$, depending on the planetary mass (ranging from $1 M_{\rm J}-10 M_{\rm J}$). \memoDS{Where is the relevant velocity?  Is it at the magnetic standoff point, or at the planetary surface, or somewhere in between?  At the planet's surface, the infall velocity is 150 km/s for a 10$M_{\rm J}$ planet, no?}
 Here, we simply consider
 %%%%%%%%%% 
 \begin{equation}
@@ -456,11 +456,11 @@ However, at this stage, the velocity of stellar wind becomes slower than the esc
 %%%%%%%%%
 \begin{eqnarray}
 L_{\rm acc} \sim &&  10^{25} \; {\rm erg\;s}^{-1} \left( \frac{\dot M_*}{10^{-8} M_{\odot }/{\rm yr}} \right)  \notag \\
-&& \times \left( \frac{M_p}{M_J} \right)^3 \left( \frac{M_*}{M_{\odot }} \right). \\
+&& \times \left( \frac{M_p}{M_{\rm J}} \right)^3 \left( \frac{M_*}{M_{\odot }} \right). \\
 %
-T_{\rm acc} \sim %&& 2 \times 10^6 ~\mbox{K} \left( \frac{M_p}{10 M_J} \right) \\
+T_{\rm acc} \sim %&& 2 \times 10^6 ~\mbox{K} \left( \frac{M_p}{10 M_{\rm J}} \right) \\
 %\sim 
-&& 2 \times 10^5 ~\mbox{K} \left( \frac{M_p}{M_J} \right). \label{eq:Tacc}
+&& 2 \times 10^5 ~\mbox{K} \left( \frac{M_p}{M_{\rm J}} \right). \label{eq:Tacc}
 \end{eqnarray}
 %%%%%%%%%
 The accretion onto planets, therefore, leads to emission of UV/X-ray radiation 
@@ -476,7 +476,7 @@ Denoting the ionization fraction by $x$, the equilibrium state at a distance $r$
 \end{equation}
 %%%%%%%%%
 \begin{equation}
-\tau = \int _{R_J}^r n(1-x) \sigma_H [E_{\rm photon}] dr 
+\tau = \int _{R_{\rm J}}^r n(1-x) \sigma_H [E_{\rm photon}] dr 
 \end{equation}
 %%%%%%%%%
 where $\dot N_X$ is the source rate of the photons that can ionize the hydrogen, 
@@ -506,8 +506,8 @@ As a result,
 \dot{N}_X \sim  
   \left\{
     \begin{array}{ll}
-      2 \times 10^{35} \;  {\rm sec^{-1}} & \;\;\;(M_p = M_J) \\
-      3 \times 10^{37} \; {\rm sec^{-1}} & \;\;\;(M_p = 10 M_J)
+      2 \times 10^{35} \;  {\rm sec^{-1}} & \;\;\;(M_p = M_{\rm J}) \\
+      3 \times 10^{37} \; {\rm sec^{-1}} & \;\;\;(M_p = 10 M_{\rm J})
     \end{array}. 
   \right.
 \end{eqnarray}
@@ -555,7 +555,7 @@ Ultimately, $\dot{N}_X $ in equation (\ref{eq:equilibrium}) is replaced by
 \dot{N}_X \rightarrow N_i \dot{N}_X \, .
 \end{equation}
 %%%%%%%%%
-For a $10 M_J$ planet, $N_i$ is probably approximately in the range 5---10.
+For a $10 M_{\rm J}$ planet, $N_i$ is probably approximately in the range 5---10.
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -569,7 +569,7 @@ For a $10 M_J$ planet, $N_i$ is probably approximately in the range 5---10.
 
 The ionization fraction $x$ as a solution of equation (\ref{eq:equilibrium}) is shown in Figure \ref{fig:ionizationfraction}. 
 %\memoDS{We should write the expression ... it's just the quadratic formula, but it would be useful to write.}
-When, $\tau \sim n \sigma _H r$ is much smaller than unity and thus $e^{-\tau }$ term can be ignored (that is the case for $M_p = 10 M_J$),  the solution is simply
+When, $\tau \sim n \sigma _H r$ is much smaller than unity and thus $e^{-\tau }$ term can be ignored (that is the case for $M_p = 10 M_{\rm J}$),  the solution is simply
 %%%%%%%%%
 \begin{eqnarray}
 x[r] &=& \frac{-1 + \sqrt{1+4C[r]}}{2C[r]} \\
@@ -592,14 +592,14 @@ which gives
 r_{\rm stromgren} \sim  
   \left\{
     \begin{array}{ll}
-      67 ~R_J & \;\;\;(M_p = M_J) \\
-      310 ~R_J & \;\;\;(M_p = 10 M_J)
+      67 ~R_J & \;\;\;(M_p = M_{\rm J}) \\
+      310 ~R_J & \;\;\;(M_p = 10 M_{\rm J})
     \end{array}
   \right. \label{eq:stromgren}
 \end{eqnarray}
 %%%%%%%%%
 for a planet around a red giants at 5~AU. 
-The Str\"omgren radius for $1M_J $ and for $10M_J$ are also indicated in Figure \ref{fig:ionizationfraction}. Note, however, that unlike the frequently-demonstrated photoionization problem around O/B-type stars, in the situation of our interest, the Str\"omgren radius is not a sharp edge of ionization anymore, due to smaller source rate and smaller cross section (in this case parameter ``a'' in equation (13) of \citet{stromgren1939} is not small). 
+The Str\"omgren radius for $1M_{\rm J} $ and for $10M_{\rm J}$ are also indicated in Figure \ref{fig:ionizationfraction}. Note, however, that unlike the frequently-demonstrated photoionization problem around O/B-type stars, in the situation of our interest, the Str\"omgren radius is not a sharp edge of ionization anymore, due to smaller source rate and smaller cross section (in this case parameter ``a'' in equation (13) of \citet{stromgren1939} is not small). 
 The Str\"omgren radii are indicated by vertical arrows in Figure \ref{fig:ionizationfraction}. 
 
 
@@ -709,7 +709,7 @@ Substituting equation (\ref{eq:stand-off-radius2}) to equation (\ref{eq:Pinp_kin
 \begin{eqnarray}
 P_{\rm k,\,inp} &=& nv^3 r_{\rm mag}^2 %= n v^3 \left( \frac{B^2}{8\pi m_{\rm p}nv^2} \right)^{1/3} R_J^2  \\
 \\
-&=& P_{\rm k,\,inp,\,J} \left( \frac{B}{B_J} \right)^{2/3} \left( \frac{a}{5.2~\mbox{AU}} \right)^{-4/3}  \notag \\
+&=& P_{\rm k,\,inp,\,J} \left( \frac{B}{B_{\rm J}} \right)^{2/3} \left( \frac{a}{5.2~\mbox{AU}} \right)^{-4/3}  \notag \\
 && \times \left( \frac{\dot M_\star}{\dot M_{\odot}} \right)^{2/3} \left( \frac{v}{v_{\odot}} \right)^{5/3} \label{eq:Pkinp}
 \end{eqnarray}
 %%%
@@ -722,17 +722,17 @@ Then, equation (\ref{eq:Pkinp}) can be re-normalized as follows.
 P_{\rm k,\,inp} 
 %&\approx & 227 ~P_{\rm k,\,inp,\,J} \left( \frac{B}{B_J} \right)^{2/3} \left( \frac{a}{5~\mbox{AU}} \right)^{-4/3} \notag \\
 %&& \times \left( \frac{\dot M_\star}{\dot M_{\odot}} \right)^{2/3} \left( \frac{v}{10^{-1} v_{\odot}} \right)^{5/3} \\
-&\approx &  140 ~P_{\rm k,\,inp,\,J} \left( \frac{B}{B_J} \right)^{2/3} \left( \frac{a}{5~\mbox{AU}} \right)^{-4/3} \notag \\
+&\approx &  140 ~P_{\rm k,\,inp,\,J} \left( \frac{B}{B_{\rm J}} \right)^{2/3} \left( \frac{a}{5~\mbox{AU}} \right)^{-4/3} \notag \\
 && \times \left( \frac{\dot M_\star}{10^{-8} M_{\odot}{\rm /yr}} \right)^{2/3} \left( \frac{v}{10^{-1} v_{\odot}} \right)^{5/3} \\
 && \;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\; \mbox{(for RGB stars' companions)} \notag \\
 %&\approx & 2.27 \times 10^4 ~P_{\rm k,\,inp,\,J} \left( \frac{B}{B_J} \right)^{2/3} \left( \frac{a}{5~\mbox{AU}} \right)^{-4/3} \notag \\
 %&& \times \left( \frac{\dot M_\star}{10^9 \dot M_{\odot}} \right)^{2/3} \left( \frac{v}{10^{-1} v_{\odot}} \right)^{5/3}  \\
-&\approx & 14000 \times 10^4 ~P_{\rm k,\,inp,\,J} \left( \frac{B}{B_J} \right)^{2/3} \left( \frac{a}{5~\mbox{AU}} \right)^{-4/3} \notag \\
+&\approx & 14000 \times 10^4 ~P_{\rm k,\,inp,\,J} \left( \frac{B}{B_{\rm J}} \right)^{2/3} \left( \frac{a}{5~\mbox{AU}} \right)^{-4/3} \notag \\
 && \times \left( \frac{\dot M_\star}{10^{-5} M_{\odot}{\rm /yr}} \right)^{2/3} \left( \frac{v}{10^{-1} v_{\odot}} \right)^{5/3}  \\
 && \;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\; \mbox{(for AGB stars' companions)} \notag \\
 %&\approx & 489 ~P_{\rm k,\,inp,\,J} \left( \frac{B}{B_J} \right)^{2/3} \left( \frac{a}{0.05~\mbox{AU}} \right)^{-4/3} \notag \\
 %&& \times \left( \frac{\dot M_\star}{\dot M_{\odot}} \right)^{2/3} \left( \frac{v}{v_{\odot}} \right)^{5/3} \\
-&\approx & 490 ~P_{\rm k,\,inp,\,J} \left( \frac{B}{B_J} \right)^{2/3} \left( \frac{a}{0.05~\mbox{AU}} \right)^{-4/3} \notag \\
+&\approx & 490 ~P_{\rm k,\,inp,\,J} \left( \frac{B}{B_{\rm J}} \right)^{2/3} \left( \frac{a}{0.05~\mbox{AU}} \right)^{-4/3} \notag \\
 && \times \left( \frac{\dot M_\star}{\dot M_{\odot}} \right)^{2/3} \left( \frac{v}{v_{\odot}} \right)^{5/3} \\
 && \;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\; \mbox{(for canonical hot jupiters)} \notag 
 \end{eqnarray}
@@ -748,8 +748,8 @@ Depending on the modeling of magnetic field strength, there is also speculation 
 %\begin{tabular}{c|cccc} \hline \hline
 %& mass & magnetic field & orbit &  spin period \\ 
 %& $M_p$ & B & $a$ &  \\ \hline
-%canonical HJ & $M_J$ & $B_J$ & 0.05 AU & 4 days \\
-%RGHJ & $M_J$ & $B_J$ & 5 AU &  0.4 days \\ \hline
+%canonical HJ & $M_{\rm J}$ & $B_J$ & 0.05 AU & 4 days \\
+%RGHJ & $M_{\rm J}$ & $B_J$ & 5 AU &  0.4 days \\ \hline
 %\end{tabular}
 %\end{center}
 %\label{tab:comp_HJ}
@@ -762,7 +762,7 @@ Combining the expressions above, we find that the radio spectral flux density ob
 \begin{eqnarray}
 F_{\nu} &=& \frac{P_{\rm radio}}{\Omega d^2 \nu_{\rm cyc}} \\
 &\approx & 5.2\times 10^{-8} \mbox{Jy} \left( \frac{d}{100\mbox{~pc}} \right)^{-2}  \notag \\
-&&\times \left( \frac{B}{B_J} \right)^{-1/3}  \left( \frac{a}{5~\mbox{AU}} \right)^{-4/3} \notag \\
+&&\times \left( \frac{B}{B_{\rm J}} \right)^{-1/3}  \left( \frac{a}{5~\mbox{AU}} \right)^{-4/3} \notag \\
 && \times \left( \frac{\dot M_\star}{\dot M_{\odot}} \right)^{2/3} \left( \frac{v}{v_{\odot}} \right)^{5/3} \label{eq:F_nu} \\
 && \;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\; \mbox{(for Jupiter-twin)} \notag \\
 %%%
@@ -770,7 +770,7 @@ F_{\nu} &=& \frac{P_{\rm radio}}{\Omega d^2 \nu_{\rm cyc}} \\
 %&&\times \left( \frac{B}{B_J} \right)^{-1/3} \left( \frac{a}{5~\mbox{AU}} \right)^{-4/3} \notag \\ 
 %&& \times \left( \frac{\dot M_\star}{10^6 \dot M_{\odot}} \right)^{2/3} \left( \frac{v}{10^{-1} v_{\odot}} \right)^{5/3} \label{eq:F_nu_RGHJ} \\
 &\approx & 0.70 \times 10^{-5} \mbox{Jy} \left( \frac{d}{100\mbox{~pc}} \right)^{-2}  \notag \\
-&&\times \left( \frac{B}{B_J} \right)^{-1/3} \left( \frac{a}{5~\mbox{AU}} \right)^{-4/3} \notag \\ 
+&&\times \left( \frac{B}{B_{\rm J}} \right)^{-1/3} \left( \frac{a}{5~\mbox{AU}} \right)^{-4/3} \notag \\ 
 && \times \left( \frac{\dot M_\star}{10^{-8} M_{\odot}/{\rm yr}} \right)^{2/3} \left( \frac{v}{10^{-1} v_{\odot}} \right)^{5/3} \label{eq:F_nu_RGHJ} \\
 && \;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\; \mbox{(for RGB stars' companions)} \notag \\
 %%%
@@ -778,12 +778,12 @@ F_{\nu} &=& \frac{P_{\rm radio}}{\Omega d^2 \nu_{\rm cyc}} \\
 %&&\times \left( \frac{B}{B_J} \right)^{-1/3} \left( \frac{a}{5~\mbox{AU}} \right)^{-4/3} \notag \\ 
 %&& \times \left( \frac{\dot M_\star}{10^9 \dot M_{\odot}} \right)^{2/3} \left( \frac{v}{10^{-1} v_{\odot}} \right)^{5/3} \label{eq:F_nu_AGB} \\
 &\approx & 0.70 \times 10^{-3} \mbox{Jy} \left( \frac{d}{100\mbox{~pc}} \right)^{-2}  \notag \\
-&&\times \left( \frac{B}{B_J} \right)^{-1/3} \left( \frac{a}{5~\mbox{AU}} \right)^{-4/3} \notag \\ 
+&&\times \left( \frac{B}{B_{\rm J}} \right)^{-1/3} \left( \frac{a}{5~\mbox{AU}} \right)^{-4/3} \notag \\ 
 && \times \left( \frac{\dot M_\star}{10^{-5} M_{\odot}/{\rm yr}} \right)^{2/3} \left( \frac{v}{10^{-1} v_{\odot}} \right)^{5/3} \label{eq:F_nu_AGB} \\
 && \;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\; \mbox{(for AGB stars' companions)} \notag \\
 %%%
 &\approx & 2.4 \times 10^{-5} \mbox{Jy} \left( \frac{d}{100\mbox{~pc}} \right)^{-2}  \notag \\
-&&\times \left( \frac{B}{B_J} \right)^{-1/3} \left( \frac{a}{0.05~\mbox{AU}} \right)^{-4/3} \notag \\ 
+&&\times \left( \frac{B}{B_{\rm J}} \right)^{-1/3} \left( \frac{a}{0.05~\mbox{AU}} \right)^{-4/3} \notag \\ 
 && \times \left( \frac{\dot M_\star}{\dot M_{\odot}} \right)^{2/3} \left( \frac{v}{v_{\odot}} \right)^{5/3} \label{eq:F_nu_RGHJs} \\
 && \;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\; \mbox{(for canonical hot jupiters)} \notag 
 \end{eqnarray}
@@ -810,7 +810,7 @@ Observable energy flux is, however, limited by the plasma cut-off frequency in t
 The doubly hashed regions in Figure \ref{fig:radio} indicate the parameter spaces where the criteria $\nu_{\rm cyc,\,max} > \nu_{\rm plasma}^{\rm los}$ is not satisfied and thus the radio emission from the planet cannot be observed from the Earth. 
 In reality, the peak of the auroral radio emission does not always occur at the maximum frequency. Instead, it usually exits at lower frequencies. Here, we also consider one more criteria, $0.1 \nu_{\rm cyc,\,max} > \nu_{\rm plasma}^{\rm los}$ as a conservative measure for the observability of the bulk of radio emission. In figure \ref{fig:radio}, this conservative region is shown as hatched regions with vertical lines. 
 It is now shown that the plasma cut-off due to massive stellar wind is a major obstacle in detecting planetary companions around evolved stars. 
-For a red-giant system, the most promising target is massive companions with $M_p \gtrsim 5M_J$. 
+For a red-giant system, the most promising target is massive companions with $M_p \gtrsim 5M_{\rm J}$. 
 On the other hand, for a AGB-star system, only massive planets at distant orbits are marginally detectable. 
 
 
@@ -857,7 +857,7 @@ Finally, Section \ref{ss:timevariability} points out the polarization and the ti
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{figure*}[tbp]
    \plotonesc{cartoon_10Mj_100pc_smooth.pdf}
-   \caption{A cartoon of radio emission spectra of a RGHJ with 10$M_J$ and the host red giants with 100 $R_{\odot }$.
+   \caption{A cartoon of radio emission spectra of a RGHJ with 10$M_{\rm J}$ and the host red giants with 100 $R_{\odot }$.
 The spectrum of RGHJ is modeled after Jovian radio spectra, e.g. figure 8 of \citet{zarka_et_al2004} and figure 2 of \citet{griesmeier2007a}; contribution from Io is not shown here.
 The spectra of the host red giant are modeled simply by extrapolating observed radio spectra above 1~GHz with power law. }
   \label{fig:cartoon}
@@ -903,7 +903,7 @@ Using these data, we extrapolate the radio flux from the host star $F_{\star}$ t
 %%%
 where the power index $\alpha_* $ is order of unity. 
 
-Figure \ref{fig:cartoon} is a cartoon for a radio spectrum of a planet with $10~M_J$ and that of the host red giant star with 100~$R_{\odot }$, both of which are placed at a distance of 100 pc. 
+Figure \ref{fig:cartoon} is a cartoon for a radio spectrum of a planet with $10~M_{\rm J}$ and that of the host red giant star with 100~$R_{\odot }$, both of which are placed at a distance of 100 pc. 
 Note that the thermal contribution from the accretion disk is negligible in this figure. 
 The spectral shape is modeled by simply scaling the Jovian radio spectrum (e.g. Figure 8 of \cite{zarka_et_al2004}). 
 The continuum lines from the star in the cases of $\alpha_* =0.8$ and $2.0$ are shown as an extreme case. %; the 0.6 value is the prediction from the constant property wind model \citep{wright1975,panagia1975,olnon1975}. 
@@ -965,7 +965,7 @@ For a hypothetical Jupiter-mass planet at 5 AU, a reasonable number of systems h
 %   \plotoneh{radio_5Mp_5AU.pdf}
 %   \plotoneh{radio_2Mp_4-5Gyr.pdf}
 %   \plotoneh{radio_4Mp_4-5Gyr.pdf}   
-   \caption{Radio emission from existing M-type red giants with a hypothetical planetary companion of 1$M_J$ and 10$M_J$ at 1 AU and 5AU.
+   \caption{Radio emission from existing M-type red giants with a hypothetical planetary companion of 1$M_{\rm J}$ and 10$M_{\rm J}$ at 1~AU and 5~AU.
 Cross symbols indicate that the radio emission is not observable because cyclotron frequency is less than plasma density around the planet. }
   \label{fig:observability}
 \end{figure}
@@ -1097,7 +1097,7 @@ To be conservative, we use the GMRT online calculator.\footnote{\url{http://gmrt
 
 % SKA
 The low frequency component of the Square Kilometer Array (SKA), recently rebaselined to have 0.4~km$^2$ collecting area in 130,000 elements with baselines extending to 65~km, will operate from 50-350~MHz.\footnote{\url{https://www.skatelescope.org/news/worlds-largest-radio-telescope-near-construction/}}
-We estimate the noise in the lower half of the band ($\nu<200~\rm MHz$), appropriate for lower mass ($\lesssim 10 M_J$) separately from the full band, which could be used to detect $\sim 30 M_J$ hot Jupiters.
+We estimate the noise in the lower half of the band ($\nu<200~\rm MHz$), appropriate for lower mass ($\lesssim 10 M_{\rm J}$) separately from the full band, which could be used to detect $\sim 30 M_{\rm J}$ hot Jupiters.
 We again adopt the \cite{Rogers+Bowman2008} relation for \Tsys\ (Equation~\ref{eq:Tsky}), and assume $\Trx \approx 60~\rm K$.
 We caution that these assumptions are optimistic, and the time estimates could in reality be a factor of a few worse.
 
@@ -1108,9 +1108,9 @@ We estimate the sensitivity of LOBO assuming the receiver noise extrapolates lin
 
 
 The noise estimates shown in Table \ref{tab:sens}, together with Figure \ref{fig:observability}, indicate that, at the frequencies relevant for the detection of radio emission from Jupiter-size planets, current instrument sensitivities are generally too low.
-On the other hand, for more massive exoplanets ($M_p\sim 10 M_J$) where the bulk of the radio emission would exist above 50~MHz, there is hope to detect radio emission from nearby systems with LOFAR-HBA or LOBO.
-LOFAR-HBA has reasonable sensitivity to $M_p =10~M_J$ planets at 5 AU around the few closest systems as well as those around further stars but orbiting closer to the stars. 
-More promising is the low frequency component of SKA, which will be able to detect the signal within one day from planets with $M_p \sim 10~M_J$ and orbital distances $\sim$5~AU around M stars $<$100~pc from Earth.
+On the other hand, for more massive exoplanets ($M_p\sim 10 M_{\rm J}$) where the bulk of the radio emission would exist above 50~MHz, there is hope to detect radio emission from nearby systems with LOFAR-HBA or LOBO.
+LOFAR-HBA has reasonable sensitivity to $M_p =10~M_{\rm J}$ planets at 5 AU around the few closest systems as well as those around further stars but orbiting closer to the stars. 
+More promising is the low frequency component of SKA, which will be able to detect the signal within one day from planets with $M_p \sim 10~M_{\rm J}$ and orbital distances $\sim$5~AU around M stars $<$100~pc from Earth.
 
 
 
@@ -1248,7 +1248,7 @@ Based on such a picture, the massive stellar wind of a red giant or a AGB star w
 We found that the intrinsic brightness of radio emission from RGHJs are supposedly comparable to canonical hot Jupiters in close-in orbits around main-sequence stars, and $>100$ times brighter than distant Jupiter-twins around main-sequence stars. This implies that they can be searched for 10 times further away, or in 1000 times larger volume. This can compensate the rareness of the evolved stars at least partly. Thus, RGHJs will serve as  reasonable targets for future search for exoplanetary radio emission. 
 
 A major obstacle to observe this radio emission is the plasma cut-off frequency of the (ionized) stellar wind. Due to the great density of the stellar wind, the cut-off frequency is as high as $\sim 12$ MHz for typical red giants and $\sim$ 400 MHz for typical AGB stars. 
-The promising targets are massive planetary ($M_p \gtrsim 5M_J$ \memoYF{what shall we say?}) companions with magnetic field stronger than Jupiter (i.e., higher cyclotron frequency). 
+The promising targets are massive planetary ($M_p \gtrsim 5M_{\rm J}$ \memoYF{what shall we say?}) companions with magnetic field stronger than Jupiter (i.e., higher cyclotron frequency). 
 
 The radio flux from a system with an exoplanet at 5 AU at a distance of 100 pc would be typically on the order of $\sim 10 \mu $Jy.
 Such signals would be detectable with SKA within a day or so.
@@ -1389,34 +1389,34 @@ As for i., ii. and iii., the scaling laws are summarized in Table \ref{tab:comp}
 If we use the assumptions that $R_p \sim R_J\;\;(const.)$, $\rho _c\sim R_p\sim const.$, and $\sigma = const.$, then the assumptions are reduced to:
 %%%%%%%%%
 \begin{eqnarray}
-\mbox{[\#1]} \; P_{\rm rad} &\sim & 4 \times 10^9 \,{\rm W}\,\left( \frac{\omega}{\omega _J} \right)^{0.58} \left( \frac{M_p}{M_J} \right)^{0.98} \left( \frac{a}{a_J} \right)^{-1.17} \left( \frac{\dot M_\star}{\dot M_{\odot}} \right)^{0.586} \left( \frac{v}{v_{\odot}} \right)^{1.46} \\
+\mbox{[\#1]} \; P_{\rm rad} &\sim & 4 \times 10^9 \,{\rm W}\,\left( \frac{\omega}{\omega _{\rm J}} \right)^{0.58} \left( \frac{M_p}{M_{\rm J}} \right)^{0.98} \left( \frac{a}{a_{\rm J}} \right)^{-1.17} \left( \frac{\dot M_\star}{\dot M_{\odot}} \right)^{0.586} \left( \frac{v}{v_{\odot}} \right)^{1.46} \\
 %
-\mbox{[\#2]} \; P_{\rm rad} &\sim & 4 \times 10^{11} \,{\rm W}\, \left( \frac{\omega}{\omega _J} \right)^{0.79} \left( \frac{M_p}{M_J} \right)^{1.33} \left( \frac{a}{a_J} \right)^{-1.60} \left( \frac{\dot M_\star}{\dot M_{\odot}} \right)^{0.8} \left( \frac{v}{v_{\odot}} \right)^{2.0} \\
+\mbox{[\#2]} \; P_{\rm rad} &\sim & 4 \times 10^{11} \,{\rm W}\, \left( \frac{\omega}{\omega _{\rm J}} \right)^{0.79} \left( \frac{M_p}{M_{\rm J}} \right)^{1.33} \left( \frac{a}{a_{\rm J}} \right)^{-1.60} \left( \frac{\dot M_\star}{\dot M_{\odot}} \right)^{0.8} \left( \frac{v}{v_{\odot}} \right)^{2.0} \\
 %
-\mbox{[\#3]} \; P_{\rm rad} &\sim & ? \times 10^{11} \,{\rm W}\,\left( \frac{M_p}{M_J} \right)^{2/3} \left( \frac{a}{a_J} \right)^{-4/3} \left( \frac{\dot M_\star}{\dot M_{\odot}} \right)^{2/3} \left( \frac{v}{v_{\odot}} \right)^{5/3} \\
+\mbox{[\#3]} \; P_{\rm rad} &\sim & ? \times 10^{11} \,{\rm W}\,\left( \frac{M_p}{M_{\rm J}} \right)^{2/3} \left( \frac{a}{a_{\rm J}} \right)^{-4/3} \left( \frac{\dot M_\star}{\dot M_{\odot}} \right)^{2/3} \left( \frac{v}{v_{\odot}} \right)^{5/3} \\
 %
-\mbox{[\#4]} \; P_{\rm rad} &\sim & 2.1 \times 10^{11} \,{\rm W}\,\left( \frac{\omega}{\omega _J} \right)^{2/3} \left( \frac{M_p}{M_J} \right)^{1/3} \left( \frac{a}{a_J} \right)^{-4/3} \left( \frac{\dot M_\star}{\dot M_{\odot}} \right)^{2/3} \left( \frac{v}{v_{\odot}} \right)^{5/3} \, \\
+\mbox{[\#4]} \; P_{\rm rad} &\sim & 2.1 \times 10^{11} \,{\rm W}\,\left( \frac{\omega}{\omega _{\rm J}} \right)^{2/3} \left( \frac{M_p}{M_{\rm J}} \right)^{1/3} \left( \frac{a}{a_{\rm J}} \right)^{-4/3} \left( \frac{\dot M_\star}{\dot M_{\odot}} \right)^{2/3} \left( \frac{v}{v_{\odot}} \right)^{5/3} \, \\
 %
-\mbox{[\#5]} \; P_{\rm rad} &\sim & 2.1 \times 10^{11} \,{\rm W}\,\left( \frac{\omega}{\omega _J} \right)^{1/3} \left( \frac{M_p}{M_J} \right)^{1/3} \left( \frac{a}{a_J} \right)^{-4/3} \left( \frac{\dot M_\star}{\dot M_{\odot}} \right)^{2/3} \left( \frac{v}{v_{\odot}} \right)^{5/3} \, \\
+\mbox{[\#5]} \; P_{\rm rad} &\sim & 2.1 \times 10^{11} \,{\rm W}\,\left( \frac{\omega}{\omega _{\rm J}} \right)^{1/3} \left( \frac{M_p}{M_{\rm J}} \right)^{1/3} \left( \frac{a}{a_{\rm J}} \right)^{-4/3} \left( \frac{\dot M_\star}{\dot M_{\odot}} \right)^{2/3} \left( \frac{v}{v_{\odot}} \right)^{5/3} \, \\
 %
-\mbox{[\#6]} \; P_{\rm rad} &\sim & 2.1 \times 10^{11} \,{\rm W}\,\left( \frac{\omega}{\omega _J} \right)^{1/2} \left( \frac{M_p}{M_J} \right)^{1/3} \left( \frac{a}{a_J} \right)^{-4/3} \left( \frac{\dot M_\star}{\dot M_{\odot}} \right)^{2/3} \left( \frac{v}{v_{\odot}} \right)^{5/3} \, \\
+\mbox{[\#6]} \; P_{\rm rad} &\sim & 2.1 \times 10^{11} \,{\rm W}\,\left( \frac{\omega}{\omega _{\rm J}} \right)^{1/2} \left( \frac{M_p}{M_{\rm J}} \right)^{1/3} \left( \frac{a}{a_{\rm J}} \right)^{-4/3} \left( \frac{\dot M_\star}{\dot M_{\odot}} \right)^{2/3} \left( \frac{v}{v_{\odot}} \right)^{5/3} \, \\
 %
-\mbox{[\#7]} \; P_{\rm rad} &\sim & 2.1 \times 10^{11} \,{\rm W}\,\left( \frac{\omega}{\omega _J} \right)^{2/3} \left( \frac{M_p}{M_J} \right)^{1/3} \left( \frac{a}{a_J} \right)^{-4/3} \left( \frac{\dot M_\star}{\dot M_{\odot}} \right)^{2/3} \left( \frac{v}{v_{\odot}} \right)^{5/3} \, \\
+\mbox{[\#7]} \; P_{\rm rad} &\sim & 2.1 \times 10^{11} \,{\rm W}\,\left( \frac{\omega}{\omega _{\rm J}} \right)^{2/3} \left( \frac{M_p}{M_{\rm J}} \right)^{1/3} \left( \frac{a}{a_{\rm J}} \right)^{-4/3} \left( \frac{\dot M_\star}{\dot M_{\odot}} \right)^{2/3} \left( \frac{v}{v_{\odot}} \right)^{5/3} \, \\
 %
-\mbox{[\#8]} \; P_{\rm rad} &\sim & ? \times 10^{11} \,{\rm W}\, \left( \frac{M_p}{M_J} \right)^{0.69}  \left( \frac{t}{4.5 \rm~Gyr} \right)^{-0.288}  \left( \frac{a}{a_J} \right)^{-4/3} \left( \frac{\dot M_\star}{\dot M_{\odot}} \right)^{2/3} \left( \frac{v}{v_{\odot}} \right)^{5/3} \, \\
+\mbox{[\#8]} \; P_{\rm rad} &\sim & ? \times 10^{11} \,{\rm W}\, \left( \frac{M_p}{M_{\rm J}} \right)^{0.69}  \left( \frac{t}{4.5 \rm~Gyr} \right)^{-0.288}  \left( \frac{a}{a_{\rm J}} \right)^{-4/3} \left( \frac{\dot M_\star}{\dot M_{\odot}} \right)^{2/3} \left( \frac{v}{v_{\odot}} \right)^{5/3} \, \\
 \end{eqnarray}
 %%%%%%%%%
 For the last equation, we used the scaling of the luminosity $L$, equation (\ref{eq:burrowsLum}):
 %%%
 \begin{equation}
-L \sim 1.84\times10^{-10} L_\odot \left( \frac{t}{4.5 \rm~Gyr} \right)^{-1.3} \left( \frac{M_p}{M_J} \right)^{2.64} \tag{\ref{eq:burrowsLum}}
+L \sim 1.84\times10^{-10} L_\odot \left( \frac{t}{4.5 \rm~Gyr} \right)^{-1.3} \left( \frac{M_p}{M_{\rm J}} \right)^{2.64} \tag{\ref{eq:burrowsLum}}
 \end{equation} 
 %%%
 
 In summary, we write down the scaling of the radio emission as below, 
 %%%
 \begin{equation}
-P_{\rm rad} \times 10^{11} \,{\rm W}\, \left( \frac{\omega}{\omega _J} \right)^{\alpha } \left( \frac{M_p}{M_J} \right)^{\beta }  \left( \frac{t}{4.5 \rm~Gyr} \right)^{-\gamma }  \left( \frac{a}{a_J} \right)^{-\delta }  \left( \frac{\dot M_\star}{\dot M_{\odot}} \right)^{\epsilon } \left( \frac{v}{v_{\odot}} \right)^{\phi } \, \\
+P_{\rm rad} \times 10^{11} \,{\rm W}\, \left( \frac{\omega}{\omega _{\rm J}} \right)^{\alpha } \left( \frac{M_p}{M_{\rm J}} \right)^{\beta }  \left( \frac{t}{4.5 \rm~Gyr} \right)^{-\gamma }  \left( \frac{a}{a_{\rm J}} \right)^{-\delta }  \left( \frac{\dot M_\star}{\dot M_{\odot}} \right)^{\epsilon } \left( \frac{v}{v_{\odot}} \right)^{\phi } \, \\
 \end{equation} 
 %%%
 with $\alpha = 0.5-0.8$, $\beta = 0.33-1.33$, $\gamma = 0-0.288$, $\gamma = 1.17-1.60$, $\epsilon = 0.58-0.8$, $\phi = 1.46-2.0$. 
@@ -1607,22 +1607,22 @@ $\tau_{\rm conv} \sim (M R^2 / L)^{1/3}$.  According to
 \citet{burrows_et_al2001}, radius $R$ and luminosity scale with time
 as $R \sim R_J$, where $R_J$ is the radius of Jupiter, and
 \begin{equation}
-\frac{L}{10^{-9} L_\odot} \sim \left( \frac{t}{1 \rm~Gyr} \right)^{-1.3} \left( \frac{M}{1~M_J} \right)^{2.64} \, .
+\frac{L}{10^{-9} L_\odot} \sim \left( \frac{t}{1 \rm~Gyr} \right)^{-1.3} \left( \frac{M}{1~M_{\rm J}} \right)^{2.64} \, .
 \label{eq:burrowsLum_2}
 \end{equation}
 So,
 %\begin{eqnarray}
-%\nonumber \tau_{\rm conv} & \sim & 3 {\rm~days} \times \left( \frac{M}{M_J} \right)^{1/3} \left( \frac{R}{R_J} \right)^{2/3} \left( \frac{L}{L_\odot} \right)^{-1/3} \\
+%\nonumber \tau_{\rm conv} & \sim & 3 {\rm~days} \times \left( \frac{M}{M_{\rm J}} \right)^{1/3} \left( \frac{R}{R_J} \right)^{2/3} \left( \frac{L}{L_\odot} \right)^{-1/3} \\
 % & = & 
 %\end{eqnarray}
 \begin{eqnarray}
 \nonumber \tau_c & \sim & 3 {\rm~hrs} \times \frac{\left( \frac{H}{100 \rm~km} \right) \left( \frac{\rho}{10^{-5} \rm~g~cm^{-3}} \right)^{1/3}}{\left( \frac{L}{10^{-9} L_\odot} \right)^{1/3}} \\
- & = & 3 {\rm~hrs} \times \frac{\left( \frac{H}{100 \rm~km} \right) \left( \frac{\rho}{10^{-5} \rm~g~cm^{-3}} \right)^{1/3}}{\left( \frac{M}{1 ~M_J} \right)^{0.88} \left( \frac{t}{1 \rm~Gyr} \right)^{0.43}} \\
+ & = & 3 {\rm~hrs} \times \frac{\left( \frac{H}{100 \rm~km} \right) \left( \frac{\rho}{10^{-5} \rm~g~cm^{-3}} \right)^{1/3}}{\left( \frac{M}{1 ~M_{\rm J}} \right)^{0.88} \left( \frac{t}{1 \rm~Gyr} \right)^{0.43}} \\
 \end{eqnarray}
 So the Rossby number $Ro = \tau_c/P_{\rm rot}$ is
 \begin{eqnarray}
 Ro & = & \frac{\tau_c}{P_{\rm rot}} \\
- & = & \left( \frac{P_{\rm rot}}{3 \rm~hrs} \right)^{-1} \times \frac{\left( \frac{H}{100 \rm~km} \right) \left( \frac{\rho}{10^{-5} \rm~g~cm^{-3}} \right)^{1/3}}{\left( \frac{M}{1 ~M_J} \right)^{0.88} \left( \frac{t}{1 \rm~Gyr} \right)^{0.43}}
+ & = & \left( \frac{P_{\rm rot}}{3 \rm~hrs} \right)^{-1} \times \frac{\left( \frac{H}{100 \rm~km} \right) \left( \frac{\rho}{10^{-5} \rm~g~cm^{-3}} \right)^{1/3}}{\left( \frac{M}{1 ~M_{\rm J}} \right)^{0.88} \left( \frac{t}{1 \rm~Gyr} \right)^{0.43}}
 \end{eqnarray}
 
 \citep{hallinan_et_al2013}
@@ -1645,7 +1645,7 @@ where $B_0$ is the field strength at a distance $d_0$ from the planet.
 \frac{\dot{M}_* v}{r^2} & = & B_0^2 \left( \frac{d}{d_0} \right)^{-6} \\
 d^6 & = & \frac{d_0^6 B_0^2 r^2}{\dot{M}_* v} \\
 d_A & = & d_0 \left( \frac{B_0^2 r^2}{\dot{M}_* v} \right)^{1/6} \\
-  & \sim & 4 R_J \left( \frac{d_0}{R_J}\right) \left\{ \frac{\left( \frac{B}{10 \rm~G} \right)^2 \left( \frac{r}{5 \rm~AU} \right)^2}{\left( \frac{\dot{M}_*}{10^{-6} M_\odot/\rm yr} \right) \left( \frac{v}{20 \rm~km/s} \right)} \right\}^{1/6}
+  & \sim & 4 R_J \left( \frac{d_0}{R_{\rm J}}\right) \left\{ \frac{\left( \frac{B}{10 \rm~G} \right)^2 \left( \frac{r}{5 \rm~AU} \right)^2}{\left( \frac{\dot{M}_*}{10^{-6} M_\odot/\rm yr} \right) \left( \frac{v}{20 \rm~km/s} \right)} \right\}^{1/6}
 \label{eq:Chapman-Ferraro}
 \end{eqnarray}
 In the above, $d_A$ is the distance from the planet to the Alfven
@@ -1678,7 +1678,7 @@ Note that $\rho v = \dot{M}_*/4\pi r^2$.  Therefore,
 P_{\rm inc} & = & d_0^2 \left( \frac{\pi^2 \rho^2 v^7 B_0^2}{32} \right)^{1/3} \\
  & = & d_0^2 \left( \frac{\dot{M}_*^2 v^5 B_0^2}{512 r^4} \right)^{1/3} \\
  & = & \frac{d_0^2}{8} \left( \frac{\dot{M}_*^2 v^5 B_0^2}{r^4} \right)^{1/3} \\
-\nonumber  & \sim & 2 \times 10^{18} {\rm~W} \left( \frac{d_0}{R_J} \right)^2 \left( \frac{\dot{M}_*}{10^{-5} M_\odot / {\rm yr}} \right)^2 \\
+\nonumber  & \sim & 2 \times 10^{18} {\rm~W} \left( \frac{d_0}{R_{\rm J}} \right)^2 \left( \frac{\dot{M}_*}{10^{-5} M_\odot / {\rm yr}} \right)^2 \\
  & & \times \left( \frac{v}{20 \rm~km/s} \right)^5 \left( \frac{B_0}{10 \rm~G} \right)^2 \left( \frac{r}{5 \rm~AU} \right)^{-4}
 \end{eqnarray}
 
@@ -1712,7 +1712,7 @@ Without no physical insights of the typical spin rate, we simply assume that of 
 \memoYF{Would their spin rate become higher or lower??}
 
 In order to evaluate $\rho _c $ and $r_c$, we need a model of internal structure of gaseous planets. 
-First, we assume that the planetary radius is constant at $R_p = R_{p,J}$, as the numerical calculations show that the radii of gaseous planets over the range of $0.1 R_{p, J} < M_p < 10M_{p, J}$ (with core mass less than 10\%) are converged to $0.8 R_{p, J} < R_p < 1.2R_{p, J}$ in 1 Gyr \citep{fortney2007}. 
+First, we assume that the planetary radius is constant at $R_p = R_{p,\,{\rm J}}$, as the numerical calculations show that the radii of gaseous planets over the range of $0.1 R_{p,\,{\rm J}} < M_p < 10M_{p,\,{\rm J}}$ (with core mass less than 10\%) are converged to $0.8 R_{p,\,{\rm J}} < R_p < 1.2R_{p, \,{\rm J}}$ in 1 Gyr \citep{fortney2007}. 
 For the density profile, we assume a polytrope gas sphere with index $n=1$, which results in:
 %%%%%%%%%% 
 \begin{equation}
@@ -1734,7 +1734,7 @@ Equation (\ref{eq:fcyc>fplasma}) can also be rewritten as:
 or, 
 %%%
 \begin{eqnarray}
- \left( \frac{M_p}{M_{p,J}} \right) &> & 0.627 \left( \frac{a}{5~\mbox{AU}} \right)^{-0.72} \left( \frac{t}{4.5~\mbox{Gyr}} \right)^{0.31} \\
+ \left( \frac{M_p}{M_{p,\,{\rm J}}} \right) &> & 0.627 \left( \frac{a}{5~\mbox{AU}} \right)^{-0.72} \left( \frac{t}{4.5~\mbox{Gyr}} \right)^{0.31} \\
  && \times \left( \frac{\dot M_\star}{10^6 \dot M_{\odot}} \right)^{0.36}  \left( \frac{v}{10^{-1}v_{\odot}} \right)^{-0.36} \label{eq:Ma_limit}
 \end{eqnarray}
 %%%
