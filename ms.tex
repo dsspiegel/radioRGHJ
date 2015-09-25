@@ -26,6 +26,10 @@
 
 \def\memoNZ#1{\color{green}$[${\bf #1}$]$ \color{black}}
 
+\def\memoJN#1{\color{purple}$[${\bf #1}$]$ \color{black}}
+
+
+
 \definecolor{DarkGreen}{rgb}{0.0, 0.6, 0.0}
 \def\memoTM#1{\color{DarkGreen}$[${\bf #1}$]$ \color{black}}
 
@@ -110,7 +114,7 @@ Aaron Parsons\altaffilmark{10}
 %
 Nikku Madhusudhan\altaffilmark{11}
 %
-Mehrdad Mirbabayi\altaffilmark{13}
+Mehrdad Mirbabayi\altaffilmark{12}
 }
 
 \affil{$^1$Earth-Life Science Institute, Tokyo Institute of Technology, 
@@ -139,7 +143,7 @@ Mehrdad Mirbabayi\altaffilmark{13}
 
 \affil{$^{11}$Astronomy Department, University of Cambridge, UK}
 
-
+\affil{$^{12}$ \memoJN{Need Mehrdad's affiliation here.}}
 \vspace{0.5\baselineskip}
 
 \email{
@@ -562,7 +566,7 @@ For a $10 M_{\rm J}$ planet, $N_i$ is probably approximately in the range 5---10
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{figure}[htbp]
    \plotoneh{ionizationfraction.pdf}
-   \caption{Profile of ionization fraction due to X-ray from the planetary accretion disk, measured from the surface of the planet. Solid lines show the solutions without the correction for the secondary ionization by ionized electrons, while the dashed lines show the solutions which take the correction into account with efficiency factor $N_i=6$. The vertical arrows show the Str\"omgren radius estimated simply  by equation (\ref{eq:stromgren}). The dotted vertical lines indicate the location of the magnetic stand-off radii, $r_{\rm mag}$,  obtained by equation (\ref{eq:stand-off-radius_RGHJ}) below. }
+   \caption{Profile of ionization fraction due to X-ray from planetary accretion, measured from the surface of the planet. Solid lines show the solutions without the correction for the secondary ionization by ionized electrons, while the dashed lines show the solutions which take the correction into account with efficiency factor $N_i=6$. The vertical arrows show the Str\"omgren radius estimated simply  by equation (\ref{eq:stromgren}). The dotted vertical lines indicate the location of the magnetic stand-off radii, $r_{\rm mag}$,  obtained by equation (\ref{eq:stand-off-radius_RGHJ}) below. }
    %\memoDS{This looks great.  Might be good to also show the locations of the magnetic standoff point and the ``stromgren sphere radius'' on this figure (say, with vertical dashed and dotted lines?), and to move the legend to the lower left corner? {\tt plt.legend(loc=3)}}
   \label{fig:ionizationfraction}
 \end{figure}
@@ -581,7 +585,7 @@ While the photon rate is large for larger planets, the strong dependence of cros
 Nevertheless, still, substantial amount of ionized plasmas are expected around the magnetic stand-off radius. 
 
 
-The extent of ionized region may also be roughly estimated by Str\"omgren radius of the accretion disk \citep{stromgren1939}: 
+The extent of ionized region may also be roughly estimated by Str\"omgren radius \citep{stromgren1939}: 
 %%%%%%%%%
 \begin{equation}
 r_{\rm stromgren} = \left( \frac{3}{4\pi} \frac{\dot N_X}{n^2 \beta } \right)^{1/3}
@@ -604,7 +608,7 @@ The Str\"omgren radius for $1M_{\rm J} $ and for $10M_{\rm J}$ are also indicate
 The Str\"omgren radii are indicated by vertical arrows in Figure \ref{fig:ionizationfraction}. 
 
 
-As a whole, we expect for the X-ray emission from the accretion disk to ionize the incoming stellar wind.
+As a whole, we expect for the X-ray emission from the accretion onto the planet to ionize the incoming stellar wind.
 This implies that the stellar wind particles represented by (equation~(\ref{eq:n})) are fully ionized plasmas like Solar wind, and that the stellar wind can interact with the planetary magnetic fields in a rather similar way to the case of Solar System planets.
 
 
@@ -906,7 +910,7 @@ Using these data, we extrapolate the radio flux from the host star $F_{\star}$ t
 where the power index $\alpha_* $ is order of unity. 
 
 Figure \ref{fig:cartoon} is a cartoon for a radio spectrum of a planet with $10~M_{\rm J}$ and that of the host red giant star with 100~$R_{\odot }$, both of which are placed at a distance of 100 pc. 
-Note that the thermal contribution from the accretion disk is negligible in this figure. 
+Note that the thermal contribution from the accretion is negligible in this figure. 
 The spectral shape is modeled by simply scaling the Jovian radio spectrum (e.g. Figure 8 of \cite{zarka_et_al2004}). 
 The continuum lines from the star in the cases of $\alpha_* =0.8$ and $2.0$ are shown as an extreme case. %; the 0.6 value is the prediction from the constant property wind model \citep{wright1975,panagia1975,olnon1975}. 
 As Figure \ref{fig:cartoon} indicates, with a reasonable range of spectral index, the radio emission from the star is smaller by order of magnitude than the expected radio flux from RGHJs at frequencies below 300~MHz. 
@@ -1272,7 +1276,7 @@ Therefore, unless the density increases more drastically than $1/r^5$, the ratio
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 In this paper, we estimate the radio brightness of distant ``hot Jupiters'' around evolved stars (RGHJ) on the assumption of the simple empirical correlation between planetary radio emission and the input kinetic energy from the stellar wind. 
-Unlike the previous paper, we consider that UV/X-ray from the accretion disk around the planetary companion ionizes the stellar wind in the vicinity of planets, which would otherwise be fairly neutral. 
+Unlike the previous paper, we consider that UV/X-ray from accretion onto the planetary companion ionizes the stellar wind in the vicinity of planets, which would otherwise be fairly neutral. 
 Based on such a picture, the massive stellar wind of a red giant or a AGB star would interact with the planetary magnetic field and input kinetic energy into the magnetosphere of a RGHJ. 
 We found that the intrinsic brightness of radio emission from RGHJs are supposedly comparable to canonical hot Jupiters in close-in orbits around main-sequence stars, and $>100$ times brighter than distant Jupiter-twins around main-sequence stars. This implies that they can be searched for 10 times further away, or in 1000 times larger volume. This can compensate the rareness of the evolved stars at least partly. Thus, RGHJs will serve as  reasonable targets for future search for exoplanetary radio emission. 
 
