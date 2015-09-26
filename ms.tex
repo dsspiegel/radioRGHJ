@@ -155,7 +155,11 @@ When planet-hosting stars evolve off the main sequence and go through the red-gi
 Accordingly, planetary companions around them at orbital distances of a few AU, if they exist, will be heated up to the level of canonical hot Jupiters and also subjected to a massive stellar wind.
 Given that magnetized planets interacting with stellar winds emit radio waves, such ``Red-Giant Hot Jupiters'' (RGHJs) may also be candidate radio emitters.
 We estimate the spectral auroral radio intensity of RGHJs based on the empirical relation with the stellar wind as well as a proposed scaling for planetary magnetic fields. 
+<<<<<<< HEAD
 We predict that RGHJs might be intrinsically as bright as canonical hot Jupiters, and about 100 times brighter than equivalent objects around main-sequence stars. %, which allow us to search them in 1000 times larger volume. 
+=======
+We predict that RGHJs might be intrinsically as bright as canonical hot Jupiters, and 100 times brighter than equivalent objects around main-sequence stars, which allow us to search them in a 1000 times larger volume. 
+>>>>>>> b3a577eb1943e60ab2ea44c69da3c8b795380278
 The signal from a RGHJ may be detectable at distances up to a few hundred parsecs with current/future instruments such as LOFAR and the Square Kilometer Array. 
 \end{abstract}
 
@@ -846,7 +850,7 @@ In this section, we discuss the observability of the estimated radio emission.
 An obvious potential obstacle is the intrinsic radio emission from host red-giant stars themselves; if they are bright relative to the radio flux from the planets, it is significantly more difficult identify the planetary contribution.
 We will see in Section \ref{ss:RGradio} that radio flux from the planets will probably be larger in a certain parameter range. 
 Then, we estimate the radio emission of Jupiter-twin around known M giants in Section \ref{ss:actualMgiants}. 
-A general discussion about the luminosity function of planetary radio emission is given in Section \ref{ss:Lfunc}. 
+%A general discussion about the luminosity function of planetary radio emission is given in Section \ref{ss:Lfunc}. 
 In Section \ref{ss:detectability}, we estimate the sensitivities and limitations of several current and future
 radio instruments at relevant frequencies.
 Finally, Section \ref{ss:timevariability} points out the polarization and the time variability of the radio emission as keys to discern the signals from the background noise. 
@@ -977,57 +981,6 @@ Cross symbols indicate that the radio emission is not observable because cyclotr
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\subsection{Luminosity function of planetary radio: 
-nearby faint object v.s. far luminous object}
-\label{ss:Lfunc}
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-In principle, if the expected luminosity function and positional distribution of possible RGHJ emitters were known, one could estimate the likelihood of detecting RGHJs in radio surveys. 
-For illustration we consider a hypothetical power-law distribution for the RGHJ luminosity function $N[L] \propto L^{-\alpha_L}$, where, $N[L]$ is the number of objects per unit volume with a luminosity of $L$, and assume an isotropic distribution of sources in the observed volume. 
-Under these assumptions, the largest luminosity in a volume limited sample (volume $V$, distance $d$) would be such that $V n[L] = 1$, i.e., $L \propto d^{3/\alpha _L}$.
-The flux of such target at distance $d$ is $F \propto d^{\frac{3}{\alpha_L} - 2}$. 
-Therefore,the likelihood of finding the brighter source increases with distance for $\alpha_L < 3/2$. 
-Such a scenario would indeed be favorable to detect RGHJs given that RGs and AGB stars with high mass loss rates are rare and would require probing out to larger distances for detection. 
-For example, for an $N[L] \propto L^{-1}$ the apparently brightest source within a given distance will increase linearly with distance, making it favorable for detecting intrinsically rare objects. 
-Therefore, if we can estimate the luminosity function of RGHJ emitters, we may estimate their detectability.
-
-Planning future targeted surveys of RGHJs would require accurate distribution functions of various parameters of giant stars in our neighborhood of the Galaxy.
-In order to estimate the true luminosity function of RGHJ emitters, one of the key factors is the distribution of mass-loss rates of giant host stars. 
-As discussed in Section \ref{ss:brightness}, for a given set of orbital parameters the luminosity ($L$) of a RGHJ depends on the stellar mass-loss rate and wind velocity as $\dot{M}_\star^{2/3} v^{5/3}$. 
-Employing equation (\ref{eq:mass-loss}) which implies $\dot{M}_\star \propto L_\star^{7.5/4} R_\star^{-0.75} M_\star^{-1} (1+A/g_\star)$ and crudely estimating the wind velocity as $v \propto \sqrt{GM/R} \propto M^{1/2} R^{-1/2}$, the luminosity of the RGHJ radio emission is given by $L \propto L_\star^{2/3} R_\star ^{-1/6} M_\star^{1/6} T_{\rm eff}^{2.3} (1+A/g_\star)^{2/3}$. 
-Given that the dependences on $R_\star$ and $M_\star^{1/6}$ are relatively weak and that $T_{\rm eff}$ does not change significantly, the radio luminosity of RGHJs scales roughly as $L \propto L_{\star }^{2/3}$. 
-Observations of globular clusters indicates the luminosity function of red giants $dn/dL_{\star } \sim L_{\star }^{-1.8}$ \citep{sandquist1996}.
-Therefore, $\alpha_L \sim -2.7$. 
-
-Thus, the criterion $\alpha_L < 3/2$ is satisfied if the slope of the luminosity function of the host stars is shallower than $-1$.
-
-\memoYF{this is note. this part will be removed later}
-
-The number of targets within the shell at radius $r \sim r+\Delta r$, $dN(r)/dr $, is
-%%%
-\begin{eqnarray}
-\frac{dN(r)}{dr} &=& 4 \pi r^2 \int _{L_{\rm min}}^{\infty} \frac{dn(L)}{dL} dL \\
-L_{\rm min} &\propto & r^2 F_{\rm min} 
-\end{eqnarray}
-%%%
-where $F_{\rm min}$ is the detection limit ($=constant$). 
-Assuming $dn(L)/dL \propto L^{-\alpha_L }$, 
-%%%
-\begin{eqnarray}
-\frac{dN(r)}{dr} &\propto & r^2 \left( \frac{L_{\rm min}^{-\alpha_L + 1}}{\alpha_L - 1}  \right)\\
-&\sim & r^2 \left( \frac{r^{2(-\alpha_L + 1)}}{\alpha_L - 1} \right) \\
-&\propto & \frac{r^{-2\alpha_L + 4}}{\alpha_L - 1}
-\end{eqnarray}
-%%%
-($N(r)$ is the number of candidates within volume $V(r) =4\pi r^3/3$.)
-When $\alpha _L=2.7$, 
-\begin{equation}
-\frac{dN(r)}{dr} \propto r^{-1.4}
-\end{equation}
-%Now, using the luminosity function of red giants $dn/dL_{\star } \sim L_{\star }^{-1.8}$ \citep{sandquist1996} and $L \sim L_{\star}^{2/3}$, $\alpha_L \sim -2.7$. Thus, the number of candidates within volume $V(r)$ increases as $r^{-0.4}$. 
-%%%
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \subsection{Detectability with current and near-future low-frequency radio instrumentation}
 \label{ss:detectability}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -1040,18 +993,18 @@ When $\alpha _L=2.7$,
 and Future Radio Telescopes.\label{tab:sens}}
 \tablehead{
 Instrument & Band  & \sigRMS\tablenotemark{a} & $\tau$\tablenotemark{b}  & Resolution & $\sigma_c$\tablenotemark{c}\\
-           & (MHz) & ($\mu$Jy~hr$^{1/2}$)         &  (hr)                    & (\arcsec)  & ($\mu$Jy bm$^{-1}$)} 
+           & (MHz) & ($\mu$Jy bm$^{-1}$)         &  (hr)                    & (\arcsec)  & ($\mu$Jy bm$^{-1}$)} 
 \startdata
-LOFAR-LBA  &  30-80  & 700   & 120000             & 8.3  & 42 \\ 
-LOFAR-HBA  & 110-200 &  35   &    310             & 3.3  & 1.1 \\  
-HERA       &  30-80  & 870   & 160000             & 1030 & 4.2$\times10^5$\\ 
-GMRT       & 130-190 & 430   &  46000             & 16.5 & 56.9 \\ 
-%LWA       &  30-80  & 58000 &  702127141         & 10.3 & 42.2 \\
-%MWA       &  30-80  & 29000 &  176223211         & 1030 & 4.2$\times10^5$ \\
-SKA-Low (part) & 50-200 & 7.8 &  12.6             & 7.6  & 9.7 \\
-SKA-Low (full) & 50-350 & 2.2 &  1.0              & 4.8  & 1.5 \\
+LOFAR-LBA  &  30-80  & 1100  & 230000             & 10   & 57 \\ 
+LOFAR-HBA  & 110-200 & 180   &   6500             & 4.1  & 1.1 \\  
+HERA       & 50-250  &  76   & 1200               & 410  & 36000\\ 
+GMRT       & 130-190 & 162   &   5400             & 16.5 & 57 \\ 
+%LWA       &  30-80  & 50000 &  702127141         & 10.3 & 42.2 \\
+%MWA       &  30-80  & 24000 &  176223211         & 1030 & 4.2$\times10^5$ \\
+SKA-Low (part) & 50-200 & 5.9 &   7.2             & 7.6  & 9.7 \\
+SKA-Low (full) & 50-350 & 1.8 &  0.7              & 4.8  & 1.5 \\
 %VLA 4-Band& 30-80   & 3300  & 2312058            & 28.6 & 330 \\
-VLA-LOBO   &  50-350 &  92   &  1800              & 8.6  & 10.4
+VLA-LOBO   &  50-350 &  77   &  1200              & 8.6  & 10.4
 \enddata
 %\tablecomments{Time estimates to reach 2~$\mu$Jy RMS.}
 \tablenotetext{a}{RMS noise in a 1-hour observation, computed for imaging of the full band reported 
@@ -1097,7 +1050,7 @@ where $T_{150} = 283.2~\rm K$ is the \Tsky\ at 150~MHz, $\beta=2.47$, and $\Tcmb
 While this relation was fit to data taken in the 100-200~MHz range, the authors found it to be consistent with published measurements from 10-408~MHz. 
 %The \Trx\ is the receiver noise temperature, which depends on the instruments and is described below. 
 
-An additional contribution to the noise is due to source confusion, the imaging noise associated with unresolved interloping radio sources in an observation.
+An additional factor that affects detectability is source confusion, the imaging noise associated with unresolved interloping radio sources in an observation.
 Source confusion is characterized by the standard deviation $\sigma_c$ in the surface brightness of an image due to one or more unresolved sources in the beam solid angle (for a review, see \cite{Condon1974,Condon2012}).
 To estimate $\sigma_c$, reported in Table~\ref{tab:sens}, we use the relations provided by \cite{condon+ransom2016}, reproduced below:
 %%%
@@ -1106,6 +1059,9 @@ To estimate $\sigma_c$, reported in Table~\ref{tab:sens}, we use the relations p
 \sigma_c & \approx & 2.2 \left( \frac{\nu}{1 \rm~GHz} \right)^{-0.7} \left( \frac{\theta}{1\arcmin} \right)^{10/3}\!\!\!\!\!\!\!\!\!\!,~(\theta < 10\arcsec).
 \end{eqnarray}
 %%%
+As Table~\ref{tab:sens} illustrates, source confusion is likely to exceed the 2 $\mu$Jy detection limit of a typical hot Jupiter source for most
+telescopes under consideration.  However, source confusion can be mitigated through differencing observations that cancel out background sources.
+Potential axes for such cancellation are polarization and time.
 The source confusion limit is dominated by active galactic nuclei, which have low polarization fractions $\lesssim2.5\%$ \citep{Stil2014} and slowly vary with time.
 Therefore both the circularly polarized nature of the cyclotron emission from hot jupiters and the time variability (discussed in \S\ref{ss:timevariability}) partially mitigate the source confusion limit, allowing hot jupiters, like other time-variable sources, to be detected below the imaging confusion limit.
 We therefore expect confusion not to be a strong limitation to the detectability of hot jupiters.
@@ -1118,7 +1074,13 @@ LOFAR-LBA's most sensitive band is centered at 60~MHz, and LOFAR-HBA's is at 150
 Given the strong frequency dependence of the effective aperture of a dipole antenna, and that the reciever noise temperature for LOFAR $\Trx \sim \Tsky$, we use the LOFAR Image Noise calculator\footnote{Heald; \url{http://www.astron.nl/~heald/test/sens.php}}, which is based on {\it SKA Memo 113}\footnote{Nijboer, Pandey-Pommier, \& de Bruyn; \url{http://www.skatelescope.org/uploaded/59513\_113\_Memo\_Nijboer.pdf}}, to obtain the sensitivity and imaging parameters in Table~\ref{tab:sens}.
 
 % HERA
-The Hydrogen Epoch of Reionization Array (HERA\footnote{\url{http://reionization.org/}}) \ldots \memoYF{write here (Aaron?)}
+The Hydrogen Epoch of Reionization Array (HERA\footnote{\url{http://reionization.org/}}) is a telescope array under construction
+in South Africa that will ultimately consist of 352 14-m parabolic dishes, operating from 50 to 250~MHz \citep{pober_et_al2014}.
+Unlike other the other telescope observatories considered here, HERA is a dedicated experiment for making power spectral measurements 
+of cosmic reionization over wide fields of view.  Similar to its progenitor, the Precision Array to Probe the Epoch of Reionization
+(PAPER; \citealt{parsons_et_al2010}), HERA's dishes are deployed in an extremely compact configuration \citep{parsons_et_al2012} and 
+statically point toward zenith.  While these features make HERA less ideal for targeted observations, HERA's substantial collecting area,
+long observing campaigns, and wide field of view make it a powerful survey instrument.
 
 % GMRT
 The Giant Metre-wave Radio Telescope (GMRT) is an array comprising thirty 25-meter antennas, operating at frequencies 130-2000~MHz.
@@ -1300,6 +1262,7 @@ YF is supported from the Grant-in-Aid No. 25887024 by the Japan Society for the 
 DSS gratefully acknowledges support from a fellowship from the AMIAS group. JN acknowledges support from NASA grant HST AR-12146.04-A and NSF grant AST-1102738.
 We thank David Hogg for encouraging us to pursue calculations of exoplanetary radio emission.
 NM acknowledges support from [???]. 
+AP is grateful for support from NSF grants 1352519 and 1440343.
 YF greatly acknowledges insightful and helpful discussions with Tomoki Kimura and Hiroki Harakawa. 
 The portion of this research for which TM is responsible was performed under a National Research 
 Council Research Associateship Award at the Naval Research Laboratory (NRL).
