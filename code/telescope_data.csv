@@ -1,6 +1,6 @@
 telescope,dish_diam_m,max_baseline_m,num_antennas,freq,bandwidth_MHz,T_rx
 gmrt,45,25000,30,150,50,200
-hera,14,1000,350,60,50,260
+hera,14,1000,350,150,200,260
 lofar_lba,35,100000,44,60,50,500
 lofar_hba,25,100000,44,150,90,60
 lwa,2.,100000,256,60,50,260
