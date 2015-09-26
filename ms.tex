@@ -1097,7 +1097,7 @@ where $T_{150} = 283.2~\rm K$ is the \Tsky\ at 150~MHz, $\beta=2.47$, and $\Tcmb
 While this relation was fit to data taken in the 100-200~MHz range, the authors found it to be consistent with published measurements from 10-408~MHz. 
 %The \Trx\ is the receiver noise temperature, which depends on the instruments and is described below. 
 
-An additional contribution to the noise is due to source confusion, the imaging noise associated with unresolved interloping radio sources in an observation.
+An additional factor that affects detectability is source confusion, the imaging noise associated with unresolved interloping radio sources in an observation.
 Source confusion is characterized by the standard deviation $\sigma_c$ in the surface brightness of an image due to one or more unresolved sources in the beam solid angle (for a review, see \cite{Condon1974,Condon2012}).
 To estimate $\sigma_c$, reported in Table~\ref{tab:sens}, we use the relations provided by \cite{condon+ransom2016}, reproduced below:
 %%%
@@ -1106,6 +1106,9 @@ To estimate $\sigma_c$, reported in Table~\ref{tab:sens}, we use the relations p
 \sigma_c & \approx & 2.2 \left( \frac{\nu}{1 \rm~GHz} \right)^{-0.7} \left( \frac{\theta}{1\arcmin} \right)^{10/3}\!\!\!\!\!\!\!\!\!\!,~(\theta < 10\arcsec).
 \end{eqnarray}
 %%%
+As Table~\ref{tab:sens} illustrates, source confusion is likely to exceed the 2 $\mu$Jy detection limit of a typical hot Jupiter source for most
+telescopes under consideration.  However, source confusion can be mitigated through differencing observations that cancel out background sources.
+Potential axes for such cancellation are polarization and time.
 The source confusion limit is dominated by active galactic nuclei, which have low polarization fractions $\lesssim2.5\%$ \citep{Stil2014} and slowly vary with time.
 Therefore both the circularly polarized nature of the cyclotron emission from hot jupiters and the time variability (discussed in \S\ref{ss:timevariability}) partially mitigate the source confusion limit, allowing hot jupiters, like other time-variable sources, to be detected below the imaging confusion limit.
 We therefore expect confusion not to be a strong limitation to the detectability of hot jupiters.
@@ -1118,7 +1121,13 @@ LOFAR-LBA's most sensitive band is centered at 60~MHz, and LOFAR-HBA's is at 150
 Given the strong frequency dependence of the effective aperture of a dipole antenna, and that the reciever noise temperature for LOFAR $\Trx \sim \Tsky$, we use the LOFAR Image Noise calculator\footnote{Heald; \url{http://www.astron.nl/~heald/test/sens.php}}, which is based on {\it SKA Memo 113}\footnote{Nijboer, Pandey-Pommier, \& de Bruyn; \url{http://www.skatelescope.org/uploaded/59513\_113\_Memo\_Nijboer.pdf}}, to obtain the sensitivity and imaging parameters in Table~\ref{tab:sens}.
 
 % HERA
-The Hydrogen Epoch of Reionization Array (HERA\footnote{\url{http://reionization.org/}}) \ldots \memoYF{write here (Aaron?)}
+The Hydrogen Epoch of Reionization Array (HERA\footnote{\url{http://reionization.org/}}) is a telescope array under construction
+in South Africa that will ultimately consist of 352 14-m parabolic dishes, operating from 50 to 250~MHz \citep{pober_et_al2014}.
+Unlike other the other telescope observatories considered here, HERA is a dedicated experiment for making power spectral measurements 
+of cosmic reionization over wide fields of view.  Similar to its progenitor, the Precision Array to Probe the Epoch of Reionization
+(PAPER; \citealt{parsons_et_al2010}), HERA's dishes are deployed in an extremely compact configuration \citep{parsons_et_al2012} and 
+statically point toward zenith.  While these features make HERA less ideal for targeted observations, HERA's substantial collecting area,
+long observing campaigns, and wide field of view make it a powerful survey instrument.
 
 % GMRT
 The Giant Metre-wave Radio Telescope (GMRT) is an array comprising thirty 25-meter antennas, operating at frequencies 130-2000~MHz.
@@ -1300,6 +1309,7 @@ YF is supported from the Grant-in-Aid No. 25887024 by the Japan Society for the 
 DSS gratefully acknowledges support from a fellowship from the AMIAS group. JN acknowledges support from NASA grant HST AR-12146.04-A and NSF grant AST-1102738.
 We thank David Hogg for encouraging us to pursue calculations of exoplanetary radio emission.
 NM acknowledges support from [???]. 
+AP is grateful for support from NSF grants 1352519 and 1440343.
 YF greatly acknowledges insightful and helpful discussions with Tomoki Kimura and Hiroki Harakawa. 
 The portion of this research for which TM is responsible was performed under a National Research 
 Council Research Associateship Award at the Naval Research Laboratory (NRL).
