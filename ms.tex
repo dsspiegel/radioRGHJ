@@ -581,7 +581,7 @@ This implies that the stellar wind particles represented by (equation~\ref{eq:n}
 \end{figure}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% 
 
-Figure \ref{fig:planetaryB} shows the computed radius ($r_c$) and average density ($\rho_c$) of the dynamo region as function of planetary mass, as well as the heat flux at the outer boundary of the core, the estimated strength of planetary magnetic field $B$ and the corresponding cyclotron frequency ($\nu_{\rm cyc}$) as functions of planetary mass and the age. 
+Figure \ref{fig:planetaryB} shows the computed radius ($r_c$) and average density ($\rho_c$) of the dynamo region as function of planetary mass, as well as the heat flux at the outer boundary of the core ($q_o$), the estimated strength of planetary magnetic field ($B$) and the corresponding cyclotron frequency ($\nu_{\rm cyc}$) as functions of planetary mass and the age. 
 Substituting equation (\ref{eq:burrowsHeatFlux}) into equation (\ref{eq:Bscaling2}) and given that $r_{\rm dynamo} $ does not change significantly, the magnetic field is approximately:
 %%%%%%%%%% 
 \begin{equation}
@@ -592,7 +592,7 @@ under this model.
 Reasonably, the resultant values agree with \citet{reiners2010}, who adopted the same scaling law for planetary magnetic field; we show this figure just for completeness. 
 Note that the cyclotron frequency of Jovian planets typically falls between 10~MHz and 1~GHz. 
 In this regime, there are a number of current and near-future radio wave detectors including GMRT, 
-LOFAR, HERA, SKA, and potential upgrades to the VLA. 
+LOFAR, HERA, SKA, and potential upgrades to the VLA (see Section \ref{ss:detectability}). 
 
 Since $\nu_{\rm cyc,\,max} > \nu_{\rm plasma}^\oplus $, the radio emission will not be hindered by Earth's ionosphere cut-off. 
 On the other hand, it may experience opacity due to the plasma of the stellar wind particles around the planet.
@@ -604,7 +604,7 @@ The maximum plasma frequency along the line of sight, $\nu_{\rm plasma}^{\rm los
 \label{eq:fplasmalos_scaled} &=& 12 {\rm~MHz} \times \left( \frac{a}{5~\mbox{AU}}\right)^{-1} \left(\frac{v}{30~\mbox{km/s}}  \right)^{-1/2} \notag \\
  & & \times \left( \frac{\dot M_\star}{10^{-8} M_{\odot }{\rm /yr}}\right)^{1/2} \, .
 \end{eqnarray}
-We can see emission only from where $\nu_{\rm cyc,\,max} > \nu_{\rm plasma}^{\rm los}$. Therefore, for Jupiter-mass planets, only distant ones at $\sim 5 $ AU or further, will emit the radio waves from the system. 
+We can see emission only from where $\nu_{\rm cyc,\,max} > \nu_{\rm plasma}^{\rm los}$. Therefore, for Jupiter-mass planets, only distant ones $\gtrsim 5 $  may emit the radio waves from the system. 
 The detectable parameter space will be presented in more detail in the next section. 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -636,6 +636,7 @@ The typical value for RGHJs is found by substituting relevant values for stellar
  \label{eq:stand-off-radius_RGHJ}
 \end{eqnarray}
 %%%
+where we employ $r_{\rm mag,\,J} = 84~R_{\rm J}$ \citep{joy2002}. 
 
 Substituting equation (\ref{eq:stand-off-radius2}) to equation (\ref{eq:Pinp_kin}), the scaling of the radio emission is expanded as follows:
 %%%
@@ -646,7 +647,7 @@ P_{\rm k,\,inp} &=& nv^3 r_{\rm mag}^2 \\
 \end{eqnarray}
 %%%
 
-We may compare radio emission power of canonical hot Jupiters set at 0.05 AU  and that of RGHJs at 5 AU.
+We may compare radio emission power of RGHJs at 5 AU with that of canonical hot Jupiters set at 0.05 AU.
 Then, equation (\ref{eq:Pkinp}) can be re-normalized as follows.
 %%%
 \begin{eqnarray}
@@ -654,7 +655,7 @@ P_{\rm k,\,inp}
 &\approx &  140 ~P_{\rm k,\,inp,\,J} \left( \frac{B}{B_{\rm J}} \right)^{2/3} \left( \frac{a}{5~\mbox{AU}} \right)^{-4/3} \notag \\
 && \times \left( \frac{\dot M_\star}{10^{-8} M_{\odot}{\rm /yr}} \right)^{2/3} \left( \frac{v}{10^{-1} v_{\odot}} \right)^{5/3} \\
 && \;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\; \mbox{(for RGB stars' companions)} \notag \\
-&\approx & 14000 \times 10^4 ~P_{\rm k,\,inp,\,J} \left( \frac{B}{B_{\rm J}} \right)^{2/3} \left( \frac{a}{5~\mbox{AU}} \right)^{-4/3} \notag \\
+&\approx & 14000 ~P_{\rm k,\,inp,\,J} \left( \frac{B}{B_{\rm J}} \right)^{2/3} \left( \frac{a}{5~\mbox{AU}} \right)^{-4/3} \notag \\
 && \times \left( \frac{\dot M_\star}{10^{-5} M_{\odot}{\rm /yr}} \right)^{2/3} \left( \frac{v}{10^{-1} v_{\odot}} \right)^{5/3}  \\
 && \;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\; \mbox{(for AGB stars' companions)} \notag \\
 &\approx & 490 ~P_{\rm k,\,inp,\,J} \left( \frac{B}{B_{\rm J}} \right)^{2/3} \left( \frac{a}{0.05~\mbox{AU}} \right)^{-4/3} \notag \\
@@ -662,12 +663,12 @@ P_{\rm k,\,inp}
 && \;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\; \mbox{(for canonical hot jupiters)} \notag 
 \end{eqnarray}
 %%%
-Here we normalized the strength of magnetic field of canonical hot jupiters with $B_J$, due to the uncertainty of the magnetic field of tidally-locked planets. 
+Here we normalized the strength of magnetic field of canonical hot jupiters with $B_J$, considering the uncertainty of the magnetic field of tidally-locked planets. 
 Depending on the modeling of magnetic field strength, there is also speculation that the tidally-locked planets may have weaker magnetic fields due to slow rotation \citep[e.g.][]{griesmeier2004}; in that case the radio emission would be weaker. 
 
 
 
-Combining the expressions above, we find that the radio spectral flux density observed at the Earth is:
+Using the expressions above, we find that the radio spectral flux density observed at the Earth is:
 %%%
 \begin{eqnarray}
 F_{\nu} &=& \frac{P_{\rm radio}}{\Omega d^2 \nu_{\rm cyc}} \\
@@ -692,7 +693,7 @@ F_{\nu} &=& \frac{P_{\rm radio}}{\Omega d^2 \nu_{\rm cyc}} \\
 \end{eqnarray}
 %%%
 Thus, RGHJs are expected to be intrinsically as bright as the closest hot Jupiters. 
-Compared with the distant Jupiter-like planets around main sequence stars, the massive stellar wind of late red giants can increase the radio emission from planetary companions by more than 2 orders of magnitude, which allow us to explore 10 times more distant system, i.e., 1000 times more volume. This compensates the small population of evolved stars at least partially. 
+Compared with the equivalent Jupiter-like planets around main sequence stars, the massive stellar wind of late red giants can increase the radio emission from planetary companions by more than 2 orders of magnitude, which allow us to explore 10 times more distant system, i.e., 1000 times more volume. This compensates the small population of evolved stars at least partly. 
 
 Equation (\ref{eq:F_nu_RGHJ}) gives the value which is by factor smaller than the prediction of equation (5) in \citet{ignace2010} in the case of $\eta = 1$. This originates from the different scaling laws for the planetary magnetic field and that their formulation didn't incorporate the effect of compressed planetary magnetosphere due to massive stellar wind. 
 
