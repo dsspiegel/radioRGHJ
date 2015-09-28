@@ -475,7 +475,7 @@ To take this into account, we consider two limiting possibilities:
 After an ionizing collision, the energy can (\emph{i}) be split evenly between the two electrons, or it can (\emph{ii}) go entirely into the kinetic energy of one electron and not at all into that of the other (of course, any split in between these extremes is possible, too).
 Note that conservation of momentum and energy imply that the proton will not acquire a significant fraction of the energy of the collision.\footnote{Were it otherwise, we'd have to take into account what fraction of a rubber ball's kinetic energy is imparted to the kinetic energy of the Earth when bouncing a ball.}  
 
-Scenario (\emph{i}) implies a cascade where an electron with energy $E_{\rm in}$ ionizes an atom producing two electrons (an ionizing electron plus the released electron) with energy $ ( E_{\rm in} - E_{\rm Rydberg} ) /2 $ for each.
+Scenario (\emph{i}) implies a cascade where an electron with energy $E_{\rm in}$ ionizes an atom, producing two electrons (an ionizing electron plus the released electron) with energy $ ( E_{\rm in} - E_{\rm Rydberg} ) /2 $ for each.
 For example, in an idealized case with $M_p = 10 M_{\rm J}$, $k_B T_{\rm acc} \sim 172\,{\rm eV} \sim 12 \, E_{\rm Rydberg}$, a photoionization could produce an electron with energy of $(12-1) = 11 E_{\rm Rydberg} $, then a second ionization by that electron would produce two photons with energy of $(11-1)/2 = 5 E_{\rm Rydberg}$, and the third ionization by these two photons would produce four photons with energy of $(5-1)/2 = 2 E_{\rm Rydberg}$, etc.
 The cascade can proceed to the fourth order at the maximum.
 
@@ -494,7 +494,7 @@ Alternatively, cascade (\emph{ii}) leads to
 %%%%%%%%%
 \begin{eqnarray}
   \nonumber N_i & = & \frac{1 - \xi^k}{1 - \xi} \\
-  \label{eq:N_i2}  & = & 1 + \xi + \xi^2 + \cdots + \xi^{\nu - 1} \, ,
+  \label{eq:N_i2}  & = & 1 + \xi + \xi^2 + \cdots + \xi^{k - 1} \, ,
 \end{eqnarray}
 %%%%%%%%%
 where $k \equiv E_{\rm in} / E_{\rm Rydberg}$ is the maximum number of ionizations for the given initial electron energy.
