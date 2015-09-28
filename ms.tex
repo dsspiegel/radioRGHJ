@@ -382,7 +382,7 @@ The wind velocity is typically of order the escape velocity at a distance of sev
 For a star with radius $R_{\star }=100~R_{\odot }$, this results in $v_{\rm sw}\sim 30~{\rm km/s}$.
 Therefore, a Solar-mass red giant with radius $R_{\star}=100R_{\odot}$ encounters a stellar wind that is slower by at least an order of magnitude than that of the Sun, $v_{\odot}$. 
 
-Based on equations (\ref{eq:scale_Mdot}), the number density of the stellar wind (equation (\ref{eq:n})) is normalized as follows:
+Based on equation (\ref{eq:scale_Mdot}), the number density of the stellar wind (equation (\ref{eq:n})) is normalized as follows:
 %%%%%%%%%% 
 \begin{eqnarray}
 n &=& 1.8 \times 10^6 \; {\rm cm^{-3}} \times \left( \frac{a}{5 \; {\rm AU}} \right)^{-2} \notag \\
@@ -395,10 +395,10 @@ While $v_{\rm sw}$ is $\sim$30~km/s, the infall velocity from the planetary grav
 In the next section, we simply consider
 %%%%%%%%%% 
 \begin{equation}
-\frac{v}{v_{\odot}} \sim 10^{-1} \, . \label{eq:scale_v}
+\frac{v}{v_{\odot}} \sim 10^{-1} \, \label{eq:scale_v}
 \end{equation}
 %%%%%%%%%%
-as a fiducial value for normalization. 
+a fiducial value for the normalization. 
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -406,8 +406,8 @@ as a fiducial value for normalization.
 \label{ss:ionization}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-As discussed in \citet{ignace2010}, as the stars evolve, the ionization fraction of the stellar wind are lowered down to order of $\sim 10^{-3}$ \citep{drake1987}. Since only charged particles interact with planetary magnetic field, this suggests the inefficient interaction with planetary magnetosphere and hence low input energy for radio emission. 
-However, at this stage, the velocity of stellar wind becomes slower than the escape velocity of planetary companion and hence the stellar wind particles are expected to accrete onto the planets. 
+As discussed in \citet{ignace2010}, as the stars evolve, the ionization fraction of the stellar wind is lowered down to order of $\sim 10^{-3}$ \citep{drake1987}. Since only charged particles interact with planetary magnetic field, this suggests inefficient interaction with planetary magnetosphere and hence low input energy for radio emission. 
+However, at this stage, the velocity of the stellar wind becomes slower than the escape velocity of the planetary companion and hence the stellar wind particles are expected to accrete onto the planets. 
 \citet{spiegel+madhusudhan2012} computed the accretion luminosity $L_{\rm acc}$ and the temperature $T_{\rm acc}$ as follows: 
 %%%%%%%%%
 \begin{eqnarray}
@@ -418,7 +418,7 @@ T_{\rm acc} \sim && 2 \times 10^5 ~\mbox{K} \left( \frac{M_p}{M_{\rm J}} \right)
 \end{eqnarray}
 %%%%%%%%%
 The accretion onto planets, therefore, leads to emission of UV/X-ray radiation 
-whose characteristic energy $\sim k_B T_{\rm acc} $ exceeds the ionization energy of Hydrogen, $E_{\rm Rydberg} = 13.6$~eV, or $\lambda = 91.2\rm~nm$. 
+whose characteristic energy $\sim k_B T_{\rm acc} $ exceeds the ionization energy of hydrogen, $E_{\rm Rydberg} = 13.6$~eV, or $\lambda = 91.2\rm~nm$. 
 Therefore, UV/X-ray radiation from accretion will create local ionized region around the planet. 
 
 Let us consider the ionization profile around the planet. 
@@ -433,7 +433,7 @@ Denoting the ionization fraction by $x$, the equilibrium state at a distance $r$
 \tau = \int _{R_{\rm J}}^r n(1-x) \sigma_H [E_{\rm photon}] dr 
 \end{equation}
 %%%%%%%%%
-where $\dot N_X$ is the source rate of the photons that can ionize the hydrogen, 
+where $\dot N_X$ is the source rate of the photons that can ionize hydrogen, 
 $\sigma _H$ is the cross section of H atoms for X-ray \citep{verner1996}: 
 %%%%%%%%%
 \begin{equation}
@@ -446,7 +446,7 @@ $ \beta \sim 2.6 \times 10^{-13}\;{\rm cm^3/sec} $ \citep{pequignot1991}
 at electron temperature of stellar wind of evolved stars, $T_e \sim 10^4 $K \citep{suzuki2007}. 
 
 
-The source rate is obtained by counting the number of photons whose energy exceeds the ionization energy of Hydrogen ($E_{\rm Rydberg} = 13.6$~eV, 
+The source rate is obtained by counting the number of photons with energy exceeding the ionization energy of hydrogen ($E_{\rm Rydberg} = 13.6$~eV, 
 or $\lambda = 91.2\rm~nm$), which is approximately given by dividing the X-ray accretion luminosity by the characteristic photon energy produced:
 %%%%%%%%%
 \begin{equation}
@@ -471,8 +471,8 @@ For the accretion onto large planets, however, the characteristic photon energy 
 The cross section\footnote{This is close to the geometric cross section of the Bohr radius.} of hydrogen for electrons is $\sim 4\times 10^{-17} {\rm cm}^2$ \citep{fite1958}, which implies a mean free path for ionized electrons of $\sim$2$R_J$ in the surrounding medium.
 As a result, nearly 2/3 of released energetic electrons will ionize a hydrogen atom within $\sim$2$R_J$, and more than 99\% will ionize a hydrogen atom within $\sim$10$R_J$.
 
-In principle, photons with energy $E_{\rm photon}$ have the potential to ionize $E_{\rm photon}/E_{\rm Rydberg}$ times.
-To take this into account, we consider two limiting possibilities:
+In principle, photons with energy $E_{\rm photon}$ have the potential to ionize $E_{\rm photon}/E_{\rm Rydberg}$ hydrogen atoms.
+To account for this, we consider two limiting possibilities:
 After an ionizing collision, the energy can (\emph{i}) be split evenly between the two electrons, or it can (\emph{ii}) go entirely into the kinetic energy of one electron and not at all into that of the other (of course, any split in between these extremes is possible, too).
 Note that conservation of momentum and energy imply that the proton will not acquire a significant fraction of the energy of the collision.\footnote{Were it otherwise, we'd have to take into account what fraction of a rubber ball's kinetic energy is imparted to the kinetic energy of the Earth when bouncing a ball.}  
 
@@ -483,8 +483,8 @@ The cascade can proceed to the fourth order at the maximum.
 Under scenario (\emph{ii}), the cascade proceeds with the initial $E_{\rm in}$ electron leading to an electron with kinetic energy $E_{\rm in} - E_{\rm Rydberg}$ and another electron with 0 kinetic energy.
 Clearly, this cascade can produce a maximum total of $E_{\rm in} / E_{\rm Rydberg}$ free electrons.
 
-In reality, not all released electrons may be able to proceed the next ionization.
-If $\xi$ represents the fraction of released electrons that proceed to the next ionization, then the number of ionized atoms $N_i$ released through this cascade (\emph{i}), is
+In reality, not all released electrons result in further ionization interactions.
+If $\xi$ represents the fraction of released electrons that proceed to the next ionization, then the number of ionized atoms $N_i$ released through this cascade (\emph{i}) is
 %%%%%%%%%
 \begin{eqnarray}
   \nonumber N_i & = & (1-\xi) + 2\xi (1-\xi) + 4 \xi^2 (1-\xi) + 8 \xi^3 \\
@@ -535,7 +535,7 @@ While the photon rate is large for larger planets, the strong dependence of cros
 Nevertheless, substantial amount of ionized plasmas are expected around the magnetic stand-off radius.
 
 
-The extent of ionized region may also be roughly estimated by Str\"omgren radius \citep{stromgren1939}: 
+The extent of the ionized region may also be roughly estimated as the Str\"omgren radius \citep{stromgren1939}: 
 %%%%%%%%%
 \begin{equation}
 r_{\rm stromgren} = \left( \frac{3}{4\pi} \frac{\dot N_X}{n^2 \beta } \right)^{1/3}
@@ -553,14 +553,14 @@ r_{\rm stromgren} \sim
   \right. \label{eq:stromgren}
 \end{eqnarray}
 %%%%%%%%%
-for a planet around a red giants at 5~AU. 
+for a planet 5~AU from a red giant host. 
 The Str\"omgren radius for $1M_{\rm J} $ and for $10M_{\rm J}$ are also indicated in Figure \ref{fig:ionizationfraction}.
 Note, however, that unlike the frequently-demonstrated photoionization problem around O/B-type stars, in the situation of our interest, the Str\"omgren radius is not a sharp edge of ionization anymore, due to smaller source rate and smaller cross section (in this case parameter ``$a$'' in equation (13) of \citealt{stromgren1939} is not small) on account of X-ray photons interacting more weakly with neutral hydrogen than UV photons near the ionization limit.
 The Str\"omgren radii are indicated by vertical arrows in Figure \ref{fig:ionizationfraction}. 
 
 
 As a whole, we expect for the X-ray emission from the accretion onto the planet to ionize the incoming stellar wind.
-This implies that the stellar wind particles represented by (equation~\ref{eq:n}) are nearly fully ionized plasmas like Solar wind, and that the stellar wind can interact with the planetary magnetic fields in a rather similar way to the case of Solar System planets.
+This implies that the stellar wind particles represented by equation (\ref{eq:n}) are nearly fully ionized plasmas like Solar wind, and that the stellar wind can interact with the planetary magnetic fields in a rather similar way to the case of Solar System planets.
 
 
 
@@ -664,10 +664,10 @@ P_{\rm k,\,inp}
 && \;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\; \mbox{(for AGB stars' companions)} \notag \\
 &\approx & 490 ~P_{\rm k,\,inp,\,J} \left( \frac{B}{B_{\rm J}} \right)^{2/3} \left( \frac{a}{0.05~\mbox{AU}} \right)^{-4/3} \notag \\
 && \times \left( \frac{\dot M_\star}{\dot M_{\odot}} \right)^{2/3} \left( \frac{v}{v_{\odot}} \right)^{5/3} \\
-&& \;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\; \mbox{(for canonical hot jupiters)} \notag 
+&& \;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\; \mbox{(for canonical hot Jupiters)} \notag 
 \end{eqnarray}
 %%%
-Here we normalized the strength of magnetic field of canonical hot jupiters with $B_J$, considering the uncertainty of the magnetic field of tidally-locked planets. 
+Here we normalized the strength of magnetic field of canonical hot Jupiters with $B_J$, considering the uncertainty of the magnetic field of tidally-locked planets. 
 Depending on the modeling of magnetic field strength, there is also speculation that the tidally-locked planets may have weaker magnetic fields due to slow rotation \citep[e.g.][]{griesmeier2004}; in that case the radio emission would be weaker. 
 
 
@@ -679,7 +679,7 @@ F_{\nu} &=& \frac{P_{\rm radio}}{\Omega d^2 \nu_{\rm cyc}} \\
 &\approx & 5.2\times 10^{-8} \mbox{Jy} \left( \frac{d}{100\mbox{~pc}} \right)^{-2}  \notag \\
 &&\times \left( \frac{B}{B_{\rm J}} \right)^{-1/3}  \left( \frac{a}{5~\mbox{AU}} \right)^{-4/3} \notag \\
 && \times \left( \frac{\dot M_\star}{\dot M_{\odot}} \right)^{2/3} \left( \frac{v}{v_{\odot}} \right)^{5/3} \label{eq:F_nu} \\
-&& \;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\; \mbox{(for Jupiter-twin)} \notag \\
+&& \;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\; \mbox{(for a Jupiter-twin)} \notag \\
 %%%
 &\approx & 0.70 \times 10^{-5} \mbox{Jy} \left( \frac{d}{100\mbox{~pc}} \right)^{-2}  \notag \\
 &&\times \left( \frac{B}{B_{\rm J}} \right)^{-1/3} \left( \frac{a}{5~\mbox{AU}} \right)^{-4/3} \notag \\ 
@@ -693,7 +693,7 @@ F_{\nu} &=& \frac{P_{\rm radio}}{\Omega d^2 \nu_{\rm cyc}} \\
 &\approx & 2.4 \times 10^{-5} \mbox{Jy} \left( \frac{d}{100\mbox{~pc}} \right)^{-2}  \notag \\
 &&\times \left( \frac{B}{B_{\rm J}} \right)^{-1/3} \left( \frac{a}{0.05~\mbox{AU}} \right)^{-4/3} \notag \\ 
 && \times \left( \frac{\dot M_\star}{\dot M_{\odot}} \right)^{2/3} \left( \frac{v}{v_{\odot}} \right)^{5/3} \label{eq:F_nu_RGHJs} \\
-&& \;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\; \mbox{(for canonical hot jupiters)} \notag 
+&& \;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\; \mbox{(for canonical hot Jupiters)} \notag 
 \end{eqnarray}
 %%%
 Thus, RGHJs are expected to be intrinsically as bright as the closest hot Jupiters. 
