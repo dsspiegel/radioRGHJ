@@ -349,13 +349,6 @@ q_o \sim q_{o, {\rm J}} \left( \frac{t}{4.5 \rm~Gyr} \right)^{-1.3} \left( \frac
 \end{equation}
 %%%%%%%%%%
 
-Substituting equation (\ref{eq:burrowsHeatFlux}) into equation (\ref{eq:Bscaling2}) and given that $r_{\rm dynamo} $ does not change significantly, the magnetic field is approximately:
-%%%%%%%%%% 
-\begin{equation}
-B   \sim   10~{\rm G} \left( \frac{M_p }{M_{p,{\rm J}}} \right)^{1.04} \left( \frac{t}{4.5~\rm{Gyr}} \right)^{-0.43} \label{eq:scalingB}
-\end{equation}
-%%%%%%%%%%
-under this model. 
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -585,6 +578,13 @@ This implies that the stellar wind particles represented by (equation~(\ref{eq:n
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% 
 
 Figure \ref{fig:planetaryB} shows the computed radius ($r_c$) and average density ($\rho_c$) of the dynamo region as function of planetary mass, as well as the heat flux at the outer boundary of the core, the estimated strength of planetary magnetic field $B$ and the corresponding cyclotron frequency ($\nu_{\rm cyc}$) as functions of planetary mass and the age. 
+Substituting equation (\ref{eq:burrowsHeatFlux}) into equation (\ref{eq:Bscaling2}) and given that $r_{\rm dynamo} $ does not change significantly, the magnetic field is approximately:
+%%%%%%%%%% 
+\begin{equation}
+B   \sim   10~{\rm G} \left( \frac{M_p }{M_{p,{\rm J}}} \right)^{1.04} \left( \frac{t}{4.5~\rm{Gyr}} \right)^{-0.43} \label{eq:scalingB}
+\end{equation}
+%%%%%%%%%%
+under this model. 
 Reasonably, the resultant values agree with \citet{reiners2010}, who adopted the same scaling law for planetary magnetic field; we show this figure just for completeness. 
 Note that the cyclotron frequency of Jovian planets typically falls between 10~MHz and 1~GHz. 
 In this regime, there are a number of current and near-future radio wave detectors including GMRT, 
@@ -794,10 +794,10 @@ For each red giant, the mass-loss rate is estimated by the improved Reimers' equ
 \end{equation}
 %%%
 where $\tilde L = L_{\star }/L_{\odot }(=4\pi R_{\star }^2 T_{\star }^4)$, $\tilde R = R_{\star }/R_{\odot }$, $\tilde M = M_{\star }/M_{\odot }$, and $g$ is the surface gravity. 
-The velocity of the stellar wind is assumed to scale with the escape velocity, hence
+The velocity of the stellar wind is assumed to be the escape velocity at $\sim 4 R_{\star }$:
 %%%
 \begin{equation}
-v \propto \sqrt{\frac{2GM_\star}{R_{\star }}}
+v \sim \sqrt{\frac{2GM_\star}{4R_{\star }}}
 \end{equation}
 %%%
 The age of the system is assumed to be roughly the same as the lifetime of the main-sequence stage, which depends on the stellar mass. We simply assume:
@@ -806,22 +806,29 @@ The age of the system is assumed to be roughly the same as the lifetime of the m
 t \sim 10\,{\rm Gyr}\, \left( \frac{M_{\star}}{M_{\odot }} \right)^{-2.5}
 \end{equation}
 %%%
-In addition, the distance to the system is obtained based on the parallax data from Hipparcos datasets.\footnote{http://www.rssd.esa.int/index.php?project=HIPPARCOS}
+Combining this relation with equations (\ref{eq:fcyc}) and (\ref{eq:scalingB}) results in
+%%%
+\begin{equation}
+\nu_{\rm cyc,\,max} \sim 20 \,{\rm MHz}\, \left( \frac{M_{\star}}{M_{\odot }} \right)^{1.075} \left( \frac{M_p}{M_{p,\,{\rm J}}} \right)^{1.04} 
+\end{equation}
+%%%
+In addition, the distance to the system is obtained based on the parallax data from Hipparcos datasets\footnote{http://www.rssd.esa.int/index.php?project=HIPPARCOS}.
 
-Using these data, we calculate the maximum frequency and intensity of radio emission by specifying planetary mass and orbital distance of a hypothetical planetary companion. 
-We consider [A] a Jupiter-twin whose maximum cyclotron frequency is $\nu _{\rm cyc,\,max} \sim 30$~MHz, and [B] a larger Jovian planet with $M_p\sim 10M_p$ whose cyclotron frequency is $\nu _{\rm cyc,\,max} \sim 300$~MHz (equations (\ref{eq:scalingB}) and (\ref{eq:fcyc})). 
+Using these data, we calculate the spectral flux of radio emission by specifying planetary mass and orbital distance of a hypothetical planetary companion. 
+We consider [A] a Jupiter-twin whose maximum cyclotron frequency is $\nu _{\rm cyc,\,max} \sim 20\,(M_{\star }/M_{\odot})$~MHz, and [B] a larger Jovian planet with $M_p\sim 10M_p$ whose cyclotron frequency is $\nu _{\rm cyc,\,max} \sim 200\,(M_{\star }/M_{\odot})$~MHz. 
 
-Figure \ref{fig:observability} displays the estimated radio intensity (i.e., cyclotron frequency) of Jupiters [A] and [B] around M-type red giants within 300~pc. 
+Figure \ref{fig:observability} displays the estimated radio flux from Jupiters [A] and [B] around M-type red giants within 300~pc. 
 Jupiters are placed at 1 AU and at 5 AU for reference. 
-The difference of the symbols indicates whether the radio emission can escape from the system (circle) or not (cross), i.e., $\nu _{\rm cyc,\,max} > \nu_{\rm plasma}^{\rm los}$.  
-For a hypothetical Jupiter-mass planet at 5 AU, a reasonable number of systems have potential to emit radio wave at the level of $\sim 10 \mu {\rm Jy}$  out to $\sim 100-150$ pc. 
+The difference of the symbols indicates whether the radio emission can escape from the system (circle), i.e., $\nu _{\rm cyc,\,max} > \nu_{\rm plasma}^{\rm los}$,  or not (cross). 
+Assuming Jupiter-mass planets which typically have the maximum cyclotron frequency at $10-100$~MHz depending on the age, a reasonable number of systems have potential to emit radio wave at the level above $\sim 10~\mu {\rm Jy}$  out to $\sim 100-300$ pc, while the those with the highest mass-loss rate would suffer from the plasma cut-off of the stellar wind. 
+For more massive planets with the maximum cyclotron frequency at around $100-1000$~MHz, the radio flux is lowered due to its dependence on $B^{-1/3}$ (equation (\ref{eq:F_nu})), but more likely to get to the Earth. $10~M_{\rm J}$ planets at $\sim 1$ AU will be detectable out to $\sim 200$~pc.
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{figure}[tbhp]
-   \plotoneh{radio_1Mp.pdf}
-   \plotoneh{radio_10Mp.pdf}
-   \caption{Radio emission from existing M-type red giants with a hypothetical planetary companion of 1$M_{\rm J}$ and 10$M_{\rm J}$ at 1~AU and 5~AU.
+   \plotoneh{radio_M-RG_1Mp.pdf}
+   \plotoneh{radio_M-RG_10Mp.pdf}
+   \caption{Radio emission from existing M-type red giants with a hypothetical planetary companion of 1$M_{\rm J}$ (upper panel) and 10$M_{\rm J}$ (lower panel) at 1~AU (blue) and 5~AU (black).
 Cross symbols indicate that the radio emission is not observable because cyclotron frequency is less than plasma density around the planet. }
   \label{fig:observability}
 \end{figure}
