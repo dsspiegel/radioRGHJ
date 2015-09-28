@@ -498,7 +498,7 @@ Alternatively, cascade (\emph{ii}) leads to
 %%%%%%%%%
 where $k \equiv E_{\rm in} / E_{\rm Rydberg}$ is the maximum number of ionizations for the given initial electron energy.
 This limit leads to a value for $N_i$ that is not dramatically different from that of limit (\emph{ii}).
-In Appendix \ref{sec:AppendixB}, we estimate the Bhabha(/M{\o}ller) scattering cross section and show that cascade (\emph{ii}) is probably more realistic.
+In Appendix \ref{sec:AppendixA}, we estimate the Bhabha(/M{\o}ller) scattering cross section and show that cascade (\emph{ii}) -- unequal recoil energies -- is probably more realistic.
 
 Ultimately, $\dot{N}_X $ in equation (\ref{eq:equilibrium}) is replaced by 
 %%%%%%%%%
@@ -1128,7 +1128,7 @@ Basic research in radio astronomy at NRL is supported by 6.1 Base funding.
 
 
 \section{Ionization Cascade}
-\label{sec:AppendixB}
+\label{sec:AppendixA}
 
 For an electron-hydrogen ionizing collision, we estimate the differential cross section $\sigma$ as a function of recoil energy $d\sigma / dE_{\rm recoil}$.
 We approximate the bound electron as a free one at rest and use the differential cross section for scattering of two electrons (Bhabha scattering) in the non-relativistic limit:
@@ -1150,11 +1150,27 @@ We therefore have
 \end{equation}
 which is largest for small recoil energies.
 Of course, $E_{\rm recoil}$ must be larger than $E_{\rm Rydberg}$ for this approximation to be meaningful. 
-%This suggests that if the energetic electron ends up ionizing other atoms, it is more likely to put them right at the threshold of 
+
+An objection to the above estimate is that the singularity in the $E_{\rm recoil} \rightarrow 0$ limit arises from the long range nature of Coulomb interaction which of course is absent in the real problem.
+Far away, the ionizing electron sees the dipole moment of the neutral atom.
+However, for energy transfer of order a Rydberg $\alpha/2a_0$ we can estimate the transfer momentum and see that it is larger than the inverse of the Bohr radius $a_0$.
+This implies that in this range the above estimate may actually be reliable. The transfer momentum is
+\begin{equation}
+q^2 =\frac{1}{4} m^2 \vrel^2 (\sin^2\theta +(1-\cos \theta)^2)= m^2\vrel^2 \sin^2 \frac{\theta}{2}.
+\end{equation}
+Comparison with (\ref{eq:Erec}) shows
+\begin{equation}
+E_{\rm recoil} = \frac{q^2}{2m}.
+\ee
+Now set $E_{\rm recoil} \sim \alpha/a_0$ to get
+\be
+q \sim \sqrt{\frac{m\alpha}{a_0}}\sim \frac{1}{a_0}
+\ee
+where we used $a_0 = 1/\alpha m$.
 
 
 \section{Comparison with previous work}
-\label{sec:AppendixA}
+\label{sec:AppendixB}
 
 There is a rather wide range in estimates of the radio emission from Jovian exoplanets and it is worth noting how the different models yield different answers. 
 
