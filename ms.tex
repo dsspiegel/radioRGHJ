@@ -197,10 +197,10 @@ Finally, Section \ref{s:conc} concludes the paper with a brief summary.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 
-In this section, we describe our scheme to estimate radio emission from RGHJs. 
-First, we introduce our framework to compute the frequency and intensity of planetary radio emission in Section \ref{ss:model_frequency} and Section \ref{ss:model_intensity}, respectively. 
+In this section, we describe our framework to estimate radio emission from RGHJs. 
+First, we introduce our scheme to compute the frequency and intensity of planetary radio emission in Section \ref{ss:model_frequency} and Section \ref{ss:model_intensity}, respectively. 
 Then, two ingredients for the framework --- the strength of planetary magnetic field and the properties of the stellar wind --- will be presented in Section \ref{ss:magneticfield} and Section \ref{ss:stellarwind}, respectively. 
-In Section \ref{ss:ionization}, we consider the ionization around the planets, which is a crucial factor to determine the efficiency of the planetary magnetosphere and the stellar wind. 
+In Section \ref{ss:ionization}, we consider the ionization around the planets, which is a crucial factor to determine the efficiency of the interaction between the planetary magnetosphere and the stellar wind. 
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -215,9 +215,9 @@ The upper limit is around the cyclotron frequency of the planetary surface magne
 \nu_{\rm cyc,\,max} = \frac{eB}{2\pi m_e c} \approx 28 {\rm~MHz} \left( \frac{B}{10 \rm~G} \right) \label{eq:fcyc}
 \end{equation}
 %%%%%%%%%%
-where $B$ is the strength of magnetic field at the planetary surface, $e$ and $m_e$ are the charge and mass of the electron, respectively, and $c$ is the speed of light. 
+where $B$ is the strength of magnetic field at the planetary surface, $e$ and $m_e$ are the charge and mass of electrons, respectively, and $c$ is the speed of light. 
 
-Radio emission from the planet is observable from ground only when the frequencies of the radio emission are larger than the plasma frequency of Earth's ionosphere $\nu_{\rm plasma}^\oplus$ and the maximum plasma frequency along the line of sight $\nu_{\rm plasma}^{\rm los}$: 
+Radio emission from the planet is observable from the ground only when the frequencies of the radio emission are larger than both the plasma frequency of Earth's ionosphere $\nu_{\rm plasma}^\oplus$ and the maximum plasma frequency along the line of sight $\nu_{\rm plasma}^{\rm los}$: 
 %%%%%%%%%% 
 \begin{equation}
 \nu_{\rm cyc,\,max} > \nu_{\rm plasma}^\oplus \;\;\; \mbox{and} \;\;\; \nu_{\rm cyc,\,max} > \nu_{\rm plasma}^{\rm los}
@@ -245,10 +245,10 @@ F_{\nu} = \frac{P_{\rm radio}}{\Omega l^2 \Delta \nu}
 \label{eq:Fnu}
 \end{equation}
 %%%
-where $P_{\rm radio}$ is the energy that is deposited as radio emission of considered frequency range, $\Omega$ is the solid angle of the emission, $l$ is the distance between the target and the Earth, and $\Delta \nu$ is frequency bandwidth. 
+where $P_{\rm radio}$ is the energy that is deposited as auroral radio emission of the considered frequency range, $\Omega$ is the solid angle of the emission, $l$ is the distance between the target and the Earth, and $\Delta \nu$ is frequency bandwidth. 
 
 We estimate the radio emission of exoplanets, $P_{\rm radio}$, simply by scaling the Jovian auroral radio emission, $P_{\rm radio,\,J}$, with the input energy from stellar wind, in the same manner as \citet{griesmeier2005,griesmeier2007a,griesmeier2007b}.
-The scaling is based on the empirical/apparent good correlation between the radio emission intensity of Solar System planets and the input kinetic energy, $P_{\rm inp,\,k}$, or the magnetic energy of the solar wind, $P_{\rm inp,\,m}$, \citep[``radiometric Bode's law''; ][]{desch+kaiser1984}, i.e.,
+The scaling is based on the empirical/apparent good correlation between the radio emission intensity of Solar System planets and the input kinetic energy, $P_{\rm inp,\,k}$, or the magnetic energy of the solar wind, $P_{\rm inp,\,m}$, \citep[``radiometric Bode's law''; ][]{desch+kaiser1984,zarka2001}, i.e.,
 %%%
 \begin{eqnarray}
 P_{\rm radio} &\propto & P_{\rm inp} \\
@@ -256,8 +256,8 @@ P_{\rm inp,\,k} &=& n v^3 r_{\rm mag} ^2 \label{eq:Pinp_kin}, \\
 P_{\rm inp,\,m} &=& v B_{\star\bot }^2 r_{\rm mag} ^2 \label{eq:Pinp_mag} \, ,
 \end{eqnarray}
 %%%
-where $n$ is the number density of the stellar wind, $v$ is the relative velocity of the stellar wind particles and the planet, $ B_{\star\bot }$ is the interstellar magnetic field perpendicular to the stellar wind flow, and $r_{\rm mag}$ is the radius of the magnetic stand-off point.  
-It is not clear from the observations of the Solar System planets which is the fundamental one, the correlation to the input kinetic energy, that to the magnetic energy, or both. 
+where $n$ is the number density of the stellar wind, $v$ is the relative velocity of the stellar wind particles to the planet, $ B_{\star\bot }$ is the interstellar magnetic field perpendicular to the stellar wind flow, and $r_{\rm mag}$ is the radius of the magnetic stand-off point.  
+It is not clear from the observations of the Solar System planets which is the fundamental one, the correlation to the input kinetic energy, that to the magnetic energy, or both \citep{zarka2001}. 
 In this paper, we assume that the radio emission is scaled with the input kinetic energy, i.e., $P_{\rm radio} \propto P_{\rm k,\,inp}$ and consider the possible effects of massive stellar wind. 
 
 In the case that the correlation with input magnetic energy is fundamental, it is difficult to estimate the planetary radio emission at this point because magnetic field of evolved stars are not well constrained for highly evolved stars; most of observations only set an upper limit \citep[e.g.,][]{konstantinova2010,petit2013,tsvetkova2013,konstantinova2013,auriere2015}. 
@@ -276,7 +276,7 @@ m_p n v ^2 \sim \frac{B^2}{8\pi}\left( \frac{r_{\rm mag}}{R_p} \right)^{-6}  \la
 where $m_p$ is the proton mass. Thus, 
 %%%
 \begin{equation}
-r_{\rm mag} \sim R_p \left( 8\pi m_p n \right) ^{-1/6} v^{-1/3} B^{-1/3} \label{eq:stand-off-radius} 
+r_{\rm mag} \sim R_p \left( 8\pi m_p n \right) ^{-1/6} v^{-1/3} B^{1/3} \label{eq:stand-off-radius} 
 \end{equation}
 %%%
 The radius obtained for Jupiter from this equality is about half of the actual magnetospheric radius \citep[][]{griesmeier2005}. 
@@ -299,14 +299,14 @@ We do so simply by scaling the Jovian magnetosphere at the surface $B_J \sim 10$
 So far, several scaling relations for the planetary magnetic field strength  
 have been proposed \citep[e.g.][]{russel1978,busse1976,stevenson1979,mizutani1992,sano1993,starchenko2002,christensen2006,christensen_et_al2009}  
 which are summarized and compared with numerical simulations in \citet{christensen2010}. 
-We employ the scaling law proposed in \citet{christensen_et_al2009}, which has already been used in \citet{reiners2010} to explore the evolution of planetary magnetic fields.
-This scaling law is based on the assumption that the ohmic dissipation energy is a fraction of the available convected energy and was found to be in good agreement with the numerical experiments over a wide parameter space and with known objects from the Earth to stars:
+We employ the scaling law proposed in \citet{christensen_et_al2009}, which has already been used in \citet{reiners2010} to explore the evolution of planetary magnetic fields:
 %%%%%%%%%%
 \begin{equation}
 B_{\rm dynamo} ^2 \propto f_{\rm ohm}\;\rho_{\rm dynamo}^{1/3} \;  (Fq_o)^{2/3} \label{eq:Bscaling} 
 \end{equation}
 %%%%%%%%%%
 where $B_{\rm dynamo}$ is the mean magnetic field in the dynamo region, $f_{\rm ohm}$ is the ratio of ohmic dissipation to the total dissipation, $\rho_{\rm dynamo} $ is the mean density in the dynamo region, $F$ is an efficiency factor of order unity, and $q_o$ is the convected flux at the outer boundary of the dynamo region \citep[see][for the comprehensive description]{christensen_et_al2009}. 
+This scaling law is based on the assumption that the ohmic dissipation energy is a fraction of the available convected energy and was found to be in good agreement with the numerical experiments over a wide parameter space and with known objects from the Earth to stars. 
 Here, $f_{\rm ohm}$ and $F$ are assumed to be constant for the bodies considered in this paper. 
 Dipole magnetic field strength at the planetary surface, denoted by $B$, is then scaled by
 %%%%%%%%%%
@@ -321,7 +321,7 @@ Indeed, unlike canonical hot Jupiters, RGHJs are not tidal locked to their host 
 Therefore, we implicitly assume that the RGHJs considered in this paper are rapidly rotating so that they generate planetary magnetic fields through the same mechanism as Jupiter. 
 
 
-In order to evaluate $\rho _{\rm dynamo}$ and $q_o$, we need models of the internal planetary structure. 
+In order to evaluate $\rho _{\rm dynamo}$ and $q_o$, we need a model of the internal planetary structure. 
 We consider Jupiter-like gaseous planets and assume that the planetary radius is constant at $R_p = R_{p,{\rm J}}$, as numerical calculations show that the radii of gaseous planets over the range of $0.1 M_{p,{\rm J}} < M_p < 10M_{p, {\rm J}}$ (with core mass less than 10\%) converge to $0.8 R_{p,{\rm J}} < R_p < 1.2R_{p, {\rm J}}$ within 1 Gyr \citep{fortney2007}. 
 For the density profile, we assume a polytrope gas sphere with index $n=1$, which results in:
 %%%%%%%%%% 
@@ -389,8 +389,8 @@ n &=& 1.8 \times 10^6 \; {\rm cm^{-3}} \times \left( \frac{a}{5 \; {\rm AU}} \ri
 \end{eqnarray}
 %%%%%%%%%% 
 
-The contributions for the velocity term in equation (\ref{eq:Pinp_kin}), which should be the relative velocity between the planet and the solar wind, are given by the stellar wind velocity, the planetary orbital velocity, and the infall velocity (i.e., the velocity due to falling in the planet's gravitional field).
-While $v_{\rm sw}$ is $\sim$30~km/s, the orbital velocity is $10-30~{\rm km/s}$ depending on the orbital distance (ranging from $1-5~{\rm AU}$), and the infall velocity from the planetary gravity is $\sim 10-25~{\rm km/s}$, depending on the planetary mass (ranging from $1 M_{\rm J}-10 M_{\rm J}$). 
+The contributions for the velocity term in equation (\ref{eq:Pinp_kin}), which should be the relative velocity between the planet and the solar wind, are given by the stellar wind velocity, the infall velocity (i.e., the acceleration due to planet's gravitational field), and the planetary orbital velocity. 
+While $v_{\rm sw}$ is $\sim$30~km/s, the infall velocity from the planetary gravity is $\sim 10-25~{\rm km/s}$ depending on the planetary mass (ranging from $1 M_{\rm J}-10 M_{\rm J}$), and the orbital velocity is $10-30~{\rm km/s}$ depending on the orbital distance (ranging from $1-5~{\rm AU}$). 
 In the next section, we simply consider
 %%%%%%%%%% 
 \begin{equation}
@@ -422,7 +422,7 @@ Therefore, UV/X-ray radiation from accretion will create local ionized region ar
 
 Let us consider the ionization profile around the planet. 
 We suppose a state where the ionization and recombination rates are in equilibrium. 
-Denoting the ionization fraction by $x$, the equilibrium state at a distance $r$ from the planet may be approximately represented by 
+Denoting the ionization fraction by $x$, the equilibrium state at a distance $r$ from the planet may be represented by 
 %%%%%%%%%
 \begin{equation}
 \frac{\dot N_X}{ 4 \pi r^2 } e^{- \tau } n ( 1-x ) \sigma _H [E_{\rm photon}] = (n x )^2 \beta [T_e] \label{eq:equilibrium} 
@@ -466,7 +466,7 @@ As a result,
 \end{eqnarray}
 %%%%%%%%%
 
-For the accretion onto large planets, however, the characteristic photon energy is so high (equation (\ref{eq:Tacc})) that the released energetic electrons may also ionize other atoms in the vicinity.
+For the accretion onto large planets, however, the characteristic photon energy is so high that the released energetic electrons may also ionize other atoms in the vicinity.
 The cross section\footnote{This is close to the geometric cross section of the Bohr radius.} of hydrogen for electrons is $\sim 4\times 10^{-17} {\rm cm}^2$ \citep{fite1958}, which implies a mean free path for ionized electrons of $\sim$2$R_J$ in the surrounding medium.
 As a result, nearly 2/3 of released energetic electrons will ionize a hydrogen atom within $\sim$2$R_J$, and more than 99\% will ionize a hydrogen atom within $\sim$10$R_J$.
 
@@ -513,7 +513,7 @@ For a $10 M_{\rm J}$ planet, $N_i$ is probably approximately in the range 5---10
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{figure}[htbp]
    \plotoneh{ionizationfraction.pdf}
-   \caption{Profile of ionization fraction due to X-ray from planetary accretion, measured from the surface of the planet. Solid lines show the solutions without the correction for the secondary ionization by ionized electrons, while the dashed lines show the solutions which take the correction into account with efficiency factor $N_i=6$. The vertical arrows show the Str\"omgren radius estimated simply  by equation (\ref{eq:stromgren}). The dotted vertical lines indicate the location of the magnetic stand-off radii, $r_{\rm mag}$,  obtained by equation (\ref{eq:stand-off-radius_RGHJ}) below. }
+   \caption{Profile of ionization fraction measured from the surface of the planet, due to UV/X-ray from the accretion of stellar wind onto the planet.  Solid lines show the solutions without the correction for the secondary ionization by ionized electrons, while the dashed lines show the solutions which take the correction into account with efficiency factor $N_i=6$. The vertical arrows show the Str\"omgren radius estimated simply by equation (\ref{eq:stromgren}). The dotted vertical lines indicate the location of the magnetic stand-off radii, $r_{\rm mag}$, obtained by equation (\ref{eq:stand-off-radius_RGHJ}) below. }
   \label{fig:ionizationfraction}
 \end{figure}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% 
@@ -551,7 +551,7 @@ r_{\rm stromgren} \sim
 %%%%%%%%%
 for a planet around a red giants at 5~AU. 
 The Str\"omgren radius for $1M_{\rm J} $ and for $10M_{\rm J}$ are also indicated in Figure \ref{fig:ionizationfraction}.
-Note, however, that unlike the frequently-demonstrated photoionization problem around O/B-type stars, in the situation of our interest, the Str\"omgren radius is not a sharp edge of ionization anymore, due to smaller source rate and smaller cross section (in this case parameter ``$a$'' in equation (13) of \citealt{stromgren1939} is not small) on account of X-ray photons interacting more weakly with neutral hydrogen than UV photons near the ionization limit.
+Note, however, that unlike the frequently-demonstrated photoionization problem around O/B-type stars, in the situation of our interest, the Str\"omgren radius is not a sharp edge of ionization anymore, due to smaller source rate and smaller cross section (in this case parameter ``$a$'' in equation (13) of \citealt{stromgren1939} is not small) on account of UV/X-ray photons interacting more weakly with neutral hydrogen than UV photons near the ionization limit.
 The Str\"omgren radii are indicated by vertical arrows in Figure \ref{fig:ionizationfraction}. 
 
 
