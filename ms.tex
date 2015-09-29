@@ -71,7 +71,7 @@
 % THE DOCUMENT BEGINS HERE                      %
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\slugcomment{Submitted to ApJ, XX September 2015}
+%\slugcomment{Submitted to ApJ, XX September 2015}
 
 \begin{document}
 
@@ -132,7 +132,6 @@ yuka.fujii@elsi.jp
 
 
 \begin{abstract}
-%%%
 When planet-hosting stars evolve off the main sequence and go through the red-giant branch, the stars become orders of magnitudes more luminous and at the same time lose mass at much higher rates than their main-sequence counterparts.
 Accordingly, planetary companions around them at orbital distances of a few AU, if they exist, will be heated up to the level of canonical hot Jupiters and also subjected to a dense stellar wind.
 Given that magnetized planets interacting with stellar winds emit radio waves, such ``Red-Giant Hot Jupiters'' (RGHJs) may also be candidate radio emitters.
@@ -878,7 +877,6 @@ SKA-Low (full) & 50-350 & 1.8 &  0.7              & 4.8  & 1.5 \\
 %VLA 4-Band& 30-80   & 3300  & 2312058            & 28.6 & 330 \\
 VLA-LOBO   &  50-350 &  77   &  1200              & 8.6  & 10.4
 \enddata
-%\tablecomments{Time estimates to reach 2~$\mu$Jy RMS.}
 \tablenotetext{a}{RMS noise in a 1-hour observation, computed for imaging of the full band reported 
 in this table (Equation~\ref{eq:rms_sens}).}
 \tablenotetext{b}{The integration time in hours required to reach an RMS of 2~$\mu$Jy (i.e.\ 5-$\sigma$ detection
@@ -920,7 +918,6 @@ We estimate \Tsky\ using the low frequency sky noise temperature fit from \cite{
 %%%
 where $T_{150} = 283.2~\rm K$ is the \Tsky\ at 150~MHz, $\beta=2.47$, and $\Tcmb = 2.73~\rm K$ is the contribution from the cosmic microwave background (CMB).
 While this relation was fit to data taken in the 100-200~MHz range, the authors found it to be consistent with published measurements from 10-408~MHz. 
-%The \Trx\ is the receiver noise temperature, which depends on the instruments and is described below. 
 
 An additional factor that affects detectability is source confusion, the imaging noise associated with unresolved interloping radio sources in an observation.
 Source confusion is characterized by the standard deviation $\sigma_c$ in the surface brightness of an image due to one or more unresolved sources in the beam solid angle (for a review, see \cite{Condon1974,Condon2012}).
@@ -970,8 +967,6 @@ We estimate the sensitivity of LOBO assuming the receiver noise extrapolates lin
 
 
 The noise estimates shown in Table \ref{tab:sens} indicate that, at the frequencies relevant for the detection of radio emission from Jupiter-size planets, current instrument sensitivities are generally too low.
-%On the other hand, for more massive exoplanets ($M_p\sim 10 M_{\rm J}$) where the bulk of the radio emission would exist above 50~MHz, there is hope to detect radio emission from nearby systems with LOFAR-HBA or LOBO.
-%LOFAR-HBA has reasonable sensitivity to $M_p =10~M_{\rm J}$ planets at 5 AU around the few closest systems as well as those around further stars but orbiting closer to the stars. 
 On the other hand, for more massive exoplanets ($M_p\sim 10 M_{\rm J}$) where the bulk of the radio emission would exist above 50~MHz, low frequency component of SKA will be able to detect the signal within half a day from planets with $M_p \sim 10~M_{\rm J}$ at $\sim$1~AU within $\sim $200~pc, or those at $\sim$5~AU within $\sim $100~pc. 
 VLA-LOBO could also work for a few nearby systems. 
 
@@ -1248,7 +1243,6 @@ As for i., ii. and iii., the scaling laws are summarized in Table \ref{tab:comp}
 \#5 & & & $\mathcal{M} \propto \rho _c^{1/2} \omega^{1/2} r_c^3 \sigma ^{-1/2} $ & & \\
 \#6 & & & $\mathcal{M} \propto \rho _c^{1/2} \omega^{3/4} r_c^{7/2} \sigma ^{-1/4} $ & \\
 \#7 & & & $\mathcal{M} \propto \rho _c^{1/2} \omega r_c^{7/2}$ & & \\ \hline
-%\#8 & \citet{griesmeier2007a,griesmeier2007b} & $P_{\rm radio} \propto P_{\rm sw}$ & same as above & $2.1 \times 10^{11}$ & $ \nu_{\rm cyc}$ \\ \hline
 & \citet{reiners2010} & $P_{\rm radio} \propto P_{\rm sw}$ & $\mathcal{M} \propto M_p^{1/6} L^{1/3} R_p^{25/6}$ \\ 
 \#8  & this work & & \\ \hline
 \end{tabular}
