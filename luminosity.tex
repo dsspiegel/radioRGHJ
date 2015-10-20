@@ -1,0 +1,203 @@
+%\documentclass[12pt,preprint]{aastex}
+\documentclass[12pt]{emulateapj} 
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{amstext}
+%\usepackage{apjfonts}
+\usepackage{graphicx}
+\usepackage{epstopdf}
+\usepackage{epsfig}
+\usepackage{url}
+%------------------------------------------
+% User-defined macros.
+\usepackage{color}
+
+
+\definecolor{myColor}{rgb}{0.9,0.9,0.9}  
+%------------------------------------------
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{document}
+\renewcommand\bottomfraction{.9}
+\newcommand{\PD}[2]{\frac{\partial {#1}}{\partial {#2}}}
+
+\title{Luminosity function of RGHJs}
+\author{Yuka Fujii\altaffilmark{1}}
+\altaffiltext{1}{Institute of Astronomy, Madingley Road, University of Cambridge, Cambridge CB3 0HA, United Kingdom}
+
+\begin{abstract}
+N/A
+\end{abstract} 
+
+\keywords{planetary systems --- planets and satellites: general}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Luminosity Function Note \#1} 
+\label{sec:luminosity function}
+
+Assume:
+%%%
+\begin{displaymath}
+\frac{dn}{dL} = \left\{
+\begin{array}{ll}
+C' L^{-\alpha } & (L_{\rm min} < L < L_{\rm max}) \\
+0 & (\mbox{elsewhere})
+\end{array}
+\right.
+\end{displaymath}
+%%%
+where $C' $ is the proportional coefficient. 
+
+%%%
+\begin{equation}
+\frac{d^2n}{dL dr} dL dr =  4 \pi C L^{-\alpha } r^2 dL dr \equiv \Psi (L, r) dL dr
+\end{equation}
+%%%
+
+The relationship between flux $F$ and Luminosity $L$ is:
+%%%
+\begin{equation}
+F = \frac{L}{r^2}
+\end{equation}
+%%%
+where $r$ is the distance to the target. 
+
+The number of the targets within distance $R$ which have flux at $F \sim F+dF$ is
+%%%
+\begin{eqnarray}
+\frac{dn}{dF} dF &=& \int dr \int dL \; \Psi (L, r) \\
+&=& \int _0^{R} dr \int _{F}^{F+dF} dF \; \Psi (F r^2, r)\; det(J) 
+\end{eqnarray}
+%%%
+where
+%%%
+\begin{equation}
+det(J) = \left| \PD{r}{r}\PD{L}{F} - \PD{r}{F}\PD{L}{r} \right| = r^2
+\end{equation}
+%%%
+Therefore, 
+%%%
+\begin{eqnarray}
+\frac{dn}{dF} dF &=& \left[ 4 \pi \int _0 ^{R} dr \; r^4 \Phi (F, r) \right] dF\\
+\Phi (F, r) &=& \left\{
+\begin{array}{ll}
+C (F r^2)^{-\alpha } & (\sqrt{L_{\rm min}/F} < r < \sqrt{L_{\rm max}/F}) \\
+0 & (\mbox{elsewhere})
+\end{array}
+\right. 
+\end{eqnarray}
+%%%
+Therefore, 
+%%%
+\begin{eqnarray}
+&& \frac{dn}{dF} dF \\
+&=& 0 \;\;\;\; (R < \sqrt{L_{\rm min}/F}) \\
+&=& \frac{4\pi C F^{-\alpha }}{5 - 2\alpha} \left[ R^{5 - 2\alpha} - \left( \sqrt{ \frac{L_{\rm min}}{F}} \right)^{5 - 2\alpha} \right] \\
+&& \;\;\;\;\;\;\;\;\;\;\;\;\;\;  (\sqrt{L_{\rm min}/F} < R < \sqrt{L_{\rm max}/F} ) \\
+&=& \frac{4\pi C F^{-\alpha }}{5 - 2\alpha} \left[ \left( \sqrt{ \frac{L_{\rm max}}{F} } \right)^{5 - 2\alpha} - \left( \sqrt{\frac{L_{\rm min}}{F}} \right)^{5 - 2\alpha } \right] \\
+&& \;\;\;\;\;\;\;\;\;\;\;\;\;\; (\sqrt{L_{\rm max}/F} < R) 
+\end{eqnarray}
+%%%
+
+
+
+\vspace{2\baselineskip}
+
+
+
+\end{document}
+
+
+
+The probability to have the maximum luminosity of $F \sim F + dF$, $\mathcal{P} (F_{\rm max})$, with $N$ samples is
+% $expected value of the maximum luminosity $L_{\rm max}$ is
+%%%
+\begin{eqnarray}
+\mathcal{P}(F_{\rm max}) &\cdot & F_{\rm max} \\
+&=& N \cdot p (F_{\rm max}) \cdot P^{N-1}(<F_{\rm max}) \cdot dF_{\rm max}\end{eqnarray}
+%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Luminosity Function Note \#2} 
+\label{sec:luminosity function}
+
+Assume 
+%%%
+\begin{equation}
+\frac{dn}{dL} = L^{-\alpha }
+\end{equation}
+%%%
+Probability for a star to have luminosity $L\sim L+dL$ is 
+%%%
+\begin{equation}
+p (L) dL = C L^{-\alpha }
+\end{equation}
+%%%
+
+
+Probability for a star to have luminosity larger than $L$ is 
+%%%
+\begin{equation}
+P(>L) = \int _L^{\infty} C L^{-\alpha } dL = C \frac{L^{-\alpha +1}}{-\alpha + 1}
+\end{equation}
+%%%
+
+Probability for a star to have luminosity less than $L$ is 
+%%%
+\begin{equation}
+P(<L) = 1 -P (>L) \end{equation}
+%%% 
+
+The probability to have the maximum luminosity of $L \sim L + dL$, $\mathcal{P(L_{\rm max}})$, with $N$ samples is
+% $expected value of the maximum luminosity $L_{\rm max}$ is
+%%%
+\begin{eqnarray}
+\mathcal{P}(L_{\rm max}) &\cdot & dL_{\rm max} \\
+&=& N \cdot p (L_{\rm max}) \cdot P^{N-1}(<L_{\rm max}) \cdot dL_{\rm max} \\
+&=& N C L_{\rm max}^{-\alpha } \left[ 1 - \left( \frac{CL_{\rm max}^{-\alpha+1}}{-\alpha+1} \right) \right]^{N-1}
+\end{eqnarray}
+%%%
+Thus, the expected value for the maximum luminosity is
+%%%
+\begin{eqnarray}
+< L_{\rm max} > (N) &=& \int L_{\rm max} \cdot \mathcal{P_{\rm max}}(L_{\rm max}) \cdot dL_{\rm max} \\
+&=& N C \int dL_{\rm max} \cdot L_{\rm max}^{-\alpha +1} \left[ 1 - \left( \frac{CL_{\rm max}^{-\alpha+1}}{-\alpha+1} \right) \right]^{N-1} \\
+&\equiv & N C \int dL_{\rm max} \cdot L_{\rm max}^{-\alpha +1} K^{N-1}(L_{\rm max})
+\end{eqnarray}
+%%%
+
+%Thus, the expected value for the maximum flux from the spherical shell at $l \sim l+dl$, $f_{\rm max} (l)$, is:
+%%%
+%\begin{equation}
+%f_{\rm max} (l) = < L_{\rm max} > (4\pi l^2 dl) / l^2
+%\end{equation}
+%%%
+
+
+As we observer further (i.e. while the distance $l$ increases by d$l$), the maximum luminosity increases
+%%%
+\begin{eqnarray}
+&& \frac{d < L_{\rm max} >}{dl} = \frac{dN}{dl} \frac{d < L_{\rm max} >}{dN} \\
+&\propto & l^{2} \left[ \int dL_{\rm max} \cdot L_{\rm max}^{-\alpha +1} K^{N-1}(L_{\rm max}) \right. \\
+&&\left. + N (N-1) \int dL_{\rm max} \cdot L_{\rm max}^{-\alpha +1} K^{N-2}(L_{\rm max}) \right]
+\end{eqnarray}
+%%%
+
+
+
+Let us compute the expected value for the maximum flux $F_{\rm max}$ as a function of distance $d$ of the sample. 
+%%%
+\begin{equation}
+aiu
+\end{equation}
+%%%
+
+\vspace{2in}
+
+\begin{thebibliography}{}
+\bibitem[Schroder(2007)]{Schroder2007} Schr\"{o}der , K.-P. \& Cuntz, M. 2005, ApJ, 630,  L73 
+\bibitem[Schroder(2007)]{Schroder2007} Schr\"{o}der , K.-P. \& Cuntz, M. 2007, A\&A, 465, 593 
+\end{thebibliography}
+
+\end{document}
+
+
