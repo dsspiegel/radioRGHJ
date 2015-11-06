@@ -1,0 +1,57 @@
+
+Reviewer's Comments:
+
+This paper addresses the possibility of observing radio emission from planets orbiting around red giants. This emission is powered by the interaction of the stellar wind with the exoplanet, in a manner similar to that observed from many solar-system planets including Jupiter and the Earth. The winds of red giants are much cooler and slower than the solar wind, but they have a much higher mass density. Their kinetic energy fluxes therefore may be large enough to power observable radio fluxes. There are currently many planned and ongoing searches for radio emission from exoplanets, so this is a timely topic to address.
+
+Comparison with previous work: 
+
+The nature of radio emission from red giant Hot Jupiters has already been addressed by Ignace et al (2010). The main difference in this new paper is that the authors explicitely allow for the area presented to the stellar wind by the exoplanetary magnetosphere, rather than simply the area presented by the bow shock around an unmagnetised planet. This provides around two orders of magnitude increase in the input kinetic power intercepted by the exoplanet. 
+
+This approach requires that the authors make some estimate of the magnetic field strength of the planet, for which they use published expressions for the field strength as a function of the exoplanet's mass and age. As a smaller point, in the present paper, the authors also explicitely consider the ionisation of the plasma around the exoplanet due to simple Bondi-Hoyle accretion. In the Ignace paper this mechanism was also introduced, but not explored in detail as the ionisation was provided by the presence of the bow shock that forms around the exoplanet. 
+
+The role of the size of the exoplanetary magnetosphere has been addressed by many other authors, including many of the papers by Zarka and Griessmeier cited by the authors. The novel aspect is the application to red giants. Most of the other parts of the paper involve applying published results. The most interesting of these is the use of the published expressions for the drop in the planet's convective heat flux with time as a means of estimating the decay with time of the planetary field strength and hence the emission frequency.
+
+Recommendation:
+
+My main concern with this paper is that it is much too long for its original scientific content. The amendment to the Ignace (2010) result is interesting, as is the decay with time of the emission frequency, but much of the rest is unnecessary. For example, Appendix B covers almost two pages, but is not referred to or used in the paper. I have outlined below detailed comments on each section, but my recommendation is that the authors reduce the main paper by a factor of four by focussing on only the new and relevant results.
+
+Detailed comments:
+
+Introduction: The authors should cite Jardine & Cameron (2008) who provide a model for the radio emission that does not rely on scaling of the solar system, and Smith et al 2009 for a search for a secondary eclipse.
+
+Section 2.2
+
+Eqns 6-8 seem to be missing a factor of 4pi.
+
+Section 2.3
+
+This section is only needed to calculate the decay with time of the field strength of the planet. For the radio emission, the authors simply scale to a field strength of 10G (which is perfectly acceptable as most of the parameters used in section 2.4 are unknown). This section simply quotes results from other papers and could be moved to an appendix.
+
+Section 2.4
+
+The same comment applies here...the authors ultimately only use a wind velocity that is 1/10 that of the solar wind, so much of this section is unnecessary.
+
+Section 2.5
+
+This section is new, but not necessary, as Ignace (2010) have already addressed the issue of the ionisation of the exoplanetary exosphere. 
+
+Section 3.2
+
+Given that the authors dismiss the AGB stars because their cutoff frequencies are too high (which could have been demonstrated very briefly) it seems unnecessary to include these at every step. More significantly, the comparison with the "classical" hot Jupiters is not valid, either in eqns 43 or 48, as in this case the orbital velocity of the planet cannot be neglected when considering the relative velocity of the stellar wind particles to the planet (equation 7). The stellar rotational velocity is probably small and so can be neglected however. The authors should demonstrate that the ram pressure of any exoplanetary outflow induced by heating can also be neglected in determining the size of the magnetosphere. 
+
+Fig 3: the numbers on the RHS have no units...they are probably fluxes, but they should be shown. 
+
+Section 4:
+
+Much of this section could be cut, saving perhaps section 4.2. Predictions for observations with different facilities have been made many times before.
+
+Section 5 and Appendix B:
+
+Could be cut.
+
+Section 6:
+
+The authors note the rareness of evolved stars - it would be useful if they included a brief calculation or statement of how many might be expected, particularly in the age ranges they consider.
+
+In summary, this paper contains some interesting results that would make much more impact if they were clearly presented in a much shorter paper.
+
