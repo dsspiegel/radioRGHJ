@@ -29,6 +29,13 @@ This approach requires that the authors make some estimate of the magnetic field
 The role of the size of the exoplanetary magnetosphere has been addressed by many other authors, including many of the papers by Zarka and Griessmeier cited by the authors. The novel aspect is the application to red giants. Most of the other parts of the paper involve applying published results. The most interesting of these is the use of the published expressions for the drop in the planet's convective heat flux with time as a means of estimating the decay with time of the planetary field strength and hence the emission frequency.
 --------------------------------------------------------------------------------------
 
+We thank the referee for pointing out that we were not as clear as we
+would like to have been regarding the many differences from and
+advances upon the seminal paper of Ignace (2010) in our original
+submission.  In this resubmission, we have taken the referee's
+comments to heart and have endeavored to trim literature review where
+it is unnecessary, and to highlight the new aspects of our work.
+
 "the area presented by the bow shock around an unmagnetised planet. " ...??
 
 
