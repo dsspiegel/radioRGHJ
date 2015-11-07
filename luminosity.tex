@@ -12,6 +12,7 @@
 % User-defined macros.
 \usepackage{color}
 
+\allowdisplaybreaks[1]
 
 \definecolor{myColor}{rgb}{0.9,0.9,0.9}  
 %------------------------------------------
@@ -34,22 +35,40 @@ N/A
 \section{Luminosity Function Note \#1} 
 \label{sec:luminosity function}
 
+
+%In principle, if the expected luminosity function and positional distribution of possible RGHJ emitters were known, one could estimate the likelihood of detecting RGHJs in radio surveys. For illustration we consider a hypothetical power-law distribution for the RGHJ luminosity function $N[L] \propto L^{-\alpha_L}$, where, $N[L]$ is the number of objects per unit volume with a luminosity of $L$, and assume an isotropic distribution of sources in the observed volume. 
+%Under these assumptions, the largest luminosity in a volume limited sample (volume $V$, distance $d$) would be such that $V n[L] = 1$, i.e., $L \propto d^{3/\alpha _L}$.
+%The flux of such target at distance $d$ is $F \propto d^{\frac{3}{\alpha_L} - 2}$. 
+%Therefore,the likelihood of finding the brighter source increases with distance for $\alpha_L < 3/2$. 
+%Such a scenario would indeed be favorable to detect RGHJs given that RGs and AGB stars with high mass loss rates are rare and would require probing out to larger distances for detection. 
+%For example, for an $N[L] \propto L^{-1}$ the apparently brightest source within a given distance will increase linearly with distance, making it favorable for detecting intrinsically rare objects. 
+%Therefore, if we can estimate the luminosity function of RGHJ emitters, we may estimate their detectability.
+
+%Planning future targeted surveys of RGHJs would require accurate distribution functions of various parameters of giant stars in our neighborhood of the Galaxy. 
+In order to estimate the luminosity function of RGHJ emitters, one of the key factors is the distribution of mass-loss rates of giant host stars. 
+For a given set of orbital parameters the luminosity ($L$) of a RGHJ depends on the stellar mass-loss rate and wind velocity as $\dot{M}_\star^{2/3} v^{5/3}$. 
+Employing equation (\ref{eq:mass-loss}) which implies $\dot{M}_\star \propto L_\star^{7.5/4} R_\star^{-0.75} M_\star^{-1} (1+A/g_\star)$ and crudely estimating the wind velocity as $v \propto \sqrt{GM/R} \propto M^{1/2} R^{-1/2}$, the luminosity of the RGHJ radio emission is given by $L \propto L_\star^{2/3} R_\star ^{-1/6} M_\star^{1/6} T_{\rm eff}^{2.3} (1+A/g_\star)^{2/3}$. 
+Given that the dependences on $R_\star$ and $M_\star^{1/6}$ are relatively weak and that $T_{\rm eff}$ does not change significantly, the radio luminosity of RGHJs scales roughly as $L \propto L_{\star }^{2/3}$. 
+Observations of globular clusters indicates the luminosity function of red giants is $dn/dL_{\star } \sim L_{\star }^{-1.8}$ (Sandquist et al. (1996)) %\citep{sandquist1996}
+. Therefore, $\alpha_L \sim -2.7$. 
+
+\vspace{2\baselineskip}
+
 Assume:
 %%%
 \begin{displaymath}
 \frac{dn}{dL} = \left\{
 \begin{array}{ll}
-C' L^{-\alpha } & (L_{\rm min} < L < L_{\rm max}) \\
+C L^{-\alpha } & (L_{\rm min} < L < L_{\rm max}) \\
 0 & (\mbox{elsewhere})
 \end{array}
 \right.
 \end{displaymath}
 %%%
-where $C' $ is the proportional coefficient. 
-
+where $C $ is the proportional coefficient. 
 %%%
 \begin{equation}
-\frac{d^2n}{dL dr} dL dr =  4 \pi C L^{-\alpha } r^2 dL dr \equiv \Psi (L, r) dL dr
+\frac{d^2n}{dL dr} dL dr = 4 \pi C L^{-\alpha } r^2 dL dr \equiv \Psi (L, r) dL dr 
 \end{equation}
 %%%
 
@@ -74,6 +93,7 @@ where
 det(J) = \left| \PD{r}{r}\PD{L}{F} - \PD{r}{F}\PD{L}{r} \right| = r^2
 \end{equation}
 %%%
+
 Therefore, 
 %%%
 \begin{eqnarray}
@@ -86,16 +106,32 @@ C (F r^2)^{-\alpha } & (\sqrt{L_{\rm min}/F} < r < \sqrt{L_{\rm max}/F}) \\
 \right. 
 \end{eqnarray}
 %%%
+
 Therefore, 
 %%%
 \begin{eqnarray}
 && \frac{dn}{dF} dF \\
-&=& 0 \;\;\;\; (R < \sqrt{L_{\rm min}/F}) \\
-&=& \frac{4\pi C F^{-\alpha }}{5 - 2\alpha} \left[ R^{5 - 2\alpha} - \left( \sqrt{ \frac{L_{\rm min}}{F}} \right)^{5 - 2\alpha} \right] \\
-&& \;\;\;\;\;\;\;\;\;\;\;\;\;\;  (\sqrt{L_{\rm min}/F} < R < \sqrt{L_{\rm max}/F} ) \\
-&=& \frac{4\pi C F^{-\alpha }}{5 - 2\alpha} \left[ \left( \sqrt{ \frac{L_{\rm max}}{F} } \right)^{5 - 2\alpha} - \left( \sqrt{\frac{L_{\rm min}}{F}} \right)^{5 - 2\alpha } \right] \\
-&& \;\;\;\;\;\;\;\;\;\;\;\;\;\; (\sqrt{L_{\rm max}/F} < R) 
+&& = \left\{
+\begin{array}{l}
+0 \;\;\;\; \displaystyle \left( F < \frac{L_{\rm min}}{R^2} \right) \\
+\\
+\displaystyle \frac{4\pi C F^{-\alpha }}{5 - 2\alpha} \left[ R^{5 - 2\alpha} - \left( \sqrt{ \frac{L_{\rm min}}{F}} \right)^{5 - 2\alpha} \right] dF \\
+\\
+\;\;\;\;\;\;\;\;\;\;\;\;\;\;  \displaystyle \left( \frac{L_{\rm min}}{R^2} < F < \frac{L_{\rm max}}{R^2} \right) \\
+\\
+\displaystyle \frac{4\pi C F^{-\alpha }}{5 - 2\alpha} \left[ \left( \sqrt{ \frac{L_{\rm max}}{F} } \right)^{5 - 2\alpha} - \left( \sqrt{\frac{L_{\rm min}}{F}} \right)^{5 - 2\alpha } \right] dF \\
+\\
+\;\;\;\;\;\;\;\;\;\;\;\;\;\; \displaystyle \left( \frac{L_{\rm max}}{R^2} < F \right) 
+\end{array}
+\right.
 \end{eqnarray}
+%%%
+
+The maximum flux of volume $4\pi R^3/3$ is likely to occur (?) at $F_{\rm max}$ such that
+%%%
+\begin{equation}
+\int _{F_0}^{\infty} \frac{dn}{dF} dF = 1
+\end{equation}
 %%%
 
 
@@ -106,6 +142,43 @@ Therefore,
 
 \end{document}
 
+%%%
+\begin{eqnarray}
+&&<F> = \int F \frac{dn}{dF} dF \\
+%
+&&= \frac{4 \pi C}{5 - 2 \alpha } \\
+&& \times \left[ \int _{F_{\rm l}} ^{F_{u}} F^{1-\alpha } \left\{ R^{5-2\alpha } - \left( \frac{L_{\rm min}}{F} \right)^{2.5-\alpha} \right\} \right. dF \\
+&&+ \left. \int _{F_{u}} ^{\infty } F^{1-\alpha } \left\{ \left( \frac{L_{\rm max}}{F} \right)^{2.5-\alpha} - \left(\frac{L_{\rm min}}{F} \right)^{2.5-\alpha} \right\} \right] dF \\
+%
+&&= \frac{4 \pi C}{5 - 2 \alpha } \\
+&& \times \left\{ \left[ \frac{F^{2-\alpha } R^{5-2\alpha }}{2-\alpha } - \frac{F^{-0.5}L_{\rm min}^{2.5-\alpha} }{-0.5} \right]_{F_l} ^{F_u} \right. \\
+&&\left. + \left[ \frac{F^{-0.5}L_{\rm max}^{2.5-\alpha} }{-0.5} - \frac{F^{-0.5}L_{\rm min}^{2.5-\alpha} }{-0.5} \right]_{F_l} ^{F_u} \right\} \\
+&&\propto R 
+%
+\end{eqnarray}
+%%%
+
+Therefore, 
+%%%
+\begin{eqnarray}
+&& \frac{dn}{dF} dF \\
+&& = \left\{
+\begin{array}{l}
+0 \;\;\;\; (R < \sqrt{L_{\rm min}/F}) \\
+\\
+\displaystyle \frac{4\pi C F^{-\alpha }}{5 - 2\alpha} \left[ R^{5 - 2\alpha} - \left( \sqrt{ \frac{L_{\rm min}}{F}} \right)^{5 - 2\alpha} \right] \\
+\\
+\;\;\;\;\;\;\;\;\;\;\;\;\;\;  (\sqrt{L_{\rm min}/F} < R < \sqrt{L_{\rm max}/F} ) \\
+\\
+\displaystyle \frac{4\pi C F^{-\alpha }}{5 - 2\alpha} \left[ \left( \sqrt{ \frac{L_{\rm max}}{F} } \right)^{5 - 2\alpha} - \left( \sqrt{\frac{L_{\rm min}}{F}} \right)^{5 - 2\alpha } \right] \\
+\\
+\;\;\;\;\;\;\;\;\;\;\;\;\;\; (\sqrt{L_{\rm max}/F} < R) 
+\end{array}
+\right.
+\end{eqnarray}
+%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 
 The probability to have the maximum luminosity of $F \sim F + dF$, $\mathcal{P} (F_{\rm max})$, with $N$ samples is
