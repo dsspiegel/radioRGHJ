@@ -11,6 +11,7 @@
 \usepackage{comment}
 \usepackage{color,xcolor}
 \usepackage{url}
+\usepackage{ulem}
 \usepackage{hyperref}
 \hypersetup{colorlinks,linkcolor={blue!50!black},citecolor={blue!50!black},urlcolor={blue!50!black}}
 \allowdisplaybreaks[1]
@@ -18,9 +19,9 @@
 \bibliographystyle{apj}
 
 \definecolor{DarkGreen}{rgb}{0.0, 0.6, 0.0}
-\def\memoTM#1{\color{DarkGreen}$[${\bf #1}$]$ \color{black}}
+\def\memoTM#1{\color{DarkGreen}${\bf #1}$ \color{black}}
 
-\def\revise#1{\color{blue}$[${\bf #1}$]$ \color{blue}}
+\def\revise#1#2{\color{blue}\sout{#1} {\bf #2} \color{black}}
 
 \def\plotonesc#1{\centering \leavevmode
 \includegraphics[clip=, width=1.70\columnwidth]{#1}}
@@ -171,7 +172,8 @@ Extrapolating this scaling to exoplanets, radio emission from exoplanetary syste
 \citet{griesmeier2007a, griesmeier2007b} discussed the effects of the detailed properties of stellar wind in the proximity of the stars. They considered not only the kinetic energy of the stellar wind but also the magnetic energy of the stellar wind and coronal mass ejection (CME). 
 Note that in these papers, the scaling relation of planetary magnetic fields differ from paper to paper.
 In \citet{reiners2010}, the authors adopted a new scaling relation of planetary magnetic field based on \citet{christensen_et_al2009}. 
-Although observational searches for these radio signatures are underway, no clear detection has been claimed \citep{bastian2000,george2007,stroe2012,hallinan2013,murphy2015}, though there are some promising initial results \citep{lecavelier_et_al2013,sirothia2014}.
+We note that \revise{}{\citet{jardine2008} modeled the reconnection between the magnetic fields of close-in planets and that of the star to obtain estimates which is not based on the ``radiometric Bode's law''. } 
+Although observational searches for these radio signatures are underway, no clear detection has been claimed \revise{}{\citep{bastian2000,george2007,smith2009,stroe2012,hallinan2013,murphy2015}}, though there are some promising initial results \citep{lecavelier_et_al2013,sirothia2014}.
 
 When stars less than $\sim$8~$M_\sun$ evolve off the main sequence, they evolve through the red-giant branch (RGB) and the asymptotic-giant branch (AGB) phases where their radii and luminosities increase by orders of magnitude.
 Jovian planets in orbit around such stars can migrate inward or outward due to the interplay between tidal torques and mass-loss process on the post-main sequence \citep{nordhaus_et_al2010, spiegel2012, mustill+villaver2012, nordhaus+spiegel2013}.
@@ -180,14 +182,16 @@ Such planets are also subject to interactions with a massive (but slow) stellar 
 On the assumption that the radio emission is correlated with the stellar wind, planetary companions around evolved stars could also generate bright radio emission. 
 
 Based on this speculation, \citet{ignace2010} examined radio emission from known substellar-mass companions around cool evolved stars.
-They found that the low ionization fraction of the stellar wind of evolved stars suppresses their radio emission and leads to weak radio emission, probably below the detection limit. 
+They found that the low ionization fraction of the stellar wind of evolved stars suppresses their radio emission and leads to weak radio emission. 
+\revise{}{In addition, they considered the scenario where the post-bow shock heating could produce ionized hydrogen atoms. This indicates a configuration of radio wave generation very different from that of Solar System, and the lower-limit estimate, at least, is well below the detection limit. }
 
-In this paper, we argue that the accretion of the massive stellar wind onto the planet would emit UV and X-ray photons that ionize the stellar wind in the vicinity of the planet.
+In this paper, we \revise{argue that}{consider another plausible scenario where} the accretion of the massive stellar wind onto the planet would emit UV and X-ray photons that ionize the stellar wind in the vicinity of the planet.
 The ionized stellar wind particles would then interact with the planetary magnetic field in the same way as Solar System planets do.
-Thus, by extrapolating the ``radiometric Bode's law,'' we provide more optimistic estimates for highly evolved stars compared to the previous result.
-We also consider the plasma frequency cut-off of the stellar wind, which turns out to be one of the major obstacles to detect radio emission from RGHJs. 
-Given that the survey of exoplanets around highly evolved stars is not complete, we do not constrain ourselves to the systems known to have sub-stellar companions.
-Instead, we investigate the parameter space where we can search for radio emission and examine the possibility to detect them with current and future instruments. 
+Thus, by extrapolating the ``radiometric Bode's law,'' we provide more optimistic estimates for highly evolved stars compared to the previous result. 
+\revise{}{Additional two major updates from \citet{ignace2010} are the following. } 
+\revise{We also consider}{Firstly, we estimate} the plasma frequency cut-off of the stellar wind, which turns out to be one of the major obstacles to detect radio emission from RGHJs. 
+\revise{Given that the survey of exoplanets around highly evolved stars is not complete, we do not constrain ourselves to the systems known to have sub-stellar companions.
+Instead, we investigate the parameter space where we can search for radio emission and examine the possibility to detect them with current and future instruments. }{Secondly, we discuss the planetary parameter space to  search for radio emission, employing the scaling law of planetary magnetic field, noting that the survey of exoplanets around highly evolved stars is not complete. }
 
 In Section \ref{s:assumptions}, we introduce the framework to obtain the frequency and the flux of planetary auroral radio emission, and describe our models for the stellar wind and planetary magnetosphere.
 Section \ref{s:result} presents the estimates of the spectral radio flux of RGHJs and compares the predictions with what might be expected from canonical hot Jupiters as well as those from Jupiter-twins.
@@ -623,7 +627,7 @@ The detectable parameter space will be presented in more detail in the next sect
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{figure*}[bp]
-	\plotonesc{radio_emission_mass_orbit.pdf}
+	\plotonesc{radio_emission_mass_orbit_ver2.pdf}
    \caption{Radio flux in unit of Jy from a planetary companion to a red giant with mass loss rate $10^{-8} M_{\odot }/\mbox{yr}$ (top) and that to an AGB star with mass loss rate $10^{-5} M_{\odot }/\mbox{yr}$ (bottom). The systems are located at 100 pc away. The doubly hatched regions show the parameter spaces where the planetary radio emission would not be observable at all because the maximum frequency of the emission (cyclotron frequency at the planetary surface, $\nu_{\rm cyc}$) is below the plasma frequency cut-off, $\nu_{\rm plasma}^{\rm los}$. The regions hatched with vertical lines show the parameter spaces where the frequencies of bulk radio emission is below $\nu_{\rm plasma}^{\rm los}$, i.e., $\nu_{\rm plasma}^{\rm los} > 0.1 \nu_{\rm cyc}$)}
   \label{fig:radio}
 \end{figure*}
@@ -668,13 +672,13 @@ P_{\rm k,\,inp}
 && \times \left( \frac{\dot M_\star}{10^{-5} M_{\odot}{\rm /yr}} \right)^{2/3} \left( \frac{v}{10^{-1} v_{\odot}} \right)^{5/3}  \\
 && \;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\; \mbox{(for AGB stars' companions)} \notag \\
 &\approx & 490 ~P_{\rm k,\,inp,\,J} \left( \frac{B}{B_{\rm J}} \right)^{2/3} \left( \frac{a}{0.05~\mbox{AU}} \right)^{-4/3} \notag \\
-&& \times \left( \frac{\dot M_\star}{\dot M_{\odot}} \right)^{2/3} \left( \frac{v}{v_{\odot}} \right)^{5/3} \\
+&& \times \left( \frac{\dot M_\star}{\dot M_{\odot}} \right)^{2/3} \left( \frac{v}{v_{\odot}} \right)^{5/3} \label{eq:P_HJ} \\
 && \;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\; \mbox{(for canonical hot Jupiters)} \notag 
 \end{eqnarray}
 %%%
 Here we normalized the strength of magnetic field of canonical hot Jupiters with $B_J$, considering the uncertainty of the magnetic field of tidally-locked planets. 
 Depending on the modeling of magnetic field strength, there is also speculation that the tidally-locked planets may have weaker magnetic fields due to slow rotation \citep[e.g.][]{griesmeier2004}; in that case the radio emission would be weaker. 
-
+\revise{}{We also note that the orbital velocity of the canonical hot Jupiters has been ignored in equation (\ref{eq:P_HJ}); the orbital velocity at $0.05 {\rm AU}$ around a Solar-mass star is $\sim 130 {\rm km/sec}$, which could contribute to only $\sim $5\% increase of the velocity. }
 
 
 Using the expressions above, we find that the radio spectral flux density observed at the Earth is:
@@ -1098,6 +1102,67 @@ Now set $E_{\rm recoil} \sim \alpha/a_0$ to get
 q \sim \sqrt{\frac{m\alpha}{a_0}}\sim \frac{1}{a_0}
 \end{equation}
 where we used $a_0 = 1/\alpha m$.
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Back-reaction of a plasma flowing into a magnetic field}
+\label{ss:offset}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\revise{One might expect}{Given that the density of stellar wind of evolved stars is fairly high, one might anticipate }
+that \revise{}{massive} plasma flowing into a region permeated by a magnetic field would, by spiraling around the field lines, generate an opposing magnetic field that partially cancels the intrinsic planetary magnetic field. 
+To estimate the strength of this effect, consider a uniform flow of particles of charge $e$, mass $m$, and velocity $v$ into a region of magnetic field $B$, spiraling along the initial magnetic field. 
+A single charged particle moving perpendicular to the magnetic field moves in a circular orbit of radius 
+%%%
+\begin{equation}
+r=\frac{mv_\bot }{eB}.
+\end{equation}
+%%%
+which creates a magnetic dipole
+%%%
+\begin{equation}
+\mu = \frac{e}{2\pi r/v_\bot} \pi r^2 = \frac{1}{2} e r v_\bot = \frac{mv_\bot^2}{2B}.
+\end{equation}
+%%%
+The volume integral of the canceling magnetic field $B_c$ generated by a single dipole $\mu$ is
+%%%
+\begin{equation}
+\int d^3{\boldsymbol r} B_c = \frac{8\pi}{3} \mu.
+\end{equation}
+%%%
+
+Hence, for a number density $n$ of these charged particles, the fraction of canceling field to the background magnetic field is
+%%%
+\begin{equation}
+\frac{B_c}{B} = \frac{n(mv_\bot^2/2)}{3 B^2/8\pi} < \frac{\rho_K}{3\rho_B},
+\end{equation}
+%%%
+where $\rho_K$ and $\rho_B$ are the kinetic energy density and the magnetic energy density, respectively. 
+
+Just inside the stand-off point, 
+%%%
+\begin{equation}
+m_p n[r_{\rm mag}] v^2 < \frac{B[r_{\rm mag}]^2}{2\pi }
+\end{equation}
+%%%
+and thus $\rho_K/\rho _B < 1$. 
+When the particle spirals into the planet, 
+the magnetic pressures increases as 
+%%%
+\begin{equation}
+\frac{B^2}{8\pi } \propto \frac{1}{r^6}
+\end{equation}
+%%%
+On the other hand, the kinetic energy of the moment increases
+%%%
+\begin{equation}
+\frac{mv^2}{2} \propto \frac{1}{r}
+%\rho _K \propto \frac{1}{r}
+\end{equation}
+%%%
+Therefore, unless the density increases more drastically than $1/r^5$, the ratio $B_c/B$ is significantly less than unity. 
+ 
+
 
 
 \end{document}
