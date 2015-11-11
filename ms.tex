@@ -1,4 +1,4 @@
-\documentclass[iop,numberedappendix,apj]{emulateapj}
+\documentclass[iop,numberedappendix,apj,]{emulateapj}
 
 \usepackage{epsfig}
 \usepackage{amsmath}
@@ -197,7 +197,7 @@ In Section \ref{s:assumptions}, we introduce the framework to obtain the frequen
 Section \ref{s:result} presents the estimates of the spectral radio flux of RGHJs and compares the predictions with what might be expected from canonical hot Jupiters as well as those from Jupiter-twins.
 Section \ref{s:observability} gives the prospects for the signal detection with the current/future instruments. 
 Estimates for the actual late-type (M type) evolved stars are also included. 
-Section \ref{s:discussion} is devoted to additional discussions, one for the usefulness of the radio emission to characterize the system and the other for the effects of canceling magnetic field which results from the plasmas spiraling in the planetary magnetosphere.  
+\revise{Section \ref{s:discussion} is devoted to additional discussions, one for the usefulness of the radio emission to characterize the system and the other for the effects of canceling magnetic field which results from the plasmas spiraling in the planetary magnetosphere.}  
 Finally, Section \ref{s:conc} concludes the paper with a brief summary. 
 
 
@@ -274,7 +274,7 @@ In the case that the correlation with input magnetic energy is fundamental, it i
 In the case of M-type giant EK boo, surface magnetic field $\sim 0.1-10 $G has been measured; In this particular case, given the large stellar radius $R_\star \sim 210 R_{\odot }$ the magnetic moment may be about $10^3$ times larger than the Sun and thus may also increase the planetary radio emission.
 However, because of the lack of universal understanding of the stellar magnetic field, we leave the magnetic model of radio emission for evolved stars for future work. 
 
-In reality, the total power of Jovian auroral emission varies greatly over time: $1.3\times 10^{10}$ W for the average, $3.2\times 10^{10}$ W for the average of highly active time, and $4.5 \times 10^{11}$ W for the peak activity \citep{zarka_et_al2004}. 
+In reality, the total power of Jovian auroral emission varies greatly over time: $1.3\times 10^{10}$ W for the average, \revise{$3.2\times 10^{10}$}{$8.2\times 10^{10}$} W for the average of highly active time, and $4.5 \times 10^{11}$ W for the peak activity \citep{zarka_et_al2004}. 
 Here we employ $P_{\rm radio,\,J}=2.1\times 10^{11}\mbox{~W}$ as a canonical value, following \citet{griesmeier2005,griesmeier2007b}. 
 
 The radius of the magnetic stand-off point, $r_{\rm mag}$, is obtained based on the balance between the stellar wind pressure and the planetary magnetic pressure: 
@@ -678,7 +678,7 @@ P_{\rm k,\,inp}
 %%%
 Here we normalized the strength of magnetic field of canonical hot Jupiters with $B_J$, considering the uncertainty of the magnetic field of tidally-locked planets. 
 Depending on the modeling of magnetic field strength, there is also speculation that the tidally-locked planets may have weaker magnetic fields due to slow rotation \citep[e.g.][]{griesmeier2004}; in that case the radio emission would be weaker. 
-\revise{}{We also note that the orbital velocity of the canonical hot Jupiters has been ignored in equation (\ref{eq:P_HJ}); the orbital velocity at $0.05 {\rm AU}$ around a Solar-mass star is $\sim 130 {\rm km/sec}$, which could contribute to only $\sim $5\% increase of the velocity. }
+\revise{}{We also note that the orbital velocity of the canonical hot Jupiters has been ignored in equation (\ref{eq:P_HJ}); the orbital velocity at $0.05 {\rm AU}$ around a Solar-mass star is $\sim 130~{\rm km/sec}$, which contributes to only $\sim $5\% increase of the velocity. }
 
 
 Using the expressions above, we find that the radio spectral flux density observed at the Earth is:
@@ -1034,8 +1034,17 @@ Such signals would be detectable with SKA within half a day.
 For a few nearby systems, a possible upgrade to the VLA such as LOBO would also provide reasonable integration times and resolving power.
 In both cases, it is critical to consider polarization and/or time variability of the planetary radio flux, in order to separate it from confused sources in the same resolution element.
 
+
+\revise{%
 Finally, we note that the radio emission considered in this paper can either be an avenue to learn more about known RGHJs or a tool for discovering new planets, given that traditional exoplanet-discovery methods (specifically, transit and radial-velocity observations) are not very sensitive to planets around RGB or AGB stars.
-Once planetary radio emission is detected, it will provide a unique approach for learning about the planetary spin, magnetic field, presence of satellites, and potentially the stellar wind properties.
+Once planetary radio emission is detected, it will provide a unique approach for learning about the planetary spin, magnetic field, presence of satellites, and potentially the stellar wind properties.%
+}{%
+Once planetary radio emission is detected, it in general provides a unique approach for learning the planetary property. As the auroral radio flux is significantly modulated in association with several physical processes described in \S\ref{ss:timevariability}, the time variability is useful to imply the planetary spin rotation period or the presence of satellites. If spectra are obtained, the upper cut-off frequency can tell us the magnetic field strength of the planetary surfaces, which, when combined with constrains on the planetary mass via e.g. radial-velocity observations, tests  the proposed scaling law of planetary dynamo. 
+A extra fruit from observations of RGHJs in particular is that the lower cut-off frequency, which presumably corresponds to in situ plasma frequency, could probe of the stellar wind property at the planetary orbit. In addition, the planetary radio power in such an extreme environment as RG's massive stellar wind will be valuable data points to test the empirical ``radiometric Bode's law''. %
+We also note that the radio emission of RGHJs may also be used as a tool for discovering/confirming new planets, given that traditional exoplanet-discovery methods (specifically, transit and radial-velocity observations) are not very sensitive to planets around RGB or AGB stars. %
+}
+
+
 
 
 \vspace{0.5in}

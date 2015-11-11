@@ -19,7 +19,8 @@ text and updated the references, both in ways suggested by the referee
 and on our own initiative.  Below is our point-by-point response to
 the referee.  In our response, we present the referee's comments
 preceded by "## ", and our own comments indented in the space that
-follows.
+follows. We also revised the reference list to match the journal's
+nomenclature. 
 
   We realized upon reading the referee's report that we should have
 done a better job of motivating some of the sections in our paper.
@@ -133,12 +134,11 @@ All the very best,
 ## of four by focussing on only the new and relevant results.
 
   We thank referee for this comment.  We now realize that we had
-  previously failed to put our work into proper context.  [DSS: strike
-  the following: As referee understands,] the main topic of our paper
-  is the re-evaluation of radio emission from planets around evolved
-  stars. While the possibility of their strong radio emission has been
-  addressed in Ignace et al. (2010), there are important updates in this
-  paper, in particular:
+  previously failed to put our work into proper context.  The main topic
+  of our paper is the re-evaluation of radio emission from planets around
+  evolved stars. While the possibility of their strong radio emission has
+  been addressed in Ignace et al. (2010), there are important updates in 
+  this paper, in particular:
 
   - taking account of the shrinking of planetary magnetosphere. As a
     result, our estimate of radio emission is order-of-magnitude off
