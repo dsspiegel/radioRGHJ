@@ -137,8 +137,8 @@ All the very best,
   the following: As referee understands,] the main topic of our paper
   is the re-evaluation of radio emission from planets around evolved
   stars. While the possibility of their strong radio emission has been
-  addressed in Ignace et al. (2011) [DSS: don't we mean 2010?], there
-  are important updates in this paper, in particular:
+  addressed in Ignace et al. (2010), there are important updates in this
+  paper, in particular:
 
   - taking account of the shrinking of planetary magnetosphere. As a
     result, our estimate of radio emission is order-of-magnitude off
@@ -146,7 +146,7 @@ All the very best,
   - pointing out the presence of ionizing radition from accretion and
     quantitative evaluation of their ionizing effects. A mechanism to
     ionize otherwise neutral stellar wind has been briefly introduced
-    in Ignace et al. (2011), but it is different from the mechanism we
+    in Ignace et al. (2010), but it is different from the mechanism we
     introduce.
   - taking account of the plasma frequency of stellar wind, which
     severely affects the detectability of radio signal.
