@@ -279,9 +279,21 @@ All the very best,
   of any predictions in the literature that make it easy for the
   reader to estimate the required duration of the observations
   describe in our manuscript.  We also think Section 4.3 and 4.4 are
-  useful. <<< To Tony, please describe how difficult (or not
-  straight-forward) it is to obtain these number >>>
-
+  useful.  To our knowledge, we know of no such comparison for state of
+  the art facilities that is up to date for late 2015, nor do we know
+  of any consolidation of this information in one publication.
+  Predictions for future facilities become rapidly out of date as
+  projects are descoped (or "rebaselined" in the case of the SKA), and
+  many sensitivity predictions for existing instruments were made
+  before the instrument was built.  Including the latest measured 
+  performance or design specifications is crucial to assess observing 
+  feasibility.
+  In section 4.4, we discuss the important point that one can exploit 
+  the unique time variability of these signatures for detection.  
+  We think this is a crucial point to consider, as direct imaging 
+  would be impossible in the face of confusion from both Galactic and
+  extragalactic sources (which are brighter but will not vary on the same
+  time scale).  
 
 ## Section 5 and Appendix B:
 ## 
