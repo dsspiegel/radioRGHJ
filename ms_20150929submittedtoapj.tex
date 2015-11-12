@@ -863,7 +863,7 @@ Cross symbols indicate that the radio emission is not observable because cyclotr
 \tablecaption{Detectability of Hot Jupiters with Current 
 and Future Radio Telescopes.\label{tab:sens}}
 \tablehead{
-Instrument & Band  & \sigRMS\tablenotemark{a} & $\tau$\tablenotemark{b}  & Resolution & $\sigma_c$\tablenotemark{c}\\
+Instrument & Band  & \sigRMS\tablenotemark{a} & $\tau$\tablenotemark{b}  & $\theta$\tablenotemark{c}  & $\sigma_c$\tablenotemark{d}\\
            & (MHz) & ($\mu$Jy bm$^{-1}$)         &  (hr)                    & (\arcsec)  & ($\mu$Jy bm$^{-1}$)} 
 \startdata
 LOFAR-LBA  &  30-80  & 1100  & 230000             & 10   & 57 \\ 
@@ -881,7 +881,8 @@ VLA-LOBO   &  50-350 &  77   &  1200              & 8.6  & 10.4
 in this table (Equation~\ref{eq:rms_sens}).}
 \tablenotetext{b}{The integration time in hours required to reach an RMS of 2~$\mu$Jy (i.e.\ 5-$\sigma$ detection
 of a typical source at 100~pc with 10~$\mu$Jy bm$^{-1}$ average flux).}
-\tablenotetext{c}{Source confusion RMS contribution.}
+\tablenotetext{c}{Resolution of the instrument.}
+\tablenotetext{d}{Source confusion RMS contribution.}
 \end{deluxetable*}
 %
 % HERA
@@ -920,7 +921,7 @@ where $T_{150} = 283.2~\rm K$ is the \Tsky\ at 150~MHz, $\beta=2.47$, and $\Tcmb
 While this relation was fit to data taken in the 100-200~MHz range, the authors found it to be consistent with published measurements from 10-408~MHz. 
 
 An additional factor that affects detectability is source confusion, the imaging noise associated with unresolved interloping radio sources in an observation.
-Source confusion is characterized by the standard deviation $\sigma_c$ in the surface brightness of an image due to one or more unresolved sources in the beam solid angle (for a review, see \cite{Condon1974,Condon2012}).
+Source confusion is characterized by the standard deviation $\sigma_c$ in the surface brightness of an image due to one or more unresolved sources in the beam solid angle, or resolution element, $\theta$ (for a review, see \cite{Condon1974,Condon2012}).
 To estimate $\sigma_c$, reported in Table~\ref{tab:sens}, we use the relations provided by \cite{condon+ransom2016}, reproduced below:
 %%%
 \begin{eqnarray}
