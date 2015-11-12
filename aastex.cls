@@ -1795,8 +1795,10 @@
   % Revista Mexicana de Astronomia y Astrofisica
 \newcommand\skytel{\ref@jnl{S\&T}}%
           % Sky and Telescope
-\newcommand\solphys{\ref@jnl{Sol.~Phys.}}%
+\newcommand\solphys{\ref@jnl{SoPh}}%
           % Solar Physics
+\newcommand\rvmp{\ref@jnl{RvMP}}%
+          % Reviews of Modern Physics
 \newcommand\sovast{\ref@jnl{Soviet~Ast.}}%
           % Soviet Astronomy
 \newcommand\ssr{\ref@jnl{Space~Sci.~Rev.}}%
