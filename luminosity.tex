@@ -47,10 +47,10 @@ N/A
 %Planning future targeted surveys of RGHJs would require accurate distribution functions of various parameters of giant stars in our neighborhood of the Galaxy. 
 In order to estimate the luminosity function of RGHJ emitters, one of the key factors is the distribution of mass-loss rates of giant host stars. 
 For a given set of orbital parameters the luminosity ($L$) of a RGHJ depends on the stellar mass-loss rate and wind velocity as $\dot{M}_\star^{2/3} v^{5/3}$. 
-Employing equation (\ref{eq:mass-loss}) which implies $\dot{M}_\star \propto L_\star^{7.5/4} R_\star^{-0.75} M_\star^{-1} (1+A/g_\star)$ and crudely estimating the wind velocity as $v \propto \sqrt{GM/R} \propto M^{1/2} R^{-1/2}$, the luminosity of the RGHJ radio emission is given by $L \propto L_\star^{2/3} R_\star ^{-1/6} M_\star^{1/6} T_{\rm eff}^{2.3} (1+A/g_\star)^{2/3}$. 
-Given that the dependences on $R_\star$ and $M_\star^{1/6}$ are relatively weak and that $T_{\rm eff}$ does not change significantly, the radio luminosity of RGHJs scales roughly as $L \propto L_{\star }^{2/3}$. 
+Employing equation (\ref{eq:mass-loss}) which implies $\dot{M}_\star \propto L_\star^{7.5/4} R_\star^{-0.75} M_\star^{-1} (1+A/g_\star)$ and crudely estimating the wind velocity as $v \propto \sqrt{GM/R} \propto M^{1/2} R^{-1/2}$, the luminosity of the RGHJ radio emission is given by $L \propto L_\star^{7/12} M_\star^{1/6} T_{\rm eff}^{8/3} (1+A/g_\star)^{2/3}$. 
+Given that the dependences on $M_\star^{1/6}$ is relatively weak and that $T_{\rm eff}$ does not change significantly, the radio luminosity of RGHJs scales roughly as $L \propto L_{\star }^{7/12}$. 
 Observations of globular clusters indicates the luminosity function of red giants is $dn/dL_{\star } \sim L_{\star }^{-1.8}$ (Sandquist et al. (1996)) %\citep{sandquist1996}
-. Therefore, $\alpha_L \sim -2.7$. 
+. Therefore, $\alpha_L \sim -3.1$. 
 
 \vspace{2\baselineskip}
 
@@ -84,7 +84,7 @@ The number of the targets within distance $R$ which have flux at $F \sim F+dF$ i
 %%%
 \begin{eqnarray}
 \frac{dn}{dF} dF &=& \int dr \int dL \; \Psi (L, r) \\
-&=& \int _0^{R} dr \int _{F}^{F+dF} dF \; \Psi (F r^2, r)\; det(J) 
+&=& \int _{F}^{F+dF} dF \int _0^{R} dr \; \Psi (F r^2, r)\; det(J) 
 \end{eqnarray}
 %%%
 where
@@ -107,7 +107,7 @@ C (F r^2)^{-\alpha } & (\sqrt{L_{\rm min}/F} < r < \sqrt{L_{\rm max}/F}) \\
 \end{eqnarray}
 %%%
 
-Therefore, 
+Thus,  
 %%%
 \begin{eqnarray}
 && \frac{dn}{dF} dF \\
@@ -117,13 +117,27 @@ Therefore,
 \\
 \displaystyle \frac{4\pi C F^{-\alpha }}{5 - 2\alpha} \left[ R^{5 - 2\alpha} - \left( \sqrt{ \frac{L_{\rm min}}{F}} \right)^{5 - 2\alpha} \right] dF \\
 \\
-\;\;\;\;\;\;\;\;\;\;\;\;\;\;  \displaystyle \left( \frac{L_{\rm min}}{R^2} < F < \frac{L_{\rm max}}{R^2} \right) \\
+\;\;\;\;\;\;\;\;\;\;\;\;\;\;  \displaystyle \left( \frac{L_{\rm min}}{R^2} < F < \frac{L_{\rm max}}{R^2} \right) \\	
 \\
 \displaystyle \frac{4\pi C F^{-\alpha }}{5 - 2\alpha} \left[ \left( \sqrt{ \frac{L_{\rm max}}{F} } \right)^{5 - 2\alpha} - \left( \sqrt{\frac{L_{\rm min}}{F}} \right)^{5 - 2\alpha } \right] dF \\
 \\
 \;\;\;\;\;\;\;\;\;\;\;\;\;\; \displaystyle \left( \frac{L_{\rm max}}{R^2} < F \right) 
 \end{array}
-\right.
+\right. \\
+%%%
+&& = \left\{
+\begin{array}{l}
+0 \;\;\;\; \displaystyle \left( F < \frac{L_{\rm min}}{R^2} \right) \\
+\\
+\displaystyle \frac{4\pi C }{5 - 2\alpha} \left[ R^{5 - 2\alpha}F^{-\alpha } -  L_{\rm min}^{2.5 - \alpha} F^{-2.5} \right] dF \\
+\\
+\;\;\;\;\;\;\;\;\;\;\;\;\;\;  \displaystyle \left( \frac{L_{\rm min}}{R^2} < F < \frac{L_{\rm max}}{R^2} \right) \\	
+\\
+\displaystyle \frac{4\pi C F^{-2.5 }}{5 - 2\alpha} \left[ L_{\rm max}^{2.5 - \alpha} - L_{\rm min}^{2.5 - \alpha}  \right] dF \\
+\\
+\;\;\;\;\;\;\;\;\;\;\;\;\;\; \displaystyle \left( \frac{L_{\rm max}}{R^2} < F \right) 
+\end{array}
+\right. 
 \end{eqnarray}
 %%%
 
@@ -134,6 +148,16 @@ The maximum flux of volume $4\pi R^3/3$ is likely to occur (?) at $F_{\rm max}$ 
 \end{equation}
 %%%
 
+Solar luminosity becomes 2 times brighter than current value when it evolves off the main-sequence stage. Correspondingly, the radio wave from Jupiter will becomes $2.1 \cdot 10^{11} \times 2^{7/12} = 3.1 \cdot 10^{11}~{\rm W} = 2.5 \cdot 10^{11} ~{\rm W/str}$ . 
+
+\vspace{2\baselineskip}
+
+\begin{itemize}
+\item $L_{\rm min} = 2.5 \times 10^{11} ~{\rm W/str}$
+\item $L_{\rm max} = $
+\end{itemize}
+
+\vspace{2\baselineskip}
 
 
 \vspace{2\baselineskip}
@@ -141,6 +165,29 @@ The maximum flux of volume $4\pi R^3/3$ is likely to occur (?) at $F_{\rm max}$ 
 
 
 \end{document}
+
+
+ 
+%%%
+\begin{eqnarray}
+&& \frac{dn}{dF} dF \\
+&& = \left\{
+\begin{array}{l}
+0 \;\;\;\; \displaystyle \left( F < \frac{L_{\rm min}}{R^2} \right) \\
+\\
+\displaystyle \frac{4\pi C F^{-\alpha }}{5 - 2\alpha} \left[ R^{5 - 2\alpha} - \left( \sqrt{ \frac{L_{\rm min}}{F}} \right)^{5 - 2\alpha} \right] dF \\
+\\
+\;\;\;\;\;\;\;\;\;\;\;\;\;\;  \displaystyle \left( \frac{L_{\rm min}}{R^2} < F < \frac{L_{\rm max}}{R^2} \right) \\	
+\\
+\displaystyle \frac{4\pi C F^{-\alpha }}{5 - 2\alpha} \left[ \left( \sqrt{ \frac{L_{\rm max}}{F} } \right)^{5 - 2\alpha} - \left( \sqrt{\frac{L_{\rm min}}{F}} \right)^{5 - 2\alpha } \right] dF \\
+\\
+\;\;\;\;\;\;\;\;\;\;\;\;\;\; \displaystyle \left( \frac{L_{\rm max}}{R^2} < F \right) 
+\end{array}
+\right.
+\end{eqnarray}
+%%%
+
+
 
 %%%
 \begin{eqnarray}
