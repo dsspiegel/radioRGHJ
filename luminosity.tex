@@ -23,7 +23,7 @@
 
 \title{Luminosity function of RGHJs}
 \author{Yuka Fujii\altaffilmark{1}}
-\altaffiltext{1}{Institute of Astronomy, Madingley Road, University of Cambridge, Cambridge CB3 0HA, United Kingdom}
+%\altaffiltext{1}{Institute of Astronomy, Madingley Road, University of Cambridge, Cambridge CB3 0HA, United Kingdom}
 
 \begin{abstract}
 N/A
@@ -45,101 +45,141 @@ N/A
 %Therefore, if we can estimate the luminosity function of RGHJ emitters, we may estimate their detectability.
 
 %Planning future targeted surveys of RGHJs would require accurate distribution functions of various parameters of giant stars in our neighborhood of the Galaxy. 
-In order to estimate the luminosity function of RGHJ emitters, one of the key factors is the distribution of mass-loss rates of giant host stars. 
-For a given set of orbital parameters the luminosity ($L$) of a RGHJ depends on the stellar mass-loss rate and wind velocity as $\dot{M}_\star^{2/3} v^{5/3}$. 
-Employing equation (\ref{eq:mass-loss}) which implies $\dot{M}_\star \propto L_\star^{7.5/4} R_\star^{-0.75} M_\star^{-1} (1+A/g_\star)$ and crudely estimating the wind velocity as $v \propto \sqrt{GM/R} \propto M^{1/2} R^{-1/2}$, the luminosity of the RGHJ radio emission is given by $L \propto L_\star^{7/12} M_\star^{1/6} T_{\rm eff}^{8/3} (1+A/g_\star)^{2/3}$. 
-Given that the dependences on $M_\star^{1/6}$ is relatively weak and that $T_{\rm eff}$ does not change significantly, the radio luminosity of RGHJs scales roughly as $L \propto L_{\star }^{7/12}$. 
-Observations of globular clusters indicates the luminosity function of red giants is $dn/dL_{\star } \sim L_{\star }^{-1.8}$ (Sandquist et al. (1996)) %\citep{sandquist1996}
-. Therefore, $\alpha_L \sim -3.1$. 
 
-\vspace{2\baselineskip}
 
-Assume:
+We consider the number density of observed flux from targets within the distance $R$. 
+Luminosity and (observed) flux are denoted by $L$ and $F$, respectively. 
+\vspace{1\baselineskip}
+
+Let us denote the number density of evolved stars per unit volume by $n$ and assume that the luminosity function can be written as follows. 
 %%%
-\begin{displaymath}
+\begin{equation}
 \frac{dn}{dL} = \left\{
 \begin{array}{ll}
 C L^{-\alpha } & (L_{\rm min} < L < L_{\rm max}) \\
 0 & (\mbox{elsewhere})
 \end{array}
-\right.
-\end{displaymath}
+\right. 
+\end{equation}
 %%%
-where $C $ is the proportional coefficient. 
+Here, $C $ is the proportional coefficient. 
+
+Then, let us denote the (expected) total number of evolved stars in a sphere of radius $R$ by $N$. Consider a spherical shell at radius $r$ ($r<R$) with thickness $dr$. The number of evolved stars in this spherical shell and with luminosity ranging from $L\sim L+dL$ is:
 %%%
 \begin{equation}
-\frac{d^2n}{dL dr} dL dr = 4 \pi C L^{-\alpha } r^2 dL dr \equiv \Psi (L, r) dL dr 
+\frac{d^2N}{dL dr} dL dr = 4 \pi C L^{-\alpha } r^2 dL dr \equiv \Psi (L, r) dL dr \label{eq:d2N/dLdr}
 \end{equation}
 %%%
 
-The relationship between flux $F$ and Luminosity $L$ is:
+The relationship between flux $F$ and luminosity $L$ is, as usual,
 %%%
 \begin{equation}
-F = \frac{L}{r^2}
+F = \frac{L}{4\pi r^2} 
 \end{equation}
 %%%
 where $r$ is the distance to the target. 
 
-The number of the targets within distance $R$ which have flux at $F \sim F+dF$ is
+Now, we want to get the number of targets with flux between $F$ and $F+dF$. 
+To do so, we want to integrate equation (\ref{eq:d2N/dLdr}) over the parameter space $\mathcal{S}$ satisfying
+%%%
+\begin{equation}
+F < \left( \frac{L}{4\pi r^2} \right) < F+dF 
+\end{equation}
+%%%
+To do so, we change the set of variables from $\{ L,\,r \}$ to $\{ F,\,r \}$. 
+Thus,
 %%%
 \begin{eqnarray}
-\frac{dn}{dF} dF &=& \int dr \int dL \; \Psi (L, r) \\
-&=& \int _{F}^{F+dF} dF \int _0^{R} dr \; \Psi (F r^2, r)\; det(J) 
+\frac{dN}{dF} dF &=& \iint _{\mathcal{S}}  dr dL \;\; \Psi (L, r) \\
+&=& \int _0^{R} dr \int _{F}^{F+dF} dF' \;\; \Psi (4\pi r^2F', r)\; det(J) 
 \end{eqnarray}
 %%%
 where
 %%%
 \begin{equation}
-det(J) = \left| \PD{r}{r}\PD{L}{F} - \PD{r}{F}\PD{L}{r} \right| = r^2
+det(J) = \left| \PD{r}{r}\PD{L}{F'} - \PD{r}{F'}\PD{L}{r} \right| = 4 \pi r^2
 \end{equation}
 %%%
 
 Therefore, 
 %%%
 \begin{eqnarray}
-\frac{dn}{dF} dF &=& \left[ 4 \pi \int _0 ^{R} dr \; r^4 \Phi (F, r) \right] dF\\
+\frac{dN}{dF} dF &=& \left[ \int _0 ^{R} dr \; \Phi (F, r) \right] dF\\
 \Phi (F, r) &=& \left\{
 \begin{array}{ll}
-C (F r^2)^{-\alpha } & (\sqrt{L_{\rm min}/F} < r < \sqrt{L_{\rm max}/F}) \\
+C' F^{-\alpha } r^{4-2\alpha} & (\sqrt{L_{\rm min}/4 \pi F} < r < \sqrt{L_{\rm max}/4 \pi F}) \\
 0 & (\mbox{elsewhere})
 \end{array}
-\right. 
+\right. \\
+C' &\equiv & C ( 4 \pi )^{2-\alpha }
 \end{eqnarray}
 %%%
 
 Thus,  
 %%%
 \begin{eqnarray}
-&& \frac{dn}{dF} dF \\
+&& \frac{dN}{dF} dF \\
 && = \left\{
 \begin{array}{l}
-0 \;\;\;\; \displaystyle \left( F < \frac{L_{\rm min}}{R^2} \right) \\
+0 \;\;\;\; \displaystyle \left( F < \frac{L_{\rm min}}{4\pi R^2} \right) \\
 \\
-\displaystyle \frac{4\pi C F^{-\alpha }}{5 - 2\alpha} \left[ R^{5 - 2\alpha} - \left( \sqrt{ \frac{L_{\rm min}}{F}} \right)^{5 - 2\alpha} \right] dF \\
+\displaystyle \frac{C' F^{-\alpha }}{5 - 2\alpha} \left[ R^{5 - 2\alpha} - \left( \sqrt{ \frac{L_{\rm min}}{4\pi F}} \right)^{5 - 2\alpha} \right] dF \\
 \\
-\;\;\;\;\;\;\;\;\;\;\;\;\;\;  \displaystyle \left( \frac{L_{\rm min}}{R^2} < F < \frac{L_{\rm max}}{R^2} \right) \\	
+\;\;\;\;\;\;\;\;\;\;\;\;\;\;  \displaystyle \left( \frac{L_{\rm min}}{4\pi R^2} < F < \frac{L_{\rm max}}{4\pi R^2} \right) \\	
 \\
-\displaystyle \frac{4\pi C F^{-\alpha }}{5 - 2\alpha} \left[ \left( \sqrt{ \frac{L_{\rm max}}{F} } \right)^{5 - 2\alpha} - \left( \sqrt{\frac{L_{\rm min}}{F}} \right)^{5 - 2\alpha } \right] dF \\
+\displaystyle \frac{C' F^{-\alpha }}{5 - 2\alpha} \left[ \left( \sqrt{ \frac{L_{\rm max}}{4\pi F} } \right)^{5 - 2\alpha} - \left( \sqrt{\frac{L_{\rm min}}{4\pi F}} \right)^{5 - 2\alpha } \right] dF \\
 \\
-\;\;\;\;\;\;\;\;\;\;\;\;\;\; \displaystyle \left( \frac{L_{\rm max}}{R^2} < F \right) 
+\;\;\;\;\;\;\;\;\;\;\;\;\;\; \displaystyle \left( \frac{L_{\rm max}}{4\pi R^2} < F \right) 
 \end{array}
 \right. \\
 %%%
 && = \left\{
 \begin{array}{l}
-0 \;\;\;\; \displaystyle \left( F < \frac{L_{\rm min}}{R^2} \right) \\
+0 \;\;\;\; \displaystyle \left( F < \frac{L_{\rm min}}{4\pi R^2} \right) \\
 \\
-\displaystyle \frac{4\pi C }{5 - 2\alpha} \left[ R^{5 - 2\alpha}F^{-\alpha } -  L_{\rm min}^{2.5 - \alpha} F^{-2.5} \right] dF \\
+\displaystyle \frac{C' }{5 - 2\alpha} \left[ R^{5 - 2\alpha}F^{-\alpha } -  L_{\rm min}^{2.5 - \alpha} F^{-2.5} \right] dF \\
 \\
-\;\;\;\;\;\;\;\;\;\;\;\;\;\;  \displaystyle \left( \frac{L_{\rm min}}{R^2} < F < \frac{L_{\rm max}}{R^2} \right) \\	
+\;\;\;\;\;\;\;\;\;\;\;\;\;\;  \displaystyle \left( \frac{L_{\rm min}}{4\pi R^2} < F < \frac{L_{\rm max}}{4\pi R^2} \right) \\	
 \\
-\displaystyle \frac{4\pi C F^{-2.5 }}{5 - 2\alpha} \left[ L_{\rm max}^{2.5 - \alpha} - L_{\rm min}^{2.5 - \alpha}  \right] dF \\
+\displaystyle \frac{C' F^{-2.5 }}{5 - 2\alpha} \left[ L_{\rm max}^{2.5 - \alpha} - L_{\rm min}^{2.5 - \alpha}  \right] dF \\
 \\
-\;\;\;\;\;\;\;\;\;\;\;\;\;\; \displaystyle \left( \frac{L_{\rm max}}{R^2} < F \right) 
+\;\;\;\;\;\;\;\;\;\;\;\;\;\; \displaystyle \left( \frac{L_{\rm max}}{4\pi R^2} < F \right) 
 \end{array}
 \right. 
 \end{eqnarray}
 %%%
+
+\vspace{1\baselineskip}
+
+For now, let us suppose
+%%%
+\begin{itemize}
+\item range of luminosity of ``evolved stars'':\\$L_{\odot }-10,000 L_{\odot }$
+\item $\Rightarrow$ minimum radio luminosity of ``RGHJs''\\%
+$L_{\rm min} = 2,1\times 10^{11}/30 {\rm MHz} = 7000 {\rm W/Hz}$
+\item $\Rightarrow $maximum radio luminosity of ``RGHJs'':\\$L_{\rm max} = 4.5\times 10^{13} {\rm W}$
+\end{itemize}
+%%%
+We also assume $\alpha = -3.1$; see next subsection. 
+
+
+
+
+\subsection{Actual luminosity function (?)}
+
+In order to estimate the luminosity function of RGHJ emitters, one of the key factors is the distribution of mass-loss rates of giant host stars. 
+For a given set of orbital parameters the luminosity ($L$) of a RGHJ depends on the stellar mass-loss rate and wind velocity as $\dot{M}_\star^{2/3} v^{5/3}$. 
+Employing equation (\ref{eq:mass-loss}) which implies $\dot{M}_\star \propto L_\star^{7.5/4} R_\star^{-0.75} M_\star^{-1} (1+A/g_\star)$ and crudely estimating the wind velocity as $v \propto \sqrt{GM/R} \propto M^{1/2} R^{-1/2}$, the luminosity of the RGHJ radio emission is given by $L \propto L_\star^{7/12} M_\star^{1/6} T_{\rm eff}^{8/3} (1+A/g_\star)^{2/3}$. 
+Given that the dependences on $M_\star^{1/6}$ is relatively weak and that $T_{\rm eff}$ does not change significantly, the radio luminosity of RGHJs scales roughly as $L \propto L_{\star }^{7/12}$. 
+Observations of globular clusters indicates the luminosity function of red giants is $dn/dL_{\star } \sim L_{\star }^{-1.8}$ (Sandquist et al. (1996)) %\citep{sandquist1996}
+. Therefore, $\alpha \sim -3.1$. 
+
+
+
+
+
+\end{document}
+
 
 The maximum flux of volume $4\pi R^3/3$ is likely to occur (?) at $F_{\rm max}$ such that
 %%%
