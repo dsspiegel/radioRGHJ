@@ -4,13 +4,15 @@
 \usepackage{amssymb}
 \usepackage{amstext}
 %\usepackage{apjfonts}
-\usepackage{graphicx}
+%\usepackage{graphicx}
 \usepackage{epstopdf}
 \usepackage{epsfig}
 \usepackage{url}
 %------------------------------------------
 % User-defined macros.
 \usepackage{color}
+\def\plotoneh#1{\centering \leavevmode
+\includegraphics[clip=, width=.95\columnwidth]{#1}}
 
 \allowdisplaybreaks[1]
 
@@ -20,6 +22,7 @@
 \begin{document}
 \renewcommand\bottomfraction{.9}
 \newcommand{\PD}[2]{\frac{\partial {#1}}{\partial {#2}}}
+\newcommand{\memoYF}[1]{\color{red} #1 \color{black}}
 
 \title{Luminosity function of RGHJs}
 \author{Yuka Fujii\altaffilmark{1}}
@@ -32,7 +35,7 @@ N/A
 \keywords{planetary systems --- planets and satellites: general}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\section{Luminosity Function Note \#1} 
+\section{Distribution of observed flux} 
 \label{sec:luminosity function}
 
 
@@ -64,10 +67,10 @@ C L^{-\alpha } & (L_{\rm min} < L < L_{\rm max}) \\
 %%%
 Here, $C $ is the proportional coefficient. 
 
-Then, let us denote the (expected) total number of evolved stars in a sphere of radius $R$ by $N$. Consider a spherical shell at radius $r$ ($r<R$) with thickness $dr$. The number of evolved stars in this spherical shell and with luminosity ranging from $L\sim L+dL$ is:
+Then, let us denote the (expected) total number of evolved stars in a sphere of radius $R$ by $N_R$. Consider a spherical shell at radius $r$ ($r<R$) with thickness $dr$. The number of evolved stars in this spherical shell and with luminosity ranging from $L\sim L+dL$ is:
 %%%
 \begin{equation}
-\frac{d^2N}{dL dr} dL dr = 4 \pi C L^{-\alpha } r^2 dL dr \equiv \Psi (L, r) dL dr \label{eq:d2N/dLdr}
+\frac{d^2N_R}{dL dr} dL dr = 4 \pi C L^{-\alpha } r^2 dL dr \equiv \Psi (L, r) dL dr \label{eq:d2N/dLdr}
 \end{equation}
 %%%
 
@@ -90,7 +93,7 @@ To do so, we change the set of variables from $\{ L,\,r \}$ to $\{ F,\,r \}$.
 Thus,
 %%%
 \begin{eqnarray}
-\frac{dN}{dF} dF &=& \iint _{\mathcal{S}}  dr dL \;\; \Psi (L, r) \\
+\frac{dN_R}{dF} dF &=& \iint _{\mathcal{S}}  dr dL \;\; \Psi (L, r) \\
 &=& \int _0^{R} dr \int _{F}^{F+dF} dF' \;\; \Psi (4\pi r^2F', r)\; det(J) 
 \end{eqnarray}
 %%%
@@ -104,7 +107,7 @@ det(J) = \left| \PD{r}{r}\PD{L}{F'} - \PD{r}{F'}\PD{L}{r} \right| = 4 \pi r^2
 Therefore, 
 %%%
 \begin{eqnarray}
-\frac{dN}{dF} dF &=& \left[ \int _0 ^{R} dr \; \Phi (F, r) \right] dF\\
+\frac{dN_R}{dF} dF &=& \left[ \int _0 ^{R} dr \; \Phi (F, r) \right] dF\\
 \Phi (F, r) &=& \left\{
 \begin{array}{ll}
 C' F^{-\alpha } r^{4-2\alpha} & (\sqrt{L_{\rm min}/4 \pi F} < r < \sqrt{L_{\rm max}/4 \pi F}) \\
@@ -115,10 +118,10 @@ C' &\equiv & C ( 4 \pi )^{2-\alpha }
 \end{eqnarray}
 %%%
 
-Thus,  
+Thus, when $\alpha \not = 2.5$,
 %%%
 \begin{eqnarray}
-&& \frac{dN}{dF} dF \\
+&& \frac{dN_R}{dF} dF \\
 && = \left\{
 \begin{array}{l}
 0 \;\;\;\; \displaystyle \left( F < \frac{L_{\rm min}}{4\pi R^2} \right) \\
@@ -137,11 +140,11 @@ Thus,
 \begin{array}{l}
 0 \;\;\;\; \displaystyle \left( F < \frac{L_{\rm min}}{4\pi R^2} \right) \\
 \\
-\displaystyle \frac{C' }{5 - 2\alpha} \left[ R^{5 - 2\alpha}F^{-\alpha } -  L_{\rm min}^{2.5 - \alpha} F^{-2.5} \right] dF \\
+\displaystyle \frac{C' }{(5 - 2\alpha) (4 \pi )^{2.5-\alpha } } \left[ R^{5 - 2\alpha}F^{-\alpha }  (4 \pi )^{2.5-\alpha }  -  L_{\rm min}^{2.5 - \alpha} F^{-2.5} \right] dF \\
 \\
 \;\;\;\;\;\;\;\;\;\;\;\;\;\;  \displaystyle \left( \frac{L_{\rm min}}{4\pi R^2} < F < \frac{L_{\rm max}}{4\pi R^2} \right) \\	
 \\
-\displaystyle \frac{C' F^{-2.5 }}{5 - 2\alpha} \left[ L_{\rm max}^{2.5 - \alpha} - L_{\rm min}^{2.5 - \alpha}  \right] dF \\
+\displaystyle \frac{C' F^{-2.5 }}{(5 - 2\alpha) (4 \pi )^{2.5-\alpha } } \left[ L_{\rm max}^{2.5 - \alpha} - L_{\rm min}^{2.5 - \alpha}  \right] dF \\
 \\
 \;\;\;\;\;\;\;\;\;\;\;\;\;\; \displaystyle \left( \frac{L_{\rm max}}{4\pi R^2} < F \right) 
 \end{array}
@@ -149,7 +152,19 @@ Thus,
 \end{eqnarray}
 %%%
 
-\vspace{1\baselineskip}
+\newpage
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{figure}[htbp]
+   \plotoneh{dndF_alpha31.pdf}
+   \plotoneh{dndF_alpha15.pdf}
+   \caption{Number density of observed flux in $\mu {\rm Jy}$.}
+  \label{fig:dndF}
+\end{figure}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% 
+
+
 
 For now, let us suppose
 %%%
@@ -160,12 +175,56 @@ $L_{\rm min} = 2,1\times 10^{11}/30 {\rm MHz} = 7000 {\rm W/Hz}$
 \item $\Rightarrow $maximum radio luminosity of ``RGHJs'':\\$L_{\rm max} = 4.5\times 10^{13} {\rm W}$
 \end{itemize}
 %%%
-We also assume $\alpha = -3.1$; see next subsection. 
+With these assumptions, number density of observed flux is shown in Figure \ref{fig:dndF}. We consider $\alpha = 3.1$ (see the last section) and $\alpha = 1.5$ for demonstration. 
+
+\vspace{2\baselineskip}
+
+\section{Expected value for the highest flux within radius $R$}
 
 
+Let us consider that the probability of finding an object with flux in the range between $F$ and $F + dF$ is
+%%%
+\begin{equation}
+P (F) dF = \frac{1}{N_R} \frac{dN_R}{dF}
+\end{equation}
+%%%
+Note that $N_R$ is the {\it expected} total number of targets within radius $R$. \memoYF{not sure how to deal with the fact that this is expected number.}
+
+Then, the probability to find one object with flux higher than $\tilde F$ is
+%%%
+\begin{equation}
+P (> \tilde F) = \int _{\tilde F} ^{\infty}  P (F) \; dF 
+\end{equation}
+%%%
+In turn, the probability to find an object with flux lower than $\tilde F$ s
+%%%
+\begin{equation}
+P (< \tilde F) = 1 - P (> \tilde F)
+\end{equation}
+%%%
+Thus, the probability to find the maximum flux between $\tilde F \sim \tilde F + d\tilde F$, $\mathcal{P} (\tilde F) d\tilde F$ is
+%%%
+\begin{eqnarray}
+\mathcal{P} (\tilde F) d\tilde F &=& N P(\tilde F) d\tilde F \cdot \left[ P (< \tilde F) \right]^{N-1} \\
+&=& N P(\tilde F) d\tilde F \cdot \left[ 1 - P (> \tilde F) \right]^{N-1} \\
+&\sim & N P(\tilde F) d\tilde F \cdot \left[ 1 - ( N -1 ) P (> \tilde F) \right]
+\end{eqnarray}
+%%%
+
+So the expected value for the maximum flux, $<F_{\rm max}>$ is:
+%%%
+\begin{eqnarray}
+<F_{\rm max}> &=& \int \tilde F \mathcal{P} (\tilde F) \; d\tilde F \\
+&=& ...
+\end{eqnarray}
+%%%
 
 
-\subsection{Actual luminosity function (?)}
+\memoYF{Not sure if the argument above is right}
+
+\vspace{2\baselineskip}
+
+\section{Power index of luminosity function (?)}
 
 In order to estimate the luminosity function of RGHJ emitters, one of the key factors is the distribution of mass-loss rates of giant host stars. 
 For a given set of orbital parameters the luminosity ($L$) of a RGHJ depends on the stellar mass-loss rate and wind velocity as $\dot{M}_\star^{2/3} v^{5/3}$. 
