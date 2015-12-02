@@ -629,7 +629,7 @@ The maximum plasma frequency along the line of sight, $\nu_{\rm plasma}^{\rm los
 \label{eq:fplasmalos} \nu_{\rm plasma}^{\rm los} & \sim & 
 8979 {\rm~kHz} \times \left( \frac{\dot M_\star}{4 \pi a^2 m_p v} \times 1\rm~cm^3 \right)^{1/2} \\
 \label{eq:fplasmalos_scaled} &=& 12 {\rm~MHz} \times \left( \frac{a}{5~\mbox{AU}}\right)^{-1} \left(\frac{v}{30~\mbox{km/s}}  \right)^{-1/2} \notag \\
- & & \times \left( \frac{\dot M_\star}{10^{-8} M_{\odot }{\rm /yr}}\right)^{1/2} \, .
+ & & \times \left( \frac{\dot M_\star}{10^{-8} M_{\odot }{\rm /yr}}\right)^{1/2} \label{eq:fplasma_RG} \, .
 \end{eqnarray}
 We can see emission only from where $\nu_{\rm cyc,\,max} > \nu_{\rm plasma}^{\rm los}$. Therefore, for Jupiter-mass planets, only distant ones $\gtrsim 5 $  may emit the radio waves from the system. 
 The detectable parameter space will be presented in more detail in the next section. 
@@ -1234,8 +1234,79 @@ Therefore, unless the density increases more drastically than $1/r^5$, the ratio
  
 
 
+%YFYFYFYFYFYFYFYF
+
+\color{blue}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Expected number}
+\label{ss:detectability}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+Let us also consider the expected number of radio detection from RGHJs taking account of the occurrence rate of Jovian planets. 
+For this purpose, we consider an empirical power-law planet occurrence rate described as
+%%%
+\begin{eqnarray}
+f(M_p,P) &\equiv & \frac{d^2N}{d\log M_pd\log P } \\
+&=& \mathcal{C} \left( \frac{M_p}{M_{\rm J}} \right)^{\alpha } \left( \frac{P}{1~{\rm days}} \right)^{\beta }
+\end{eqnarray}
+%%%
+where they find $\alpha = -0.31\pm 0.2$, $\beta =0.26 \pm 0.1$, $\mathcal{C} =1.04\times 10^{-3}$  as best-fit values. %
+Using this equation, the possibility of a given evolved star in Figure \ref{fig:observability} to have a RGHJ with mass larger than threshold $M_{p0}$ whose radio emission may be detectable is
+%%%
+\begin{equation}
+\mathcal{P }(>M_{p0}) \sim \int_{M_{p0}} d\log M_p\,\int_{P_{\rm min}(M_p)}^{P_{\rm max}(M_p)} d\log P ~f(M_p, P) \label{eq:detect_prob}
+\end{equation}
+%%%
+where $P_{\rm min}(M_p)$ is the minimum orbital period to have cyclotron frequency larger than the ambient plasma frequency, while $P_{\rm max}(M_p)$ is the maximum orbital period given planetary mass to emit detectable radio flux. For the former, combining equations (\ref{eq:fcyc}) and (\ref{eq:fplasma_RG}) leads to
+%%%
+\begin{eqnarray}
+a_{\rm min} (M_p) &=& 2.15~{\rm AU} \left( \frac{M_p}{M_{\rm J}} \right)^{-1.04} \left( \frac{t}{4.5~{\rm Gyr}} \right)^{0.43}  \\
+&&\times \left( \frac{\dot M}{10^{-8} M_{\odot}/{\rm yr}} \right)^{1/2} 
+\end{eqnarray}
+%%%
+while for the latter, equations (\ref{eq:scalingB}) and (\ref
+{eq:F_nu_RGHJ}) indicate
+%%%
+\begin{eqnarray}
+a_{\rm max} (M_p) &=& 3.80~{\rm AU} \left( \frac{F_{\rm min}}{10~\mu {\rm Jy}} \right)^
+{-3/4} \left( \frac{d}{100~{\rm pc}} \right)^{-3/2} \\
+&& \times \left( \frac{M_p}{M_{\rm J}} \right)^{-1.04/4}  \left( \frac{t}{4.5~{\rm Gyr}} \right)^{-0.43/4} \\
+&& \times \left( \frac{M_{\star }}{10^{-8}~M_{\odot }/{\rm yr}} \right)^{1/2} \left( \frac{v_{\star }}{10^{-1} v_{\odot }} \right)^{5/4} 
+\end{eqnarray}
+%%%
+They are translated into the orbital period via Kepler's law, $P_{\{{\rm min,max}\}} = 2\pi \sqrt{a^3_{\{{\rm min,max}\}} / GM_{\star } }$. 
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{figure}[htbp]
+   \plotoneh{cumlative_expected_value.pdf}
+   \caption{}
+  \label{fig:expected_values}
+\end{figure}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% 
+
+Using equation (\ref{eq:detect_prob}), the expected number for $M_p > >M_{p0}$ planet with detectable radio emission is $\sum _i \mathcal{P} _i(>M_{p0})$, where $\mathcal{P}_i(>M_{p0})$ is the probability for the $i$-th target. 
+
+Figure \ref{fig:expected_values} show the expected number of detection as a function of threshold planetary mass $M_{p0}$. This figure indicates that, if all of the target in Figure \ref{fig:observability} are red giant stars, %
+the total number of detections would be about 4 (7), provided that the sensitivity of the radio instruments $F_{\rm min}$ is $10~\mu {\rm Jy}$ ($5~\mu {\rm Jy}$). 
+However, such high sensitivity of the instrument will not be achieved at low frequency, which makes us consider massive planets as candidates. 
+Roughly assuming that $\nu _{\rm cyc} > 200~{\rm MHz} $ (i.e. $M_p > 7 M_{\rm J}$) is needed, then the expected values of detections would be reduced to 1-2. 
+
+
+
+
+
+
+\color{black}
+
 
 \end{document}
+
+
+Observations suggest that the occurrence rate of planets with masses $M_{\rm J} < M_p \sin i < 2 M_{\rm J}$ in orbits $1 {\rm AU} < a < 5 {\rm AU}$ around F, G, or K stars is $\sim $ 3.9\% \citep{cumming2008}. %
+%(Here we assume the rate does not change significantly in red giant stage, while admitting the likely orbital evolution at this stage. ) %
+Given that 148 (12) systems with 1$M_{\rm J}$ planets at 1 AU (5 AU) have potential to emit $>10~\mu {\rm Jy}$, about 2-6 would actually be emitting the radio wave of our interest at the level of $>10~\mu {\rm Jy}$. %
+For larger planets ($M_p>2M_{\rm J}$), the number of potentially detectable systems are less, due to both the $B^{-1/3}$ dependence of the spectral flux: the number of systems where a 10 $M_{\rm J}$ planet at 1 AU (5 AU) emit $>10~\mu {\rm Jy}$ is 98 (5): Since the occurrence rate of such larger planets in the same orbital region is $\sim 3.1\%$ \citep{cumming2008}, one could expect additional $\sim 1$ radio source detection from larger planets with sensitivity $10~\mu {\rm Jy}$.
 
 \section{Comparison with previous work}
 \label{sec:AppendixB}
