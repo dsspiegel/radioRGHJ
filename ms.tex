@@ -419,7 +419,7 @@ a fiducial value for the normalization.
 
 As discussed in \citet{ignace2010}, as the stars evolve, the ionization fraction of the stellar wind is lowered down to order of $\sim 10^{-3}$ \citep{drake1987}. Since only charged particles interact with planetary magnetic field, this suggests inefficient interaction with planetary magnetosphere and hence low input energy for radio emission. 
 However, at this stage, the velocity of the stellar wind becomes slower than the escape velocity of the planetary companion and hence the stellar wind particles are expected to accrete onto the planets. 
-\citet{spiegel+madhusudhan2012} \revise{}{considered Bondi--Hoyle accretion where the accretion disk is}
+\citet{spiegel+madhusudhan2012} \revise{}{considered Bondi--Hoyle accretion where the accretion radius is}
 %%%%%%%%%
 \begin{eqnarray}
 R_{\rm acc} &=& \frac{2GM_p}{v_{\rm rel}^2} \\
@@ -430,7 +430,7 @@ R_{\rm acc} &=& \frac{2GM_p}{v_{\rm rel}^2} \\
 %%%%%%%%%
 \begin{eqnarray}
 L_{\rm acc} \sim &&  10^{25} \; {\rm erg\;s}^{-1} \left( \frac{\dot M_*}{10^{-8} M_{\odot }/{\rm yr}} \right)  \notag \\
-&& \times \left( \frac{M_p}{M_{\rm J}} \right)^3 \left( \frac{M_*}{M_{\odot }} \right). \\
+&& \times \left( \frac{M_p}{M_{\rm J}} \right)^3 \left( \frac{M_*}{M_{\odot }} \right). \label{eq:Lacc}\\
 %
 T_{\rm acc} \sim && 2 \times 10^5 ~\mbox{K} \left( \frac{M_p}{M_{\rm J}} \right). \label{eq:Tacc}
 \end{eqnarray}
@@ -576,7 +576,13 @@ The Str\"omgren radius for $1M_{\rm J} $ and for $10M_{\rm J}$ are also indicate
 Note, however, that unlike the frequently-demonstrated photoionization problem around O/B-type stars, in the situation of our interest, the Str\"omgren radius is not a sharp edge of ionization anymore, due to smaller source rate and smaller cross section (in this case parameter ``$a$'' in equation (13) of \citealt{stromgren1939} is not small) on account of X-ray photons interacting more weakly with neutral hydrogen than UV photons near the ionization limit.
 The Str\"omgren radii are indicated by vertical arrows in Figure \ref{fig:ionizationfraction}. 
 
-\revise{}{In reality, only the neutral portion of the stellar wind can accrete onto the planet without interacting with planetary magnetic field and thus Bondi-Hoyle accretion would be relevant. Therefore, what we could envision is...}
+\revise{}{In reality, only the neutral portion of the stellar wind can accrete onto the planet without interacting with planetary magnetic field and thus Bondi-Hoyle accretion would be relevant. 
+The ionized portion could lose some of their energy at the bow shock before they accrete, and energy released there is less than the estimate by equations (\ref{eq:Lacc}) and (\ref{eq:Tacc}). 
+Now the stellar wind is so dense that the mean free path is comparable to the Jovian radius, the neutral and ionized particles may also drag each other. ??
+%While interacting with magnetic field, the ionized portion could lose their energy 
+%Therefore, some part of the incoming wind particles are what we could envision is the 
+%Considering other uncertainties of radio wave generation, we 
+The detailed electromagnetic structure around RGHJs therefore requires an elaborate numerical simulations, which is beyond the scope of this paper. Noting that all other uncertainties including the radio wave generation, in this paper we simply aim at giving an order-of-magnitude estimate. }
 
 As a whole, we expect for the X-ray emission from the accretion onto the planet to ionize the incoming stellar wind.
 This implies that the stellar wind particles represented by equation (\ref{eq:n}) are nearly fully ionized plasmas like Solar wind, and that the stellar wind can interact with the planetary magnetic fields in a rather similar way to the case of Solar System planets.
@@ -818,7 +824,7 @@ Therefore, in the following, we ignore the radio emission from the red giant as 
 
 In order to examine the realistic potential to detect radio emission of RGHJs with the current and near-future instruments, we estimate the possible radio emission from known red giants assuming that they have planetary companions. 
 For this purpose, we obtained the list of M-type red giants from Table 4 of \citet{dumm1998} with the data of mass, radius, and effective temperature. 
-\revise{}{We note that in this range }
+\revise{}{We note that there data do not unambiguously distinguish RG from early AGB stars and thus the list likely includes about 40\% of early AGB stars. }
 For each red giant, the mass-loss rate is estimated using the improved Reimers' equation \citep{reimers1975} given by \citet{schroder2005,schroder2007}:
 %%%
 \begin{equation}
@@ -861,6 +867,7 @@ Observations suggest that the occurrence rate of planets with masses $M_{\rm J} 
 Given that 148 (12) systems with 1$M_{\rm J}$ planets at 1 AU (5 AU) have potential to emit $>10~\mu {\rm Jy}$, about 2-6 would actually be emitting the radio wave of our interest at the level of $>10~\mu {\rm Jy}$. %
 For larger planets ($M_p>2M_{\rm J}$), the number of potentially detectable systems are less, due to both the $B^{-1/3}$ dependence of the spectral flux: the number of systems where a 10 $M_{\rm J}$ planet at 1 AU (5 AU) emit $>10~\mu {\rm Jy}$ is 98 (5): Since the occurrence rate of such larger planets in the same orbital region is $\sim 3.1\%$ \citep{cumming2008}, one could expect additional $\sim 1$ radio source detection from larger planets with sensitivity $10~\mu {\rm Jy}$. %
 }
+
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{figure}[tbhp]
