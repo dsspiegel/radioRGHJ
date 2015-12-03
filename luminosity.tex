@@ -1,13 +1,18 @@
 %\documentclass[12pt,preprint]{aastex}
-\documentclass[12pt]{emulateapj} 
+\documentclass[iop,numberedappendix,apj,twocolappendix,]{emulateapj} 
 \usepackage{amsmath}
 \usepackage{amssymb}
 \usepackage{amstext}
+\usepackage{natbib}
 %\usepackage{apjfonts}
 %\usepackage{graphicx}
+\usepackage{appendix}
 \usepackage{epstopdf}
 \usepackage{epsfig}
 \usepackage{url}
+
+\bibliographystyle{apj}
+
 %------------------------------------------
 % User-defined macros.
 \usepackage{color}
@@ -25,11 +30,28 @@
 \newcommand{\memoYF}[1]{\color{red} #1 \color{black}}
 
 \title{Luminosity function of RGHJs}
-\author{Yuka Fujii\altaffilmark{1}}
+\author{%
+Yuka Fujii\altaffilmark{1}, %
+David S. Spiegel\altaffilmark{2,3,4}%
+}
+
+
+\affil{$^1$Earth-Life Science Institute, Tokyo Institute of Technology, 
+  Tokyo, JAPAN, 152-8550}
+  
+\affil{$^2$Analytics \& Algorithms, Stitch Fix,
+  San Francisco, CA  94103}
+
+\affil{$^3$Research \& Development, Sum Labs,
+  New York, NY  10001}
+
+
 %\altaffiltext{1}{Institute of Astronomy, Madingley Road, University of Cambridge, Cambridge CB3 0HA, United Kingdom}
 
 \begin{abstract}
-N/A
+We examine how the highest observed flux evolves as we observe further. 
+Given a luminosity function characterized by a power law with lower and upper limits of luminosity, firstly we consider the distribution of observed flux from a sphere within distance $R$ of a given luminosity function ("flux function"). The flux function composes of three regimes: in order of increasing flux, 1) zero flux, 2) a power law which depends on the luminosity function, and 3) a power law with index -2.5. 
+Then, we compute the expected value of the highest flux from a spherical shell at distance $R\sim R+dR$. within a volume with radius $R$. 
 \end{abstract} 
 
 \keywords{planetary systems --- planets and satellites: general}
@@ -50,8 +72,9 @@ N/A
 %Planning future targeted surveys of RGHJs would require accurate distribution functions of various parameters of giant stars in our neighborhood of the Galaxy. 
 
 
-We consider the number density of observed flux from targets within the distance $R$. 
-Luminosity and (observed) flux are denoted by $L$ and $F$, respectively. 
+In this section, we consider the number density of observed flux of the targets at spherical shell at distance $r$. 
+
+In the following, Luminosity and (observed) flux are denoted by $L$ and $F$, respectively. 
 \vspace{1\baselineskip}
 
 Let us denote the number density of evolved stars per unit volume by $n$ and assume that the luminosity function can be written as follows. 
@@ -67,13 +90,15 @@ C L^{-\alpha } & (L_{\rm min} < L < L_{\rm max}) \\
 %%%
 Here, $C $ is the proportional coefficient. 
 
-Then, let us denote the (expected) total number of evolved stars in a sphere of radius $R$ by $N_R$. Consider a spherical shell at radius $r$ ($r<R$) with thickness $dr$. The number of evolved stars in this spherical shell and with luminosity ranging from $L\sim L+dL$ is:
+Then, let us denote the (expected) total number of evolved stars by $N$. Consider a spherical shell at radius $r$ with thickness $dr$. The number of evolved stars in this spherical shell and with luminosity ranging from $L\sim L+dL$ is:
 %%%
 \begin{equation}
-\frac{d^2N_R}{dL dr} dL dr = 4 \pi C L^{-\alpha } r^2 dL dr \equiv \Psi (L, r) dL dr \label{eq:d2N/dLdr}
+\frac{d^2N}{dL dr} dL dr = 4 \pi C L^{-\alpha } r^2 dL dr \equiv \Psi (L, r) dL dr \label{eq:d2N/dLdr}
 \end{equation}
 %%%
 
+
+Now, we want to change variables from $\{L,\,r\}$ to $\{F,\,r\}$. 
 The relationship between flux $F$ and luminosity $L$ is, as usual,
 %%%
 \begin{equation}
@@ -81,56 +106,55 @@ F = \frac{L}{4\pi r^2}
 \end{equation}
 %%%
 where $r$ is the distance to the target. 
-
-Now, we want to get the number of targets with flux between $F$ and $F+dF$. 
-To do so, we want to integrate equation (\ref{eq:d2N/dLdr}) over the parameter space $\mathcal{S}$ satisfying
-%%%
-\begin{equation}
-F < \left( \frac{L}{4\pi r^2} \right) < F+dF 
-\end{equation}
-%%%
-To do so, we change the set of variables from $\{ L,\,r \}$ to $\{ F,\,r \}$. 
-Thus,
+As changing the set of variables needs to employ Jacobian,
 %%%
 \begin{eqnarray}
-\frac{dN_R}{dF} dF &=& \iint _{\mathcal{S}}  dr dL \;\; \Psi (L, r) \\
-&=& \int _0^{R} dr \int _{F}^{F+dF} dF' \;\; \Psi (4\pi r^2F', r)\; det(J) 
+\frac{d^2 N}{dL dr} &=& \Psi (4\pi r^2F', r)\; det(J) \\
+det(J) &=& \left| \PD{r}{r}\PD{L}{F'} - \PD{r}{F'}\PD{L}{r} \right| = 4 \pi r^2
 \end{eqnarray}
 %%%
-where
+Therefore, the number density of the flux coming from the spherical shell is
 %%%
 \begin{equation}
-det(J) = \left| \PD{r}{r}\PD{L}{F'} - \PD{r}{F'}\PD{L}{r} \right| = 4 \pi r^2
-\end{equation}
-%%%
-
-Therefore, 
-%%%
-\begin{eqnarray}
-\frac{dN_R}{dF} dF &=& \left[ \int _0 ^{R} dr \; \Phi (F, r) \right] dF\\
-\Phi (F, r) &=& \left\{
+\frac{d^2 N}{dF dr} = \left\{
 \begin{array}{ll}
-C' F^{-\alpha } r^{4-2\alpha} & (\sqrt{L_{\rm min}/4 \pi F} < r < \sqrt{L_{\rm max}/4 \pi F}) \\
+C' F^{-\alpha} r^{4-2\alpha } & (L_{\rm min} < F/4\pi r^2 < L_{\rm max}) \label{eq:dNdFdr} \\
 0 & (\mbox{elsewhere})
 \end{array}
-\right. \\
-C' &\equiv & C ( 4 \pi )^{2-\alpha }
-\end{eqnarray}
+\right. 
+\end{equation}
+%%%
+where $C' \equiv (4 \pi )^{2-\alpha}$. 
+
+
+
+%Therefore, 
+%%%
+%\begin{eqnarray}
+%\frac{dN_R}{dF} dF &=& \left[ \int _0 ^{R} dr \; \Phi (F, r) \right] dF\\
+%\Phi (F, r) &=& \left\{
+%\begin{array}{ll}
+%C' F^{-\alpha } r^{4-2\alpha} & (\sqrt{L_{\rm min}/4 \pi F} < r < \sqrt{L_{\rm max}/4 \pi F}) \\
+%0 & (\mbox{elsewhere})
+%\end{array}
+%\right. \\
+%C' &\equiv & C ( 4 \pi )^{2-\alpha }
+%\end{eqnarray}
 %%%
 
-Thus, when $\alpha \not = 2.5$,
+The flux distribution of targets within radius $R$ can be obtained by integrating equation (\ref{eq:dNdFdr}) from $0$ to $R$. When $\alpha \not = 2.5$,
 %%%
 \begin{eqnarray}
-&& \frac{dN_R}{dF} dF \\
+&& \frac{dN_R}{dF} \\
 && = \left\{
 \begin{array}{l}
 0 \;\;\;\; \displaystyle \left( F < \frac{L_{\rm min}}{4\pi R^2} \right) \\
 \\
-\displaystyle \frac{C' F^{-\alpha }}{5 - 2\alpha} \left[ R^{5 - 2\alpha} - \left( \sqrt{ \frac{L_{\rm min}}{4\pi F}} \right)^{5 - 2\alpha} \right] dF \\
+\displaystyle \frac{C' F^{-\alpha }}{5 - 2\alpha} \left[ R^{5 - 2\alpha} - \left( \sqrt{ \frac{L_{\rm min}}{4\pi F}} \right)^{5 - 2\alpha} \right] \\
 \\
 \;\;\;\;\;\;\;\;\;\;\;\;\;\;  \displaystyle \left( \frac{L_{\rm min}}{4\pi R^2} < F < \frac{L_{\rm max}}{4\pi R^2} \right) \\	
 \\
-\displaystyle \frac{C' F^{-\alpha }}{5 - 2\alpha} \left[ \left( \sqrt{ \frac{L_{\rm max}}{4\pi F} } \right)^{5 - 2\alpha} - \left( \sqrt{\frac{L_{\rm min}}{4\pi F}} \right)^{5 - 2\alpha } \right] dF \\
+\displaystyle \frac{C' F^{-\alpha }}{5 - 2\alpha} \left[ \left( \sqrt{ \frac{L_{\rm max}}{4\pi F} } \right)^{5 - 2\alpha} - \left( \sqrt{\frac{L_{\rm min}}{4\pi F}} \right)^{5 - 2\alpha } \right] \\
 \\
 \;\;\;\;\;\;\;\;\;\;\;\;\;\; \displaystyle \left( \frac{L_{\rm max}}{4\pi R^2} < F \right) 
 \end{array}
@@ -140,11 +164,11 @@ Thus, when $\alpha \not = 2.5$,
 \begin{array}{l}
 0 \;\;\;\; \displaystyle \left( F < \frac{L_{\rm min}}{4\pi R^2} \right) \\
 \\
-\displaystyle \frac{C' }{(5 - 2\alpha) (4 \pi )^{2.5-\alpha } } \left[ R^{5 - 2\alpha}F^{-\alpha }  (4 \pi )^{2.5-\alpha }  -  L_{\rm min}^{2.5 - \alpha} F^{-2.5} \right] dF \\
+\displaystyle \frac{C' }{(5 - 2\alpha) (4 \pi )^{2.5-\alpha } } \left[ R^{5 - 2\alpha}F^{-\alpha }  (4 \pi )^{2.5-\alpha }  -  L_{\rm min}^{2.5 - \alpha} F^{-2.5} \right] \\
 \\
 \;\;\;\;\;\;\;\;\;\;\;\;\;\;  \displaystyle \left( \frac{L_{\rm min}}{4\pi R^2} < F < \frac{L_{\rm max}}{4\pi R^2} \right) \\	
 \\
-\displaystyle \frac{C' F^{-2.5 }}{(5 - 2\alpha) (4 \pi )^{2.5-\alpha } } \left[ L_{\rm max}^{2.5 - \alpha} - L_{\rm min}^{2.5 - \alpha}  \right] dF \\
+\displaystyle \frac{C' F^{-2.5 }}{(5 - 2\alpha) (4 \pi )^{2.5-\alpha } } \left[ L_{\rm max}^{2.5 - \alpha} - L_{\rm min}^{2.5 - \alpha}  \right] \\
 \\
 \;\;\;\;\;\;\;\;\;\;\;\;\;\; \displaystyle \left( \frac{L_{\rm max}}{4\pi R^2} < F \right) 
 \end{array}
@@ -152,7 +176,8 @@ Thus, when $\alpha \not = 2.5$,
 \end{eqnarray}
 %%%
 
-\newpage
+
+%\newpage
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -165,8 +190,101 @@ Thus, when $\alpha \not = 2.5$,
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% 
 
 
+Examples with $\alpha = 3.1$ and $\alpha = 1.5$ are shown in Figure \ref{fig:dndF}. For demonstration, we consider $\alpha = 3.1$ (see the last section) and $\alpha = 1.5$ with $L_{\rm min } = 7000 {\rm W/Hz}$, $L_{\rm max} = 4.5\times 10^{13} {\rm W/Hz}$. 
+The flux distribution from a spherical shell composes of three regimes: in order of increasing flux, 1) zero flux, 2) a power law which depends on the luminosity function, and 3) a power law with index -2.5. 
 
-For now, let us suppose
+
+
+\newpage
+
+\section{Expected value for the highest flux from spherical shell at distance $r$}
+
+
+Let us consider a flux distribution of the targets from spherical shell at distance $r$. 
+
+The probability of a star to have a flux between $F\sim F+dF$, $P(F)dF $, may be assumed to be proportional to the flux number distribution:
+%%%
+\begin{equation}
+P(F) dF = \frac{dN_r}{dF} = C' F^{\alpha } r^{4-2\alpha }
+\end{equation}
+%%%
+where
+%%%
+\begin{equation}
+N_r = \frac{dN}{dr} 
+\end{equation}
+%%%
+Note that $N_r$ is the {\it expected} number. \memoYF{not sure how to deal with the fact that this is expected number.}
+
+Then, the probability to find one object with flux lower than $F'$ is
+%%%
+\begin{equation}
+P (<F') = \int _{-\infty} ^{F'}  P (F) \; dF 
+\end{equation}
+%%%
+
+The probability to find the maximum flux between $F_{\rm max} \sim F_{\rm max} + dF_{\rm max}$, $\mathcal{P} (F_{\rm max}) dF_{\rm max}$ is the joint probability where one of the targets has flux between $F_{\rm max} \sim F_{\rm max} + dF_{\rm max}$ and all others have smaller flux. Noting that we have $N_r$ ways to select the target with the highest flux, such a probability is:
+%%%
+\begin{equation}
+\mathcal{P} (F_{\rm max}) dF_{\rm max} = N_R P (< F_{\rm max})^{N_R-1}  P(F_{\rm max}) dF_{\rm max} %\\
+%&=& N_R P(F_{\rm max}) dF_{\rm max} \left[ 1 - P (> F_{\rm max}) \right]^{N_R-1} \\
+%&\sim & N_R P(F_{\rm max}) dF_{\rm max} \left[ 1 - ( N_R -1 ) P (> F_{\rm max}) \right]
+\end{equation}
+%%%
+
+The expected value for the maximum flux, $<F_{\rm max}>$, is obtained by calculating the flowing integral. 
+%%%
+\begin{eqnarray}
+<F_{\rm max}> &=& \int dF_{\rm max} \, F_{\rm max} \mathcal{P} (F_{\rm max}) \\
+&=& N_r \int dF_{\rm max} F_{\rm max} P (< F_{\rm max})^{N_r-1}  P(F_{\rm max})
+\end{eqnarray}
+%%%
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{figure}[htbp]
+   \plotoneh{Prob_alpha15.pdf}
+   \plotoneh{Prob_alpha31.pdf}
+   \caption{Flux distribution of targets in a spherical shell at distance $r$ with unit width $\Delta r = 1{\rm pc}$ (arbitrary) .}
+  \label{fig:prob}
+\end{figure}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% 
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{figure}[htbp]
+   \plotoneh{expectedFmax_alpha31.pdf}
+   \plotoneh{expectedFmax_alpha15.pdf}
+   \caption{Expected value for the maximum flux in $\mu {\rm Jy}$ from a spherical shell at distance $r$ with unit width $\Delta r = 1{\rm pc}$ (arbitrary) .}
+  \label{fig:dnrdF}
+\end{figure}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% 
+
+Examples with $\alpha = 3.1$ and $\alpha = 1.5$ are shown in Figure \ref{fig:dnrdF}. For demonstration, we consider $\alpha = 3.1$ (see the last section) and $\alpha = 1.5$ with $L_{\rm min } = 7000 {\rm W/Hz}$, $L_{\rm max} = 4.5\times 10^{13} {\rm W/Hz}$. 
+The flux distribution from a spherical shell composes of three regimes: in order of increasing flux, 1) zero flux, 2) a power law which depends on the luminosity function, and 3) a power law with index -2.5. 
+
+
+\newpage
+
+
+\appendix
+
+\section{Luminosity function of Red Giant Hot Jupiters}
+
+In order to estimate the luminosity function of RGHJ emitters, one of the key factors is the distribution of mass-loss rates of giant host stars. 
+For a given set of orbital parameters the luminosity ($L$) of a RGHJ depends on the stellar mass-loss rate and wind velocity as $\dot{M}_\star^{2/3} v^{5/3}$. 
+The improved Reimers' equation \citep{reimers1975} given by \citet{schroder2005,schroder2007}:
+%%%
+\begin{equation}
+\dot M_\star [M_\odot{\rm /yr}] \sim 8 \times 10^{-14} \frac{\tilde L \tilde R}{\tilde M} \left( \frac{T_{\rm eff}}{4000} \right)^{3.5} \left( 1 + \frac{g_{\odot }}{4300 g_{\star}} \right) \label{eq:mass-loss}
+\end{equation}
+%%%
+implies $\dot{M}_\star \propto L_\star^{7.5/4} R_\star^{-0.75} M_\star^{-1} (1+A/g_\star)$ and crudely estimating the wind velocity as $v \propto \sqrt{GM/R} \propto M^{1/2} R^{-1/2}$, the luminosity of the RGHJ radio emission is given by $L \propto L_\star^{7/12} M_\star^{1/6} T_{\rm eff}^{8/3} (1+A/g_\star)^{2/3}$. 
+Given that the dependences on $M_\star^{1/6}$ is relatively weak and that $T_{\rm eff}$ does not change significantly, the radio luminosity of RGHJs scales roughly as $L \propto L_{\star }^{7/12}$. 
+Observations of globular clusters indicates the luminosity function of red giants is $dn/dL_{\star } \sim L_{\star }^{-1.8}$ (Sandquist et al. (1996)) %\citep{sandquist1996}
+. Therefore, $\alpha \sim -3.1$. 
+
+The upper and lower limits are tentatively assumed as follows. 
 %%%
 \begin{itemize}
 \item range of luminosity of ``evolved stars'':\\$L_{\odot }-10,000 L_{\odot }$
@@ -175,66 +293,8 @@ $L_{\rm min} = 2,1\times 10^{11}/30 {\rm MHz} = 7000 {\rm W/Hz}$
 \item $\Rightarrow $maximum radio luminosity of ``RGHJs'':\\$L_{\rm max} = 4.5\times 10^{13} {\rm W}$
 \end{itemize}
 %%%
-With these assumptions, number density of observed flux is shown in Figure \ref{fig:dndF}. We consider $\alpha = 3.1$ (see the last section) and $\alpha = 1.5$ for demonstration. 
 
-\vspace{2\baselineskip}
-
-\section{Expected value for the highest flux within radius $R$}
-
-
-Let us consider that the probability of finding an object with flux in the range between $F$ and $F + dF$ is
-%%%
-\begin{equation}
-P (F) dF = \frac{1}{N_R} \frac{dN_R}{dF}
-\end{equation}
-%%%
-Note that $N_R$ is the {\it expected} total number of targets within radius $R$. \memoYF{not sure how to deal with the fact that this is expected number.}
-
-Then, the probability to find one object with flux higher than $\tilde F$ is
-%%%
-\begin{equation}
-P (> \tilde F) = \int _{\tilde F} ^{\infty}  P (F) \; dF 
-\end{equation}
-%%%
-In turn, the probability to find an object with flux lower than $\tilde F$ s
-%%%
-\begin{equation}
-P (< \tilde F) = 1 - P (> \tilde F)
-\end{equation}
-%%%
-Thus, the probability to find the maximum flux between $\tilde F \sim \tilde F + d\tilde F$, $\mathcal{P} (\tilde F) d\tilde F$ is
-%%%
-\begin{eqnarray}
-\mathcal{P} (\tilde F) d\tilde F &=& N P(\tilde F) d\tilde F \cdot \left[ P (< \tilde F) \right]^{N-1} \\
-&=& N P(\tilde F) d\tilde F \cdot \left[ 1 - P (> \tilde F) \right]^{N-1} \\
-&\sim & N P(\tilde F) d\tilde F \cdot \left[ 1 - ( N -1 ) P (> \tilde F) \right]
-\end{eqnarray}
-%%%
-
-So the expected value for the maximum flux, $<F_{\rm max}>$ is:
-%%%
-\begin{eqnarray}
-<F_{\rm max}> &=& \int \tilde F \mathcal{P} (\tilde F) \; d\tilde F \\
-&=& ...
-\end{eqnarray}
-%%%
-
-
-\memoYF{Not sure if the argument above is right}
-
-\vspace{2\baselineskip}
-
-\section{Power index of luminosity function (?)}
-
-In order to estimate the luminosity function of RGHJ emitters, one of the key factors is the distribution of mass-loss rates of giant host stars. 
-For a given set of orbital parameters the luminosity ($L$) of a RGHJ depends on the stellar mass-loss rate and wind velocity as $\dot{M}_\star^{2/3} v^{5/3}$. 
-Employing equation (\ref{eq:mass-loss}) which implies $\dot{M}_\star \propto L_\star^{7.5/4} R_\star^{-0.75} M_\star^{-1} (1+A/g_\star)$ and crudely estimating the wind velocity as $v \propto \sqrt{GM/R} \propto M^{1/2} R^{-1/2}$, the luminosity of the RGHJ radio emission is given by $L \propto L_\star^{7/12} M_\star^{1/6} T_{\rm eff}^{8/3} (1+A/g_\star)^{2/3}$. 
-Given that the dependences on $M_\star^{1/6}$ is relatively weak and that $T_{\rm eff}$ does not change significantly, the radio luminosity of RGHJs scales roughly as $L \propto L_{\star }^{7/12}$. 
-Observations of globular clusters indicates the luminosity function of red giants is $dn/dL_{\star } \sim L_{\star }^{-1.8}$ (Sandquist et al. (1996)) %\citep{sandquist1996}
-. Therefore, $\alpha \sim -3.1$. 
-
-
-
+\bibliography{biblio.bib}
 
 
 \end{document}
@@ -416,6 +476,124 @@ aiu
 \bibitem[Schroder(2007)]{Schroder2007} Schr\"{o}der , K.-P. \& Cuntz, M. 2005, ApJ, 630,  L73 
 \bibitem[Schroder(2007)]{Schroder2007} Schr\"{o}der , K.-P. \& Cuntz, M. 2007, A\&A, 465, 593 
 \end{thebibliography}
+
+
+
+
+
+
+Now, we want to get the number of targets with flux between $F$ and $F+dF$. 
+To do so, we want to integrate equation (\ref{eq:d2N/dLdr}) over the parameter space $\mathcal{S}$ satisfying
+%%%
+\begin{equation}
+F < \left( \frac{L}{4\pi r^2} \right) < F+dF 
+\end{equation}
+%%%
+To do so, we change the set of variables from $\{ L,\,r \}$ to $\{ F,\,r \}$. 
+Thus,
+%%%
+\begin{eqnarray}
+\frac{dN_R}{dF} dF &=& \iint _{\mathcal{S}}  dr dL \;\; \Psi (L, r) \\
+&=& \int _0^{R} dr \int _{F}^{F+dF} dF' \;\; \Psi (4\pi r^2F', r)\; det(J) 
+\end{eqnarray}
+%%%
+where
+%%%
+\begin{equation}
+det(J) = \left| \PD{r}{r}\PD{L}{F'} - \PD{r}{F'}\PD{L}{r} \right| = 4 \pi r^2
+\end{equation}
+%%%
+
+Therefore, 
+%%%
+\begin{eqnarray}
+\frac{dN_R}{dF} dF &=& \left[ \int _0 ^{R} dr \; \Phi (F, r) \right] dF\\
+\Phi (F, r) &=& \left\{
+\begin{array}{ll}
+C' F^{-\alpha } r^{4-2\alpha} & (\sqrt{L_{\rm min}/4 \pi F} < r < \sqrt{L_{\rm max}/4 \pi F}) \\
+0 & (\mbox{elsewhere})
+\end{array}
+\right. \\
+C' &\equiv & C ( 4 \pi )^{2-\alpha }
+\end{eqnarray}
+%%%
+
+Thus, when $\alpha \not = 2.5$,
+%%%
+\begin{eqnarray}
+&& \frac{dN_R}{dF} \\
+&& = \left\{
+\begin{array}{l}
+0 \;\;\;\; \displaystyle \left( F < \frac{L_{\rm min}}{4\pi R^2} \right) \\
+\\
+\displaystyle \frac{C' F^{-\alpha }}{5 - 2\alpha} \left[ R^{5 - 2\alpha} - \left( \sqrt{ \frac{L_{\rm min}}{4\pi F}} \right)^{5 - 2\alpha} \right] \\
+\\
+\;\;\;\;\;\;\;\;\;\;\;\;\;\;  \displaystyle \left( \frac{L_{\rm min}}{4\pi R^2} < F < \frac{L_{\rm max}}{4\pi R^2} \right) \\	
+\\
+\displaystyle \frac{C' F^{-\alpha }}{5 - 2\alpha} \left[ \left( \sqrt{ \frac{L_{\rm max}}{4\pi F} } \right)^{5 - 2\alpha} - \left( \sqrt{\frac{L_{\rm min}}{4\pi F}} \right)^{5 - 2\alpha } \right] \\
+\\
+\;\;\;\;\;\;\;\;\;\;\;\;\;\; \displaystyle \left( \frac{L_{\rm max}}{4\pi R^2} < F \right) 
+\end{array}
+\right. \\
+%%%
+&& = \left\{
+\begin{array}{l}
+0 \;\;\;\; \displaystyle \left( F < \frac{L_{\rm min}}{4\pi R^2} \right) \\
+\\
+\displaystyle \frac{C' }{(5 - 2\alpha) (4 \pi )^{2.5-\alpha } }  \\
+\displaystyle \times \left[ R^{5 - 2\alpha}F^{-\alpha }  (4 \pi )^{2.5-\alpha }  -  L_{\rm min}^{2.5 - \alpha} F^{-2.5} \right] dF \\
+\\
+\;\;\;\;\;\;\;\;\;\;\;\;\;\;  \displaystyle \left( \frac{L_{\rm min}}{4\pi R^2} < F < \frac{L_{\rm max}}{4\pi R^2} \right) \\	
+\\
+\displaystyle \frac{C' F^{-2.5 }}{(5 - 2\alpha) (4 \pi )^{2.5-\alpha } } \left[ L_{\rm max}^{2.5 - \alpha} - L_{\rm min}^{2.5 - \alpha}  \right] dF \\
+\\
+\;\;\;\;\;\;\;\;\;\;\;\;\;\; \displaystyle \left( \frac{L_{\rm max}}{4\pi R^2} < F \right) 
+\end{array}
+\right. 
+\end{eqnarray}
+%%%
+
+
+
+\vspace{2\baselineskip}
+
+\newpage
+
+\section{Expected value for the highest flux within radius $R$}
+
+In order to estimate the expected value for the highest flux, we need to get the probability function for the highest flux. 
+
+We may assume \memoYF{???} that the probability of finding an object with flux in the range between $F$ and $F + dF$ is proportional to the distribution of the observed flux. 
+%%%
+\begin{equation}
+P (F) dF = \frac{1}{N_R} \frac{dN_R}{dF}
+\end{equation}
+%%%
+Note that $N_R$ is the {\it expected} total number of targets within radius $R$. \memoYF{not sure how to deal with the fact that this is expected number.}
+
+Then, the probability to find one object with flux lower than $F'$ is
+%%%
+\begin{equation}
+P (<F') = \int _{-\infty} ^{F'}  P (F) \; dF 
+\end{equation}
+%%%
+So the probability to find the maximum flux between $F_{\rm max} \sim F_{\rm max} + dF_{\rm max}$, $\mathcal{P} (F_{\rm max}) dF_{\rm max}$ is
+%%%
+\begin{equation}
+\mathcal{P} (F_{\rm max}) dF_{\rm max} = N_R P (< F_{\rm max})^{N_R-1}  P(F_{\rm max}) dF_{\rm max} %\\
+%&=& N_R P(F_{\rm max}) dF_{\rm max} \left[ 1 - P (> F_{\rm max}) \right]^{N_R-1} \\
+%&\sim & N_R P(F_{\rm max}) dF_{\rm max} \left[ 1 - ( N_R -1 ) P (> F_{\rm max}) \right]
+\end{equation}
+%%%
+Then, the expected value for the maximum flux, $<F_{\rm max}>$ is:
+%%%
+\begin{eqnarray}
+<F_{\rm max}> &=& \int dF_{\rm max} \, F_{\rm max} \mathcal{P} (F_{\rm max}) \\
+&=& \int dF_{\rm max} F_{\rm max} N_R P (< F_{\rm max})^{N_R-1}  P(F_{\rm max})
+\end{eqnarray}
+%%%
+
+
 
 \end{document}
 
