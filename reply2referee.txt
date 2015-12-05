@@ -1,18 +1,18 @@
 ***** TO DO LIST *****
 
-1) response to ``The authors should demonstrate that the ram pressure of any exoplanetary outflow induced by heating can also be neglected in determining the size of the magnetosphere. ''
+1) response to ``The authors should demonstrate that the ram pressure of any exoplanetary outflow induced by heating can also be neglected in determining the size of the magnetosphere. '' => done
 
-2) argue the necesity of ``Observability`` section, in particular S4.3 and S4.4. 
+2) argue the necesity of ``Observability`` section, in particular S4.3 and S4.4.  
 
-3) response to ``it would be useful if they included a brief calculation or statement of how many might be expected, particularly in the age ranges they consider. ''
+3) response to ``it would be useful if they included a brief calculation or statement of how many might be expected, particularly in the age ranges they consider. '' => done
 
-4) literature survey if 4.3 and 4.4 have been discussed already in previous papers
+4) literature survey if 4.3 and 4.4 have been discussed already in previous papers 
 
 5) revise Figure 4 (?)
 
 **********************
 
-                                                10 November 2015
+                                                12 December 2015
 
 Dear Dr. Burton,
 
@@ -142,14 +142,14 @@ All the very best,
   been addressed in Ignace et al. (2010), there are important updates in 
   this paper, in particular:
 
-  - taking account of the shrinking of planetary magnetosphere. As a
-    result, our estimate of radio emission is order-of-magnitude off
-    of their estimate.
   - pointing out the presence of ionizing radition from accretion and
     quantitative evaluation of their ionizing effects. A mechanism to
     ionize otherwise neutral stellar wind has been briefly introduced
     in Ignace et al. (2010), but it is different from the mechanism we
     introduce.
+  - taking account of the shrinking of planetary magnetosphere. As a
+    result, our estimate of radio emission is order-of-magnitude off
+    of their scaling (eq. 20 of their paper).
   - taking account of the plasma frequency of stellar wind, which
     severely affects the detectability of radio signal.
 
@@ -160,9 +160,9 @@ All the very best,
   by previous papers, with an intention of making the paper
   self-contained and easy to follow. According to referee's
   suggestion, we attempted to reduce the materials as much as we think
-  reasonable <<<grammatically wrong?>>>.  There are some arguments
-  which we still think are worth part of the paper. We describe them
-  in the following, in reponse to each of referee's detailed comments.
+  reasonable.  There are some arguments which we still think are worth
+  part of the paper. We describe them in the following, in reponse to
+  each of referee's detailed comments.
 
 
 ## Detailed comments:
@@ -260,7 +260,8 @@ All the very best,
   contribute 5% increase in the relative velocity. We mentioned in the
   paragraph following equation (43).
 
-  <<< ram pressure ??? >>>
+  We now added the discussion about the effect of planetary outflow in 
+  Appendix A. 
 
 
 ## Fig 3: the numbers on the RHS have no units...they are probably
@@ -328,7 +329,13 @@ All the very best,
 
   As far as we understand the referee's feedback, Figure 5 partly
   answers this suggestion, where the expected flux from the known
-  system is estimated. We now improved the discussion by including the
-  effects of occurrence rate of Jupiter-like planets. <<< to do >>>
+  system is estimated. We now added explicitly mention the number of
+  potential targets above the detection limit. 
+  Another way to answer this question we think of is to convolute the 
+  planet occurrence rate, noting that not all of these targets are likely
+  to harbor a planet. Thus, we also addressed the expected value of
+  detection, based on the previously estimated occurrence rate of
+  Jupiter-size planets. The method to estimate that number is detailed in
+  Appendix D and the main text quotes them. 
 
 
