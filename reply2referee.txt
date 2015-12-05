@@ -154,7 +154,8 @@ All the very best,
     severely affects the detectability of radio signal.
 
   In the revised manuscript, we tried to make these point clearer in
-  Introduction section. The revised parts are marked in bold font.
+  Introduction section. The revised parts are marked in bold and blue 
+  font.
 
   Previously, we covered some topics that have already been addressed
   by previous papers, with an intention of making the paper
