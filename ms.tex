@@ -612,7 +612,7 @@ Figure \ref{fig:planetaryB} shows the computed radius ($r_c$) and average densit
 Substituting equation (\ref{eq:burrowsHeatFlux}) into equation (\ref{eq:Bscaling2}) and given that $r_{\rm dynamo} $ does not change significantly, the magnetic field is approximately:
 %%%%%%%%%% 
 \begin{equation}
-B   \sim   10~{\rm G} \left( \frac{M_p }{M_{p,{\rm J}}} \right)^{1.04} \left( \frac{t}{4.5~\rm{Gyr}} \right)^{-0.43} \label{eq:scalingB}
+B   \sim   10~{\rm G} \left( \frac{M_p }{M_{\rm J}} \right)^{1.04} \left( \frac{t}{4.5~\rm{Gyr}} \right)^{-0.43} \label{eq:scalingB}
 \end{equation}
 %%%%%%%%%%
 under this model. 
@@ -761,13 +761,15 @@ Finally, Section \ref{ss:timevariability} points out the polarization and the ti
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\begin{figure*}[tbp]
-   \plotonesc{cartoon_10Mj_100pc_smooth.pdf}
+\begin{figure}[tbp]
+   \plotoneh{cartoon2_5Mj_100pc_smooth.pdf}
+%\begin{figure*}[tbp]
+%   \plotonesc{cartoon_10Mj_100pc_smooth.pdf}
    \caption{A cartoon of radio emission spectra of a RGHJ with 10$M_{\rm J}$ and the host red giants with 100 $R_{\odot }$.
 The spectrum of RGHJ is modeled after Jovian radio spectra, e.g. Figure 8 of \citet{zarka_et_al2004} and Figure 2 of \citet{griesmeier2007a}; contribution from Io-DAM is not shown here.
-The spectra of the host red giant are modeled simply by extrapolating observed radio spectra above 1~GHz with power law. }
+The spectra of the host red giant are modeled simply by extrapolating observed radio spectra above 1~GHz with power law. \revise{}{The shadowed region represents the frequency below the plasma frequency of the stellar wind.}}
   \label{fig:cartoon}
-\end{figure*}
+\end{figure}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% 
 
 
@@ -858,6 +860,15 @@ Jupiters are placed at 1 AU and at 5 AU for reference.
 The difference of the symbols indicates whether the radio emission can escape from the system (circle), i.e., $\nu _{\rm cyc,\,max} > \nu_{\rm plasma}^{\rm los}$,  or not (cross). 
 Assuming Jupiter-mass planets \revise{}{at 1 AU (5 AU)} which typically have the maximum cyclotron frequency at $10-100$~MHz depending on the age, \revise{a reasonable number of}{148 (12)} systems have potential to emit radio wave at the level above $\sim 10~\mu {\rm Jy}$  out to $\sim 100-300$ pc, while those with the highest mass-loss rate would suffer from the plasma cut-off of the stellar wind. 
 For more massive planets with the maximum cyclotron frequency at around $100-1000$~MHz, the radio flux is lowered due to its dependence on $B^{-1/3}$ (equation (\ref{eq:F_nu})), but more likely to get to the Earth. $10~M_{\rm J}$ planets at $\sim 1$ AU may be detectable out to $\sim 200$~pc.
+
+\revise{}{A more relistic expected number of detection can be also evaluated by combining these results with the probability for a star to have a planet with certain mass and orbit,  %
+Observations of main-sequence stars implies that the number of Jovian planets is about a few to ten percent of the number of stars \citep[e.g.][]{cumming2008,cassan2012}. %
+Assuming the same population for RG systems, the expected number of actual detection from RGHJs would be order of unity.  
+A more detailed examination using the empirical planet mass function by \citet{cumming2008} is given in Appendix \ref{s:expectedvalue}. 
+The analysis indicates that if the detection limit is 10$\mu {\rm Jy}$ the total expected value is about 3. }
+%However, as we see in the next subsection, the . and the expected value for massive planets ($M_p>5M_{\rm J}$) which supposedly have relatively high cyclotron frequency is about 1-2. 
+
+
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{figure}[tbhp]
@@ -985,11 +996,11 @@ For the low frequency receivers (28-80~MHz; 4-Band) in the Very Large Array (VLA
 Future upgrades to the VLA such as the LOw Band Observatory \citep[LOBO][]{Kassim2015IAU} are being considered, and could potentially cover the full 30-470~MHz band.
 We estimate the sensitivity of LOBO assuming the receiver noise extrapolates linearly from $\Trx \approx 60~\rm K$ (internal VLA memo) in P-Band (230-470~MHz) to $\Trx \approx 260~\rm K$ in 4-band, and consider just the 50-350~MHz portion of the full 30-470~MHz band.
 
-
 The noise estimates shown in Table \ref{tab:sens} indicate that, at the frequencies relevant for the detection of radio emission from Jupiter-size planets, current instrument sensitivities are generally too low.
 On the other hand, for more massive exoplanets ($M_p\sim 10 M_{\rm J}$) where the bulk of the radio emission would exist above 50~MHz, low frequency component of SKA will be able to detect the signal within half a day from planets with $M_p \sim 10~M_{\rm J}$ at $\sim$1~AU within $\sim $200~pc, or those at $\sim$5~AU within $\sim $100~pc. 
 VLA-LOBO could also work for a few nearby systems. 
 
+%\revise{}{The expected values for these targets are }
 
 
 
@@ -1054,7 +1065,7 @@ Finally, we note that the radio emission considered in this paper can either be 
 Once planetary radio emission is detected, it will provide a unique approach for learning about the planetary spin, magnetic field, presence of satellites, and potentially the stellar wind properties.%
 }{%
 Once planetary radio emission is detected, it in general provides a unique approach for learning the planetary property. As the auroral radio flux is significantly modulated in association with several physical processes described in \S\ref{ss:timevariability}, the time variability is useful to imply the planetary spin rotation period or the presence of satellites. If spectra are obtained, the upper cut-off frequency can tell us the magnetic field strength of the planetary surfaces, which, when combined with constrains on the planetary mass via e.g. radial-velocity observations, tests  the proposed scaling law of planetary dynamo. 
-A extra fruit from observations of RGHJs in particular is that the lower cut-off frequency, which presumably corresponds to in situ plasma frequency, could probe of the stellar wind property at the planetary orbit. In addition, the planetary radio power in such an extreme environment as RG's massive stellar wind will be valuable data points to test the empirical ``radiometric Bode's law''. %
+A extra fruit from observations of RGHJs in particular is that the lower cut-off frequency, which presumably corresponds to in situ plasma frequency, could probe the stellar wind property at the planetary orbit. In addition, the planetary radio power in such an extreme environment as RG's massive stellar wind will be valuable data points to test the empirical ``radiometric Bode's law''. %
 We also note that the radio emission of RGHJs may also be used as a tool for discovering/confirming new planets, given that traditional exoplanet-discovery methods (specifically, transit and radial-velocity observations) are not very sensitive to planets around RGB or AGB stars. %
 }
 
@@ -1239,8 +1250,8 @@ Therefore, unless the density increases more drastically than $1/r^5$, the ratio
 \color{blue}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\section{Expected number}
-\label{ss:detectability}
+\section{Expected Number of Detection Taking Account of Planet Occurrence Rate}
+\label{s:expectedvalue}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 Let us also consider the expected number of radio detection from RGHJs taking account of the occurrence rate of Jovian planets. 
@@ -1279,8 +1290,8 @@ They are translated into the orbital period via Kepler's law, $P_{\{{\rm min,max
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{figure}[htbp]
-   \plotoneh{cumlative_expected_value.pdf}
-   \caption{}
+   \plotoneh{cumulative_expected_value.pdf}
+   \caption{The expected number of radio detection of Jovian exoplanets above the given threshold mass. }
   \label{fig:expected_values}
 \end{figure}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% 

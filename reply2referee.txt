@@ -199,10 +199,7 @@ All the very best,
   The model of planetary magnetic field descibed in Section 2.3 is
   necessary to discuss the planetary parameter space, especially in
   terms of planetary mass and orbit, shown in Figure 3. Therefore, we
-  would like to retain the description in the main manuscript.  On the
-  other hand, it is true that the scaling of planetary magnetic field
-  is not a novel point of this paper (as explicitly mentioned in the
-  manuscript), so we removed some panels from figure 2.
+  would like to retain the description in the main manuscript. 
 
 
 ## Section 2.4
