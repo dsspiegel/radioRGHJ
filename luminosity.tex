@@ -226,7 +226,6 @@ The flux distribution from a sphere composes of three regimes: in the order of i
 
 \section{Expected value for the highest flux from a spherical shell at distance $r$}
 
-
 Let us consider a flux distribution of the targets from a spherical shell at distance $r$ with thickness $dr$. 
 The ({\it expected}) total number of the target within that spherical shell is
 %%%
@@ -236,10 +235,10 @@ The ({\it expected}) total number of the target within that spherical shell is
 %%%
 \memoYF{not sure how to deal with the fact that this is expected number.}
 
-The probability for a star within the spherical shell to have a flux between $F\sim F+dF$, $P(F)dF $, may be assumed to be proportional to the flux number distribution given by equation (\ref{eq:dNdFdr}):
+The probability for a star within the spherical shell to have a flux between $F\sim F+dF$, $P[F]dF $, may be assumed to be proportional to the flux number distribution given by equation (\ref{eq:dNdFdr}):
 %%%
 \begin{equation}
-P(F) dF = C' F^{\alpha } r^{4-2\alpha }
+P[F] dF = C' F^{\alpha } r^{4-2\alpha }
 \end{equation}
 %%%
 where
@@ -250,9 +249,8 @@ C' = n_r \left( \int _0 ^{\infty}P[F]~dF~\right)^{-1}
 %%%
 
 
-
-The probability to find the maximum flux between $F_{\rm max} \sim F_{\rm max} + dF_{\rm max}$, $\mathcal{P} (F_{\rm max}) dF_{\rm max}$ is the joint probability where one of the targets has flux between $F_{\rm max} \sim F_{\rm max} + dF_{\rm max}$ and all others have smaller flux. 
-The probability to find one object with flux lower than $F'$ is
+The probability that the maximum flux lies in the range between $F_{\rm max}$ and $F_{\rm max} + dF_{\rm max}$, denoted $\mathcal{P} [F_{\rm max}] dF_{\rm max}$, is the joint probability that one of the targets has flux between $F_{\rm max}$ and $F_{\rm max} + dF_{\rm max}$ and that all others have smaller flux.
+The probability that one object has flux lower than $F'$ is
 %%%
 \begin{equation}
 P [<F'] = \int _{-\infty} ^{F'}  P [F] \; dF 
@@ -261,21 +259,21 @@ P [<F'] = \int _{-\infty} ^{F'}  P [F] \; dF
 Noting that we have $n_r$ ways to select the target with the highest flux, such a probability is:
 %%%
 \begin{equation}
-\mathcal{P} (F_{\rm max}) dF_{\rm max} = n_r P (< F_{\rm max})^{n_r-1}  P(F_{\rm max}) dF_{\rm max} %\\
+\mathcal{P} [F_{\rm max}] dF_{\rm max} = n_r P [< F_{\rm max}]^{n_r-1}  P[F_{\rm max}] dF_{\rm max} %\\
 %&=& N_R P(F_{\rm max}) dF_{\rm max} \left[ 1 - P (> F_{\rm max}) \right]^{N_R-1} \\
 %&\sim & N_R P(F_{\rm max}) dF_{\rm max} \left[ 1 - ( N_R -1 ) P (> F_{\rm max}) \right]
 \end{equation}
 %%%
 
-The expected value for the maximum flux among the targets within a spherical shell at radius $r$ (with width $dr$), $<F_{\rm max}>$, is obtained by calculating the flowing integral. 
+The expected value for the maximum flux among the targets within a spherical shell at radius $r$ (with width $dr$), $\langle F_{\rm max} \rangle$, is obtained by calculating the flowing integral. 
 %%%
 \begin{eqnarray}
-<F_{\rm max}> &=& \int dF_{\rm max} \, F_{\rm max} \mathcal{P} (F_{\rm max}) \\
-&=& n_r \int dF_{\rm max} F_{\rm max} P (< F_{\rm max})^{n_r-1}  P(F_{\rm max})
+\langle F_{\rm max} \rangle &=& \int dF_{\rm max} \, F_{\rm max} \mathcal{P} [F_{\rm max}] \\
+&=& n_r \int dF_{\rm max} F_{\rm max} P [< F_{\rm max}]^{n_r-1}  P[F_{\rm max}]
 \end{eqnarray}
 %%%
 
-Figure \ref{fig:expectedFmax} shows $<F_{\rm max}>$ as a function of distance $r$ with varying number density of the targets. 
+Figure \ref{fig:expectedFmax} shows $\langle F_{\rm max} \rangle$ as a function of distance $r$ with varying number density of the targets. 
 Again, examples for $\alpha = 3.1$ and $\alpha = 1.5$, with $L_{\rm min } = 7.0\times 10^3 ~{\rm W/Hz}$ and $L_{\rm max} = 1.5\times 10^{13} ~{\rm W/Hz}$ are shown. 
 It is seen that the expected values monotonically decrease as we observe further. This indicates the brightest object is the closest one. \memoYF{??}
 
@@ -355,6 +353,31 @@ Solar luminosity becomes 2 times brighter than current value when it evolves off
 \end{document}
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
  
 %%%
 \begin{eqnarray}
@@ -379,7 +402,7 @@ Solar luminosity becomes 2 times brighter than current value when it evolves off
 
 %%%
 \begin{eqnarray}
-&&<F> = \int F \frac{dn}{dF} dF \\
+&&\langle F \rangle = \int F \frac{dn}{dF} dF \\
 %
 &&= \frac{4 \pi C}{5 - 2 \alpha } \\
 && \times \left( \int _{F_{\rm l}} ^{F_{u}} F^{1-\alpha } \left\{ R^{5-2\alpha } - \left( \frac{L_{\rm min}}{F} \right)^{2.5-\alpha} \right\} \right. dF \\
@@ -445,14 +468,14 @@ p (L) dL = C L^{-\alpha }
 Probability for a star to have luminosity larger than $L$ is 
 %%%
 \begin{equation}
-P(>L) = \int _L^{\infty} C L^{-\alpha } dL = C \frac{L^{-\alpha +1}}{-\alpha + 1}
+P[>L] = \int _L^{\infty} C L^{-\alpha } dL = C \frac{L^{-\alpha +1}}{-\alpha + 1}
 \end{equation}
 %%%
 
 Probability for a star to have luminosity less than $L$ is 
 %%%
 \begin{equation}
-P(<L) = 1 -P (>L) \end{equation}
+P[<L] = 1 -P [>L] \end{equation}
 %%% 
 
 The probability to have the maximum luminosity of $L \sim L + dL$, $\mathcal{P(L_{\rm max}})$, with $N$ samples is
@@ -467,7 +490,7 @@ The probability to have the maximum luminosity of $L \sim L + dL$, $\mathcal{P(L
 Thus, the expected value for the maximum luminosity is
 %%%
 \begin{eqnarray}
-< L_{\rm max} > (N) &=& \int L_{\rm max} \cdot \mathcal{P_{\rm max}}(L_{\rm max}) \cdot dL_{\rm max} \\
+\langle L_{\rm max} \rangle (N) &=& \int L_{\rm max} \cdot \mathcal{P_{\rm max}}(L_{\rm max}) \cdot dL_{\rm max} \\
 &=& N C \int dL_{\rm max} \cdot L_{\rm max}^{-\alpha +1} \left( 1 - \left( \frac{CL_{\rm max}^{-\alpha+1}}{-\alpha+1} \right) \right)^{N-1} \\
 &\equiv & N C \int dL_{\rm max} \cdot L_{\rm max}^{-\alpha +1} K^{N-1}(L_{\rm max})
 \end{eqnarray}
