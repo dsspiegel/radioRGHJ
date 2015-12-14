@@ -48,12 +48,15 @@ David S. Spiegel\altaffilmark{2}%
 %\altaffiltext{1}{Institute of Astronomy, Madingley Road, University of Cambridge, Cambridge CB3 0HA, United Kingdom}
 
 \begin{abstract}
-We examine how the highest observed flux evolves as we observe further. 
-This question is motivated because it appears to be a competition between the fact that the observed flux decreases as the objects are located further, and the fact that the number of targets increases as we observe further. 
+%We examine how the highest observed flux evolves as we observe further. 
+%This question is motivated because it appears to be a competition between the fact that the observed flux decreases as the objects are located further, and the fact that the number of targets increases as we observe further. 
+Within a sphere centered on an observer, is the apparently-brightest source likely to be near the center of the sphere or near the periphery?
+The answer is not obvious because near the center (near the observer), brightness is increased by the inverse square law; however, far from the observer, there is much more volume available.
 %
 To answer this question, we calculate the expected value of the highest flux from a given spherical shell and see whether the expected value increases as a function of distance (radius) of the sphere. 
-In doing so, we consider  a luminosity function characterized by a power law with lower and upper limits of luminosity, %
-We find the expected value of the highest flux monotonically decreases as a function of radius of the spherical shell, and thus we are not likely to find the brightest object far away. 
+In doing so, we consider  a luminosity function characterized by a power law with lower and upper limits of luminosity.
+We find that \memoYF{...}
+%the expected value of the highest flux monotonically decreases as a function of radius of the spherical shell, and thus we are not likely to find the brightest object far away. 
 %we calculate the expected value of the highest flux from a given spherical shell and see whether the expected value increases as a function of distance (radius) of the sphere. 
 %firstly we consider the distribution of observed flux from a sphere within distance $R$ of a given luminosity function ("flux function"). The flux function composes of three regimes: in order of increasing flux, 1) zero flux, 2) a power law which depends on the luminosity function, and 3) a power law with index -2.5. 
 %Then, we compute the expected value of the highest flux from a spherical shell at distance $R\sim R+dR$. within a volume with radius $R$. 
@@ -77,11 +80,11 @@ We find the expected value of the highest flux monotonically decreases as a func
 %Planning future targeted surveys of RGHJs would require accurate distribution functions of various parameters of giant stars in our neighborhood of the Galaxy. 
 
 
-In this section, we consider the number density of observed flux of the targets at spherical shell at distance $r$. 
-In the following, Luminosity and (observed) flux are denoted by $L$ and $F$, respectively. 
+In this section, we consider the number density of observed flux of sources in a spherical shell of radius $r$.
+In the following, luminosity and (observed) flux are denoted by $L$ and $F$, respectively. 
 \vspace{1\baselineskip}
 
-Let us denote the number density of evolved stars per unit volume by $n$ and assume that the luminosity function can be written as follows. 
+Let us denote the number density of sources of a particular class (quasars, stars, ...) per unit volume by $n$ and assume that the luminosity function can be written as follows. 
 %%%
 \begin{equation}
 \frac{dn}{dL} = \left\{
@@ -92,12 +95,14 @@ C L^{-\alpha } & (L_{\rm min} < L < L_{\rm max}) \\
 \right. 
 \end{equation}
 %%%
-Here, $C $ is the proportional coefficient. 
+Here, $C $ is the coefficient of proportionality. 
 
-Then, let us denote the (expected) total number of evolved stars by $N$. Consider a spherical shell at radius $r$ with thickness $dr$. The number of evolved stars in this spherical shell and with luminosity ranging from $L\sim L+dL$ is:
+Then, let us denote the (expected) total number of sources by $N$.
+Consider a spherical shell at radius $r$ with thickness $dr$. 
+The number of sources in this spherical shell and with luminosity ranging from $L\sim L+dL$ is:
 %%%
 \begin{equation}
-\frac{d^2N}{dL dr} dL dr = 4 \pi C L^{-\alpha } r^2 dL dr \equiv \Psi (L, r) dL dr \label{eq:d2N/dLdr}
+\frac{d^2N}{dL dr} dL dr = 4 \pi C L^{-\alpha } r^2 dL dr \equiv \Psi [L, r] dL dr \label{eq:d2N/dLdr}
 \end{equation}
 %%%
 
@@ -113,8 +118,8 @@ where $r$ is the distance to the target.
 As changing the set of variables needs to employ Jacobian,
 %%%
 \begin{eqnarray}
-\frac{d^2 N}{dL dr} &=& \Psi (4\pi r^2F', r)\; det(J) \\
-det(J) &=& \left| \PD{r}{r}\PD{L}{F'} - \PD{r}{F'}\PD{L}{r} \right| = 4 \pi r^2
+\frac{d^2 N}{dL dr} &=& \Psi [4\pi r^2F', r]\; \det[J] \\
+\det[J] &=& \left| \PD{r}{r}\PD{L}{F'} - \PD{r}{F'}\PD{L}{r} \right| = 4 \pi r^2
 \end{eqnarray}
 %%%
 Therefore, the number density of the flux coming from the spherical shell is
@@ -133,9 +138,9 @@ where $C' \equiv (4 \pi )^{2-\alpha}$.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{figure}[htbp]
-   \plotoneh{Prob_alpha15.pdf}
-   \plotoneh{Prob_alpha31.pdf}
-   \caption{Flux distribution of targets in a spherical shell at distance $r$ with unit width $\Delta r = 1{\rm pc}$ (arbitrary) .}
+   \plotoneh{Prob_alpha10.pdf}
+   \plotoneh{Prob_alpha30.pdf}
+   \caption{Flux distribution of sources in a spherical shell at distance $r$ when $L_{\rm min}=1$ and $L_{\rm max}=10^6$.}
   \label{fig:prob}
 \end{figure}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% 
@@ -162,7 +167,7 @@ where $C' \equiv (4 \pi )^{2-\alpha}$.
 %%%
 
 
-The flux distribution of targets within radius $R$ can be obtained by integrating equation (\ref{eq:dNdFdr}) from $0$ to $R$. When $\alpha \not = 2.5$,
+The flux distribution of sources within radius $R$ can be obtained by integrating equation (\ref{eq:dNdFdr}) from $0$ to $R$. When $\alpha \not = 2.5$,
 %%%
 \begin{eqnarray}
 && \frac{dN_R}{dF} \\
@@ -170,11 +175,11 @@ The flux distribution of targets within radius $R$ can be obtained by integratin
 \begin{array}{l}
 0 \;\;\;\; \displaystyle \left( F < \frac{L_{\rm min}}{4\pi R^2} \right) \\
 \\
-\displaystyle \frac{C' F^{-\alpha }}{5 - 2\alpha} \left[ R^{5 - 2\alpha} - \left( \sqrt{ \frac{L_{\rm min}}{4\pi F}} \right)^{5 - 2\alpha} \right] \\
+\displaystyle \frac{C' F^{-\alpha }}{5 - 2\alpha} \left( R^{5 - 2\alpha} - \left( \sqrt{ \frac{L_{\rm min}}{4\pi F}} \right)^{5 - 2\alpha} \right) \\
 \\
 \;\;\;\;\;\;\;\;\;\;\;\;\;\;  \displaystyle \left( \frac{L_{\rm min}}{4\pi R^2} < F < \frac{L_{\rm max}}{4\pi R^2} \right) \\	
 \\
-\displaystyle \frac{C' F^{-\alpha }}{5 - 2\alpha} \left[ \left( \sqrt{ \frac{L_{\rm max}}{4\pi F} } \right)^{5 - 2\alpha} - \left( \sqrt{\frac{L_{\rm min}}{4\pi F}} \right)^{5 - 2\alpha } \right] \\
+\displaystyle \frac{C' F^{-\alpha }}{5 - 2\alpha} \left( \left( \sqrt{ \frac{L_{\rm max}}{4\pi F} } \right)^{5 - 2\alpha} - \left( \sqrt{\frac{L_{\rm min}}{4\pi F}} \right)^{5 - 2\alpha } \right) \\
 \\
 \;\;\;\;\;\;\;\;\;\;\;\;\;\; \displaystyle \left( \frac{L_{\rm max}}{4\pi R^2} < F \right) 
 \end{array}
@@ -184,11 +189,11 @@ The flux distribution of targets within radius $R$ can be obtained by integratin
 \begin{array}{l}
 0 \;\;\;\; \displaystyle \left( F < \frac{L_{\rm min}}{4\pi R^2} \right) \\
 \\
-\displaystyle \frac{C' }{(5 - 2\alpha) (4 \pi )^{2.5-\alpha } } \left[ R^{5 - 2\alpha}F^{-\alpha }  (4 \pi )^{2.5-\alpha }  -  L_{\rm min}^{2.5 - \alpha} F^{-2.5} \right] \\
+\displaystyle \frac{C' }{(5 - 2\alpha) (4 \pi )^{2.5-\alpha } } \left( R^{5 - 2\alpha}F^{-\alpha }  (4 \pi )^{2.5-\alpha }  -  L_{\rm min}^{2.5 - \alpha} F^{-2.5} \right) \\
 \\
 \;\;\;\;\;\;\;\;\;\;\;\;\;\;  \displaystyle \left( \frac{L_{\rm min}}{4\pi R^2} < F < \frac{L_{\rm max}}{4\pi R^2} \right) \\	
 \\
-\displaystyle \frac{C' F^{-2.5 }}{(5 - 2\alpha) (4 \pi )^{2.5-\alpha } } \left[ L_{\rm max}^{2.5 - \alpha} - L_{\rm min}^{2.5 - \alpha}  \right] \\
+\displaystyle \frac{C' F^{-2.5 }}{(5 - 2\alpha) (4 \pi )^{2.5-\alpha } } \left( L_{\rm max}^{2.5 - \alpha} - L_{\rm min}^{2.5 - \alpha}  \right) \\
 \\
 \;\;\;\;\;\;\;\;\;\;\;\;\;\; \displaystyle \left( \frac{L_{\rm max}}{4\pi R^2} < F \right) 
 \end{array}
@@ -212,7 +217,7 @@ The flux distribution from a sphere composes of three regimes: in the order of i
 \begin{figure}[htbp]
    \plotoneh{dndF_alpha31.pdf}
    \plotoneh{dndF_alpha15.pdf}
-   \caption{Flux distribution of targets within radius $R$ with varying power-law index and $L_{\rm min } = 7\times 10^3~{\rm W/Hz}$, $L_{\rm max} = 1.5\times 10^6~{\rm W/Hz}$. The $y$-axis is arbitrary. }
+   \caption{Flux distribution of sources within radius $R$ with varying power-law index and $L_{\rm min } = 7\times 10^3~{\rm W/Hz}$, $L_{\rm max} = 1.5\times 10^6~{\rm W/Hz}$. The $y$-axis is arbitrary. }
   \label{fig:dndF}
 \end{figure}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% 
@@ -221,72 +226,79 @@ The flux distribution from a sphere composes of three regimes: in the order of i
 
 \newpage
 
-\section{Expected value for the highest flux from a spherical shell at distance $r$}
+\section{Expected value of the highest flux from a spherical shell at distance $r$}
 
-
-Let us consider a flux distribution of the targets from a spherical shell at distance $r$ with thickness $dr$. 
-The ({\it expected}) total number of the target within that spherical shell is
+Let us consider the distribution of fluxes from sources from a spherical shell at distance $r$ with thickness $dr$.
+The ({\it expected}) total number of the sources within that spherical shell is
 %%%
 \begin{equation}
-4 \pi r^2 dr \int _0 ^{\infty} \frac{d^2 N}{dF~dr} dF \equiv n_r. 
+n_r \equiv dr \int _0 ^{\infty} \frac{d^2 N}{dF~dr} dF \, . 
 \end{equation}
 %%%
 \memoYF{not sure how to deal with the fact that this is expected number.}
 
-The probability for a star within the spherical shell to have a flux between $F\sim F+dF$, $P(F)dF $, may be assumed to be proportional to the flux number distribution given by equation (\ref{eq:dNdFdr}):
+The probability that a source within the spherical shell has a flux between $F\sim F+dF$, $P[F]dF $, may be assumed to be proportional to the flux number distribution given by equation (\ref{eq:dNdFdr}):
 %%%
 \begin{equation}
-P(F) dF = C' F^{\alpha } r^{4-2\alpha }
+P[F] dF = \left\{
+\begin{array}{ll}
+C' F^{\alpha } r^{4-2\alpha } dF & (F_{\rm min}(r) < F < F_{\rm max}(r)) \\
+0 & (\mbox{elsewhere})
+\end{array}
+\right. 
 \end{equation}
 %%%
 where
 %%%
+\begin{eqnarray}
+C' &=& n_r \left( \int _0 ^{\infty}P[F]~dF~\right)^{-1} \\
+F_{\rm min}(r) &=& L_{\rm max} / 4 \pi r^2 \\
+F_{\rm max}(r) &=& L_{\rm max} / 4 \pi r^2
+\end{eqnarray}
+%%%
+
+
+The probability that the bright flux lies in the range between $F_{\rm bright}$ and $F_{\rm bright} + dF_{\rm bright}$, denoted $\mathcal{P} [F_{\rm bright}] dF_{\rm bright}$, is the joint probability that one of the targets has flux between $F_{\rm bright}$ and $F_{\rm bright} + dF_{\rm bright}$ and that all others have smaller flux.
+The probability that one object has flux lower than $F'$ is
+%%%
 \begin{equation}
-C' = n_r \left[ \int _0 ^{\infty}P(F)~dF~\right]^{-1}
+P [<F'] = \int _{-\infty} ^{F'}  P [F] \; dF 
 \end{equation}
 %%%
-
-
-
-The probability to find the maximum flux between $F_{\rm max} \sim F_{\rm max} + dF_{\rm max}$, $\mathcal{P} (F_{\rm max}) dF_{\rm max}$ is the joint probability where one of the targets has flux between $F_{\rm max} \sim F_{\rm max} + dF_{\rm max}$ and all others have smaller flux. 
-The probability to find one object with flux lower than $F'$ is
+Noting that we have $n_r$ ways to select the target with the highest flux, this probability is:
 %%%
 \begin{equation}
-P (<F') = \int _{-\infty} ^{F'}  P (F) \; dF 
-\end{equation}
-%%%
-Noting that we have $n_r$ ways to select the target with the highest flux, such a probability is:
-%%%
-\begin{equation}
-\mathcal{P} (F_{\rm max}) dF_{\rm max} = n_r P (< F_{\rm max})^{n_r-1}  P(F_{\rm max}) dF_{\rm max} %\\
+\mathcal{P} [F_{\rm bright}] dF_{\rm bright} = n_r P [< F_{\rm bright}]^{n_r-1}  P[F_{\rm bright}] dF_{\rm bright} %\\
 %&=& N_R P(F_{\rm max}) dF_{\rm max} \left[ 1 - P (> F_{\rm max}) \right]^{N_R-1} \\
 %&\sim & N_R P(F_{\rm max}) dF_{\rm max} \left[ 1 - ( N_R -1 ) P (> F_{\rm max}) \right]
 \end{equation}
 %%%
 
-The expected value for the maximum flux among the targets within a spherical shell at radius $r$ (with width $dr$), $<F_{\rm max}>$, is obtained by calculating the flowing integral. 
+The expected value of the maximum flux among the targets within a spherical shell at radius $r$ (with width $dr$), $\langle F_{\rm bright} \rangle$, is obtained by calculating the flowing integral. 
 %%%
 \begin{eqnarray}
-<F_{\rm max}> &=& \int dF_{\rm max} \, F_{\rm max} \mathcal{P} (F_{\rm max}) \\
-&=& n_r \int dF_{\rm max} F_{\rm max} P (< F_{\rm max})^{n_r-1}  P(F_{\rm max})
+\langle F_{\rm bright} \rangle &=& \int dF_{\rm bright} \, F_{\rm bright} \mathcal{P} [F_{\rm bright}] \\
+&=& n_r \int dF_{\rm bright} F_{\rm bright} P [< F_{\rm bright}]^{n_r-1}  P[F_{\rm bright}]
 \end{eqnarray}
 %%%
 
-Figure \ref{fig:expectedFmax} shows $<F_{\rm max}>$ as a function of distance $r$ with varying number density of the targets. 
-Again, examples for $\alpha = 3.1$ and $\alpha = 1.5$, with $L_{\rm min } = 7.0\times 10^3 ~{\rm W/Hz}$ and $L_{\rm max} = 1.5\times 10^{13} ~{\rm W/Hz}$ are shown. 
-It is seen that the expected values monotonically decrease as we observe further. This indicates the brightest object is the closest one. \memoYF{??}
+Figure \ref{fig:expectedFmax} shows $\langle F_{\rm bright} \rangle$ as a function of distance $r$ with varying number density of the sources. 
+%It is seen that the expected values monotonically decrease as we observe further. This indicates the brightest object is the closest one. \memoYF{??}
 
 \newpage
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{figure}[htbp]
-   \plotoneh{expectedFmax_alpha31.pdf}
-   \plotoneh{expectedFmax_alpha15.pdf}
-   \caption{Expected value for the maximum flux in $\mu {\rm Jy}$ from a spherical shell at distance $r$ with unit width $\Delta r = 1{\rm pc}$ (arbitrary) .}
+   \plotoneh{expectedvalues_alpha-1_Lmin-1_Lmax-1000000_Npc3-1e-3.pdf}
+   \plotoneh{expectedvalues_alpha-15_Lmin-1_Lmax-1000000_Npc3-1e-3.pdf}
+   \plotoneh{expectedvalues_alpha-3_Lmin-1_Lmax-1000000_Npc3-1e-3.pdf}
+   \caption{Expected value for the maximum flux from a spherical shell at distance $r$ with unit width $\Delta r = 1{\rm pc}$ (arbitrary) in the case of the number density of the objects is $10^{-3}\,{\rm pc^{-3}}$. Blue and red dashed lines show $F_{\rm max} = L_{\rm max}/4\pi r^2$ and $F_{\rm min} = L_{\rm min}/4\pi r^2$, respectively. Something is wrong with $\alpha=1.0$ case at $3000<F$.}
   \label{fig:expectedFmax}
 \end{figure}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% 
 
+
+\end{document}
 
 
 \newpage
@@ -323,7 +335,6 @@ It is seen that the expected values monotonically decrease as we observe further
 %% \bibliography{biblio.bib}
 
 
-\end{document}
 
 
 The maximum flux of volume $4\pi R^3/3$ is likely to occur (?) at $F_{\rm max}$ such that
@@ -352,6 +363,31 @@ Solar luminosity becomes 2 times brighter than current value when it evolves off
 \end{document}
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
  
 %%%
 \begin{eqnarray}
@@ -360,11 +396,11 @@ Solar luminosity becomes 2 times brighter than current value when it evolves off
 \begin{array}{l}
 0 \;\;\;\; \displaystyle \left( F < \frac{L_{\rm min}}{R^2} \right) \\
 \\
-\displaystyle \frac{4\pi C F^{-\alpha }}{5 - 2\alpha} \left[ R^{5 - 2\alpha} - \left( \sqrt{ \frac{L_{\rm min}}{F}} \right)^{5 - 2\alpha} \right] dF \\
+\displaystyle \frac{4\pi C F^{-\alpha }}{5 - 2\alpha} \left( R^{5 - 2\alpha} - \left( \sqrt{ \frac{L_{\rm min}}{F}} \right)^{5 - 2\alpha} \right) dF \\
 \\
 \;\;\;\;\;\;\;\;\;\;\;\;\;\;  \displaystyle \left( \frac{L_{\rm min}}{R^2} < F < \frac{L_{\rm max}}{R^2} \right) \\	
 \\
-\displaystyle \frac{4\pi C F^{-\alpha }}{5 - 2\alpha} \left[ \left( \sqrt{ \frac{L_{\rm max}}{F} } \right)^{5 - 2\alpha} - \left( \sqrt{\frac{L_{\rm min}}{F}} \right)^{5 - 2\alpha } \right] dF \\
+\displaystyle \frac{4\pi C F^{-\alpha }}{5 - 2\alpha} \left( \left( \sqrt{ \frac{L_{\rm max}}{F} } \right)^{5 - 2\alpha} - \left( \sqrt{\frac{L_{\rm min}}{F}} \right)^{5 - 2\alpha } \right) dF \\
 \\
 \;\;\;\;\;\;\;\;\;\;\;\;\;\; \displaystyle \left( \frac{L_{\rm max}}{R^2} < F \right) 
 \end{array}
@@ -376,15 +412,15 @@ Solar luminosity becomes 2 times brighter than current value when it evolves off
 
 %%%
 \begin{eqnarray}
-&&<F> = \int F \frac{dn}{dF} dF \\
+&&\langle F \rangle = \int F \frac{dn}{dF} dF \\
 %
 &&= \frac{4 \pi C}{5 - 2 \alpha } \\
-&& \times \left[ \int _{F_{\rm l}} ^{F_{u}} F^{1-\alpha } \left\{ R^{5-2\alpha } - \left( \frac{L_{\rm min}}{F} \right)^{2.5-\alpha} \right\} \right. dF \\
-&&+ \left. \int _{F_{u}} ^{\infty } F^{1-\alpha } \left\{ \left( \frac{L_{\rm max}}{F} \right)^{2.5-\alpha} - \left(\frac{L_{\rm min}}{F} \right)^{2.5-\alpha} \right\} \right] dF \\
+&& \times \left( \int _{F_{\rm l}} ^{F_{u}} F^{1-\alpha } \left\{ R^{5-2\alpha } - \left( \frac{L_{\rm min}}{F} \right)^{2.5-\alpha} \right\} \right. dF \\
+&&+ \left. \int _{F_{u}} ^{\infty } F^{1-\alpha } \left\{ \left( \frac{L_{\rm max}}{F} \right)^{2.5-\alpha} - \left(\frac{L_{\rm min}}{F} \right)^{2.5-\alpha} \right\} \right) dF \\
 %
 &&= \frac{4 \pi C}{5 - 2 \alpha } \\
-&& \times \left\{ \left[ \frac{F^{2-\alpha } R^{5-2\alpha }}{2-\alpha } - \frac{F^{-0.5}L_{\rm min}^{2.5-\alpha} }{-0.5} \right]_{F_l} ^{F_u} \right. \\
-&&\left. + \left[ \frac{F^{-0.5}L_{\rm max}^{2.5-\alpha} }{-0.5} - \frac{F^{-0.5}L_{\rm min}^{2.5-\alpha} }{-0.5} \right]_{F_l} ^{F_u} \right\} \\
+&& \times \left\{ \left( \frac{F^{2-\alpha } R^{5-2\alpha }}{2-\alpha } - \frac{F^{-0.5}L_{\rm min}^{2.5-\alpha} }{-0.5} \right]_{F_l} ^{F_u} \right. \\
+&&\left. + \left( \frac{F^{-0.5}L_{\rm max}^{2.5-\alpha} }{-0.5} - \frac{F^{-0.5}L_{\rm min}^{2.5-\alpha} }{-0.5} \right]_{F_l} ^{F_u} \right\} \\
 &&\propto R 
 %
 \end{eqnarray}
@@ -398,11 +434,11 @@ Therefore,
 \begin{array}{l}
 0 \;\;\;\; (R < \sqrt{L_{\rm min}/F}) \\
 \\
-\displaystyle \frac{4\pi C F^{-\alpha }}{5 - 2\alpha} \left[ R^{5 - 2\alpha} - \left( \sqrt{ \frac{L_{\rm min}}{F}} \right)^{5 - 2\alpha} \right] \\
+\displaystyle \frac{4\pi C F^{-\alpha }}{5 - 2\alpha} \left( R^{5 - 2\alpha} - \left( \sqrt{ \frac{L_{\rm min}}{F}} \right)^{5 - 2\alpha} \right) \\
 \\
 \;\;\;\;\;\;\;\;\;\;\;\;\;\;  (\sqrt{L_{\rm min}/F} < R < \sqrt{L_{\rm max}/F} ) \\
 \\
-\displaystyle \frac{4\pi C F^{-\alpha }}{5 - 2\alpha} \left[ \left( \sqrt{ \frac{L_{\rm max}}{F} } \right)^{5 - 2\alpha} - \left( \sqrt{\frac{L_{\rm min}}{F}} \right)^{5 - 2\alpha } \right] \\
+\displaystyle \frac{4\pi C F^{-\alpha }}{5 - 2\alpha} \left( \left( \sqrt{ \frac{L_{\rm max}}{F} } \right)^{5 - 2\alpha} - \left( \sqrt{\frac{L_{\rm min}}{F}} \right)^{5 - 2\alpha } \right) \\
 \\
 \;\;\;\;\;\;\;\;\;\;\;\;\;\; (\sqrt{L_{\rm max}/F} < R) 
 \end{array}
@@ -442,14 +478,14 @@ p (L) dL = C L^{-\alpha }
 Probability for a star to have luminosity larger than $L$ is 
 %%%
 \begin{equation}
-P(>L) = \int _L^{\infty} C L^{-\alpha } dL = C \frac{L^{-\alpha +1}}{-\alpha + 1}
+P[>L] = \int _L^{\infty} C L^{-\alpha } dL = C \frac{L^{-\alpha +1}}{-\alpha + 1}
 \end{equation}
 %%%
 
 Probability for a star to have luminosity less than $L$ is 
 %%%
 \begin{equation}
-P(<L) = 1 -P (>L) \end{equation}
+P[<L] = 1 -P [>L] \end{equation}
 %%% 
 
 The probability to have the maximum luminosity of $L \sim L + dL$, $\mathcal{P(L_{\rm max}})$, with $N$ samples is
@@ -458,14 +494,14 @@ The probability to have the maximum luminosity of $L \sim L + dL$, $\mathcal{P(L
 \begin{eqnarray}
 \mathcal{P}(L_{\rm max}) &\cdot & dL_{\rm max} \\
 &=& N \cdot p (L_{\rm max}) \cdot P^{N-1}(<L_{\rm max}) \cdot dL_{\rm max} \\
-&=& N C L_{\rm max}^{-\alpha } \left[ 1 - \left( \frac{CL_{\rm max}^{-\alpha+1}}{-\alpha+1} \right) \right]^{N-1}
+&=& N C L_{\rm max}^{-\alpha } \left( 1 - \left( \frac{CL_{\rm max}^{-\alpha+1}}{-\alpha+1} \right) \right)^{N-1}
 \end{eqnarray}
 %%%
 Thus, the expected value for the maximum luminosity is
 %%%
 \begin{eqnarray}
-< L_{\rm max} > (N) &=& \int L_{\rm max} \cdot \mathcal{P_{\rm max}}(L_{\rm max}) \cdot dL_{\rm max} \\
-&=& N C \int dL_{\rm max} \cdot L_{\rm max}^{-\alpha +1} \left[ 1 - \left( \frac{CL_{\rm max}^{-\alpha+1}}{-\alpha+1} \right) \right]^{N-1} \\
+\langle L_{\rm max} \rangle (N) &=& \int L_{\rm max} \cdot \mathcal{P_{\rm max}}(L_{\rm max}) \cdot dL_{\rm max} \\
+&=& N C \int dL_{\rm max} \cdot L_{\rm max}^{-\alpha +1} \left( 1 - \left( \frac{CL_{\rm max}^{-\alpha+1}}{-\alpha+1} \right) \right)^{N-1} \\
 &\equiv & N C \int dL_{\rm max} \cdot L_{\rm max}^{-\alpha +1} K^{N-1}(L_{\rm max})
 \end{eqnarray}
 %%%
@@ -482,7 +518,7 @@ As we observer further (i.e. while the distance $l$ increases by d$l$), the maxi
 %%%
 \begin{eqnarray}
 && \frac{d < L_{\rm max} >}{dl} = \frac{dN}{dl} \frac{d < L_{\rm max} >}{dN} \\
-&\propto & l^{2} \left[ \int dL_{\rm max} \cdot L_{\rm max}^{-\alpha +1} K^{N-1}(L_{\rm max}) \right. \\
+&\propto & l^{2} \left( \int dL_{\rm max} \cdot L_{\rm max}^{-\alpha +1} K^{N-1}(L_{\rm max}) \right. \\
 &&\left. + N (N-1) \int dL_{\rm max} \cdot L_{\rm max}^{-\alpha +1} K^{N-2}(L_{\rm max}) \right]
 \end{eqnarray}
 %%%
@@ -533,7 +569,7 @@ det(J) = \left| \PD{r}{r}\PD{L}{F'} - \PD{r}{F'}\PD{L}{r} \right| = 4 \pi r^2
 Therefore, 
 %%%
 \begin{eqnarray}
-\frac{dN_R}{dF} dF &=& \left[ \int _0 ^{R} dr \; \Phi (F, r) \right] dF\\
+\frac{dN_R}{dF} dF &=& \left( \int _0 ^{R} dr \; \Phi [F, r] \right) dF\\
 \Phi (F, r) &=& \left\{
 \begin{array}{ll}
 C' F^{-\alpha } r^{4-2\alpha} & (\sqrt{L_{\rm min}/4 \pi F} < r < \sqrt{L_{\rm max}/4 \pi F}) \\
@@ -552,11 +588,11 @@ Thus, when $\alpha \not = 2.5$,
 \begin{array}{l}
 0 \;\;\;\; \displaystyle \left( F < \frac{L_{\rm min}}{4\pi R^2} \right) \\
 \\
-\displaystyle \frac{C' F^{-\alpha }}{5 - 2\alpha} \left[ R^{5 - 2\alpha} - \left( \sqrt{ \frac{L_{\rm min}}{4\pi F}} \right)^{5 - 2\alpha} \right] \\
+\displaystyle \frac{C' F^{-\alpha }}{5 - 2\alpha} \left( R^{5 - 2\alpha} - \left( \sqrt{ \frac{L_{\rm min}}{4\pi F}} \right)^{5 - 2\alpha} \right) \\
 \\
 \;\;\;\;\;\;\;\;\;\;\;\;\;\;  \displaystyle \left( \frac{L_{\rm min}}{4\pi R^2} < F < \frac{L_{\rm max}}{4\pi R^2} \right) \\	
 \\
-\displaystyle \frac{C' F^{-\alpha }}{5 - 2\alpha} \left[ \left( \sqrt{ \frac{L_{\rm max}}{4\pi F} } \right)^{5 - 2\alpha} - \left( \sqrt{\frac{L_{\rm min}}{4\pi F}} \right)^{5 - 2\alpha } \right] \\
+\displaystyle \frac{C' F^{-\alpha }}{5 - 2\alpha} \left( \left( \sqrt{ \frac{L_{\rm max}}{4\pi F} } \right)^{5 - 2\alpha} - \left( \sqrt{\frac{L_{\rm min}}{4\pi F}} \right)^{5 - 2\alpha } \right) \\
 \\
 \;\;\;\;\;\;\;\;\;\;\;\;\;\; \displaystyle \left( \frac{L_{\rm max}}{4\pi R^2} < F \right) 
 \end{array}
@@ -567,11 +603,11 @@ Thus, when $\alpha \not = 2.5$,
 0 \;\;\;\; \displaystyle \left( F < \frac{L_{\rm min}}{4\pi R^2} \right) \\
 \\
 \displaystyle \frac{C' }{(5 - 2\alpha) (4 \pi )^{2.5-\alpha } }  \\
-\displaystyle \times \left[ R^{5 - 2\alpha}F^{-\alpha }  (4 \pi )^{2.5-\alpha }  -  L_{\rm min}^{2.5 - \alpha} F^{-2.5} \right] dF \\
+\displaystyle \times \left( R^{5 - 2\alpha}F^{-\alpha }  (4 \pi )^{2.5-\alpha }  -  L_{\rm min}^{2.5 - \alpha} F^{-2.5} \right) dF \\
 \\
 \;\;\;\;\;\;\;\;\;\;\;\;\;\;  \displaystyle \left( \frac{L_{\rm min}}{4\pi R^2} < F < \frac{L_{\rm max}}{4\pi R^2} \right) \\	
 \\
-\displaystyle \frac{C' F^{-2.5 }}{(5 - 2\alpha) (4 \pi )^{2.5-\alpha } } \left[ L_{\rm max}^{2.5 - \alpha} - L_{\rm min}^{2.5 - \alpha}  \right] dF \\
+\displaystyle \frac{C' F^{-2.5 }}{(5 - 2\alpha) (4 \pi )^{2.5-\alpha } } \left( L_{\rm max}^{2.5 - \alpha} - L_{\rm min}^{2.5 - \alpha}  \right) dF \\
 \\
 \;\;\;\;\;\;\;\;\;\;\;\;\;\; \displaystyle \left( \frac{L_{\rm max}}{4\pi R^2} < F \right) 
 \end{array}
