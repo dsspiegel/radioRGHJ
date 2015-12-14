@@ -55,7 +55,7 @@ The answer is not obvious because near the center (near the observer), brightnes
 %
 To answer this question, we calculate the expected value of the highest flux from a given spherical shell and see whether the expected value increases as a function of distance (radius) of the sphere. 
 In doing so, we consider  a luminosity function characterized by a power law with lower and upper limits of luminosity.
-We find the expected value of the highest flux monotonically decreases as a function of radius of the spherical shell, and thus we are not likely to find the brightest object far away. 
+We find the expected value of the highest flux monotonically decreases as a function of radius of the spherical shell, and thus we are not likely to find the brightest object far away.
 %we calculate the expected value of the highest flux from a given spherical shell and see whether the expected value increases as a function of distance (radius) of the sphere. 
 %firstly we consider the distribution of observed flux from a sphere within distance $R$ of a given luminosity function ("flux function"). The flux function composes of three regimes: in order of increasing flux, 1) zero flux, 2) a power law which depends on the luminosity function, and 3) a power law with index -2.5. 
 %Then, we compute the expected value of the highest flux from a spherical shell at distance $R\sim R+dR$. within a volume with radius $R$. 
@@ -79,7 +79,7 @@ We find the expected value of the highest flux monotonically decreases as a func
 %Planning future targeted surveys of RGHJs would require accurate distribution functions of various parameters of giant stars in our neighborhood of the Galaxy. 
 
 
-In this section, we consider the number density of observed flux of the targets in a spherical shell of radius $r$. 
+In this section, we consider the number density of observed flux of sources in a spherical shell of radius $r$.
 In the following, luminosity and (observed) flux are denoted by $L$ and $F$, respectively. 
 \vspace{1\baselineskip}
 
@@ -139,7 +139,7 @@ where $C' \equiv (4 \pi )^{2-\alpha}$.
 \begin{figure}[htbp]
    \plotoneh{Prob_alpha15.pdf}
    \plotoneh{Prob_alpha31.pdf}
-   \caption{Flux distribution of targets in a spherical shell at distance $r$ with unit width $\Delta r = 1{\rm pc}$ (arbitrary) .}
+   \caption{Flux distribution of sources in a spherical shell at distance $r$ with unit width $\Delta r = 1{\rm pc}$ (arbitrary) .}
   \label{fig:prob}
 \end{figure}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% 
@@ -166,7 +166,7 @@ where $C' \equiv (4 \pi )^{2-\alpha}$.
 %%%
 
 
-The flux distribution of targets within radius $R$ can be obtained by integrating equation (\ref{eq:dNdFdr}) from $0$ to $R$. When $\alpha \not = 2.5$,
+The flux distribution of sources within radius $R$ can be obtained by integrating equation (\ref{eq:dNdFdr}) from $0$ to $R$. When $\alpha \not = 2.5$,
 %%%
 \begin{eqnarray}
 && \frac{dN_R}{dF} \\
@@ -215,7 +215,7 @@ The flux distribution from a sphere composes of three regimes: in the order of i
 \begin{figure}[htbp]
    \plotoneh{dndF_alpha31.pdf}
    \plotoneh{dndF_alpha15.pdf}
-   \caption{Flux distribution of targets within radius $R$ with varying power-law index and $L_{\rm min } = 7\times 10^3~{\rm W/Hz}$, $L_{\rm max} = 1.5\times 10^6~{\rm W/Hz}$. The $y$-axis is arbitrary. }
+   \caption{Flux distribution of sources within radius $R$ with varying power-law index and $L_{\rm min } = 7\times 10^3~{\rm W/Hz}$, $L_{\rm max} = 1.5\times 10^6~{\rm W/Hz}$. The $y$-axis is arbitrary. }
   \label{fig:dndF}
 \end{figure}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% 
@@ -224,10 +224,10 @@ The flux distribution from a sphere composes of three regimes: in the order of i
 
 \newpage
 
-\section{Expected value for the highest flux from a spherical shell at distance $r$}
+\section{Expected value of the highest flux from a spherical shell at distance $r$}
 
-Let us consider a flux distribution of the targets from a spherical shell at distance $r$ with thickness $dr$. 
-The ({\it expected}) total number of the target within that spherical shell is
+Let us consider the distribution of fluxes from sources from a spherical shell at distance $r$ with thickness $dr$.
+The ({\it expected}) total number of the sources within that spherical shell is
 %%%
 \begin{equation}
 4 \pi r^2 dr \int _0 ^{\infty} \frac{d^2 N}{dF~dr} dF \equiv n_r. 
@@ -235,7 +235,7 @@ The ({\it expected}) total number of the target within that spherical shell is
 %%%
 \memoYF{not sure how to deal with the fact that this is expected number.}
 
-The probability for a star within the spherical shell to have a flux between $F\sim F+dF$, $P[F]dF $, may be assumed to be proportional to the flux number distribution given by equation (\ref{eq:dNdFdr}):
+The probability that a source within the spherical shell has a flux between $F\sim F+dF$, $P[F]dF $, may be assumed to be proportional to the flux number distribution given by equation (\ref{eq:dNdFdr}):
 %%%
 \begin{equation}
 P[F] dF = C' F^{\alpha } r^{4-2\alpha }
@@ -265,7 +265,7 @@ Noting that we have $n_r$ ways to select the target with the highest flux, such 
 \end{equation}
 %%%
 
-The expected value for the maximum flux among the targets within a spherical shell at radius $r$ (with width $dr$), $\langle F_{\rm max} \rangle$, is obtained by calculating the flowing integral. 
+The expected value of the maximum flux among the targets within a spherical shell at radius $r$ (with width $dr$), $\langle F_{\rm max} \rangle$, is obtained by calculating the flowing integral. 
 %%%
 \begin{eqnarray}
 \langle F_{\rm max} \rangle &=& \int dF_{\rm max} \, F_{\rm max} \mathcal{P} [F_{\rm max}] \\
@@ -273,7 +273,7 @@ The expected value for the maximum flux among the targets within a spherical she
 \end{eqnarray}
 %%%
 
-Figure \ref{fig:expectedFmax} shows $\langle F_{\rm max} \rangle$ as a function of distance $r$ with varying number density of the targets. 
+Figure \ref{fig:expectedFmax} shows $\langle F_{\rm max} \rangle$ as a function of distance $r$ with varying number density of the sources. 
 Again, examples for $\alpha = 3.1$ and $\alpha = 1.5$, with $L_{\rm min } = 7.0\times 10^3 ~{\rm W/Hz}$ and $L_{\rm max} = 1.5\times 10^{13} ~{\rm W/Hz}$ are shown. 
 It is seen that the expected values monotonically decrease as we observe further. This indicates the brightest object is the closest one. \memoYF{??}
 
