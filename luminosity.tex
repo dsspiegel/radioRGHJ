@@ -275,9 +275,10 @@ Noting that we have $n_r$ ways to select the target with the highest flux, this 
 %&\sim & N_R P(F_{\rm max}) dF_{\rm max} \left[ 1 - ( N_R -1 ) P (> F_{\rm max}) \right]
 \end{equation}
 %%%
-Here, the right thing to do would be to take an infinite sum over integer values of $n_r$ with occurrence probability function, but for the sake of simplicity, here we simply assume $n_r$ computed by equation (\ref{eq:n_r}) is a good proxy. 
+Strictly speaking, the mathematically correct thing to do here would be to take an infinite sum over integer values of $n_r$, weighted by the occurrence probability of that value of $n_r$.
+However, it is a reasonable proxy (and considerably simpler) to simply use the expected value of $n_r$, as given by equation (\ref{eq:n_r}).
 
-The expected value of the maximum flux among the targets within a spherical shell at radius $r$ (with width $dr$), $\langle F_{\rm bright} \rangle$, is obtained by calculating the flowing integral. 
+The expected value of the maximum flux among the targets within a spherical shell at radius $r$ (with width $dr$), $\langle F_{\rm bright} \rangle$, is obtained by calculating the following integral. 
 %%%
 \begin{eqnarray}
 \langle F_{\rm bright} \rangle &=& \int dF_{\rm bright} \, F_{\rm bright} \mathcal{P} [F_{\rm bright}] \\
