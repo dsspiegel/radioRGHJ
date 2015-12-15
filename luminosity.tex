@@ -135,12 +135,13 @@ C' F^{-\alpha} r^{4-2\alpha } & (L_{\rm min} < 4\pi r^2 F < L_{\rm max}) \\
 %%%
 where $C' \equiv (4 \pi )^{2-\alpha}$. 
 
+Examples with $\alpha = 1.0$ and $\alpha = 3.0$ are shown in Figure \ref{fig:prob}.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{figure}[htbp]
    \plotoneh{Prob_alpha10.pdf}
    \plotoneh{Prob_alpha30.pdf}
-   \caption{Flux distribution of sources in a spherical shell at distance $r$ when $L_{\rm min}=1$ and $L_{\rm max}=10^6$.}
+   \caption{Flux distribution of sources in a spherical shell at distance $r$ when $L_{\rm min}=1$ and $L_{\rm max}=10^6$. Number density of the sources is assumed to be $10^{-3}~{\rm pc}^{-3}$.}
   \label{fig:prob}
 \end{figure}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% 
@@ -203,8 +204,8 @@ The flux distribution of sources within radius $R$ can be obtained by integratin
 
 \vspace{1\baselineskip}
 
-Examples with $\alpha = 3.1$ and $\alpha = 1.5$ are shown in Figure \ref{fig:dndF}.
-For demonstration, we consider $L_{\rm min } = 7\times 10^3~{\rm W/Hz}$, $L_{\rm max} = 1.5\times 10^6~{\rm W/Hz}$. 
+Examples with $\alpha = 1.0$ and $\alpha = 3.0$ are shown in Figure \ref{fig:dndF}.
+For demonstration, we consider $L_{\rm min } = 1$, $L_{\rm max} = 10^6$. 
 The flux distribution from a sphere composes of three regimes: in the order of increasing flux, 1) zero flux, 2) a power law which depends on the luminosity function, and 3) a power law with index -2.5. 
 
 
@@ -215,9 +216,9 @@ The flux distribution from a sphere composes of three regimes: in the order of i
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{figure}[htbp]
-   \plotoneh{dndF_alpha31.pdf}
-   \plotoneh{dndF_alpha15.pdf}
-   \caption{Flux distribution of sources within radius $R$ with varying power-law index and $L_{\rm min } = 7\times 10^3~{\rm W/Hz}$, $L_{\rm max} = 1.5\times 10^6~{\rm W/Hz}$. The $y$-axis is arbitrary. }
+   \plotoneh{dN_dF_alpha1.pdf}
+   \plotoneh{dN_dF_alpha3.pdf}
+   \caption{Flux distribution of sources within radius $R$ with varying power-law index and $L_{\rm min } = 1$, $L_{\rm max} = 10^6$. Number density of the sources is assumed to be $10^{-3}~{\rm pc}^{-3}$.}
   \label{fig:dndF}
 \end{figure}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% 
