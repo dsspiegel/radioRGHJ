@@ -233,10 +233,11 @@ Let us consider the distribution of fluxes from sources from a spherical shell a
 The ({\it expected}) total number of the sources within that spherical shell is
 %%%
 \begin{equation}
-n_r \equiv dr \int _0 ^{\infty} \frac{d^2 N}{dF~dr} dF \, . 
+n_r \equiv dr \int _0 ^{\infty} \frac{d^2 N}{dF~dr} dF \label{eq:n_r}\, . 
 \end{equation}
 %%%
-\memoYF{not sure how to deal with the fact that this is expected number.}
+Note that the result of the right hand side is actually the {\it expected} number and, in reality, the source count should be an integer with some occurrence probability around this expected number. 
+
 
 The probability that a source within the spherical shell has a flux between $F\sim F+dF$, $P[F]dF $, may be assumed to be proportional to the flux number distribution given by equation (\ref{eq:dNdFdr}):
 %%%
@@ -252,7 +253,7 @@ C' F^{\alpha } r^{4-2\alpha } dF & (F_{\rm min}(r) < F < F_{\rm max}(r)) \\
 where
 %%%
 \begin{eqnarray}
-C' &=& n_r \left( \int _0 ^{\infty}P[F]~dF~\right)^{-1} \\
+C' &=& \left( \int _{F_{\rm max}} ^{F_{\rm min}} F^{\alpha } r^{4-2\alpha } dF~dF~\right)^{-1} \\
 F_{\rm min}(r) &=& L_{\rm max} / 4 \pi r^2 \\
 F_{\rm max}(r) &=& L_{\rm max} / 4 \pi r^2
 \end{eqnarray}
@@ -274,6 +275,7 @@ Noting that we have $n_r$ ways to select the target with the highest flux, this 
 %&\sim & N_R P(F_{\rm max}) dF_{\rm max} \left[ 1 - ( N_R -1 ) P (> F_{\rm max}) \right]
 \end{equation}
 %%%
+Here, the right thing to do would be to take an infinite sum over integer values of $n_r$ with occurrence probability function, but for the sake of simplicity, here we simply assume $n_r$ computed by equation (\ref{eq:n_r}) is a good proxy. 
 
 The expected value of the maximum flux among the targets within a spherical shell at radius $r$ (with width $dr$), $\langle F_{\rm bright} \rangle$, is obtained by calculating the flowing integral. 
 %%%
