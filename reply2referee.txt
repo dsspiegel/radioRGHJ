@@ -1,17 +1,3 @@
-***** TO DO LIST *****
-
-1) response to ``The authors should demonstrate that the ram pressure of any exoplanetary outflow induced by heating can also be neglected in determining the size of the magnetosphere. '' => done
-
-2) argue the necesity of ``Observability`` section, in particular S4.3 and S4.4.  
-
-3) response to ``it would be useful if they included a brief calculation or statement of how many might be expected, particularly in the age ranges they consider. '' => done
-
-4) literature survey if 4.3 and 4.4 have been discussed already in previous papers 
-
-5) revise Figure 4 (?)
-
-**********************
-
                                                 12 December 2015
 
 Dear Dr. Burton,
