@@ -43,11 +43,25 @@ surprising:
    (2010) have already addressed the issue of the ionisation of the
    exoplanetary exosphere."
 ----
+Ignace considered ionization purely due to shock heating as the stellar
+wind flows past the exoplanet.  The physical picture we propose is 
+different, namely that significant ionization can occur as wind material
+is accreted onto the exoplanets surface.  We quantify this result as a
+function of distance from the planet and planetary mass while 
+considering the effect of secondary ionization by ionized electrons.  
+These results suggest substantial ionization to large radii.  As the 
+referee states that this section is new and as we can find no evidence
+of this scenario in Ignace 2010, we prefer to keep this section in the 
+manuscript.
+
+[YF: I added the section above to include Jason's feedback. Will we 
+remove the following part instead?]
 Our manuscript presents a more detailed and accurate description of
 the ionization profile around a planet accreting stellar wind than
 that in Ignace et al.'s paper.  It is unusual, in our experience, for
 a referee to say that a description that is new, correct, and more
 detailed than another description in the literature, is unnecessary.
+
 
   Should you have any further questions, please feel free to get in
 touch with the corresponding author, Yuka Fujii.
