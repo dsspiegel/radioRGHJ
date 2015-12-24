@@ -15,13 +15,17 @@
 \usepackage{hyperref}
 \hypersetup{colorlinks,linkcolor={blue!50!black},citecolor={blue!50!black},urlcolor={blue!50!black}}
 \allowdisplaybreaks[1]
-
 \bibliographystyle{apj}
 
 \definecolor{DarkGreen}{rgb}{0.0, 0.6, 0.0}
-\def\memoTM#1{\color{DarkGreen}${\bf #1}$ \color{black}}
 
 \def\revise#1#2{\color{blue}\sout{#1} {\bf #2} \color{black}}
+
+
+%%%%%%% this part is to be removed eventually %%%%%%%
+\def\memoTM#1{\color{DarkGreen}${\bf #1}$ \color{black}}
+\def\memoYF#1{\color{red}$\leftarrow${\bf #1} \color{black}}
+
 
 \def\plotonesc#1{\centering \leavevmode
 \includegraphics[clip=, width=1.70\columnwidth]{#1}}
@@ -585,7 +589,7 @@ Now the stellar wind is so dense that the mean free path is comparable to the Jo
 %While interacting with magnetic field, the ionized portion could lose their energy 
 %Therefore, some part of the incoming wind particles are what we could envision is the 
 %Considering other uncertainties of radio wave generation, we 
-The detailed electromagnetic structure around RGHJs therefore requires  elaborate numerical simulations, which is beyond the scope of this paper. Noting that all other uncertainties, in this paper we simply aim at giving an order-of-magnitude estimate. }
+The detailed electromagnetic structure around RGHJs therefore requires  elaborate numerical simulations, which is beyond the scope of this paper. Noting these uncertainties, in this paper we simply aim to give an order-of-magnitude estimate. }
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -824,7 +828,7 @@ Therefore, in the following, we ignore the radio emission from the red giant as 
 
 In order to examine the realistic potential to detect radio emission of RGHJs with the current and near-future instruments, we estimate the possible radio emission from known red giants assuming that they have planetary companions. 
 For this purpose, we obtained the list of M-type red giants from Table 4 of \citet{dumm1998} with the data of mass, radius, and effective temperature. 
-\revise{}{We note that these data do not unambiguously distinguish RG from early AGB stars and thus the list likely includes about 40\% of early AGB stars. }
+\revise{}{We note that their data do not unambiguously distinguish RG from early AGB stars and thus the list likely consists of about 40\% early AGB stars. }\memoYF{Doesn't ``consists of'' sound like ``A is made of B''?}
 For each red giant, the mass-loss rate is estimated using the improved Reimers' equation \citep{reimers1975} given by \citet{schroder2005,schroder2007}:
 %%%
 \begin{equation}
@@ -862,8 +866,8 @@ Assuming Jupiter-mass planets \revise{}{at 1 AU (5 AU)} which typically have the
 For more massive planets with the maximum cyclotron frequency at around $100-1000$~MHz, the radio flux is lowered due to its dependence on $B^{-1/3}$ (equation (\ref{eq:F_nu})), but more likely to get to the Earth. $10~M_{\rm J}$ planets at $\sim 1$ AU may be detectable out to $\sim 200$~pc.
 
 \revise{}{A more realistic expected number of detection can be also evaluated by combining these results with the probability for a star to have a planet with certain mass and orbit,  %
-Observations of main-sequence stars implies that the number of Jovian planets is about a few to ten percent of the number of stars \citep[e.g.][]{cumming2008,cassan2012}. %
-Assuming the same population for RG systems, the expected number of actual detection from RGHJs would be order of unity.  
+Observations of main-sequence stars imply that the number of Jovian planets is about a few to ten percent of the number of stars \citep[e.g.][]{cumming2008,cassan2012}. %
+Assuming the same population for RG systems, the expected number of actual detection from RGHJs would be of order unity.  
 A more detailed examination using the empirical planet mass function by \citet{cumming2008} is given in Appendix \ref{s:expectedvalue}. 
 The analysis indicates that if the detection limit is 10$\mu {\rm Jy}$ the total expected value is about 3. }
 %However, as we see in the next subsection, the . and the expected value for massive planets ($M_p>5M_{\rm J}$) which supposedly have relatively high cyclotron frequency is about 1-2. 
@@ -1065,7 +1069,7 @@ Finally, we note that the radio emission considered in this paper can either be 
 Once planetary radio emission is detected, it will provide a unique approach for learning about the planetary spin, magnetic field, presence of satellites, and potentially the stellar wind properties.%
 }{%
 Once planetary radio emission is detected, it in general provides a unique approach for learning the planetary property. As the auroral radio flux is significantly modulated in association with several physical processes described in \S\ref{ss:timevariability}, the time variability is useful to imply the planetary spin rotation period or the presence of satellites. If spectra are obtained, the upper cut-off frequency can tell us the magnetic field strength of the planetary surfaces, which, when combined with constrains on the planetary mass via e.g. radial-velocity observations, tests  the proposed scaling law of planetary dynamo. 
-A extra fruit from observations of RGHJs in particular is that the lower cut-off frequency, which presumably corresponds to in situ plasma frequency, could probe the stellar wind property at the planetary orbit. In addition, the planetary radio power in such an extreme environment as RG's massive stellar wind will be valuable data points to test the empirical ``radiometric Bode's law''. %
+Furthermore, the lower cut-off frequency of the RGHJ emission, which presumably corresponds to in situ plasma frequency, could probe the stellar wind property at the planetary orbit. In addition, the planetary radio power in such an extreme environment as RG's massive stellar wind will be valuable data points to test the empirical ``radiometric Bode's law''. %
 We also note that the radio emission of RGHJs may also be used as a tool for discovering/confirming new planets, given that traditional exoplanet-discovery methods (specifically, transit and radial-velocity observations) are not very sensitive to planets around RGB or AGB stars. %
 }
 
@@ -1126,7 +1130,7 @@ The rate of Jeans escape is
 %&=& 1/(pi*(0.529)**2)*sqrt(2*66.74*1330./3.0) * (20+1.0)*sqrt(20.)*exp(-20.0) * 1e14
 \end{eqnarray}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-where $\sigma $ is the cross section of hydrogen atoms, assumed to be equal to Bohr radius here [[OK??]]. 
+where $\sigma $ is the cross section of hydrogen atoms, assumed to be equal to Bohr radius here \memoYF{OK??}. 
 The ram pressure at distance $r$ due to such an outflow is
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{eqnarray}
