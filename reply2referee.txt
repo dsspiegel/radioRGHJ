@@ -12,14 +12,14 @@ preceded by "## ", and our own comments indented in the space that
 follows.  We have also revised the reference list to match the
 journal's nomenclature.
 
-  We were surprised to see that the referee's report suggests
-that our manuscript is an "amendment to the Ignace (2010) result" and
-that the manuscript's length could be reduced by a factor of four.
-Much of what the referee thinks is not new or original is either
-entirely new or pulls literature results together in new ways.  In
-this prefatory note to you, we'd like to point out a few examples of
-parts that the referee thought should be cut where we think the
-referee's judgment is misguided.
+  We were surprised to see the referee's report suggest that our
+manuscript is an "amendment to the Ignace (2010) result" and that the
+manuscript's length could be reduced by a factor of four.  Much of
+what the referee thinks is not new or original is either entirely new
+or pulls literature results together in new ways.  In this prefatory
+note to you, we'd like to point out a few examples of parts that the
+referee thought should be cut where we think the referee's judgment is
+misguided.
 
   For instance, this comment from the report was surprising:
 ----
