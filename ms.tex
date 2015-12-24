@@ -19,10 +19,11 @@
 
 \definecolor{DarkGreen}{rgb}{0.0, 0.6, 0.0}
 
+%%% \sout will be removed before submission %%%
 \def\revise#1#2{\color{blue}\sout{#1} {\bf #2} \color{black}}
 
 
-%%%%%%% this part is to be removed eventually %%%%%%%
+%%% this part is to be removed eventually %%%
 \def\memoTM#1{\color{DarkGreen}${\bf #1}$ \color{black}}
 \def\memoYF#1{\color{red}$\leftarrow${\bf #1} \color{black}}
 
@@ -176,7 +177,7 @@ Extrapolating this scaling to exoplanets, radio emission from exoplanetary syste
 Note that in these papers, the scaling relation of planetary magnetic fields differ from paper to paper.
 In \citet{reiners2010}, the authors adopted a new scaling relation of planetary magnetic fields based on \citet{christensen_et_al2009}.
 We note that \revise{}{\citet{jardine2008} modeled reconnection between the magnetic fields of close-in planets and that of the star to obtain estimates that are not based on the ``radiometric Bode's law''.}
-Although observational searches for these radio signatures are underway, no clear detection has been claimed \revise{}{\citep{bastian2000,george2007,smith2009,stroe2012,hallinan2013,murphy2015}}, though there are some promising initial results \citep{lecavelier_et_al2013,sirothia2014}.
+Although observational searches for these radio signatures are underway, no clear detection has been claimed \revise{}{\citep{bastian2000,george2007,smith2009,stroe2012,hallinan2013,murphy2015}}, while there are some promising initial results \citep{lecavelier_et_al2013,sirothia2014}.
 
 When stars less than $\sim$8~$M_\sun$ evolve off the main sequence, they evolve through the red-giant branch (RGB) and the asymptotic-giant branch (AGB) phases where their radii and luminosities increase by orders of magnitude.
 Jovian planets in orbit around such stars can migrate inward or outward due to the interplay between tidal torques and mass-loss process on the post-main sequence \citep{nordhaus_et_al2010, spiegel2012, mustill+villaver2012, nordhaus+spiegel2013}.
@@ -190,7 +191,7 @@ They found that the low ionization fraction of the stellar wind of evolved stars
 
 In this paper, we \revise{argue that}{consider another plausible scenario where} the accretion of the massive stellar wind onto the planet would emit UV and X-ray photons that ionize the stellar wind in the vicinity of the planet.
 The ionized stellar wind particles would then interact with the planetary magnetic field in the same way as Solar System planets do.
-Thus, by extrapolating the ``radiometric Bode's law,'' we provide more optimistic estimates for highly evolved stars compared to the previous result. 
+Thus, by extrapolating the ``radiometric Bode's law,'' we provide more optimistic estimates \revise{for highly evolved stars}{} compared to the previous result. 
 \revise{}{In addition, two major updates from \citet{ignace2010} are the following.}
 \revise{We also consider}{First, we estimate} the plasma frequency cut-off of the stellar wind, which turns out to be one of the major obstacles to detect radio emission from RGHJs. 
 \revise{Given that the survey of exoplanets around highly evolved stars is not complete, we do not constrain ourselves to the systems known to have sub-stellar companions.
@@ -266,7 +267,7 @@ The scaling is based on the empirical/apparent good correlation between the radi
 \begin{eqnarray}
 P_{\rm radio} &\propto & P_{\rm inp} \\
 P_{\rm inp,\,k} &=& n v^3 \cdot \pi r_{\rm mag} ^2 \label{eq:Pinp_kin}, \\
-P_{\rm inp,\,m} &=& \pi v B_{\star\bot }^2 \cdot \pi r_{\rm mag} ^2 \label{eq:Pinp_mag} \, ,
+P_{\rm inp,\,m} &=& (B_{\star\bot }^2/2\mu _0) \, v \cdot \pi r_{\rm mag} ^2 \label{eq:Pinp_mag} \, ,
 \end{eqnarray}
 %%%
 where $n$ is the number density of the stellar wind, $v$ is the relative velocity of the stellar wind particles to the planet, $ B_{\star\bot }$ is the interstellar magnetic field perpendicular to the stellar wind flow, and $r_{\rm mag}$ is the radius of the magnetic stand-off point.  
@@ -339,7 +340,7 @@ Therefore, we implicitly assume that the RGHJs considered in this paper are rapi
 
 In order to evaluate $\rho _{\rm dynamo}$ and $q_o$, we need a model of the internal planetary structure. 
 We consider Jupiter-like gaseous planets and assume that the planetary radius is constant at $R_p = R_{p,{\rm J}}$, as numerical calculations show that the radii of gaseous planets over the range of $0.1 M_{p,{\rm J}} < M_p < 10M_{p, {\rm J}}$ (with core mass less than 10\%) converge to $0.8 R_{p,{\rm J}} < R_p < 1.2R_{p, {\rm J}}$ within 1 Gyr \citep{fortney2007}. 
-For the density profile, we assume a polytrope gas sphere with index $n=1$, which results in:
+For the density profile, we \revise{}{follow \citet{griesmeier2007b} and} assume a polytrope gas sphere with index $n=1$, which results in:
 %%%%%%%%%% 
 \begin{equation}
 \rho [r] = \left( \frac{\pi M_p}{4 R_p^3} \right) \frac{\sin \left[ \pi \frac{r}{R_p} \right]}{\left( \pi \frac{r}{R_p} \right)}. \label{eq:rho_r}
@@ -585,7 +586,7 @@ As a whole, we expect for the X-ray emission from the accretion onto the planet 
 
 \revise{}{In reality, only the neutral portion of the stellar wind can accrete onto the planet without interacting with planetary magnetic field and thus Bondi-Hoyle accretion would be relevant. 
 The ionized portion could lose some of their energy at the bow shock before they accrete, and energy released there is less than the estimate by equations (\ref{eq:Lacc}) and (\ref{eq:Tacc}). 
-Now the stellar wind is so dense that the mean free path is comparable to the Jovian radius, the neutral and ionized particles may also drag each other. 
+%Now the stellar wind is so dense that the mean free path is comparable to the Jovian radius, the neutral and ionized particles may also drag each other. 
 %While interacting with magnetic field, the ionized portion could lose their energy 
 %Therefore, some part of the incoming wind particles are what we could envision is the 
 %Considering other uncertainties of radio wave generation, we 
@@ -635,7 +636,8 @@ The maximum plasma frequency along the line of sight, $\nu_{\rm plasma}^{\rm los
 \label{eq:fplasmalos_scaled} &=& 12 {\rm~MHz} \times \left( \frac{a}{5~\mbox{AU}}\right)^{-1} \left(\frac{v}{30~\mbox{km/s}}  \right)^{-1/2} \notag \\
  & & \times \left( \frac{\dot M_\star}{10^{-8} M_{\odot }{\rm /yr}}\right)^{1/2} \label{eq:fplasma_RG} \, .
 \end{eqnarray}
-We can see emission only from where $\nu_{\rm cyc,\,max} > \nu_{\rm plasma}^{\rm los}$. Therefore, for Jupiter-mass planets, only distant ones $\gtrsim 5 $  may emit the radio waves from the system. 
+We can see emission only from where $\nu_{\rm cyc,\,max} > \nu_{\rm plasma}^{\rm los}$. 
+\revise{Therefore, for Jupiter-mass planets, only distant ones $\gtrsim 5 $  may emit the radio waves from the system. }{}
 The detectable parameter space will be presented in more detail in the next section. 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -734,7 +736,10 @@ Figure \ref{fig:radio} shows the contours of spectral radio flux of planetary co
 The target system is located at a distance of 100~pc from the Earth; the flux is scaled by the distance as a quadratic function. 
 
 Observable energy flux is, however, limited by the plasma cut-off frequency in the vicinity of the planets, given by equation (\ref{eq:fplasmalos_scaled}). 
-The doubly hatched regions in Figure \ref{fig:radio} indicate the parameter spaces where the criteria $\nu_{\rm cyc,\,max} > \nu_{\rm plasma}^{\rm los}$ is not satisfied and thus the radio emission from the planet cannot be observed from the Earth. 
+The doubly hatched regions in Figure \ref{fig:radio} indicate the parameter spaces where 
+%the criteria $\nu_{\rm cyc,\,max} > \nu_{\rm plasma}^{\rm los}$ is not satisfied and 
+\revise{}{$\nu_{\rm cyc,\,max} < \nu_{\rm plasma}^{\rm los}$ and there is no hope to observe from Earth.}
+thus the radio emission from the planet cannot be observed from the Earth. 
 In reality, the peak of the auroral radio emission does not always occur at the maximum frequency.
 Instead, it usually exits at lower frequencies.
 Here, we also consider one more criterion, $\nu_{\rm cyc,\,max} > 10 \nu_{\rm plasma}^{\rm los}$ as a conservative measure for the observability of the bulk of radio emission.
@@ -828,7 +833,7 @@ Therefore, in the following, we ignore the radio emission from the red giant as 
 
 In order to examine the realistic potential to detect radio emission of RGHJs with the current and near-future instruments, we estimate the possible radio emission from known red giants assuming that they have planetary companions. 
 For this purpose, we obtained the list of M-type red giants from Table 4 of \citet{dumm1998} with the data of mass, radius, and effective temperature. 
-\revise{}{We note that their data do not unambiguously distinguish RG from early AGB stars and thus the list likely consists of about 40\% early AGB stars. }\memoYF{Doesn't ``consists of'' sound like ``A is made of B''?}
+\revise{}{We note that their data do not unambiguously distinguish RG from early AGB stars and thus the list likely consists of about 40\% early AGB stars. }\memoYF{grammatical question: doesn't ``consists of'' sound like ``A is made of B''?}
 For each red giant, the mass-loss rate is estimated using the improved Reimers' equation \citep{reimers1975} given by \citet{schroder2005,schroder2007}:
 %%%
 \begin{equation}
@@ -865,11 +870,10 @@ The difference of the symbols indicates whether the radio emission can escape fr
 Assuming Jupiter-mass planets \revise{}{at 1 AU (5 AU)} which typically have the maximum cyclotron frequency at $10-100$~MHz depending on the age, \revise{a reasonable number of}{148 (12)} systems have potential to emit radio wave at the level above $\sim 10~\mu {\rm Jy}$  out to $\sim 100-300$ pc, while those with the highest mass-loss rate would suffer from the plasma cut-off of the stellar wind. 
 For more massive planets with the maximum cyclotron frequency at around $100-1000$~MHz, the radio flux is lowered due to its dependence on $B^{-1/3}$ (equation (\ref{eq:F_nu})), but more likely to get to the Earth. $10~M_{\rm J}$ planets at $\sim 1$ AU may be detectable out to $\sim 200$~pc.
 
-\revise{}{A more realistic expected number of detection can be also evaluated by combining these results with the probability for a star to have a planet with certain mass and orbit,  %
+\revise{}{A more realistic expected number of detection may be evaluated by combining these results with the probability for a star to have a planet with certain mass and orbit,  %
 Observations of main-sequence stars imply that the number of Jovian planets is about a few to ten percent of the number of stars \citep[e.g.][]{cumming2008,cassan2012}. %
-Assuming the same population for RG systems, the expected number of actual detection from RGHJs would be of order unity.  
-A more detailed examination using the empirical planet mass function by \citet{cumming2008} is given in Appendix \ref{s:expectedvalue}. 
-The analysis indicates that if the detection limit is 10$\mu {\rm Jy}$ the total expected value is about 3. }
+Assuming the same population for RG systems, the expected number of actual detection from RGHJs would be of order unity. 
+A more detailed examination using the empirical planet mass function by \citet{cumming2008} is given in Appendix \ref{s:expectedvalue}. }
 %However, as we see in the next subsection, the . and the expected value for massive planets ($M_p>5M_{\rm J}$) which supposedly have relatively high cyclotron frequency is about 1-2. 
 
 
