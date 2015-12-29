@@ -1264,10 +1264,10 @@ Using this equation, the probability of a given evolved star in Figure \ref{fig:
 \mathcal{P }(>M_{p0}) \sim \int_{M_{p0}} d\log M_p\,\int_{P_{\rm min}(M_p)}^{P_{\rm max}(M_p)} d\log P ~f(M_p, P) \label{eq:detect_prob}
 \end{equation}
 %%%
-where $P_{\rm min}(M_p)$ is the minimum orbital period to have cyclotron frequency larger than the ambient plasma frequency, while $P_{\rm max}(M_p)$ is the maximum orbital period given planetary mass to emit detectable radio flux. For the former, combining equations (\ref{eq:fcyc}) and (\ref{eq:fplasma_RG}) leads to
+where $P_{\rm min}(M_p)$ is the minimum orbital period to have cyclotron frequency larger than the ambient plasma frequency, while $P_{\rm max}(M_p)$ is the maximum orbital period given planetary mass to emit detectable radio flux. For the former, combining equations (\ref{eq:fcyc}), (\ref{eq:scalingB}), and (\ref{eq:fplasma_RG}) leads to
 %%%
 \begin{eqnarray}
-a_{\rm min} (M_p) &=& 2.15~{\rm AU} \left( \frac{M_p}{M_{\rm J}} \right)^{-1.04} \left( \frac{t}{4.5~{\rm Gyr}} \right)^{0.43}  \\
+a_{\rm min} (M_p) &=& 2.1~{\rm AU} \left( \frac{M_p}{M_{\rm J}} \right)^{-1.04} \left( \frac{t}{4.5~{\rm Gyr}} \right)^{0.43}  \\
 &&\times \left( \frac{\dot M_{\star }}{10^{-8}M_{\odot}/{\rm yr}} \right)^{1/2} 
 \end{eqnarray}
 %%%
@@ -1275,9 +1275,9 @@ while for the latter, equations (\ref{eq:scalingB}) and (\ref
 {eq:F_nu_RGHJ}) indicate
 %%%
 \begin{eqnarray}
-a_{\rm max} (M_p) &=& 3.80~{\rm AU} \left( \frac{F_{\rm min}}{10~\mu {\rm Jy}} \right)^
+a_{\rm max} (M_p) &=& 3.8~{\rm AU} \left( \frac{F_{\rm min}}{10~\mu {\rm Jy}} \right)^
 {-3/4} \left( \frac{d}{100~{\rm pc}} \right)^{-3/2} \\
-&& \times \left( \frac{M_p}{M_{\rm J}} \right)^{-1.04/4}  \left( \frac{t}{4.5~{\rm Gyr}} \right)^{-0.43/4} \\
+&& \times \left( \frac{M_p}{M_{\rm J}} \right)^{-1.04/4}  \left( \frac{t}{4.5~{\rm Gyr}} \right)^{0.43/4} \\
 && \times \left( \frac{\dot M_{\star }}{10^{-8}M_{\odot }/{\rm yr}} \right)^{1/2} \left( \frac{v_{\star }}{10^{-1} v_{\odot }} \right)^{5/4} 
 \end{eqnarray}
 %%%
@@ -1291,7 +1291,7 @@ They are translated into the orbital period via Kepler's law, $P_{\{{\rm min,max
 \end{figure}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% 
 
-Using equation (\ref{eq:detect_prob}), the expected number for $M_p > >M_{p0}$ planet with detectable radio emission is $\sum _i \mathcal{P} _i(>M_{p0})$, where $\mathcal{P}_i(>M_{p0})$ is the probability for the $i$-th target. 
+Using equation (\ref{eq:detect_prob}), the expected number for planets more massive than $M_{p0}$ with detectable radio emission is $\sum _i \mathcal{P} _i(>M_{p0})$, where $\mathcal{P}_i(>M_{p0})$ is the probability for the $i$-th target. 
 
 Figure \ref{fig:expected_values} show the expected number of detection as a function of threshold planetary mass $M_{p0}$. This figure indicates that, if all of the target in Figure \ref{fig:observability} are red giant stars, %
 the total number of detections would be about 4 (7), provided that the sensitivity of the radio instruments $F_{\rm min}$ is $10~\mu {\rm Jy}$ ($5~\mu {\rm Jy}$). 
